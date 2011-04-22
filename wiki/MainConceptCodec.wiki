@@ -1,0 +1,14 @@
+#summary One-sentence summary of this page.
+#labels H.264,Codec,CommercialLicense
+
+= Introduction =
+
+H.264 Codec Removal
+
+
+= Details =
+
+_ * how to license Mainconcept.
+ * why it was removed
+ * which features rely on it
+ * alternatives_
