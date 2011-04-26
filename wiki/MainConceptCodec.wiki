@@ -1,14 +1,27 @@
-#summary One-sentence summary of this page.
 #labels H.264,Codec,CommercialLicense
-
 = Introduction =
 
-H.264 Codec Removal
+Q: Why do WebCam and Video streaming not work in OpenQwaq?
 
+A: For the open source release we had to remove the proprietary H.264 and AAC codecs. We hope the community will help us to come up with suitable open source replacements.
 
 = Details =
 
-_ * how to license Mainconcept.
- * why it was removed
- * which features rely on it
- * alternatives_
+The original codecs used are from [http://www.mainconcept.com MainConcept].
+
+The features of OpenQwaq which use this codec are:
+
+ * Webcam
+ * MP4 Movie Playback
+ * Session Recording
+ 
+Please visit the MainConcept licensing pages to determine what kind of license is required, should you wish to use these codecs. 
+
+-   AAC  Decode   
+            [http://www.mainconcept.com/products/sdks/audio/aac.html]
+
+-   H.264  Encode and Decode      
+            [http://www.mainconcept.com/products/sdks/video/h264avc.html]
+
+
+
