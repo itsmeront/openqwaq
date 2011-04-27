@@ -1,0 +1,79 @@
+#labels Server,Install,Setup
+{{{
+1. Install necessary packages
+   On RHEL/CentOS:
+   sudo yum install subversion
+   sudo yum install gcc
+   sudo yum install php-xml
+   sudo yum install mysql-server
+   sudo yum install unixODBC
+   sudo yum install mysql-connector-odbc
+   sudo yum install php-odbc
+   
+2. Check out server from SVN
+   svn co https://dev.qwaq.com/svn/OpenQWAQ/server/trunk server
+
+3. Set up httpd for the server:
+   sudo ln -s /home/openqwaq/server/etc/OpenQwaq-httpd.conf /etc/httpd/conf.d
+   * replace "User apache" in /etc/httpd/conf/httpd.conf with "User openqwaq"
+   * replace "Group apache" in /etc/httpd/conf/httpd.conf with "Group openqwaq"
+   sudo /sbin/service/httpd restart
+
+   => Verify that http works properly by going to:
+      http://localhost/clients
+      http://localhost/admin
+
+4. Set up the MySQL database:
+   sudo /sbin/service mysqld start
+   sudo /usr/bin/mysqladmin -u root password 'openqwaq'
+
+   cd /home/openqwaq/server/conf
+   /usr/bin/mysql -uroot -popenqwaq -b < ./mysqlinit.sql
+   sudo odbcinst -i -s -l -f ./OpenQwaqData.dsn.in
+   sudo odbcinst -i -s -l -f ./OpenQwaqActivityLog.dsn.in
+
+   sudo cat <<EOF>>/etc/odbcinst.ini
+[MySQL]
+Description	= ODBC for MySQL
+Driver		= /usr/lib/libmyodbc3.so
+Setup		= /usr/lib/libodbcmyS.so
+FileUsage	= 1
+EOF
+
+   isql OpenQwaqData openqwaq openqwaq -b < ./OpenQwaqData.sql
+   isql OpenQwaqData openqwaq openqwaq -b < ./OpenQwaqActivityLog.sql
+   isql OpenQwaqData openqwaq openqwaq -b < ./default-servers.sql
+   isql OpenQwaqData openqwaq openqwaq -b < ./default-visitor.sql
+
+   => Verify mysql initialization by going to
+      http://localhost/admin
+   => Ensure existence of default server in server tab
+   => Ensure existence of default organization in org tab
+   => Ensure existence of default user in user tab
+
+5. Set up app server scripts
+   cd /home/openqwaq/server/apps/utils/
+   sudo ./MakeWrappers.sh /home/openqwaq/server/apps/scripts/
+
+6. Prepare various server bits
+   cp /home/openqwaq/server/conf/server.conf.in /home/openqwaq/server/conf/server.conf
+   mkdir /home/openqwaq/realms
+   mkdir /home/openqwaq/users
+   mkdir /home/openqwaq/tmp
+   cp /home/openqwaq/server/etc/forums.properties /home/openqwaq/realms
+   ln -s /home/openqwaq/server/system-resources /home/openqwaq/realms
+   sudo ln -s /home/openqwaq/server/etc/OpenQwaq /etc/init.d/
+
+6. Start the server
+   sudo /sbin/service OpenQwaq start
+
+   => Verify that properties of users and groups can be seen and edited
+
+7. Configure the Server
+   http://localhost/admin/serverconf.php?server=localhost
+   * Configure SMTP options
+   * Configure support and bug email
+
+8. Run the server tests
+   http://localhost/admin/servertest.php
+}}}
