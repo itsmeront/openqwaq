@@ -1,0 +1,22 @@
+%!Adobe-FontList 1.11
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:CMap
+CMapName:Identity-H
+Registry:Adobe
+Ordering:Identity
+OutlineFileName:/opt/qfesApps/Adobe/Reader9/Reader/../Resource/CMap/Identity-H
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:CMap
+CMapName:Identity-V
+Registry:Adobe
+Ordering:Identity
+UseCMap:Identity-H
+OutlineFileName:/opt/qfesApps/Adobe/Reader9/Reader/../Resource/CMap/Identity-V
+%EndFont
+

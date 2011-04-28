@@ -1,0 +1,94 @@
+#!/bin/bash
+#
+# OpenQwaq	-	OpenQwaq Server
+#
+# chkconfig: - 99 20
+#
+# description: OpenQwaq Server
+#
+# You can specify a directory to select a "particular" installation point
+# to start/stop services.  This would allow for more than one instance to be
+# side-by-side.  To run a service from a particular directory, /home/openqwaq/
+# my_new_server, start/stop that service like such:
+#    sudo /sbin/service OpenQwaq [start][stop] /home/openqwaq/my_new_server
+#
+# If you don't specify a particular directory, it will default to /home/
+# openqwaq/server
+#
+
+# Default location
+serverDir="/home/openqwaq/server"
+
+if [ $# -eq 2 ]; then
+  serverDir="${2}/server"
+fi
+
+if [ ! -d $serverDir ]; then
+  echo "	Failed to find ${serverDir}."
+  echo "	Exiting"
+  exit 1
+fi
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+RETVAL=0
+
+#
+function msg() {
+	echo -n "If this server has been configured for the role of an "
+        echo -n "Application Server and you are attempting to address an "
+        echo -n "issue with applications not launching correctly, it is "
+        echo -n "advised that you \"stop\" the OpenQwaq service, \"sudo "
+	echo -n "/sbin/service OpenQwaq stop\"  and run the "
+        echo -n "OpenQwaq-cleanup.sh script as in: "
+	echo ""
+	echo "	(the below commands should be run as user \"OpenQwaq\")"
+        echo " > cd"
+        echo " > cd /var/tmp"
+        echo " > sudo /home/openqwaq/server/apps/utils/OpenQwaq-cleanup.sh"
+	echo ""
+	echo -n "You should then address any errors that were reported by the "
+	echo -n "the clean up script.  Finally, you should restart the "
+        echo -n "OpenQwaq service with \"sudo /sbin/service OpenQwaq "
+        echo -n "start.\""
+        echo ""
+}
+
+# See how we were called.
+function start_OpenQwaq() {
+	# Start processes
+	echo $"Starting OpenQwaq services for $serverDir: "
+	(su openqwaq -c "${serverDir}/bin/RestartOpenQwaq.sh service ${serverDir}")
+	sleep 3
+	declare -i pid
+	pid=`ps aux|grep squeak|grep "startRouter"|grep ${serverDir}|grep -v grep|awk '{print $2}'`
+	renice -10 -p $pid
+}
+
+function stop_OpenQwaq() {
+	# Stop daemons.
+	echo "	Shutting down OpenQwaq Server instances for ${serverDir}: "
+
+	(su openqwaq -c "${serverDir}/bin/StopOpenQwaq.sh service ${serverDir}")
+}
+
+case "$1" in
+  start)
+	start_OpenQwaq
+	;;
+  stop)
+	stop_OpenQwaq
+	echo ""
+	echo "			IMPORTANT NOTICE"
+	msg
+	;;
+  restart)
+	start_OpenQwaq
+	;;
+  *)
+	echo "OpenQwaq [stop][start]"
+	;;
+esac
+
+exit $RETVAL

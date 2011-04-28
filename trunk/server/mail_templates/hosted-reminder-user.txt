@@ -1,0 +1,18 @@
+Subject: OpenQWAQ Account Reminder
+Email Body:
+
+This email is the reminder you requested of your OpenQWAQ account details 
+(or an administrator or support person may have requested it for you).
+
+Your login:{!Contact.EMail}
+
+Organizations you are a member of: {!User.orgList}.
+Host: {!Client.ServerName}.
+Your password: is not stored on the server use "forgot password" on the client login screen to reset if necessary
+
+After you login to the OpenQWAQ client you can select which Organization you want to enter by clicking the Organization dropdown in the Lobby.
+
+If you need to download the client again you can get it from this link:
+	{!Client.Download}
+
+If you believe you have received this email in error, please contact {!OpenQWAQ.Support}.

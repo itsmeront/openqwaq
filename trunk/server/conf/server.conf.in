@@ -1,0 +1,217 @@
+#############################################################################
+# TES configuration file.
+#############################################################################
+
+# The specific network interface to use for the server.
+# OpenQwaq.ServiceIP: 127.0.0.1
+
+#############################################################################
+# Where are the logs stored? Note that for browsing support
+# the log directory needs to have a subdirectory xsl with the
+# matching xsl files in them. You can link the directory from
+# the installation (which should be server/logs/xsl)
+OpenQwaq.LogDir: /home/openqwaq/server/logs
+
+# Standard log names; actual name will be logname.yyyy-mm-dd.log
+# If you change any of these names you will want to provide
+# matching xsl's for browsing support (just link the old ones)
+OpenQwaq.ActivityLog: activity
+
+#############################################################################
+# ODBC activity database settings: DSN, user name, password, insert
+OpenQwaq.ActivityLog.DSN: OpenQwaqActivityLog
+OpenQwaq.ActivityLog.User: openqwaq
+OpenQwaq.ActivityLog.Password: openqwaq
+OpenQwaq.ActivityLog.Insert: INSERT INTO sp_activity_log(logdate, host, user, action, org, extra) VALUES (%date, %host, %user, %action, %organization, %extra)
+
+#############################################################################
+# Where should we send bug reports to?
+# OpenQwaq.BugMail: bugs@qwaq.com
+
+#############################################################################
+# Service provider specific options
+OpenQwaq.SP.RealmsPath: /home/openqwaq/realms
+OpenQwaq.SP.UsersPath: /home/openqwaq/users
+OpenQwaq.SP.TierDirectory: /home/openqwaq/tiers
+OpenQwaq.SP.SupportEmail: support@your_domain
+
+# Should newly invited users be activated automatically?
+OpenQwaq.SP.AutoActivate: true
+
+# Should new organizations be lazily created?
+OpenQwaq.SP.LazyCreateOrgs: true
+
+# Download, min and max version
+# OpenQwaq.SP.ClientDownload: http://www.openqwaq.com/latest
+OpenQwaq.SP.MinimumClientVersion: OpenQwaq 1.0.01
+OpenQwaq.SP.MaximumClientVersion: 
+
+# Global org redirect: When set, *all* orgs are redirected
+# to the alternative server.
+# OpenQwaq.SP.GlobalOrgRedirect: alt.domain.com
+
+# Unknown org redirect: When set, any unknown organization
+# is asked to go to the alternative server.
+# OpenQwaq.SP.UnknownOrgRedirect: alt.domain.com
+
+
+#############################################################################
+# Forum Pages settings:
+#
+# The hostname or hostname:port people use for Web access.
+# OpenQwaq.SP.Web.ExternalHostName: your-host.domain.com
+
+# The hostname or hostname:port that we will redirect the above to for HTTPS 
+# Web access, if any. Leave it out if you don't need HTTPS Forum Pages.  If it
+# is specified, stunnel must be configured to connect HTTPSHostName to
+# InternalHostName.
+# OpenQwaq.SP.Web.HTTPSHostName: stunnelled-host.domain.com
+
+# Where should bad Forum Page requests be redirected?
+# OpenQwaq.SP.Web.invalidRequest: http://www.openqwaq.com/support/fp-info.php
+# OpenQwaq.SP.Web.unauthorized: http://www.openqwaq.com/trial/visitor.php
+
+# To help debugging of Forum Pages support
+# OpenQwaq.SP.Web.LogLevel: 1
+
+# The hostname or hostname:port that we listen on.
+#     host part defaults to hostname, which can be set interactively.
+#     port part defaults to 9994, which is redirected fromm 80.
+# OpenQwaq.SP.Web.InternalHostName: localhost:9994
+
+# What icons are to be used?  Can be a file system path or a URL.
+# Note that  when used in conjunction with OpenQwaq.SP.Web.HTTPSHostName, the
+# value should be either a file system path or an HTTPS url. Otherwise some 
+# browsers may give "broken key" warnings.  
+# OpenQwaq.SP.Web.favicon: http://www.qwaq.com/favicon.ico
+# The default display picture for a user when they don't have one set in preferences:
+# OpenQwaq.SP.Web.userLogo: /home/openqwaq/server/web/user.png
+# The default display picture for an org when there is no realms/orgname/logo.jpg:
+# OpenQwaq.SP.Web.orgLogo: /home/openqwaq/server/web/org.jpg
+# The default when we need any other picture and don't have one:
+# OpenQwaq.SP.Web.logo: /home/openqwaq/server/web/logo-branding_nav-qwaq.gif
+
+# The following Web properties may be removed in future versions:
+#OpenQwaq.SP.Web.feedIcon: /home/openqwaq/server/web/RSSfeed-icon-28x28.png
+#OpenQwaq.SP.Web.uploadIcon: /home/openqwaq/server/web/arrow-up-grey-trans.gif
+#OpenQwaq.SP.Web.downloadIcon: /home/openqwaq/server/web/arrow-down-grey-trans.gif
+# Location (relative to bin/forums) of the template showing what to display.
+#OpenQwaq.SP.Web.goTemplate: /home/openqwaq/server/web/qrl-go.html
+#OpenQwaq.SP.Web.loginFormTemplate: /home/openqwaq/server/web/loginform.html
+#OpenQwaq.SP.Web.uploadFormTemplate: /home/openqwaq/server/web/uploadform.html
+#OpenQwaq.SP.Web.uploadResponseTemplate: /home/openqwaq/server/web/uploadresponse.html
+
+
+#############################################################################
+# SP data settings
+OpenQwaq.SP.ODBC.Active: true
+OpenQwaq.SP.ODBC.DSN: OpenQwaqData
+OpenQwaq.SP.ODBC.User: openqwaq
+OpenQwaq.SP.ODBC.Password: openqwaq
+
+#############################################################################
+# ODBC client activity log
+OpenQwaq.SP.ClientActivityLog.DSN: OpenQwaqActivityLog
+OpenQwaq.SP.ClientActivityLog.User: openqwaq
+OpenQwaq.SP.ClientActivityLog.Password: openqwaq
+OpenQwaq.SP.ClientActivityLog.ActivitiesQuery: INSERT INTO client_activity_data_log (datetime_created, client_version, realm_name, username, status, activity_data) VALUES (%date, %version, %org, %user, 0, %contents)
+OpenQwaq.SP.ClientActivityLog.StatisticsQuery: INSERT INTO client_performance_data_log (datetime_created, client_version, realm_name, username, status, performance_data) VALUES (%date, %version, %org, %user, 0, %contents)
+OpenQwaq.SP.ClientActivityLog.SysInfoQuery: INSERT INTO client_system_information_log (datetime_created, client_version, realm_name, username, status, system_information) VALUES (%date, %version, %org, %user, 0, %contents)
+
+#############################################################################
+# ODBC survey log
+# OpenQwaq.SP.SurveyLog.DSN: OpenQwaqSurveys
+# OpenQwaq.SP.SurveyLog.User: odbcuser
+# OpenQwaq.SP.SurveyLog.Password: odbcpassword
+# OpenQwaq.SP.SurveyLog.SurveyQuery: INSERT INTO client_survey (datetime_created, client_version, realm_name, username, session_id, survey_name, client_comments) VALUES (%date, %version, %org, %user, %session, %survey, %comment)
+# OpenQwaq.SP.SurveyLog.AnswerQuery: INSERT INTO client_survey_answer (session_id, survey_question_id, client_question_answer, question_maximum_scale) VALUES (%session, %question, %answer, %scale)
+
+#############################################################################
+# Router-specific options
+# Allows HTTP(S) connections to the router if set true on a router (or all-in-one) host.
+OpenQwaq.Router.HTTPS: true   
+# When set on a PROXY CLIENT HOST, tells clients to connect to an HTTP(S) router at other than the default port (8333).
+# OpenQwaq.Router.HTTPS.ExternalPort: 9997
+
+
+#############################################################################
+# App-server specific options
+OpenQwaq.Apps.RealmsPath: /home/openqwaq/realms
+OpenQwaq.Apps.MaxApps: 40
+OpenQwaq.Apps.HomeDirectoryPath: /home/openqwaq/tmp
+OpenQwaq.Apps.TempDirectoryPath: /tmp
+# DO NOT CHANGE THESE UNLESS YOU KNOW WHAT YOU ARE DOING
+OpenQwaq.Apps.ScriptPath: ../../apps/scripts
+OpenQwaq.Apps.UserGuidePath: ../../docs/userguide
+
+#############################################################################
+# Video server specific options
+OpenQwaq.NetVid.RealmsPath: /home/openqwaq/realms
+OpenQwaq.NetVid.CachePath: /home/openqwaq/realms/cache/NetVid-cache
+
+#############################################################################
+# RTSP Broadcast  specific options
+OpenQwaq.RTSP.Port: 1554
+
+#############################################################################
+# VNC access options for the server
+OpenQwaq.VNC.Active: true
+OpenQwaq.VNC.Password: secret
+
+#############################################################################
+# SMTP options
+OpenQwaq.Smtp.Host: localhost
+OpenQwaq.Smtp.Port: 25 
+#OpenQwaq.Smtp.User: admin
+#OpenQwaq.Smtp.Password: secret
+
+
+#############################################################################
+# Delegated authentication
+# When present, the auth script is run with arguments -u user -p password
+# It needs to return the format described in the fake_auth script. The
+# auth args are any additional arguments that should be passed to the script
+#
+# OpenQwaq.SP.AuthScript: /home/openqwaq/server/bin/utils/fake_auth.py
+# OpenQwaq.SP.AuthArgs: -s fake.server.com
+
+#############################################################################
+# Active Directory settings
+#
+OpenQwaq.AD.Enabled: false
+OpenQwaq.AD.ServerName:
+OpenQwaq.AD.BaseDN:
+OpenQwaq.AD.AuthScript: /home/openqwaq/server/bin/utils/kauth.py
+
+#############################################################################
+# Coal options
+OpenQwaq.Coal.Active: true
+OpenQwaq.Coal.CreateOrgScript: /home/openqwaq/server/templates/mkorg.sh
+# OpenQwaq.Coal.GetMyOwnUrl: http://<your_TES>/phpapp/signup.php
+# OpenQwaq.Coal.BuyNowUrl: http://<your_TES>/buy
+
+# These mail properties file is no longer in use.
+# The entry is here for backwards compatibility
+OpenQwaq.Coal.MailProperties: /home/openqwaq/server/mail_templates/mail.properties
+
+# BCC address for keeping an audit trail of outgoing invites etc.
+# OpenQwaq.Coal.BCCAddress: coal_bcc@qwaq.com
+
+# Welcome Email Templates
+OpenQwaq.Coal.Welcome.AdminTemplate: /home/openqwaq/server/mail_templates/welcome-admin.txt
+OpenQwaq.Coal.Welcome.UserTemplate: /home/openqwaq/server/mail_templates/welcome-user.txt
+# Invitation Email Templates
+OpenQwaq.Coal.Invitation.Template: /home/openqwaq/server/mail_templates/invite.txt
+OpenQwaq.Coal.Invitation.NotifyTemplate: /home/openqwaq/server/mail_templates/notify.txt
+OpenQwaq.Coal.Invitation.BaseURL: http://<your_TES>/trial/invite.php
+
+# Reset Password Email Template
+OpenQwaq.Coal.ResetPassword.Template: /home/openqwaq/server/mail_templates/resetPassword.txt
+
+# Account Reminder Templates
+OpenQwaq.Coal.AccountReminder.AdminTemplate: /home/openqwaq/server/mail_templates/reminder-admin.txt
+OpenQwaq.Coal.AccountReminder.UserTemplate: /home/openqwaq/server/mail_templates/reminder-user.txt
+
+# Seat Notice Templates
+OpenQwaq.Coal.SeatLimitNotice.LimitCloseTemplate: /home/openqwaq/server/mail_templates/seat-limit-close.txt
+OpenQwaq.Coal.SeatLimitNotice.OverLimitTemplate: /home/openqwaq/server/mail_templates/over-seat-limit.txt

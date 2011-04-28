@@ -1,0 +1,6 @@
+# Run TES weekly usage report every Saturday at midnight
+0 0 * * 6	/usr/bin/php /home/openqwaq/server/admin/report.php -weekly
+# Run TES monthly usage report at midnight the first day of the month
+0 0 1 * * 	/usr/bin/php /home/openqwaq/server/admin/report.php -monthly
+# Back up database at 02.00 everyday
+0 2 * * *	/home/openqwaq/server/etc/OpenQwaq-backupDB.sh

@@ -1,0 +1,61 @@
+#!/bin/bash
+#
+# OpenQwaq-tunnel	stunnel
+#
+# chkconfig: - 99 20
+#
+# description:	SSL support for HTTPS
+#
+prog=/usr/sbin/stunnel
+config=/home/openqwaq/server/etc/stunnel/stunnel.conf
+PID_FILE=/var/run/OpenQwaq-tunnel.pid
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+RETVAL=0
+
+# Determine IP of eth0 for settings
+function setupIP() {
+  device=$1
+  ETH=$( /sbin/ifconfig $device|grep "inet addr"|sed -e 's/\(\s*inet addr\)\(:[0-9]*.[0-9]*.[0-9]*.[0-9]*\)\(\s*.*\)/\2/' -e 's/://')
+
+  cp -f /home/openqwaq/server/etc/stunnel/stunnel.conf.in /home/openqwaq/server/etc/stunnel/stunnel.conf
+  sed -i.bk "s/ETH_REPLACEMENT/$ETH/g" /home/openqwaq/server/etc/stunnel/stunnel.conf
+}
+
+# See how we were called.
+case "$1" in
+  start)
+	# Start processes
+	echo -n $"Starting tunneling service for OpenQwaq Server Forum Pages: "
+	setupIP eth0
+	if [ -f ${config} ]; then
+	  daemon ${prog} ${config} ${PID_FILE}
+          RETVAL=$?
+          echo
+	else
+	  echo "  Missing stunnel configuration file!  Exiting!"
+	  exit 1
+	fi
+	;;
+  stop)
+	# Stop daemons.
+	echo -n "Shutting down tunneling service"
+	declare -i tunnelPid
+        tunnelPid=`cat ${PID_FILE}`
+	kill -9 ${tunnelPid}	
+        RETVAL=$?
+        echo
+	;;
+  restart)
+	$0 stop
+	$0 start
+	;;
+  status)
+	status stunnel
+	RETVAL=$?
+	;;
+esac
+
+exit $RETVAL

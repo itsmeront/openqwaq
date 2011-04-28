@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# Uncomment the following two lines for normal desktop:
+# unset SESSION_MANAGER
+# exec /etc/X11/xinit/xinitrc
+
+[ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+[ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+
+# Ensure that applications can be found
+PATH=/OpenQwaqBin:"${PATH}"
+
+#
+# Since the content of most apps is white,
+# this makes the startup experience a bit less flicker
+# (and may reduce overall volume of xmitted raster data,
+# since the bulk of the area remains white from start to app-active.)
+#
+xsetroot -solid White
+
+#
+# So that we get cut'n'paste
+# XXXX: disabled because we need more server support
+#   (eg: filter so that only focus holder has paste-buffer updated)
+#
+##vncconfig -nowin &
+
+#
+# Launch the app based on $VNCDESKTOP
+#
+exec /OpenQwaqBin/qstartup-$VNCDESKTOP
+
+
+#
+# We never reach here.
+#
+xterm -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &
+#twm &
+wmaker &

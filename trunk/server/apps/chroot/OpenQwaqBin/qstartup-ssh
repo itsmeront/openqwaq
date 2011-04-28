@@ -1,0 +1,6 @@
+#!/bin/sh 
+#xterm -geometry 131x45+0+0 -e ssh $QwaqRemoteAppARGS
+GEOM=$(echo $QwaqRemoteAppARGS | awk '{print $1}')
+DEST=$(echo $QwaqRemoteAppARGS | awk '{print $2}')
+#gnome-terminal --geometry $GEOM --execute ssh $DEST
+xterm -geometry $GEOM -font 9x15 -e ssh $DEST

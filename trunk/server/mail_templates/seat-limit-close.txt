@@ -1,0 +1,10 @@
+Subject: OpenQWAQ Named Seats Near Limit
+Email Body:
+
+Dear OpenQWAQ Administrator,
+
+This message is to remind you that you are getting close to the named seat limit in your organization "{!User.organization}". Your current limit is {!Seats.Total} out of which you have {!Seats.Left} named seats still available.
+
+If you would like to license additional seats for your organization or upgrade your account please contact our support team at {!OpenQWAQ.Support}.
+
+We look forward to your continued use of OpenQWAQ!

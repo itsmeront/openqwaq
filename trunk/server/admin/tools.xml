@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : tools.xml.xml
+    Created on : July 17, 2009, 10:27 AM
+    Author     : Ron
+    Description:
+        Purpose of the document follows.
+-->
+
+<chart>
+    <chart_type>line</chart_type>
+    <chart_data>
+        <?php include createChart.php;?>
+    </chart_data>
+</chart>

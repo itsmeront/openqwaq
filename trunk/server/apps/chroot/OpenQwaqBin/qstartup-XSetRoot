@@ -1,0 +1,4 @@
+#!/bin/sh 
+
+# Set the background to the specified color.
+xsetroot -solid $QwaqRemoteAppARGS

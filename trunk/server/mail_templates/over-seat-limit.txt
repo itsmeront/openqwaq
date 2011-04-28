@@ -1,0 +1,8 @@
+Subject: OpenQWAQ Named Seats Over Limit
+Email Body:
+
+Dear OpenQWAQ Administrator,
+
+This message is to inform you that your organization "{!User.organization}" has exceeded the number of seats for which you are licensed. The number of seats is currently {!Seats.Total} and you are {!Seats.Over} seats over this limit. If you would like to license additional seats or upgrade your account please contact our support team at {!OpenQWAQ.Support}.
+
+We look forward to your continued use of OpenQWAQ!

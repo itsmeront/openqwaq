@@ -1,0 +1,1 @@
+'From Croquet1.0beta of 11 April 2006 [latest update: #1] on 16 November 2009 at 6:24:24 pm'!!QClientSpeaker methodsFor: 'testing' stamp: 'jcg 11/16/2009 18:24'!shouldPlayStream	isAudible ifFalse: [^false].	(self isMute not & isPlaying) ifTrue: [^true].	isMe ifTrue: [^false].	manager ifNotNilDo: [:m | m isRecordingSession ifTrue: [^true]].	^false ! !

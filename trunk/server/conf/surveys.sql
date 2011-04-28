@@ -1,0 +1,4 @@
+/* isql OpenQwaqSurveys UserId UserPass -b < OpenQwaqSurveys.sql  */
+/* NOTE: isql is pathetic; everything must be single line, sorry! */
+CREATE TABLE  client_survey (client_survey_id bigint(20) unsigned NOT NULL auto_increment, datetime_created timestamp NOT NULL default CURRENT_TIMESTAMP, client_version varchar(50) NOT NULL, realm_name varchar(255) NOT NULL, username varchar(100) NOT NULL, session_id varchar(50) NOT NULL, survey_name varchar(50) NOT NULL, client_comments longtext, PRIMARY KEY  (client_survey_id)) ENGINE=InnoDB;
+CREATE TABLE  client_survey_answer (client_survey_answer_id bigint(20) unsigned NOT NULL auto_increment, session_id varchar(50) NOT NULL, survey_question_id varchar(100) NOT NULL, client_question_answer varchar(50) NOT NULL, question_maximum_scale varchar(50) default NULL, PRIMARY KEY (client_survey_answer_id)) ENGINE=InnoDB;

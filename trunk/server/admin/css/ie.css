@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+table tr td select {
+}
+
+.table_header input.search {
+	height: 23px !important;
+}
+
+.button input {
+	width: auto;
+	width: 1%;
+	overflow-x: visible;
+}
+
+form fieldset ul {
+	height: auto;
+	overflow: auto;
+	margin: 20px 0;
+}

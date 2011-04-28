@@ -1,0 +1,5 @@
+[OpenQwaq-1.0]
+name=OpenQwaq Server 1.0
+baseurl=http://username:password@www.openqwaq.com/OpenQwaq/updates/1.0/$releasever/
+enabled=1
+gpgcheck=0

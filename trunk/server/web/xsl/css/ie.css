@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+
+#recent_activity caption {
+	margin:0; /* Had to put -1 left margin on caption to make FF behave so resetting it here */
+}
+		

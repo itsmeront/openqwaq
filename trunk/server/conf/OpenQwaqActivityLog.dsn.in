@@ -1,0 +1,7 @@
+; sudo odbcinst -i -s -l -f OpenQwaqActvityLog.dsn
+[OpenQwaqActivityLog]
+Description=OpenQwaq Activity Log
+Driver=MySQL
+Database=OpenQwaqActivityLog
+Server=localhost
+Port=3306

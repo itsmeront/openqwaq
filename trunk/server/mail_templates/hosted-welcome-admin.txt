@@ -1,0 +1,53 @@
+
+Subject: Your OpenQWAQ login is ready
+Email Body:
+
+OpenQWAQ: Immersive Collabotation
+
+In 15 minutes or less you can create a virtual meeting space, import your documents and working materials, and be collaborating with colleagues in a virtual business setting.
+
+Learn more about OpenQWAQ at www.openqwaq.com
+
+Dear {!Contact.EMail},
+									
+Your OpenQWAQ account is ready.
+
+										
+To get started, follow these steps:
+									
+1) Download and install the client, if you have not already from: {!Client.Download}
+2) Launch OpenQWAQ. (on Windows: Start > All Programs > OpenQwaq)
+
+3) Sign Login using this information:
+	
+	Login: {!Contact.EMail}
+	Password: {!Contact.Password}
+
+	Organization: {!User.organization} 
+	Host:{!Client.ServerName}
+
+If you have any difficulty please contact OpenQWAQ support: {!OpenQWAQ.Support}
+
+Welcome to OpenQWAQ!
+
+
+Additional Info
+
+Administrator Privileges:
+
+	Your account has administrative privileges which allow you to control invitations to new users, and create new virtual spaces from templates, set access controls on those spaces, and remove users from an organization.
+                  
+More than one Organization:
+
+     Your user account can be a member of more than one organization within OpenQWAQ.  You'll see all the organizations you're a member of in the dropdown on the OpenQWAQ sign in screen right after login.  Organizations are like buildings.  People in the same building can easily share resources and access common Forums.  They can see who is logged into the Organization, and private chat others (like instant messaging) even if the person is in another room.
+                  
+Inviting Others:
+                  
+	Press the invite new user button (under the people list on the right side of the client) to invite new people in.  All you need is their email address.  
+
+Managing Users:
+                  
+	Select: Menu > Tools > Manage Users, to add security to a room or to remove users from your organization.
+							
+If you believe you have received this email in error, please contact {!OpenQWAQ.Support}.
+					

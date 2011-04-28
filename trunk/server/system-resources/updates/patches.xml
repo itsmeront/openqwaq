@@ -1,0 +1,39 @@
+<update version='Qwaq Forums 2.0.10'>
+  <patch>0001SpeakerLock.cs</patch>
+  <patch>0002ReleaseUpdates.cs</patch>
+  <patch>0003KeySym.cs</patch>
+  <patch>0004VNC3Buttons.st</patch>
+</update>
+<update version='Teleplace 3.0.15'>
+  <patch>0001Update3015.cs</patch>
+  <patch>0002SessionRecording.cs</patch>
+  <patch>0003Widgets.cs</patch>
+  <patch>0004ChatSuppress.cs</patch>
+  <patch>0005EncoderParams.cs</patch>
+  <patch>0006Sound.cs</patch>
+  <patch>0007KMZ71A.cs</patch>
+  <patch>0008AudioSpillover.cs</patch>
+</update>
+<update version='Teleplace 3.0.30'>
+  <patch>0001EBoxOOHome.st</patch>
+  <patch>0002SimultaneousWebcastAndRecordPlus.cs</patch>
+  <patch>0003Cleanups.st</patch>
+  <patch>0004Guards.cs</patch>
+  <patch>0005PyDocMgmt.cs</patch>
+  <patch>0006Safety.cs</patch>
+  <patch>0007UPS.cs</patch>
+  <patch>0008SocketOptimization.cs</patch>
+  <patch>0009AudioDecodeNoLog.cs</patch>
+  <patch>0010FallbackFileDialogs.cs</patch>
+  <patch>0011ClientNullPlayers.cs</patch>
+  <patch>0012VersionNumberOrdering.cs</patch>
+</update>
+<update version='Teleplace 3.5.17'>
+  <patch>0001RefreshPrefs.st</patch>
+  <patch>0002Mobile3517.cs</patch>
+  <patch>0003ExperienceTest.cs</patch>
+  <patch>0004RfbClientError2.cs</patch>
+  <patch>0005SignDrop.st</patch>
+  <patch>0006SharePoint2003.st</patch>
+  <patch>0007MobileGoDoc.cs</patch>
+</update>
