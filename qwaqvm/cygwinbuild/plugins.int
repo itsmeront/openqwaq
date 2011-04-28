@@ -1,0 +1,42 @@
+# Automatically generated makefile include for internal plugins
+INTERNAL_PLUGINS = \
+ADPCMCodecPlugin \
+AsynchFilePlugin \
+B3DAcceleratorPlugin \
+B2DPlugin \
+BitBltPlugin \
+BMPReadWriterPlugin \
+CroquetPlugin \
+ZipPlugin \
+DropPlugin \
+DSAPrims \
+FFTPlugin \
+FileDialogPlugin \
+FilePlugin \
+FloatArrayPlugin \
+FloatMathPlugin \
+GIFLibPlugin \
+HostWindowPlugin \
+IA32ABI \
+JoystickTabletPlugin \
+JPEGReaderPlugin \
+JPEGReadWriter2Plugin \
+Klatt \
+LargeIntegers \
+LocalePlugin \
+Matrix2x3Plugin \
+MIDIPlugin \
+MiscPrimitivePlugin \
+Mpeg3Plugin \
+PSharePlugin \
+RePlugin \
+SecurityPlugin \
+SerialPlugin \
+SocketPlugin \
+SoundCodecPrims \
+SoundGenerationPlugin \
+StarSqueakPlugin \
+SurfacePlugin \
+UUIDPlugin \
+WebAuthPlugin \
+WebProxyPlugin

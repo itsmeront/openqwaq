@@ -1,0 +1,8 @@
+# List of external plugins.  SoundPlugin is last because it won't build under
+# cygwin (and needs MSVC) but we want it in the list.
+EXTERNAL_PLUGINS = \
+SqueakFFIPrims \
+PNGLibPlugin \
+PyBridge \
+Win32OSProcessPlugin
+
