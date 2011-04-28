@@ -1,0 +1,15 @@
+
+<group id="1" class="QPortableObject">
+	<name>Card Holder</name>
+	<children id="2">
+		<group id="3" class="QDocumentShelf">
+			<name>Card Holder</name>
+			<basicExtent>0.9 0.6</basicExtent>
+			<numVisibleSlots>6</numVisibleSlots>
+			<axis>vertical</axis>		</group>	</children>
+	<scale>1.0</scale>
+	<attractionRange>6</attractionRange>
+	<surfacePolicy>surface</surfacePolicy>
+	<openSpacePolicy>never</openSpacePolicy>
+	<isMotionEnabled>true</isMotionEnabled>
+	<isRotationEnabled>false</isRotationEnabled></group>

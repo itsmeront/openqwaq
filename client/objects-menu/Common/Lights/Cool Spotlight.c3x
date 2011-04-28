@@ -1,0 +1,32 @@
+<group>
+<name>Cool Spotlight</name>
+<atomic>true</atomic>
+<children>
+<conic>
+	<height>0.6</height>
+	<topRadius>0</topRadius>
+	<baseRadius>0.13</baseRadius>
+	<capTop>false</capTop>
+	<capBase>false</capBase>
+	<materialList>
+	<material>
+		<diffuseColor>0 0 0 0.8</diffuseColor>
+		<ambientColor>0 0 0 0.2</ambientColor>
+		<emissiveColor>0.8 0.95 0.99 1.0</emissiveColor>
+		<cullFace>false</cullFace>
+	</material>
+	</materialList>
+	<opaque>true</opaque>
+</conic>
+<light >
+	<visible>false</visible>
+	<type>spot</type>
+	<spotDirection>0 -1 0</spotDirection>
+	<spotCutoff>15.0</spotCutoff>
+	<spotExponent>5</spotExponent>
+	<ambientColor>0.25 0.26 0.3 1.0</ambientColor>
+	<diffuseColor>0.33 0.33 0.5 1.0</diffuseColor>
+	<specularColor>0.15 0.13 0.3 1.0</specularColor>
+</light>
+</children>
+</group>

@@ -1,0 +1,6 @@
+<group id="1" class="QSoundFrame">
+	<name>Fountain</name>
+	<soundFileName>rivulet.wav</soundFileName>
+	<alwaysLooping>true</alwaysLooping>
+	<gain>0.4</gain>
+</group>

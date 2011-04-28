@@ -1,0 +1,6 @@
+<group id="1" class="QRoamingSoundEffect">
+	<name>Crickets</name>
+	<soundFileName>crickets.wav</soundFileName>
+	<interval>20</interval>
+	<gain>0.6</gain>
+</group>

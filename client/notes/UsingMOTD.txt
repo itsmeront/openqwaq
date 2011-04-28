@@ -1,0 +1,83 @@
+Message Of The Day - System Announcements
+
+We can display a popup text message to all users in an organization, 
+or everyone across all of Forums.
+
+The MOTD will be seen by connected and incoming clients
+until it is removed or it expires.
+A message can be given an expires date inside the message file.
+
+The MOTD presents to users in a simple floating window.
+It appears during login to incoming users, as a pop-up to connected users.
+
+The MOTD is set up by creating one of the following files
+on the service provider.
+
+	-realms- / system-resources / system-notice.txt
+		for global announcements
+
+	-realms- / some-organization / updates / host-notice.txt
+		for announcements to users in that organization
+
+If there is a system-level global announcement, it takes precedence.
+If there is a system announcement, per-org MOTD's will not be seen
+until the system announcement file is removed.
+
+This means individual organizations can have an 'ordinary' MOTD,
+while a system notice will take precedence when published.
+
+The MOTD, after being set up by creating the above file,
+is shown to each newly-arriving user during login,
+and is also shown to users already already logged in within a few minutes (usually 2).
+
+Basic Use for Urgent Service Announcements
+
+To announce urgent or impending service issues, 
+one would post a simple text notice as the file 
+	-realms- / system-resources / system-notice.txt
+After about 3 or 4 minutes, all active users will have seen this.
+
+Remove the when the notice is no longer wanted.
+
+
+Message File Format
+
+The system-notice.txt (and/or the organization host-notice.txt) 
+can be either plain text or XML.  
+
+If text, the entire content is shown to the user 
+as the text of the notice window.
+Any time the file is not a valid XML body it is handled this way.
+(Errors in your XML will make the XML appear in the notice.)
+
+If XML, it uses the following tags:
+
+<message>
+<text> 
+The literal text of the message.  Mandatory.
+</text>
+
+... the remaining XML tags are optional controls ....
+
+<title>The title of the notice dialog</title>
+
+<minVersion>Qwaq Forums 1.1.72</minVersion>
+	would mean that users of 1.1.64 would -not- see the message
+
+<maxVersion>QwaqForums 1.1.88</maxVersion>
+	would mean that users of 1.1.92 would -not- see the message
+
+<expires>2008-08-03T09:54:22-07:00 </expires>
+	no one will be shown the message after this date/time
+
+<effective>2008-08-03T09:54:22-07:00</effective>
+	no one will be shown the message before this date/time
+
+<onceOnly>true</onceOnly>
+	If set true, the message is shown to a user only once, not at each login.
+	Default is false - MOTD's are shown at each login.
+
+</message>
+ 
+
+

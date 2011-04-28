@@ -1,0 +1,16 @@
+<conic>
+	<name>Disk</name>
+	<height>0.5</height>
+	<topRadius>2.0</topRadius>
+	<baseRadius>2.0</baseRadius>
+	<slices>16</slices>
+	<capTop>true</capTop>
+	<capBase>true</capBase>
+	<materialList>
+		<material>
+		<ambientColor> 0.4 0.4 0.4 1.0</ambientColor>
+		<diffuseColor> 0.9 0.9 0.8 1.0</diffuseColor>
+		</material>
+	</materialList>
+	<opaque>true</opaque>
+<conic>

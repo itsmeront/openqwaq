@@ -1,0 +1,9 @@
+
+<group id="1" class="QOutdoorTree">
+	<name>OakTree</name>
+	<modelFilename>Content/Qwaq/Models/Plants/TreeMidOak.ASE</modelFilename>
+	<modelScale>0.3</modelScale>
+	<boundsDepth>1</boundsDepth>
+	<optimized>true</optimized>
+	<optimizedEarly>true</optimizedEarly>
+</group>

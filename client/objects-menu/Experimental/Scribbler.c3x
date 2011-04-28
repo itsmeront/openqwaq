@@ -1,0 +1,9 @@
+<group id="1" class="QFileCard">
+	<name>Scribbler</name>
+	<kind>panelApp</kind>
+	<content>
+		<object id="2" class="PyPanelDocCS">
+			<appName>Teleplace.Scribbler</appName>
+		</object>
+	</content>
+</group>

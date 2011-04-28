@@ -1,0 +1,8 @@
+
+
+<group class="QGate" id="1">
+	<name>Portal Gate</name>
+	<extent>5 8</extent>
+	<isOpen>false</isOpen>
+	<label>Portal Gate</label>
+</group>

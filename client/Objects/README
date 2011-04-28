@@ -1,0 +1,8 @@
+On-disk client side thumbnail snapshots
+for mesh-based objects offered in the objects menu.
+
+This directory is to remain in the product installation.
+
+The resource-based full meshes used by the thumbnails 
+are in the Content/Qwaq/Models/ subdirectories.
+

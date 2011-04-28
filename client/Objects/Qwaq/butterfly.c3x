@@ -1,0 +1,22 @@
+
+<frameThumb id="129">
+	<name>butterfly</name>
+	<sha>COEC1VFZA10GKOY5KLA3742KBJLS3EE</sha>
+	<children id="130">
+		<cube id="131">
+			<name>butterfly</name>
+			<extent>1.6836 0.5229 0.6285</extent>
+			<location>-0.0072 0.26235 -0.07095</location>
+		</cube>
+	</children>
+	<fileName>Content/Qwaq/Models/Plants/butterfly/butterfly.c3z</fileName>
+
+	<tFileTextures id="132">
+		<texture id="133" class="TFileTexture">
+			<extent>128 128</extent>
+			<fileName>Content/Qwaq/Models/Plants/butterfly/btrfly-small.png</fileName>
+			<sha>HEHUUGTHU4RALRI6J5B3EOAODZ5V3E9</sha>
+			<extension>alpha</extension>
+		</texture>
+	</tFileTextures>
+</frameThumb>

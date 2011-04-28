@@ -1,0 +1,30 @@
+<group>
+<name>Cool Flood</name>
+<atomic>true</atomic>
+<children>
+<conic>
+	<height>0.5</height>
+	<topRadius>0</topRadius>
+	<baseRadius>0.2</baseRadius>
+	<capTop>false</capTop>
+	<capBase>false</capBase>
+	<materialList>
+	<material>
+		<diffuseColor>0 0 0 0.8</diffuseColor>
+		<ambientColor>0 0 0 0.2</ambientColor>
+		<emissiveColor>0.8 0.95 0.99 1.0</emissiveColor>
+		<cullFace>false</cullFace>
+	</material>
+	</materialList>
+	<opaque>true</opaque>
+</conic>
+<light >
+	<rotation>180.0 1.0 0.0 0.0</rotation>
+	<visible>false</visible>
+	<type>directional</type>
+	<ambientColor>0.25 0.26 0.3 1.0</ambientColor>
+	<diffuseColor>0.33 0.33 0.5 1.0</diffuseColor>
+	<specularColor>0.15 0.13 0.3 1.0</specularColor>
+</light>
+</children>
+</group>

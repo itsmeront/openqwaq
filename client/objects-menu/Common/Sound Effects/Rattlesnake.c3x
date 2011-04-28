@@ -1,0 +1,7 @@
+
+<group id="1" class="QRoamingSoundEffect">
+	<name>Rattlesnake</name>
+	<soundFileName>Rattlesnake_Idle01.wav</soundFileName>
+	<interval>60</interval>
+	<gain>0.3</gain>
+</group>

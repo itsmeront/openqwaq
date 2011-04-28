@@ -1,0 +1,12 @@
+
+<cube id="1">
+	<name>Post</name>
+	<materialList id="2">
+		<material id="3">
+			<diffuseColor>1.0 1.0 1.0 1.0</diffuseColor>
+			<texture id="4">
+				<extent>512 512</extent>
+				<fileName>Content/Qwaq/TexturePalette/wood015.jpg</fileName>
+				<sha>DWR6VOMJZBF93WEBT6A7ZYNF5A51ADP</sha>
+				<extension>alpha</extension>			</texture>		</material>	</materialList>
+	<extent>0.3 3.0 0.3</extent></cube>

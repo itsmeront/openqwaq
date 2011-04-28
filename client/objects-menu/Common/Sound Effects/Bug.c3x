@@ -1,0 +1,6 @@
+<group id="1" class="QRoamingSoundEffect">
+	<name>Wandering Bug</name>
+	<soundFileName>Insect04.wav</soundFileName>
+	<interval>20</interval>
+	<gain>0.3</gain>
+</group>

@@ -1,0 +1,25 @@
+
+<group>
+<name>Warm Bulb</name>
+<atomic>true</atomic>
+<children>
+<sphere>
+	<radius>0.2</radius>
+	<materialList>
+	<material>
+		<diffuseColor>0 0 0 0.9</diffuseColor>
+		<ambientColor>0 0 0 0.2</ambientColor>
+		<emissiveColor>0.99 0.98 0.8 1.0</emissiveColor>
+	</material>
+	</materialList>
+	<opaque>true</opaque>
+</sphere>
+<light >
+	<visible>false</visible>
+	<type>point</type>
+	<ambientColor>0.34 0.29 0.25 1.0</ambientColor>
+	<diffuseColor>0.5 0.46 0.39 1.0</diffuseColor>
+	<specularColor>0.2 0.13 0.1 1.0</specularColor>
+</light>
+</children>
+</group>

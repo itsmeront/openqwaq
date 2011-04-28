@@ -1,0 +1,5 @@
+<group id="1" class="QPedestal">
+	<name>Pedestal</name>
+	<extent>6.4 0.7 6.4</extent>
+	<label>3D Projection</label>
+</group>

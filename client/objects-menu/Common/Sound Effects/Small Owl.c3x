@@ -1,0 +1,7 @@
+
+<group id="1" class="QRoamingSoundEffect">
+	<name>Small Owl</name>
+	<soundFileName>Creature_SmallJ_Idle01.wav</soundFileName>
+	<gain>0.4</gain>
+	<interval>20</interval>
+</group>

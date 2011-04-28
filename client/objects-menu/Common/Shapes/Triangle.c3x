@@ -1,0 +1,11 @@
+<frame class="QArrowHead">
+	<name>Triangle</name>
+	<extent>1.5 1.5 1.0</extent>
+	<materialList>
+		<material>
+			<ambientColor> 0.6 0.2 0.2 1.0</ambientColor>
+			<diffuseColor> 0.6 0.2 0.2 1.0</diffuseColor>
+		</material>
+	</materialList>
+	<opaque>true</opaque>
+</frame>
