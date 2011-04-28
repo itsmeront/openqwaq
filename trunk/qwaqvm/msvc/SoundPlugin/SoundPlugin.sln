@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SoundPlugin", "SoundPlugin.vcproj", "{01CCEBA5-003B-4D53-8329-2D138D230F22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug-DLL|Win32 = Debug-DLL|Win32
+		Release|Win32 = Release|Win32
+		Release-DLL|Win32 = Release-DLL|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01CCEBA5-003B-4D53-8329-2D138D230F22}.Debug|Win32.ActiveCfg = Debug|Win32
+		{01CCEBA5-003B-4D53-8329-2D138D230F22}.Debug|Win32.Build.0 = Debug|Win32
+		{01CCEBA5-003B-4D53-8329-2D138D230F22}.Debug-DLL|Win32.ActiveCfg = Debug-DLL|Win32
+		{01CCEBA5-003B-4D53-8329-2D138D230F22}.Debug-DLL|Win32.Build.0 = Debug-DLL|Win32
+		{01CCEBA5-003B-4D53-8329-2D138D230F22}.Release|Win32.ActiveCfg = Release|Win32
+		{01CCEBA5-003B-4D53-8329-2D138D230F22}.Release|Win32.Build.0 = Release|Win32
+		{01CCEBA5-003B-4D53-8329-2D138D230F22}.Release-DLL|Win32.ActiveCfg = Release-DLL|Win32
+		{01CCEBA5-003B-4D53-8329-2D138D230F22}.Release-DLL|Win32.Build.0 = Release-DLL|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
