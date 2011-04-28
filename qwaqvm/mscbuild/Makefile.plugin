@@ -1,0 +1,111 @@
+#############################################################################
+# Generic Makefile for plugins using MSVC
+#############################################################################
+LIBRARIAN:= lib # Can't use LIB because it conflicts with the environment var
+CP:= cp
+RM:= rm
+
+# The following are the three key locations (set via invocation):
+# BUILDDIR: Where is the root of the build tree?
+# PLATDIR: Where is the root of the platforms tree?
+# SRCDIR: Where is the root of the src tree? (i.e. ../../../winbuild/src)
+
+#############################################################################
+# Standard directory locations:
+#   CROSSDIR: The location of the cross platform sources
+#   WIN32DIR: The location of the win32 sources
+#   MAKERDIR: The location of the VMMaker generated sources
+#   BUILDDIR: The location where the plugin is built
+#
+CROSSDIR:=   $(PLATDIR)/Cross/plugins/$(LIBNAME)
+WIN32DIR:=   $(PLATDIR)/win32/plugins/$(LIBNAME)
+MAKERDIR:=   $(SRCDIR)/$(LIBNAME)
+BUILDDIR:=   $(BASEDIR)/build/$(LIBNAME)
+
+# Support directory locations
+CROSSVMDIR:= $(PLATDIR)/Cross/vm
+WIN32VMDIR:= $(PLATDIR)/win32/vm
+MAKERVMDIR:= $(SRCDIR)/vm
+
+include $(BASEDIR)/Makefile.CFLAGS
+
+INCLUDES:= -I. -I$(DXDIR) \
+	  -I$(MAKERVMDIR) -I$(WIN32VMDIR) -I$(CROSSVMDIR) \
+	  -I$(MAKERDIR) -I$(WIN32DIR) -I$(CROSSDIR)
+
+#############################################################################
+# If no source files were given, use standard set
+#
+
+CROSSSRC:= $(wildcard $(CROSSDIR)/*.c)
+WIN32SRC:= $(wildcard $(WIN32DIR)/*.c)
+MAKERSRC:= $(wildcard $(MAKERDIR)/*.c)
+LIBSRC:= $(notdir $(MAKERSRC) $(WIN32SRC) $(CROSSSRC))
+
+#############################################################################
+# Linker settings
+#
+LD:=	 link
+LDFLAGS:= /DEBUG
+
+.SUFFIXES:	.c .o .s .rc .res .dep
+
+#############################################################################
+# Plugin settings
+#
+OBJDIR:=    $(BASEDIR)/build/$(LIBNAME)
+VMDIR:=     $(BASEDIR)/build/vm
+PLUGINLIB:= $(VMDIR)/$(LIBNAME).lib
+PLUGINDLL:= $(VMDIR)/$(LIBNAME).dll
+LIBOBJ:=    $(LIBSRC:.c=.o)
+
+VPATH:= $(MAKERDIR) $(WIN32DIR) $(CROSSDIR) $(OBJDIR)
+
+all:	$(PLUGINLIB) $(PLUGINDLL)
+
+print-settings:
+	@echo ---------------- Makefile settings ------------------
+	@echo 'PATH=$(PATH)'
+	@echo 'VPATH=$(VPATH)'
+	@echo 'INCLUDES=$(INCLUDES)'
+	@echo 'CFLAGS=$(CFLAGS)'
+	@echo 'CROSSDIR=$(CROSSDIR)'
+	@echo 'WIN32DIR=$(WIN32DIR)'
+	@echo 'MAKERDIR=$(MAKERDIR)'
+	@echo 'CROSSSRC=$(CROSSSRC)'
+	@echo 'WIN32SRC=$(WIN32SRC)'
+	@echo 'MAKERSRC=$(MAKERSRC)'
+	@echo 'LIBSRC=$(LIBSRC)'
+	@echo 'LIBOBJ=$(LIBOBJ)'
+	@echo 'OBJDIR=$(OBJDIR)'
+	@echo 'VMDIR=$(VMDIR)'
+	@echo 'PLUGINLIB=$(PLUGINLIB)'
+	@echo 'PLUGINDLL=$(PLUGINDLL)'
+	@echo 'LIBOBJ=$(LIBOBJ)'
+	@echo -----------------------------------------------------
+
+$(OBJDIR):
+	mkdir $(subst /,\\,$(OBJDIR))
+
+$(VMDIR):
+	mkdir $(subst /,\\,$(VMDIR))
+
+$(PLUGINLIB): $(VMDIR) $(OBJDIR) $(LIBOBJ)
+	-$(RM) $(PLUGINLIB)
+	$(LIBRARIAN) $(LIBOBJ) $(EXTRALIBS) /out:$(subst /,\\,$(PLUGINLIB))
+
+$(PLUGINDLL): $(VMDIR) $(OBJDIR) $(LIBOBJ)
+	$(LD) $(LDFLAGS) /DLL $(LIBOBJ) $(EXTRALIBS) /OUT:$(subst /,\\,$(PLUGINDLL))
+
+#############################################################################
+# Rules for automated builds
+#
+
+.c.o:
+	$(CC) /Fo$@ $(CFLAGS) $(INCLUDES) $(DEFS) -c $(subst /,\\,$<)
+
+.rc.res:
+	$(RC) $(RCFLAGS) /fo $@ $<
+
+.c.dep:
+	$(CC) -M -o $(notdir $@) $(CFLAGS) $(INCLUDES) $(DEFS) -c $<
