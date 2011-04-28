@@ -1,0 +1,143 @@
+#############################################################################
+# Generic Makefile for plugins
+#############################################################################
+AR:= ar rc
+CP:= cp
+RM:= rm
+
+# The following are the two key locations (set via invocation):
+# BUILDDIR: Where is the root of the build tree?
+# PLATDIR: Where is the root of the platforms tree?
+
+#############################################################################
+# Standard directory locations:
+#   CROSSDIR: The location of the cross platform sources
+#   WIN32DIR: The location of the win32 sources
+#   MAKERDIR: The location of the VMMaker generated sources
+#   BUILDDIR: The location where the plugin is built
+#
+SRCDIR:=	../../../winbuild/src
+CROSSDIR:=	$(PLATDIR)/Cross/plugins/$(LIBNAME)
+WIN32DIR:=	$(PLATDIR)/win32/plugins/$(LIBNAME)
+MAKERDIR:=	$(SRCDIR)/$(LIBNAME)
+BUILDDIR:=	$(BASEDIR)/build/$(LIBNAME)
+
+# Support directory locations
+CROSSVMDIR:=$(PLATDIR)/Cross/vm
+WIN32VMDIR:=$(PLATDIR)/win32/vm
+MAKERVMDIR:=$(SRCDIR)/vm
+
+DXDIR:=     c:/dx7sdk/include
+
+INCLUDES:= -I. -I$(DXDIR) \
+	  -I$(MAKERVMDIR) -I$(WIN32VMDIR) -I$(CROSSVMDIR) \
+	  -I$(MAKERDIR) -I$(WIN32DIR) -I$(CROSSDIR)
+
+#############################################################################
+# If no source files were given, use standard set
+#
+
+CROSSSRC:= $(wildcard $(CROSSDIR)/*.c)
+WIN32SRC:= $(wildcard $(WIN32DIR)/*.c)
+MAKERSRC:= $(wildcard $(MAKERDIR)/*.c)
+LIBSRC:= $(notdir $(MAKERSRC) $(WIN32SRC) $(CROSSSRC))
+
+#############################################################################
+# C compiler settings (for gcc-3.4.5 MingW32 5.1.4)
+#
+NDEBUG:=-DNDEBUG
+# Set minimum version to WindowsXP (see \MinGW\include\w32api.h)
+WINVER:=-D_WIN32_WINNT=0x0501 -DWINVER=0x0501
+CC:=	gcc
+OFLAGS:= -O1 -march=pentium4 -momit-frame-pointer -funroll-loops \
+		-fno-builtin-printf -fno-builtin-putchar -fno-builtin-fprintf
+CFLAGS:= -ggdb3 -mwindows -mdll -mwin32 \
+	-mno-rtd -mms-bitfields -mno-accumulate-outgoing-args $(OFLAGS)
+DEFS:=	$(WINVER) -DWIN32 -DWIN32_FILE_SUPPORT -DNO_ISNAN \
+		-DNO_SERVICE -DNO_STD_FILE_SUPPORT \
+		$(NDEBUG) -DLSB_FIRST -DVM_NAME=\"$(VM)\" -DX86 $(XDEFS)
+
+#############################################################################
+# DLL settings
+#
+# Note: DLLTOOL/DLLWRAP does the work for everything related to plugins
+#
+DLLTOOL:=	dlltool
+DLLWRAP:=	dllwrap
+#OPTSTRIP:=	strip # for production
+OPTSTRIP:=	echo not doing strip
+
+.SUFFIXES:	.c .o .s .rc .res .dep
+
+#############################################################################
+# Plugin settings
+#
+OBJDIR:=    $(BASEDIR)/build/$(LIBNAME)
+VMDIR:=     $(BASEDIR)/build/vm
+PLUGINLIB:= $(VMDIR)/$(LIBNAME).lib
+PLUGINDLL:= $(VMDIR)/$(LIBNAME).dll
+LIBOBJ:=    $(LIBSRC:.c=.o)
+
+VPATH:= $(MAKERDIR) $(WIN32DIR) $(CROSSDIR) $(OBJDIR)
+
+all:	$(PLUGINLIB) $(PLUGINDLL)
+
+print-settings:
+	@echo ---------------- Makefile settings ------------------
+	@echo VPATH=$(VPATH)
+	@echo INCLUDES=$(INCLUDES)
+	@echo CFLAGS=$(CFLAGS)
+	@echo CROSSDIR=$(CROSSDIR)
+	@echo WIN32DIR=$(WIN32DIR)
+	@echo MAKERDIR=$(MAKERDIR)
+	@echo CROSSSRC=$(CROSSSRC)
+	@echo WIN32SRC=$(WIN32SRC)
+	@echo MAKERSRC=$(MAKERSRC)
+	@echo LIBSRC=$(LIBSRC)
+	@echo LIBOBJ=$(LIBOBJ)
+	@echo OBJDIR=$(OBJDIR)
+	@echo VMDIR=$(VMDIR)
+	@echo PLUGINLIB=$(PLUGINLIB)
+	@echo PLUGINDLL=$(PLUGINDLL)
+	@echo LIBOBJ=$(LIBOBJ)
+	@echo -----------------------------------------------------
+
+$(OBJDIR):
+	mkdir $(subst /,\,$(OBJDIR))
+
+$(VMDIR):
+	mkdir $(subst /,\,$(VMDIR))
+
+$(PLUGINLIB): $(VMDIR) $(OBJDIR) $(LIBOBJ)
+	-$(RM) $(PLUGINLIB)
+	$(AR) $(PLUGINLIB) $(LIBOBJ)
+
+$(PLUGINDLL): $(VMDIR) $(OBJDIR) $(LIBOBJ)
+	$(DLLTOOL) \
+		--output-def $(LIBNAME).def \
+		--output-exp $(LIBNAME).exp \
+		--output-lib $(LIBNAME).lib \
+		$(LIBOBJ)
+	$(DLLWRAP) -mwindows \
+		-def $(LIBNAME).def \
+		-o   $(VMDIR)/$(LIBNAME).dll \
+		$(LIBNAME).exp \
+		$(LIBOBJ) $(EXTRALIBS)
+	$(OPTSTRIP) --strip-all $(VMDIR)/$(LIBNAME).dll
+	-$(RM) $(LIBNAME).lib
+
+#############################################################################
+# Rules for automated builds
+#
+
+.c.o:
+		$(CC) $(CFLAGS) $(INCLUDES) $(DEFS) -c $<
+
+.c.s:
+		$(CC) -S -o $@ -fverbose-asm -Wa,ah $(CFLAGS) $(INCLUDES) $(DEFS) -c $<
+
+.rc.res:
+		$(RC) $(RCFLAGS) -i $< -o $@
+
+.c.dep:
+		$(CC) -M -o $(notdir $@) $(CFLAGS) $(INCLUDES) $(DEFS) -c $<
