@@ -1,0 +1,5 @@
+//
+// Prefix header for all source files of the 'PyBridge' target in the 'PyBridge' project.
+//
+
+#include <Carbon/Carbon.h>

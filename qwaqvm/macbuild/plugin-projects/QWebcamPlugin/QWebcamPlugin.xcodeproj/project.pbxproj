@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4534BF7F0E3459C70073DF5C /* qFeedbackChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4534BF7D0E3459C70073DF5C /* qFeedbackChannel.cpp */; };
+		4546A6AA0DE392C40095536B /* QWebcamPlugin.c in Sources */ = {isa = PBXBuildFile; fileRef = 4546A6A90DE392C40095536B /* QWebcamPlugin.c */; };
+		A249EED11099504E00C4B65B /* libboost_thread-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A249EED01099504E00C4B65B /* libboost_thread-mt.a */; };
+		A2BDCBEF107E759E00B079EC /* qWebcam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2BDCBEE107E759E00B079EC /* qWebcam.cpp */; };
+		A2BDCC05107E766D00B079EC /* qBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A2BDCBFF107E766D00B079EC /* qBuffer.cpp */; };
+		A2BDCD17107E77C500B079EC /* qLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457879DE0E08E37F000E65D1 /* qLogger.cpp */; };
+		A2BDCD7A107E7EE400B079EC /* qmPlugin.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2BDCD78107E7EE400B079EC /* qmPlugin.mm */; };
+		A2BDCDBA107E86A400B079EC /* qWebcamQTKit.mm in Sources */ = {isa = PBXBuildFile; fileRef = A2BDCDB9107E86A400B079EC /* qWebcamQTKit.mm */; };
+		A2BDCE9E107E9FA000B079EC /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2BDCE9A107E9FA000B079EC /* QuickTime.framework */; };
+		A2BDCE9F107E9FA000B079EC /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2BDCE9B107E9FA000B079EC /* QTKit.framework */; };
+		A2BDCEA0107E9FA000B079EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2BDCE9C107E9FA000B079EC /* Foundation.framework */; };
+		A2BDCEA1107E9FA000B079EC /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2BDCE9D107E9FA000B079EC /* Carbon.framework */; };
+		A2BDCEAC107E9FCC00B079EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2BDCEAB107E9FCC00B079EC /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		73A8C47F10617BE4005C39DB /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.gcc.4_2;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		45F5EE900F547A8000E4E9A1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4534BF7C0E3459C70073DF5C /* qFeedbackChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qFeedbackChannel.h; path = ../../../platforms/Cross/plugins/QwaqLib/qFeedbackChannel.h; sourceTree = SOURCE_ROOT; };
+		4534BF7D0E3459C70073DF5C /* qFeedbackChannel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qFeedbackChannel.cpp; path = ../../../platforms/Cross/plugins/QwaqLib/qFeedbackChannel.cpp; sourceTree = SOURCE_ROOT; };
+		4534BF7E0E3459C70073DF5C /* qFeedbackChannel-interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "qFeedbackChannel-interface.h"; path = "../../../platforms/Cross/plugins/QwaqLib/qFeedbackChannel-interface.h"; sourceTree = SOURCE_ROOT; };
+		45385C290DF0DC690060F9DD /* speex_jitter_buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = speex_jitter_buffer.h; path = "../../../platforms/Cross/third-party/speexclient/speex_jitter_buffer.h"; sourceTree = "<group>"; };
+		45385C2A0DF0DC690060F9DD /* speex_jitter_buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = speex_jitter_buffer.c; path = "../../../platforms/Cross/third-party/speexclient/speex_jitter_buffer.c"; sourceTree = "<group>"; };
+		4546A6940DE390BC0095536B /* interp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = interp.h; path = ../../../src/vm/interp.h; sourceTree = SOURCE_ROOT; };
+		4546A6950DE390EE0095536B /* sqVirtualMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqVirtualMachine.h; path = ../../../platforms/Cross/vm/sqVirtualMachine.h; sourceTree = SOURCE_ROOT; };
+		4546A6960DE390EE0095536B /* sqMemoryAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqMemoryAccess.h; path = ../../../platforms/Cross/vm/sqMemoryAccess.h; sourceTree = SOURCE_ROOT; };
+		4546A6970DE390EE0095536B /* sq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sq.h; path = ../../../platforms/Cross/vm/sq.h; sourceTree = SOURCE_ROOT; };
+		4546A6980DE3910F0095536B /* sqPlatformSpecific.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqPlatformSpecific.h; path = "../../../platforms/Mac OS/vm/sqPlatformSpecific.h"; sourceTree = SOURCE_ROOT; };
+		4546A6990DE3910F0095536B /* sqConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqConfig.h; path = "../../../platforms/Mac OS/vm/sqConfig.h"; sourceTree = SOURCE_ROOT; };
+		4546A69A0DE3910F0095536B /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = "../../../platforms/Mac OS/vm/config.h"; sourceTree = SOURCE_ROOT; };
+		4546A6A90DE392C40095536B /* QWebcamPlugin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = QWebcamPlugin.c; path = ../../../src/plugins/QWebcamPlugin/QWebcamPlugin.c; sourceTree = SOURCE_ROOT; };
+		457878050E081B80000E65D1 /* qMappedResourceBoilerplate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qMappedResourceBoilerplate.hpp; path = ../../../platforms/Cross/plugins/QwaqLib/qMappedResourceBoilerplate.hpp; sourceTree = SOURCE_ROOT; };
+		457879DE0E08E37F000E65D1 /* qLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qLogger.cpp; path = ../../../platforms/Cross/plugins/QwaqLib/qLogger.cpp; sourceTree = SOURCE_ROOT; };
+		457879E10E08E3E8000E65D1 /* qLogger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qLogger.hpp; path = ../../../platforms/Cross/plugins/QwaqLib/qLogger.hpp; sourceTree = SOURCE_ROOT; };
+		457C03590FD38FB9000FCB6F /* qRingBuffer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qRingBuffer.hpp; path = ../../../platforms/Cross/plugins/QwaqLib/qRingBuffer.hpp; sourceTree = SOURCE_ROOT; };
+		457C035A0FD38FB9000FCB6F /* qRingBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qRingBuffer.cpp; path = ../../../platforms/Cross/plugins/QwaqLib/qRingBuffer.cpp; sourceTree = SOURCE_ROOT; };
+		508817D609F0C9AD0071BF1A /* QWebcamPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QWebcamPlugin-Info.plist"; sourceTree = "<group>"; };
+		508817E609F0CA040071BF1A /* QWebcamPluginProj.xcconfig */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xcconfig; path = QWebcamPluginProj.xcconfig; sourceTree = "<group>"; };
+		508817E709F0CA040071BF1A /* QWebcamPluginTarget.xcconfig */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xcconfig; path = QWebcamPluginTarget.xcconfig; sourceTree = "<group>"; };
+		A249EED01099504E00C4B65B /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_thread-mt.a"; path = "../../third-party/boost_1_40_0/lib/libboost_thread-mt.a"; sourceTree = SOURCE_ROOT; };
+		A2BDCBD7107E74F800B079EC /* QWebcamPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QWebcamPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2BDCBED107E759E00B079EC /* qWebcam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qWebcam.h; path = ../../../platforms/Cross/plugins/QWebcamPlugin/qWebcam.h; sourceTree = SOURCE_ROOT; };
+		A2BDCBEE107E759E00B079EC /* qWebcam.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qWebcam.cpp; path = ../../../platforms/Cross/plugins/QWebcamPlugin/qWebcam.cpp; sourceTree = SOURCE_ROOT; };
+		A2BDCBF1107E762C00B079EC /* QWebcamPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QWebcamPlugin.h; sourceTree = "<group>"; };
+		A2BDCBF3107E766D00B079EC /* qSharedQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qSharedQueue.h; path = ../../../platforms/Cross/plugins/QwaqLib/qSharedQueue.h; sourceTree = SOURCE_ROOT; };
+		A2BDCBF4107E766D00B079EC /* qSharedQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qSharedQueue.cpp; path = ../../../platforms/Cross/plugins/QwaqLib/qSharedQueue.cpp; sourceTree = SOURCE_ROOT; };
+		A2BDCBF5107E766D00B079EC /* qLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qLogger.h; path = ../../../platforms/Cross/plugins/QwaqLib/qLogger.h; sourceTree = SOURCE_ROOT; };
+		A2BDCBF6107E766D00B079EC /* qException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qException.h; path = ../../../platforms/Cross/plugins/QwaqLib/qException.h; sourceTree = SOURCE_ROOT; };
+		A2BDCBF7107E766D00B079EC /* qException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qException.cpp; path = ../../../platforms/Cross/plugins/QwaqLib/qException.cpp; sourceTree = SOURCE_ROOT; };
+		A2BDCBF8107E766D00B079EC /* qCPlusPlusUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qCPlusPlusUtils.h; path = ../../../platforms/Cross/plugins/QwaqLib/qCPlusPlusUtils.h; sourceTree = SOURCE_ROOT; };
+		A2BDCBFA107E766D00B079EC /* qCommandQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qCommandQueue.h; path = ../../../platforms/Cross/plugins/QwaqLib/qCommandQueue.h; sourceTree = SOURCE_ROOT; };
+		A2BDCBFE107E766D00B079EC /* qBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qBuffer.h; path = ../../../platforms/Cross/plugins/QwaqLib/qBuffer.h; sourceTree = SOURCE_ROOT; };
+		A2BDCBFF107E766D00B079EC /* qBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qBuffer.cpp; path = ../../../platforms/Cross/plugins/QwaqLib/qBuffer.cpp; sourceTree = SOURCE_ROOT; };
+		A2BDCD78107E7EE400B079EC /* qmPlugin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = qmPlugin.mm; sourceTree = "<group>"; };
+		A2BDCDB1107E84BD00B079EC /* qWebcamQTKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qWebcamQTKit.h; sourceTree = "<group>"; };
+		A2BDCDB9107E86A400B079EC /* qWebcamQTKit.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = qWebcamQTKit.mm; sourceTree = "<group>"; };
+		A2BDCE9A107E9FA000B079EC /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		A2BDCE9B107E9FA000B079EC /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		A2BDCE9C107E9FA000B079EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		A2BDCE9D107E9FA000B079EC /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		A2BDCEAB107E9FCC00B079EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		A2BDCECB107EA44800B079EC /* CamOutputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CamOutputHandler.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		508817D209F0C9AD0071BF1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2BDCE9E107E9FA000B079EC /* QuickTime.framework in Frameworks */,
+				A2BDCE9F107E9FA000B079EC /* QTKit.framework in Frameworks */,
+				A2BDCEA0107E9FA000B079EC /* Foundation.framework in Frameworks */,
+				A2BDCEA1107E9FA000B079EC /* Carbon.framework in Frameworks */,
+				A2BDCEAC107E9FCC00B079EC /* QuartzCore.framework in Frameworks */,
+				A249EED11099504E00C4B65B /* libboost_thread-mt.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45385C280DF0DC540060F9DD /* speex */ = {
+			isa = PBXGroup;
+			children = (
+				45385C290DF0DC690060F9DD /* speex_jitter_buffer.h */,
+				45385C2A0DF0DC690060F9DD /* speex_jitter_buffer.c */,
+			);
+			name = speex;
+			sourceTree = "<group>";
+		};
+		4546A6850DE390360095536B /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				A2BDCBF0107E762C00B079EC /* QWebcamPlugin */,
+				A2BDCBEA107E756A00B079EC /* Cross */,
+				457878990E087D53000E65D1 /* QwaqLib */,
+				4546A6930DE390920095536B /* vm */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		4546A6930DE390920095536B /* vm */ = {
+			isa = PBXGroup;
+			children = (
+				4546A6980DE3910F0095536B /* sqPlatformSpecific.h */,
+				4546A6990DE3910F0095536B /* sqConfig.h */,
+				4546A69A0DE3910F0095536B /* config.h */,
+				4546A6950DE390EE0095536B /* sqVirtualMachine.h */,
+				4546A6960DE390EE0095536B /* sqMemoryAccess.h */,
+				4546A6970DE390EE0095536B /* sq.h */,
+				4546A6940DE390BC0095536B /* interp.h */,
+			);
+			name = vm;
+			sourceTree = "<group>";
+		};
+		457878990E087D53000E65D1 /* QwaqLib */ = {
+			isa = PBXGroup;
+			children = (
+				A2BDCBF3107E766D00B079EC /* qSharedQueue.h */,
+				A2BDCBFA107E766D00B079EC /* qCommandQueue.h */,
+				A2BDCBF5107E766D00B079EC /* qLogger.h */,
+				A2BDCBF8107E766D00B079EC /* qCPlusPlusUtils.h */,
+				A2BDCBFE107E766D00B079EC /* qBuffer.h */,
+				A2BDCBF6107E766D00B079EC /* qException.h */,
+				4534BF7C0E3459C70073DF5C /* qFeedbackChannel.h */,
+				4534BF7E0E3459C70073DF5C /* qFeedbackChannel-interface.h */,
+				457878050E081B80000E65D1 /* qMappedResourceBoilerplate.hpp */,
+				457879E10E08E3E8000E65D1 /* qLogger.hpp */,
+				457C03590FD38FB9000FCB6F /* qRingBuffer.hpp */,
+			);
+			name = QwaqLib;
+			sourceTree = "<group>";
+		};
+		4578789A0E087D5B000E65D1 /* QwaqLib */ = {
+			isa = PBXGroup;
+			children = (
+				A2BDCBF4107E766D00B079EC /* qSharedQueue.cpp */,
+				A2BDCBF7107E766D00B079EC /* qException.cpp */,
+				A2BDCBFF107E766D00B079EC /* qBuffer.cpp */,
+				4534BF7D0E3459C70073DF5C /* qFeedbackChannel.cpp */,
+				457879DE0E08E37F000E65D1 /* qLogger.cpp */,
+				457C035A0FD38FB9000FCB6F /* qRingBuffer.cpp */,
+			);
+			name = QwaqLib;
+			sourceTree = "<group>";
+		};
+		508817C209F0C9740071BF1A = {
+			isa = PBXGroup;
+			children = (
+				4546A6850DE390360095536B /* Headers */,
+				508817F509F0CAB50071BF1A /* Sources */,
+				508817E509F0C9EF0071BF1A /* Configuration Files */,
+				508817D609F0C9AD0071BF1A /* QWebcamPlugin-Info.plist */,
+				5088180609F0CDD00071BF1A /* External Frameworks and Libraries */,
+				508817D509F0C9AD0071BF1A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		508817D509F0C9AD0071BF1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2BDCBD7107E74F800B079EC /* QWebcamPlugin.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		508817E509F0C9EF0071BF1A /* Configuration Files */ = {
+			isa = PBXGroup;
+			children = (
+				508817E609F0CA040071BF1A /* QWebcamPluginProj.xcconfig */,
+				508817E709F0CA040071BF1A /* QWebcamPluginTarget.xcconfig */,
+			);
+			name = "Configuration Files";
+			sourceTree = "<group>";
+		};
+		508817F509F0CAB50071BF1A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A2BDCD77107E7EE400B079EC /* QWebcamPlugin */,
+				4578789A0E087D5B000E65D1 /* QwaqLib */,
+				45385C280DF0DC540060F9DD /* speex */,
+				4546A6A90DE392C40095536B /* QWebcamPlugin.c */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		5088180609F0CDD00071BF1A /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A249EED01099504E00C4B65B /* libboost_thread-mt.a */,
+				A2BDCEAB107E9FCC00B079EC /* QuartzCore.framework */,
+				A2BDCE9A107E9FA000B079EC /* QuickTime.framework */,
+				A2BDCE9B107E9FA000B079EC /* QTKit.framework */,
+				A2BDCE9C107E9FA000B079EC /* Foundation.framework */,
+				A2BDCE9D107E9FA000B079EC /* Carbon.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		A2BDCBEA107E756A00B079EC /* Cross */ = {
+			isa = PBXGroup;
+			children = (
+				A2BDCBED107E759E00B079EC /* qWebcam.h */,
+				A2BDCBEE107E759E00B079EC /* qWebcam.cpp */,
+			);
+			name = Cross;
+			sourceTree = "<group>";
+		};
+		A2BDCBF0107E762C00B079EC /* QWebcamPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				A2BDCECB107EA44800B079EC /* CamOutputHandler.h */,
+				A2BDCDB1107E84BD00B079EC /* qWebcamQTKit.h */,
+				A2BDCBF1107E762C00B079EC /* QWebcamPlugin.h */,
+			);
+			name = QWebcamPlugin;
+			path = "../../../platforms/Mac OS/plugins/QWebcamPlugin";
+			sourceTree = SOURCE_ROOT;
+		};
+		A2BDCD77107E7EE400B079EC /* QWebcamPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				A2BDCDB9107E86A400B079EC /* qWebcamQTKit.mm */,
+				A2BDCD78107E7EE400B079EC /* qmPlugin.mm */,
+			);
+			name = QWebcamPlugin;
+			path = "../../../platforms/Mac OS/plugins/QWebcamPlugin";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		508817D309F0C9AD0071BF1A /* QWebcamPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 508817D709F0C9AE0071BF1A /* Build configuration list for PBXNativeTarget "QWebcamPlugin" */;
+			buildPhases = (
+				508817D009F0C9AD0071BF1A /* Resources */,
+				508817D109F0C9AD0071BF1A /* Sources */,
+				508817D209F0C9AD0071BF1A /* Frameworks */,
+				45F5EE900F547A8000E4E9A1 /* CopyFiles */,
+			);
+			buildRules = (
+				73A8C47F10617BE4005C39DB /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = QWebcamPlugin;
+			productName = QWebcamPlugin;
+			productReference = A2BDCBD7107E74F800B079EC /* QWebcamPlugin.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		508817C409F0C9740071BF1A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 508817C509F0C9740071BF1A /* Build configuration list for PBXProject "QWebcamPlugin" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 0;
+			mainGroup = 508817C209F0C9740071BF1A;
+			productRefGroup = 508817D509F0C9AD0071BF1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				508817D309F0C9AD0071BF1A /* QWebcamPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		508817D009F0C9AD0071BF1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		508817D109F0C9AD0071BF1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4546A6AA0DE392C40095536B /* QWebcamPlugin.c in Sources */,
+				4534BF7F0E3459C70073DF5C /* qFeedbackChannel.cpp in Sources */,
+				A2BDCBEF107E759E00B079EC /* qWebcam.cpp in Sources */,
+				A2BDCC05107E766D00B079EC /* qBuffer.cpp in Sources */,
+				A2BDCD17107E77C500B079EC /* qLogger.cpp in Sources */,
+				A2BDCD7A107E7EE400B079EC /* qmPlugin.mm in Sources */,
+				A2BDCDBA107E86A400B079EC /* qWebcamQTKit.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		508817C609F0C9740071BF1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 508817E609F0CA040071BF1A /* QWebcamPluginProj.xcconfig */;
+			buildSettings = {
+				ARCHS = i386;
+				GCC_ENABLE_SYMBOL_SEPARATION = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_USE_GCC3_PFE_SUPPORT = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/Developer/Headers/FlatCarbon,
+					"$(SRCROOT)/../../../platforms/MacOS/plugins/QWebcamPlugin",
+					"$(SRCROOT)/../../../platforms/Cross/plugins/QWebcamPlugin",
+					"$(SRCROOT)/../../../platforms/Cross/third-party",
+					"$(SRCROOT)/../../../platforms/Cross/third-party/boost_1_40_0",
+					.,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../src/plugins/QWebcamPlugin",
+					"$(SRCROOT)/speex",
+				);
+				PREBINDING = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		508817C709F0C9740071BF1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 508817E609F0CA040071BF1A /* QWebcamPluginProj.xcconfig */;
+			buildSettings = {
+				ARCHS = i386;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_ENABLE_SYMBOL_SEPARATION = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_USE_GCC3_PFE_SUPPORT = NO;
+				GCC_VERSION = 4.2;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/Developer/Headers/FlatCarbon,
+					"$(SRCROOT)/../../../platforms/MacOS/plugins/QWebcamPlugin",
+					"$(SRCROOT)/../../../platforms/Cross/plugins/QWebcamPlugin",
+					"$(SRCROOT)/../../../platforms/Cross/third-party",
+					"$(SRCROOT)/../../../platforms/Cross/third-party/boost_1_40_0",
+					.,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../src/plugins/QWebcamPlugin",
+					"$(SRCROOT)/speex",
+				);
+				PREBINDING = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+		508817D809F0C9AE0071BF1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 508817E709F0CA040071BF1A /* QWebcamPluginTarget.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/System/Library/Frameworks",
+					"$(SRCROOT)/../../third-party/MainConcept/AVCSDK-OSXINTL32_8.3.0_OSX/Frameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = QWebcamPlugin_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GENERATE_PKGINFO_FILE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/speex",
+					"$(SRCROOT)/../../third-party/Digium",
+					"$(SRCROOT)/../../third-party/PortAudio",
+					"\"$(SRCROOT)/../../third-party/boost_1_40_0/lib\"",
+				);
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		508817D909F0C9AE0071BF1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 508817E709F0CA040071BF1A /* QWebcamPluginTarget.xcconfig */;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/System/Library/Frameworks",
+					"$(SRCROOT)/../../third-party/MainConcept/AVCSDK-OSXINTL32_8.3.0_OSX/Frameworks",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = QWebcamPlugin_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = 4.2;
+				GENERATE_PKGINFO_FILE = YES;
+				ICC_DEBUG = NO;
+				ICC_ENABLE_CPP_RTTI = YES;
+				ICC_FP_MODEL = src;
+				ICC_OPTLEVEL = speedHLO;
+				ICC_OPT_IPO_FOR_SINGLE_FILE_COMPILATION = YES;
+				ICC_OPT_USE_ARCH_IA32 = SSE41;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/speex",
+					"$(SRCROOT)/../../third-party/Digium",
+					"$(SRCROOT)/../../third-party/PortAudio",
+					"\"$(SRCROOT)/../../third-party/boost_1_40_0/lib\"",
+				);
+				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = debugging;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		508817C509F0C9740071BF1A /* Build configuration list for PBXProject "QWebcamPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				508817C609F0C9740071BF1A /* Debug */,
+				508817C709F0C9740071BF1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		508817D709F0C9AE0071BF1A /* Build configuration list for PBXNativeTarget "QWebcamPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				508817D809F0C9AE0071BF1A /* Debug */,
+				508817D909F0C9AE0071BF1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 508817C409F0C9740071BF1A /* Project object */;
+}

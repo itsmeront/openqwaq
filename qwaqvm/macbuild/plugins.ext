@@ -1,0 +1,17 @@
+# Automatically generated makefile include for external plugins
+EXTERNAL_PLUGINS = \
+BochsIA32Plugin \
+CroquetPlugin \
+SqueakFFIPrims \
+FloatArrayPlugin \
+FloatMathPlugin \
+Mpeg3Plugin \
+PNGLibPlugin \
+PSharePlugin \
+PyBridge \
+QAudioPlugin \
+QVideoCodecPluginMC \
+QVideoCodecPluginQT \
+QWebcamPlugin \
+QwaqMediaPlugin \
+UnixOSProcessPlugin

@@ -1,0 +1,4 @@
+#!/bin/sh
+# remove any version.o's in the VM build so that the "built on" string will be
+# up to date.
+find build -name version.o -print -exec rm {} \;

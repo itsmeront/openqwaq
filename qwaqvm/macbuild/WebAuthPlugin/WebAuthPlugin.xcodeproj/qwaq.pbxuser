@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = 8D01CCC60486CAD60068D4B7 /* WebAuthPlugin */;
+		addToTargets = (
+		);
+		breakpoints = (
+		);
+		codeSenseManager = DA3A20F30AA63CAE0050B983 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					447,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					538,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 294345634;
+			PBXWorkspaceStateSaveDate = 294345634;
+		};
+		perUserProjectItems = {
+			DA80D9461188E57700E88704 = DA80D9461188E57700E88704 /* PBXTextBookmark */;
+			DA80D9471188E57700E88704 = DA80D9471188E57700E88704 /* PBXTextBookmark */;
+			DA80D9481188E57700E88704 = DA80D9481188E57700E88704 /* PBXBookmark */;
+			DA80D9681188FF2900E88704 = DA80D9681188FF2900E88704 /* PBXTextBookmark */;
+			DA80D9A4118B63A800E88704 /* PBXBookmark */ = DA80D9A4118B63A800E88704 /* PBXBookmark */;
+			DA80D9AA118B63E900E88704 /* XCBuildMessageTextBookmark */ = DA80D9AA118B63E900E88704 /* XCBuildMessageTextBookmark */;
+			DA80D9AB118B63E900E88704 /* PBXTextBookmark */ = DA80D9AB118B63E900E88704 /* PBXTextBookmark */;
+			DA80DBCE118B7B5500E88704 /* PBXTextBookmark */ = DA80DBCE118B7B5500E88704 /* PBXTextBookmark */;
+			DA80DBCF118B7B5500E88704 /* PBXTextBookmark */ = DA80DBCF118B7B5500E88704 /* PBXTextBookmark */;
+			DA80DBD0118B7B5500E88704 /* PBXTextBookmark */ = DA80DBD0118B7B5500E88704 /* PBXTextBookmark */;
+			DA80DBD1118B7B5500E88704 /* PBXTextBookmark */ = DA80DBD1118B7B5500E88704 /* PBXTextBookmark */;
+			DA80DBD3118B7B5500E88704 /* PBXTextBookmark */ = DA80DBD3118B7B5500E88704 /* PBXTextBookmark */;
+			DA80DBD5118B7B5500E88704 /* PBXTextBookmark */ = DA80DBD5118B7B5500E88704 /* PBXTextBookmark */;
+			DA80DBD7118B7B5500E88704 /* PBXTextBookmark */ = DA80DBD7118B7B5500E88704 /* PBXTextBookmark */;
+			DA80DBD8118B7B5500E88704 /* PBXTextBookmark */ = DA80DBD8118B7B5500E88704 /* PBXTextBookmark */;
+			DA80DBDD118B7B5500E88704 /* PBXTextBookmark */ = DA80DBDD118B7B5500E88704 /* PBXTextBookmark */;
+			DA80DBDE118B7B5500E88704 /* PBXTextBookmark */ = DA80DBDE118B7B5500E88704 /* PBXTextBookmark */;
+			DA80DBE1118B7B5500E88704 /* PBXTextBookmark */ = DA80DBE1118B7B5500E88704 /* PBXTextBookmark */;
+		};
+		sourceControlManager = DA3A20F20AA63CAE0050B983 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D01CCC60486CAD60068D4B7 /* WebAuthPlugin */ = {
+		activeExec = 0;
+	};
+	DA3A20F20AA63CAE0050B983 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+		scmType = "";
+	};
+	DA3A20F30AA63CAE0050B983 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	DA80D8EF1188DDA100E88704 /* WebAuthPlugin.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {607, 4264}}";
+			sepNavSelRange = "{3741, 0}";
+			sepNavVisRange = "{3741, 111}";
+		};
+	};
+	DA80D8F21188DDCB00E88704 /* NtlmGenerator.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {817, 2067}}";
+			sepNavSelRange = "{5475, 0}";
+			sepNavVisRange = "{5201, 704}";
+		};
+	};
+	DA80D8F31188DDCB00E88704 /* sqMacAuth.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {962, 2379}}";
+			sepNavSelRange = "{2547, 0}";
+			sepNavVisRange = "{700, 1984}";
+			sepNavWindowFrame = "{{137, 137}, {1021, 765}}";
+		};
+	};
+	DA80D90C1188DE9E00E88704 /* WebAuthPlugin.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {756, 285}}";
+			sepNavSelRange = "{124, 0}";
+			sepNavVisRange = "{0, 124}";
+			sepNavWindowFrame = "{{39, 210}, {1021, 765}}";
+		};
+	};
+	DA80D9461188E57700E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80D8EF1188DDA100E88704 /* WebAuthPlugin.c */;
+		name = "WebAuthPlugin.c: 148";
+		rLen = 0;
+		rLoc = 3741;
+		rType = 0;
+		vrLen = 111;
+		vrLoc = 3741;
+	};
+	DA80D9471188E57700E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80D90C1188DE9E00E88704 /* WebAuthPlugin.pch */;
+		name = "WebAuthPlugin.pch: 6";
+		rLen = 0;
+		rLoc = 124;
+		rType = 0;
+		vrLen = 124;
+		vrLoc = 0;
+	};
+	DA80D9481188E57700E88704 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = DA80D8F31188DDCB00E88704 /* sqMacAuth.c */;
+	};
+	DA80D9681188FF2900E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80D8F31188DDCB00E88704 /* sqMacAuth.c */;
+		name = "sqMacAuth.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 113;
+		vrLoc = 0;
+	};
+	DA80D97A118B5F3900E88704 /* spnegoBlob.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {962, 1209}}";
+			sepNavSelRange = "{3149, 0}";
+			sepNavVisRange = "{1952, 1197}";
+			sepNavWindowFrame = "{{126, 54}, {1021, 765}}";
+		};
+	};
+	DA80D9A4118B63A800E88704 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = DA80D97A118B5F3900E88704 /* spnegoBlob.h */;
+	};
+	DA80D9AA118B63E900E88704 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Pointer targets in passing argument 4 of 'spnegoTokenInitFromPrincipal' differ in signedness";
+		fRef = DA80D8F31188DDCB00E88704 /* sqMacAuth.c */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 89;
+		rType = 1;
+	};
+	DA80D9AB118B63E900E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80D8F31188DDCB00E88704 /* sqMacAuth.c */;
+		name = "sqMacAuth.c: 84";
+		rLen = 28;
+		rLoc = 2812;
+		rType = 0;
+		vrLen = 1288;
+		vrLoc = 1650;
+	};
+	DA80DBCE118B7B5500E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80D90C1188DE9E00E88704 /* WebAuthPlugin.pch */;
+		name = "WebAuthPlugin.pch: 6";
+		rLen = 0;
+		rLoc = 124;
+		rType = 0;
+		vrLen = 124;
+		vrLoc = 0;
+	};
+	DA80DBCF118B7B5500E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80D97A118B5F3900E88704 /* spnegoBlob.h */;
+		name = "spnegoBlob.h: 15";
+		rLen = 0;
+		rLoc = 104;
+		rType = 0;
+		vrLen = 976;
+		vrLoc = 0;
+	};
+	DA80DBD0118B7B5500E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80D8F21188DDCB00E88704 /* NtlmGenerator.h */;
+		name = "NtlmGenerator.h: 147";
+		rLen = 0;
+		rLoc = 5475;
+		rType = 0;
+		vrLen = 704;
+		vrLoc = 5201;
+	};
+	DA80DBD1118B7B5500E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80DBD2118B7B5500E88704 /* CoreServices.r */;
+		name = "CoreServices.r: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 488;
+		vrLoc = 0;
+	};
+	DA80DBD2118B7B5500E88704 /* CoreServices.r */ = {
+		isa = PBXFileReference;
+		name = CoreServices.r;
+		path = /System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.r;
+		sourceTree = "<absolute>";
+	};
+	DA80DBD3118B7B5500E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80DBD4118B7B5500E88704 /* Components.k.h */;
+		name = "Components.k.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 477;
+		vrLoc = 0;
+	};
+	DA80DBD4118B7B5500E88704 /* Components.k.h */ = {
+		isa = PBXFileReference;
+		name = Components.k.h;
+		path = /System/Library/Frameworks/CoreServices.framework/Headers/Components.k.h;
+		sourceTree = "<absolute>";
+	};
+	DA80DBD5118B7B5500E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80DBD6118B7B5500E88704 /* CoreServices.h */;
+		name = "CoreServices.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 495;
+		vrLoc = 0;
+	};
+	DA80DBD6118B7B5500E88704 /* CoreServices.h */ = {
+		isa = PBXFileReference;
+		name = CoreServices.h;
+		path = /System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h;
+		sourceTree = "<absolute>";
+	};
+	DA80DBD7118B7B5500E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80D8F31188DDCB00E88704 /* sqMacAuth.c */;
+		name = "sqMacAuth.c: 84";
+		rLen = 0;
+		rLoc = 2840;
+		rType = 0;
+		vrLen = 686;
+		vrLoc = 2311;
+	};
+	DA80DBD8118B7B5500E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80D8F31188DDCB00E88704 /* sqMacAuth.c */;
+		name = "sqMacAuth.c: 90";
+		rLen = 0;
+		rLoc = 2840;
+		rType = 0;
+		vrLen = 725;
+		vrLoc = 2311;
+	};
+	DA80DBDD118B7B5500E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80D8F31188DDCB00E88704 /* sqMacAuth.c */;
+		name = "sqMacAuth.c: 76";
+		rLen = 0;
+		rLoc = 2585;
+		rType = 0;
+		vrLen = 1814;
+		vrLoc = 1649;
+	};
+	DA80DBDE118B7B5500E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80D8F31188DDCB00E88704 /* sqMacAuth.c */;
+		name = "sqMacAuth.c: 79";
+		rLen = 0;
+		rLoc = 2547;
+		rType = 0;
+		vrLen = 1984;
+		vrLoc = 700;
+	};
+	DA80DBE1118B7B5500E88704 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DA80D97A118B5F3900E88704 /* spnegoBlob.h */;
+		name = "spnegoBlob.h: 93";
+		rLen = 0;
+		rLoc = 3149;
+		rType = 0;
+		vrLen = 1197;
+		vrLoc = 1952;
+	};
+}

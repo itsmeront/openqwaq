@@ -1,0 +1,23 @@
+#!/bin/sh
+# Run an xcodebuild -project blah clean on all current plugin projects
+
+for p in FloatMathPlugin/FloatMathPlugin.xcodeproj \
+			FloatArrayPlugin/FloatArrayPlugin.xcodeproj \
+			CroquetPlugin/CroquetPlugin.xcodeproj \
+			plugin-projects/QAudioPlugin/QAudioPlugin.xcodeproj \
+			QVideoCodecPluginMC/QVideoCodecPluginMC.xcodeproj \
+			plugin-projects/QWebcamPlugin/QWebcamPlugin.xcodeproj \
+			BochsIA32Plugin/BochsIA32Plugin.xcodeproj \
+			UnixOSProcessPlugin/UnixOSProcessPlugin.xcodeproj
+do
+	xcodebuild -project $p -configuration Release clean
+	xcodebuild -project $p -configuration Debug clean
+done
+
+for p in	SqueakFFIPrims/SqueakFFI.xcodeproj \
+			Mpeg3Plugin/Mpeg3Plugin.xcodeproj \
+			WebAuthPlugin/WebAuthPlugin.xcodeproj
+do
+	xcodebuild -project $p -configuration Deployment clean
+	xcodebuild -project $p -configuration Development clean
+done
