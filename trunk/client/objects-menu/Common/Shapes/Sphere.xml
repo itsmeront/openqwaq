@@ -1,0 +1,11 @@
+<sphere>
+	<name>Sphere</name>
+	<radius>1.0</radius>
+	<materialList>
+		<material>
+			<ambientColor> 0.2 0.3 0.9 1.0</ambientColor>
+			<diffuseColor> 0.2 0.3 0.9 1.0</diffuseColor>
+		</material>
+	</materialList>
+	<opaque>true</opaque>
+</sphere>

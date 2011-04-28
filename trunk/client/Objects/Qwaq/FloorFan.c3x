@@ -1,0 +1,219 @@
+<frameThumb id="27">
+	<name>Fan</name>
+	<sha>HXKVMD1JDKKOUNKGWJC6SVV3KX79S2T</sha>
+	<children id="28">
+		<group id="29">
+			<name>Fan</name>
+			<children id="30">
+				<cube id="31">
+					<name>k1</name>
+					<position>-0.009 1.1427 -0.7287</position>
+					<extent>0.017852 0.035802 0.015452</extent>
+					<location>0.011175 2.3331 0.73598</location>
+				</cube>
+				<cube id="32">
+					<name>os2</name>
+					<position>-0.009 1.1427 -0.7287</position>
+					<extent>0.15855 0.026802 0.026852</extent>
+					<location>0.008625 2.2168 0.74558</location>
+				</cube>
+				<cube id="33">
+					<name>sraf</name>
+					<position>-0.009 1.1427 -0.7287</position>
+					<extent>0.15435 0.15435 0.099902</extent>
+					<location>0.011025 1.3099 0.59895</location>
+				</cube>
+				<cube id="34">
+					<name>Duplicate0</name>
+					<position>-0.009 1.1427 -0.7287</position>
+					<extent>0.1809 0.9693 0.18075</extent>
+					<location>0.0111 -0.35265 0.73268</location>
+				</cube>
+				<cube id="35">
+					<name>Cylinder03</name>
+					<position>-0.009 1.1427 -0.7287</position>
+					<extent>0.1902 0.096302 0.19005</extent>
+					<location>0.0111 0.17985 0.73268</location>
+				</cube>
+				<cube id="36">
+					<name>Cylinde(1)</name>
+					<position>-0.009 1.1427 -0.7287</position>
+					<extent>0.115052 0.91155 0.115052</extent>
+					<location>0.011175 0.68227 0.73283</location>
+				</cube>
+				<cube id="37">
+					<name>Cylinder01</name>
+					<position>-0.009 1.1427 -0.7287</position>
+					<extent>0.035102 0.021202 0.035102</extent>
+					<location>0.0099 2.3256 0.9078</location>
+				</cube>
+				<cube id="38">
+					<name>Bo(1)</name>
+					<position>-0.009 1.1427 -0.7287</position>
+					<extent>0.14505 0.1475 0.285</extent>
+					<location>0.009675 2.2418 0.81675</location>
+				</cube>
+				<group id="39">
+					<name>Base</name>
+					<position>-0.0045 0.1527 0.0072</position>
+					<children id="40">
+						<cube id="41">
+							<name>Box04</name>
+							<position>-0.0045 0.99 -0.7359</position>
+							<extent>1.99005 0.14625 0.078752</extent>
+							<location>0.004425 -1.0696 0.73088</location>
+						</cube>
+						<cube id="42">
+							<name>Duplica(2)</name>
+							<position>-0.0045 0.99 -0.7359</position>
+							<extent>0.078752 0.14625 1.99005</extent>
+							<location>0.009525 -1.0696 0.73597</location>
+						</cube>
+						<cube id="43">
+							<name>Duplica(1)</name>
+							<position>-0.0045 0.99 -0.7359</position>
+							<extent>0.4236 0.2718 0.42375</extent>
+							<location>0.0111 -0.97305 0.73267</location>
+						</cube>
+					</children>
+				</group>
+				<cube id="44">
+					<name>Cylinder04</name>
+					<position>-0.009 1.1427 -0.7287</position>
+					<extent>0.075002 0.075002 0.120002</extent>
+					<location>0.0117 2.6362 0.93975</location>
+				</cube>
+				<group id="45">
+					<name>HeadAssembly</name>
+					<position>0.00225 3.7796 0.1401</position>
+					<children id="46">
+						<cube id="47">
+							<name>Box02</name>
+							<position>-0.01125 -2.6369 -0.8688</position>
+							<extent>0.177 0.09 0.40125</extent>
+							<location>0.01275 2.3811 0.75877</location>
+						</cube>
+						<cube id="48">
+							<name>Cylinder02</name>
+							<position>-0.01125 -2.6369 -0.8688</position>
+							<extent>0.55245 0.5522 0.21855</extent>
+							<location>0.011625 2.6361 1.1081</location>
+						</cube>
+						<cube id="49">
+							<name>Blades</name>
+							<position>-0.0012 -0.0048 0.2184</position>
+							<extent>1.8738 1.7088 0.053702</extent>
+							<location>0.0033 0.16395 0.03015</location>
+						</cube>
+						<group id="50">
+							<name>Cowling</name>
+							<children id="51">
+								<cube id="52">
+									<name>Cylinde(2)</name>
+									<position>-0.01125 -2.6369 -0.8688</position>
+									<extent>0.54255 0.5424 0.027602</extent>
+									<location>0.009975 2.6373 1.2603</location>
+								</cube>
+								<cube id="53">
+									<name>Bo(3)</name>
+									<position>-0.01125 -2.6369 -0.8688</position>
+									<extent>2.1062 2.106 0.043202</extent>
+									<location>0.011175 2.6369 1.08225</location>
+								</cube>
+								<cube id="54">
+									<name>Cylinder05</name>
+									<position>-0.01125 -2.6369 -0.8688</position>
+									<extent>0.528 0.528 0.49515</extent>
+									<location>0.01185 2.6363 0.71123</location>
+								</cube>
+								<cube id="55">
+									<name>Duplica(3)</name>
+									<position>-0.01125 -2.6369 -0.8688</position>
+									<extent>2.0945 2.0945 0.106052</extent>
+									<location>0.011175 2.6368 1.0139</location>
+								</cube>
+								<cube id="56">
+									<name>Box05</name>
+									<position>-0.01125 -2.6369 -0.8688</position>
+									<extent>2.0945 2.0945 0.16605</extent>
+									<location>0.011175 2.6368 1.1807</location>
+								</cube>
+							</children>
+						</group>
+					</children>
+				</group>
+				<group id="57">
+					<name>Controls</name>
+					<position>-0.00015 2.8273 0.0168</position>
+					<children id="58">
+						<cube id="59">
+							<name>d1</name>
+							<position>-0.00885 -1.81035 -0.7455</position>
+							<extent>0.13155 0.061802 0.032852</extent>
+							<location>0.011625 1.71375 0.82868</location>
+						</cube>
+						<cube id="60">
+							<name>d2</name>
+							<position>-0.00885 -1.81035 -0.7455</position>
+							<extent>0.13155 0.061952 0.032852</extent>
+							<location>0.011625 1.6475 0.82868</location>
+						</cube>
+						<cube id="61">
+							<name>d3</name>
+							<position>-0.00885 -1.81035 -0.7455</position>
+							<extent>0.13155 0.061952 0.032852</extent>
+							<location>0.011625 1.5818 0.82868</location>
+						</cube>
+						<cube id="62">
+							<name>d4</name>
+							<position>-0.00885 -1.81035 -0.7455</position>
+							<extent>0.13155 0.061802 0.032852</extent>
+							<location>0.011625 1.5162 0.82868</location>
+						</cube>
+						<cube id="63">
+							<name>d5</name>
+							<position>-0.00885 -1.81035 -0.7455</position>
+							<extent>0.13155 0.061802 0.032852</extent>
+							<location>0.011625 1.4505 0.82868</location>
+						</cube>
+						<cube id="64">
+							<name>Bo(2)</name>
+							<position>-0.00885 -1.68465 -0.7455</position>
+							<extent>0.2883 1.1057 0.16635</extent>
+							<location>0.00885 1.68475 0.72908</location>
+						</cube>
+					</children>
+				</group>
+			</children>
+		</group>
+	</children>
+	<fileName>Content/Qwaq/Models/FloorFan/Fan.c3z</fileName>
+	<tFileTextures id="65">
+		<texture id="66" class="TFileTexture">
+			<extent>256 177</extent>
+			<fileName>Content/Qwaq/Models/FloorFan/bela.jpg</fileName>
+			<sha>20XYHZICC80GAAVWP17GLK2NULC7ST8</sha>
+		</texture>
+		<texture id="67" class="TFileTexture">
+			<extent>256 177</extent>
+			<fileName>Content/Qwaq/Models/FloorFan/boja.jpg</fileName>
+			<sha>QJ5Y5ASXMZVYQSHLWDR2AW5D1IA5GCZ</sha>
+		</texture>
+		<texture id="68" class="TFileTexture">
+			<extent>512 495</extent>
+			<fileName>Content/Qwaq/Models/FloorFan/elisa.jpg</fileName>
+			<sha>PRZ0PQS08R56H2PVRCJ0RWBWL2W9XZZ</sha>
+		</texture>
+		<texture id="69" class="TFileTexture">
+			<extent>512 512</extent>
+			<fileName>Content/Qwaq/Models/FloorFan/centar.jpg</fileName>
+			<sha>F989HJE356R8NAEOV99P3O3MD4VW7MT</sha>
+		</texture>
+		<texture id="70" class="TFileTexture">
+			<extent>512 476</extent>
+			<fileName>Content/Qwaq/Models/FloorFan/multi.jpg</fileName>
+			<sha>IYSKE0R8TYDLPZRAYT4Z0QBJ166TMJH</sha>
+		</texture>
+	</tFileTextures>
+</frameThumb>
+

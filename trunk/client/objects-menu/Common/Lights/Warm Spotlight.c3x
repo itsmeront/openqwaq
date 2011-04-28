@@ -1,0 +1,32 @@
+<group>
+<name>Warm Spotlight</name>
+<atomic>true</atomic>
+<children>
+<conic>
+	<height>0.6</height>
+	<topRadius>0</topRadius>
+	<baseRadius>0.13</baseRadius>
+	<capTop>false</capTop>
+	<capBase>false</capBase>
+	<materialList>
+	<material>
+		<diffuseColor>0 0 0 0.8</diffuseColor>
+		<ambientColor>0 0 0 0.2</ambientColor>
+		<emissiveColor>0.99 0.92 0.8 1.0</emissiveColor>
+		<cullFace>false</cullFace>
+	</material>
+	</materialList>
+	<opaque>true</opaque>
+</conic>
+<light >
+	<visible>false</visible>
+	<type>spot</type>
+	<spotDirection>0 -1 0</spotDirection>
+	<spotCutoff>12.0</spotCutoff>
+	<spotExponent>12</spotExponent>
+	<ambientColor>0.35 0.29 0.25 1.0</ambientColor>
+	<diffuseColor>0.5 0.46 0.39 1.0</diffuseColor>
+	<specularColor>0.35 0.29 0.25 1.0</specularColor>
+</light>
+</children>
+</group>

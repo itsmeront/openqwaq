@@ -1,0 +1,8 @@
+
+<geometry id="1" class="QLozenge">
+	<name>Lozenge</name>
+	<materialList id="2">
+		<material id="3">
+			<ambientColor>0.7 0.25 0.55 1.0</ambientColor>
+			<diffuseColor>0.7 0.25 0.55 1.0</diffuseColor>		</material>	</materialList>
+	<extent>1.5 1.0</extent></geometry>

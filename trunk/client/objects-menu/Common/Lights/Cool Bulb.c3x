@@ -1,0 +1,24 @@
+<group>
+<name>Cool Bulb</name>
+<atomic>true</atomic>
+<children>
+<sphere>
+	<radius>0.2</radius>
+	<materialList>
+	<material>
+		<diffuseColor>0 0 0 0.8</diffuseColor>
+		<ambientColor>0 0 0 0.2</ambientColor>
+		<emissiveColor>0.8 0.95 0.99 1.0</emissiveColor>
+	</material>
+	</materialList>
+	<opaque>true</opaque>
+</sphere>
+<light >
+	<visible>false</visible>
+	<type>point</type>
+	<ambientColor>0.25 0.26 0.3 1.0</ambientColor>
+	<diffuseColor>0.4 0.4 0.5 1.0</diffuseColor>
+	<specularColor>0.2 0.13 0.1 1.0</specularColor>
+</light>
+</children>
+</group>

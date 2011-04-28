@@ -1,0 +1,9 @@
+<group id="1" class="QFileCard">
+	<name>Timer</name>
+	<kind>panelApp</kind>
+	<content>
+		<object id="2" class="PyPanelDocCS">
+			<appName>Qwaq.TimerAppCS</appName>
+		</object>
+	</content>
+</group>

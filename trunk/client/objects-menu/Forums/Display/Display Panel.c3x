@@ -1,0 +1,5 @@
+<group id="1" class="QDisplayPanel">
+	<name>Display Panel</name>
+	<extent>7.2 5.4</extent>
+	<minExtent>1 0.32</minExtent>
+</group>

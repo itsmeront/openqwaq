@@ -1,0 +1,6 @@
+<group id="1" class="QRoamingSoundEffect">
+	<name>Wandering Bird 2</name>
+	<soundFileName>Bird_Idle07.wav</soundFileName>
+	<gain>0.2</gain>
+	<interval>45</interval>
+</group>

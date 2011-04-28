@@ -1,0 +1,183 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf290
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww13800\viewh20900\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\b\fs24 \cf0 \
+Activity Logging\
+Action symbols and their values
+\b0 \
+\
+(This is really an attachment to the Qwiki page describing the activity logging formats.\
+It's in SVN in the Content tree since changes come as part of Squeak code changes.)\
+\
+Object-activity-values is shorthand for a string consisting of\
+	 [ClassName]: terse-description\
+For instance, such an entry might contain\
+	QDisplayPanel: (anonymized-filename).\
+\
+Where user-provided filenames are logged, they are logged \
+with all but the suffix anonymized - the same in each occurrence,\
+but not data from which the original file name can be reconstructed.\
+\
+For instance the file 'MyPrivateMissileDesign.doc'   \
+would appear (consistently) as 'ajssdfskjfdlskfjd.doc'\
+in the value of Drop-Document,  OpenPrivateCopy, and such actions.\
+\
+\
+\
+Activity symbol				Optional value string		Counted or Timestamped?\
+-------------------------------------------------	-----------------------------------------	--------------------------------------\
+ActionsMenu					Action-Selector			Counted\
+AddBookmark				Forum-url\
+AddToInventory				Object-activity-details \
+Away						-\
+AvatarChooserReset			Avatar family class (1.1.90)\
+AvatarChooserApply			Avatar family class (1.1.90)\
+BackFromAway				-\
+CallForVotes					Number of ballots raised\
+ChangePassword				-					Counted\
+ClearAppBandwidthWarning		Application-name	\
+CloseSession				-		\
+ConnectionError				Error-message\
+CopyFromInventory				Object-activity-details\
+CopyToInventory				Object-activity-details\
+DelayOtherUser				-					Counted\
+DelaySelfAudioSuspended		-					Counted\
+DelaySelfVideoSuspended		-					Counted\
+DelaySelfWarning				- 					Counted\
+Delete					Object-activity-details\
+DeleteCard					Object-activity-details			\
+DeleteCardInventory			Object-activity-details\
+DeleteEditBox				Object-activity-details\
+DismissEditBox				Object-activity-details\
+DocToolDropToActiveForum		File-suffix\
+DocToolMailDocument			File-suffix\
+DocToolOpenWebPage			File-suffix\
+DocToolProperties				File-suffix\
+DocToolSaveLocalCopy			File-suffix\
+DocToolLobbyDrop				File-suffix\
+DocumentFocus				shared-name (unix path)\
+DocumentUnfocus				shared-name (unix path)\
+DriveKeyDown				key-name				Counted (as of 1.2)\
+DriveKeyUp					key-name				Counted (as of 1.2)\
+DropDocument				Object-activity-details\
+DropDocumentUnknown			File-suffix				Counted\
+DropFileCard				Object-activity-details\
+DropFromInventory				Object-activity-details\
+DropInSpaceFromInventory		Object-activity-details\
+DropToInventory				Object-activity-details\
+EmergencyStopApplication		Application-name\
+EmptyCacheExtrasMenu			-\
+GeneratePoll				Number of choices\
+GetMyOwnOrg				-\
+GetAnotherOrg				-\
+GoBesideUserMenu			-\
+GoToButton					Object-activity-details			\
+GoToEnd					-\
+GoToFrameInspector			-\
+GoToPlaceMark				Place-label\
+GoToPlacesMenu				Place-label\
+GoToTab					Place-label\
+GoToUserTextingDialog			-\
+GoToUserUserMenu			-\
+GoToUserUsersShortcut			-\
+GoToUserDoubleClick			-\
+HearMyselfExtrasMenu			true / false\
+HearMyselfSoundDialog			true / false\
+HelpMenuAbout				-					Counted\
+HelpMenuQuickReference		File-name				Counted\
+HelpMenuUserGuide			-					Counted\
+HideFromToolsMenu			Dialog-title\
+ImportFileMenu				File-details\
+ImportFileMenuAbandoned		-\
+InstantiateTemplate				Forum-url\
+InstantiateTemplateAbandoned		Forum-url	\
+LaunchRemoteApplication		Application-name\
+LaunchRemoteApplicationFailed		Application-name\
+LobbyEnter					Organization-name\
+LobbyDesktopDrop				Forum-url\
+LoginForum					Forum-url\
+LoginForumAlreadyPresent		Forum-url\
+LoginForumNoForum			Forum-url\
+LoginForumNoRealmAccess		Forum-url\
+LoginForumJoinRejected			Forum-url\
+LogoutForum				Forum-url\
+MeetingAllFollowMe			true/false\
+MeetingWantsToSpeak			true/false\
+MeetingEditBlocked			true/false\
+MeetingBeLeader				true/false\
+MeetingMeetHere				true/false\
+MeetingMuteAudience			true/false\
+MeetingRestrictPrivateText		true/false\
+MeetingAudienceStayPut 			true/false\
+MiramarAttemptingToOwnDocument 	-\
+MiramarCreateLocalDocument		file details, miramar id\
+MiramarCreateLocalWindow		window id, miramar id\
+MiramarCreateStoredDocument		file details, miramar id\
+MiramarStreamDestroy			-\
+MiramarStreamStart			-\
+MiramarSubscriptionStart			-\
+NotIdle					-\
+ObjectsMenu				Object-file-name			Counted\
+OpenPrivateCopy				Object-activity-details\
+PlainAvatarDetailsGetPhoto		-    (1.1.90)\
+PlainAvatarDetailsGetBadge		-    (1.1.90)\
+PreferencesDialog				-\
+PreferencesApply				- (1.1.90)\
+PreferencesCancel				- (1.1.90)\
+PreferencesOK				- (1.1.90)\
+PrivateChatUserMenu			-\
+QMiramarSharedAppKind			kind of share\
+QMiramarSharedAppNew			miramar id\
+RemoteApplicationConnectionFailure	Application-name\
+ResetSoundExtrasMenu			-\
+ResetSoundSoundDialog			-\
+RevertForum					Forum-url\
+SaveAllForumsFileMenu			-\
+SaveForumAsFileMenu			Forum-url\
+SaveForumAsTemplateFileMenu		Forum-url\
+SaveForumFileMenu			-\
+SaveLocalCopy				Object-activity-details\
+SaveObjectToInventory			Object-activity-details\
+ShowFloatingApplication			Floating-tool-title (app title)\
+ShowFromToolsMenu			Floating-tool-title\
+ShowManageUsers			-\
+ShowRevertForumDialog			-\
+SitWhereIAm					-\
+StandWhereIAm				-\
+StartApplication				Application-name\
+StartDrivingKeyboard			-					Counted\
+StartDrivingMouse				-					Counted\
+StopAppButton				Application-name\
+StopAppClearPanel			Application-name\
+StopAppDeletePanel			Application-name\
+StopAppReplace				Application-name	\
+StopDriving					-					Counted\
+TabToPlace					Landmark-label\
+TeleportBackButton				Forum-url\
+TeleportCancel				Forum-url\
+TeleportFail					Forum-url\
+TeleportForwardButton			Forum-url\
+TeleportHistoryContext			Forum-url	\
+TeleportHistoryMenu			Forum-url\
+TeleportIncomplete				Forum-url\
+TeleportPlacesMenu			Forum-url\
+TeleportPortalClick				Forum-url	\
+TeleportServicesContext			Forum-url\
+TeleportToUser				Forum-url\
+TestBuiltinSoundExtrasMenu		-\
+TestOpenALSoundExtrasMenu		-\
+TestVoiceTransportExtrasMenu		-\
+TextChatClearTranscript			-					(1.2)\
+TextChatMessage				-					Counted   (1.2)\
+TextChatSaveTranscript			-					(1.2)\
+ToggleFlyingExtrasMenu			true / false\
+ToggleInventory				-					Counted\
+TogglePTTSoundDialog			true / false\
+ToolsStereo					Off / Anaglyph / Hardware\
+TurnToUserMenu				-\
+WarnAppBandwidth			Application-name\
+-------------------------------------------------	-----------------------------------------	--------------------------------------\
+Activity symbol				Optional value string		Counted or Timestamped?}

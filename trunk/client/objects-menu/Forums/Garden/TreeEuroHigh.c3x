@@ -1,0 +1,10 @@
+
+<group id="1" class="QOutdoorTree">
+	<name>HighQualityEuroTree</name>
+	<modelFilename>Content/Qwaq/Models/Plants/TreeHighEuro.ASE</modelFilename>
+	<modelScale>0.03</modelScale>
+	<boundsDepth>1</boundsDepth>
+	<optimized>true</optimized>
+	<optimizedEarly>true</optimizedEarly>
+	<baseOffset>0.0 -1.5</baseOffset>
+</group>

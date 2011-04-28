@@ -1,0 +1,5 @@
+
+These are the TWindowFrame button icons from Croquet.
+The corresponding .png's are in Content/Widgets/textures/
+(the references in the .c3x's correctly point there.)
+

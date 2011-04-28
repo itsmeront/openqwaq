@@ -1,0 +1,9 @@
+
+<group id="1" class="Q3DSModel">
+	<name>FlowerOrange</name>
+	<modelFilename>Content/Qwaq/Models/Plants/FlowerLowOrange.ASE</modelFilename>
+	<modelScale>0.03</modelScale>
+	<boundsDepth>1</boundsDepth>
+	<optimized>true</optimized>
+	<optimizedEarly>true</optimizedEarly>
+</group>

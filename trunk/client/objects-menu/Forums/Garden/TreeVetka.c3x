@@ -1,0 +1,10 @@
+
+<group id="1" class="QOutdoorTree">
+	<name>Vetka Tree</name>
+	<modelFilename>Content/Qwaq/Models/Plants/TreeHighVetka.ASE</modelFilename>
+	<modelScale>0.09</modelScale>
+	<boundsDepth>1</boundsDepth>
+	<optimized>true</optimized>
+	<optimizedEarly>true</optimizedEarly>
+	<baseOffset>-3.6 -0.6</baseOffset>
+</group>

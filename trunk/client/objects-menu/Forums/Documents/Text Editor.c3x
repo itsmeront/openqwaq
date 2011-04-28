@@ -1,0 +1,10 @@
+<group class="QFileCard" id="1">
+
+	<kind>text</kind>
+	<content>
+		<object class="QTextDocument" id="2">
+			<text></text>
+			<shortName>Text-Document.txt</shortName>
+		</object>
+	</content>
+</group>

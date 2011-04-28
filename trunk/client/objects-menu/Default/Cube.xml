@@ -1,0 +1,10 @@
+<cube>
+	<name>Cube</name>
+	<extent>3.0 3.0 3.0</extent>
+	<materialList>
+		<material>
+			<ambientColor> 0.5 0.1 0.1 1.0</ambientColor>
+			<diffuseColor> 0.99 0.2 0.2 1.0</diffuseColor>
+		</material>
+	</materialList>
+</cube>

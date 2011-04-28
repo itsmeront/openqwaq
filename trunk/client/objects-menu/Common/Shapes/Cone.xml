@@ -1,0 +1,15 @@
+<conic>
+	<name>Cone</name>
+	<height>2.0</height>
+	<topRadius>0</topRadius>
+	<baseRadius>0.75</baseRadius>
+	<capTop>false</capTop>
+	<capBase>true</capBase>
+	<materialList>
+		<material>
+		<ambientColor> 0.8 0.8 0.2 1.0</ambientColor>
+		<diffuseColor> 0.8 0.8 0.2 1.0</diffuseColor>
+		</material>
+	</materialList>
+	<opaque>true</opaque>
+<conic>

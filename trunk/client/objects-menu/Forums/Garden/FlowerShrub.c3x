@@ -1,0 +1,9 @@
+
+<group id="1" class="Q3DSModel">
+	<name>Flower Shrub</name>
+	<modelFilename>Content/Qwaq/Models/Plants/FlowerShrub.ASE</modelFilename>
+	<modelScale>0.032</modelScale>
+	<boundsDepth>1</boundsDepth>
+	<optimized>true</optimized>
+	<optimizedEarly>true</optimizedEarly>
+</group>
