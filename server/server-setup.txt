@@ -1,0 +1,119 @@
+1. Install necessary packages
+   On RHEL/CentOS:
+   sudo yum install subversion
+   sudo yum install gcc
+   sudo yum install php
+   sudo yum install php-xml
+   sudo yum install mysql-server
+   sudo yum install unixODBC
+   sudo yum install mysql-connector-odbc
+   sudo yum install php-odbc
+   sudo yum install vnc*
+   suod yum install mod-ssl
+   
+2. Add user and group openqwaq with correct uid and gid:
+   groupadd -g 1234 openqwaq
+   useradd -g 1234 -G 1234 -u 1234 -c "OpenQwaq service user" -d /home/openqwaq -s /bin/bash openqwaq
+   chmod 750 /home/openqwaq
+   passwd openqwaq
+   >>> enter the password with confirmation   
+
+3. Add user openqwaq to sudoers users via the visudo command as such:
+      openqwaq	ALL=(ALL)       ALL
+
+4. Remove the tty requirement for sudoers by remarking the line in
+/etc/sudoers
+ 
+5. Switch to user "openqwaq"
+
+6. Check out server from SVN
+   svn co https://dev.qwaq.com/svn/OpenQWAQ/server/trunk server
+
+7. Set up httpd for the server:
+   sudo ln -s /home/openqwaq/server/etc/OpenQwaq-https.conf /etc/httpd/conf.d
+   * replace "User apache" in /etc/httpd/conf/httpd.conf with "User openqwaq"
+   * replace "Group apache" in /etc/httpd/conf/httpd.conf with "Group openqwaq"
+   * move out of /etc/httpd/conf.d/ssl.conf, it will conflict with OpenQwaq
+     receieving connections from iptables for port 443.  Generally, you can
+     move ssl.conf up on directory, just so that it is not sourced with the 
+     conf.d directory.
+   sudo /sbin/service httpd restart
+
+   => Verify that http works properly by going to:
+      http://localhost:8443/clients
+      http://localhost:8443/admin
+
+8. Set up the MySQL database:
+   sudo /sbin/service mysqld start
+   sudo /usr/bin/mysqladmin -u root password 'openqwaq'
+
+   cd /home/openqwaq/server/conf
+   /usr/bin/mysql -uroot -popenqwaq -b < ./mysqlinit.sql
+   sudo odbcinst -i -s -l -f ./OpenQwaqData.dsn.in
+   sudo odbcinst -i -s -l -f ./OpenQwaqActivityLog.dsn.in
+
+   # Or edit the following file to conform as follows. Not particularly libmyodbc3.so.
+   sudo cat <<EOF>>/etc/odbcinst.ini
+[MySQL]
+Description	= ODBC for MySQL
+Driver		= /usr/lib/libmyodbc3.so
+Setup		= /usr/lib/libodbcmyS.so
+FileUsage	= 1
+EOF
+
+   isql OpenQwaqData openqwaq openqwaq -b < ./OpenQwaqData.sql
+   isql OpenQwaqActivityLog openqwaq openqwaq -b < ./OpenQwaqActivityLog.sql
+   isql OpenQwaqData openqwaq openqwaq -b < ./default-servers.sql
+   isql OpenQwaqData openqwaq openqwaq -b < ./default-visitor.sql
+
+   => Verify mysql initialization by going to
+      http://localhost/admin
+   => Ensure existence of default server in server tab
+   => Ensure existence of default organization in org tab
+   => Ensure existence of default user in user tab
+
+9. Set up app server scripts
+   cd /home/openqwaq/server/apps/utils/
+   sudo ./MakeWrappers.sh /home/openqwaq/server/apps/scripts/
+
+10. Prepare various server bits
+   cd /home/openqwaq/server/mail_templates; ./fixlinks.sh hosted
+   cp /home/openqwaq/server/conf/server.conf.in /home/openqwaq/server/conf/server.conf
+   mkdir /home/openqwaq/realms
+   mkdir /home/openqwaq/users
+   mkdir /home/openqwaq/tmp
+   cp /home/openqwaq/server/etc/forums.properties /home/openqwaq/realms
+   ln -s /home/openqwaq/server/system-resources /home/openqwaq/realms
+   sudo ln -s /home/openqwaq/server/etc/OpenQwaq /etc/init.d/
+   sudo ln -s /home/openqwaq/server/etc/OpenQwaq-iptables /etc/init.d/
+   sudo ln -s /home/openqwaq/server/etc/OpenQwaq-tunnel /etc/init.d/
+   # Edit cert and key if desired to point to your server.cert and server.key, in etc/stunnel/stunnel.conf.in
+
+11. Start the server
+   sudo /sbin/service OpenQwaq start
+   sudo /sbin/service OpenQwaq-iptables start
+
+   => Verify that properties of users and groups can be seen and edited
+
+12. Configure OpenQwaq and necessary services to start on reboot
+   sudo /sbin/chkconfig --levels 345 OpenQwaq on
+   sudo /sbin/chkconfig --levels 345 OpenQwaq-iptables on
+   sudo /sbin/chkconfig --levels 345 OpenQwaq-tunnel on
+   sudo /sbin/chkconfig --levels 345 mysqld on
+   sudo /sbin/chkconfig --levels 345 postfix on
+   sudo /sbin/chkconfig --levels 345 httpd on
+   sudo /sbin/chkconfig --levels 345 ntpd on
+
+13. Configure the Server
+   http://localhost:8443/admin/serverconf.php?server=localhost
+   * Configure SMTP options
+   * Configure support and bug email
+
+14. Start mail service
+   sudo /sbin/service postfix start
+
+15. Run the server tests
+   http://localhost:8443/admin/servertest.php
+
+Notes:
+There are no admin and user docs nor support pages prepared for OpenQwaq, so these links do not work.

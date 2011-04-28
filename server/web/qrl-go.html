@@ -1,0 +1,80 @@
+<html xmlns="http://www.w3org/1999/xhtml">
+  <head>
+    <meta http-equiv="refresh" content="0;URL={!qwqUrl}" />
+    <title>{!organization}: {!forum}</title>
+  </head>
+  <body><div style="font-family: sans-serif">
+
+<table width="100%" border="0" cellspacing="0" bgcolor="#455560">
+<tr>
+<td width="68"><table cellpadding="5"><tr><td><a style="color: #455560; visited: #455560" href="http://www.qwaq.com"><img src="/xsl/images/logo-openqwaq.png" border="0"/></a></td></tr></table></td>
+<td align="right">
+  <small>
+      <a style="color: white; visited: white" href="http://{!supportHost}/support/visitor.php">First time user? Click here</a> 
+      &nbsp;
+      <a style="color: white; visited: white" href="http://{!supportHost}/docs/userguide/wwhelp/wwhimpl/common/html/wwhelp.htm">User Guide</a> 
+      &nbsp;
+      <a style="color: white; visited: white" href="mailto:{!contact}?subject={!url}">Support</a>
+      &nbsp;
+  </small>
+ </td>
+</tr>
+</table>
+
+<table>
+  <tr><td colspan="2"/></tr>
+  <tr><th align="right">Entering:</th><td/></tr>
+  <tr><td colspan="2"/></tr>
+  <tr><th align="right">Organization:</th><td><a href="http://{!host}/{!organization}">{!organization}</a></td></tr>
+  <tr><th align="right">Forum:</th><td><a href="http://{!host}/{!organization}/{!forum}">{!forum}</a></td></tr>
+  <tr><th align="right">Landmark:</th><td><a href="http://{!host}/{!organization}/{!forum}?info={!place}">{!place}</a></td></tr>
+  <tr><th align="right">Host:</th><td><a href="http://{!host}">{!host}</a></td></tr>
+</table>
+
+
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p align="center">
+<b>The OpenQwaq client will take you to {!place} in a moment.<br/>If it doesn't, click <a href="#help">here</a> to learn more.</b>
+</p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+
+<hr/>
+
+<h3><a name="help">OpenQwaq Auto-launching Help</a></h3>
+
+<p>Most users have browser settings which allow the auto-launch process to happen automatically. However, there are some situations in which that may not happen. Please follow these directions if you do not seem to be automatically taken to the right place by your OpenQwaq client.</p>
+<p>The auto-launch process works just like downloading a .doc file and double-clicking it to launch your word processor. OpenQwaq uses a type of file called a ".qwq" file for this.</p>
+<ol>
+<li>If you do not have a OpenQwaq account or do not have the OpenQwaq application installed, click here: <a href="http://{!supportHost}/support/visitor.php">First time user information.</a>
+<li>If your browser did not not automatically starting downloading a new file named "{!qwqFilename}" to your browser's download directory, click here: <a href="{!qwqUrl}">.qwq file download</a>.</li>
+<li>If your browser does not open .qwq files automatically after download, you can open the downloaded file yourself by double-clicking it. Choose OpenQwaq as the application if prompted.</li>
+<li>If the OpenQwaq application is already running, but is hidden, minimized, or otherwise not visible, you may have to look among your open applications to see the OpenQwaq window.</li>
+<li>If OpenQwaq is already running and logged into a different organization, it will first ask you before leaving that forum or lobby.</li>
+<li>You may have to enter your username and password at the login screen.</li>
+</ol>
+<p>Please contact <a href="mailto:{!contact}?subject={!url}">{!contact}</a> if you have any questions.</p>
+
+<p>Thanks for using OpenQwaq.</p>
+
+
+<p></p>
+<hr>
+  </div></body>
+</html>

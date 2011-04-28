@@ -1,0 +1,29 @@
+
+Subject:  OpenQWAQ: {!User.name} has made you a member of organization {!User.organization}
+Email Body:
+
+You Have Been Added to an Organization
+
+Your OpenQWAQ login is now a member of another organization.
+
+Login: {!Invitee.email}
+Organization: {!User.organization}
+Host:{!Client.ServerName}
+                 
+You were added by: {!User.name}
+                  
+Message from {!User.name}:
+                
+{!User.Message}
+
+Your existing login (usually your email address) will now allow you to access the Forums in that organization, to the extent that access permissions have been granted.
+
+To access this organization: select the dropdown list on the Forums chooser screen right after login, and you should see this organization name as a choice. 
+
+If you need to download and install the client, you can access it here: {!Client.Download} 
+
+If you need to reset your password, enter your email address on the sign-in screen hit the "Forgot Password" button.
+
+If you believe you have received this email in error, please contact {!OpenQWAQ.Support}.
+
+

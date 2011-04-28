@@ -1,0 +1,6 @@
+/* isql OpenQwaqData UserId UserPass -b < default-visitor.sql  */
+/* NOTE: isql is pathetic; everything must be single line, sorry! */
+INSERT INTO users(id, name, email, status, first_name, last_name, company, files, sfdc_id, created, comment) VALUES("c01d8ada-9d30-11de-9dcf-005056330122", "visitor@OpenQwaq.org", "visitor@OpenQwaq.org", "ActiveUser", "Visitor", "OpenQwaq", "OpenQwaq", "/home/OpenQwaq/users/visitor@OpenQwaq.org", "", "1970-01-01 01:01:01", "OpenQwaq test user");
+INSERT INTO user_digests (name, digest, updated) VALUES ("visitor@OpenQwaq.org", "cba93898456b6d09685e964c5a1905e6", "1970-01-01 01:01:01");
+INSERT INTO organizations (id, name, seats, tier, status, created, expires, comment) VALUES ("22dfe8bc-9d30-11de-9dcf-005056330122", "OpenQwaq_Test", 2, "PersonalEdition", "ActiveOrg", "1970-01-01 01:01:01", NULL, "OpenQwaq Test organization");
+INSERT INTO org_members (id, status, org_name, org_id, member_name, member_id, member_type, role_name, created) VALUES ("c0285bd6-9d30-11de-9dcf-005056330122", "Invited", "OpenQwaq_Test", "22dfe8bc-9d30-11de-9dcf-005056330122", "visitor@OpenQwaq.org", "c01d8ada-9d30-11de-9dcf-005056330122", "user", "user", "1970-01-01 01:01:01");

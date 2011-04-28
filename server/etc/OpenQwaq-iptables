@@ -1,0 +1,98 @@
+#!/bin/env bash
+
+# OpenQwaq-iptables	Setup iptables for OpenQwaq Server.
+#
+# chkconfig: - 99 20
+#
+# description:		Sets up the appropriate iptables to forward ports
+#			80 and 443 to 1234.  These ports are used in the event
+#			corporate firewalls block 1234.
+#			This script must be run as root!
+
+# Get RH functions
+. /etc/rc.d/init.d/functions
+
+RETVAL=0
+
+# determine IP address of eth0
+IP_ETH0=`ifconfig eth0 2>/dev/null|grep "inet addr"|awk '{print $2}'|cut -f 2 -d ":"|tr -d "\r"`
+IP_ETH1=`ifconfig eth1 2>/dev/null|grep "inet addr"|awk '{print $2}'|cut -f 2 -d ":"|tr -d "\r"`
+
+set_default_filters () {
+  echo "	Applying default policy for port 9991."
+  iptables -A INPUT -p tcp -s localhost --dport 9991 -j ACCEPT
+  iptables -A INPUT -p tcp --dport 9991 -j REJECT
+}
+
+set_filters () {
+  ETH=$1
+  if [ -z "$ETH" ]; then return; fi
+
+  echo "	Applying allow policy for ${ETH}:9991."
+  iptables -A INPUT -p tcp -s ${ETH} --dport 9991 -j ACCEPT
+}
+
+forward_ssl () {
+  ETH=$1
+  if [ -z "$ETH" ]; then return; fi
+
+  echo "	Applying port 443 forwarding of ${ETH} to OpenQwaq Server."
+  iptables -t nat -A PREROUTING -d ${ETH} -p tcp --dport 443 -j DNAT --to-destination ${ETH}:1234
+}
+
+forward_webcast () {
+  FROM_ETH=$1
+  TO_ETH=$2
+  
+  if [ -z "$FROM_ETH" ]; then return; fi
+  if [ -z "$TO_ETH" ]; then return; fi
+
+  echo "	Applying port 80 forwarding of ${FROM_ETH} to OpenQwaq Server for webcasts."
+  iptables -t nat -A PREROUTING -d ${FROM_ETH} -p tcp --dport 80 -j DNAT --to-destination ${TO_ETH}:9994
+}
+
+delete_filters () {
+  ETH=$1
+  if [ -z "$ETH" ]; then return; fi
+
+  echo "	Deleting filters for ${ETH}."
+  rules_list=`iptables -L -t nat --line-numbers|grep "${ETH}"|grep "to:${ETH}"|awk '{print $1}'`
+  for i in $rules_list; do
+    iptables -t nat -D PREROUTING 1
+  done
+} 
+
+# how were we called
+case "$1" in
+  start)
+	echo $"  Applying filters to iptables."
+	set_filters $IP_ETH0
+	set_filters $IP_ETH1
+	set_default_filters
+
+      # DEFAULT CONFIGURATION
+	forward_ssl $IP_ETH0
+
+      # ENABLE THIS IF YOU RUN AN ALL-IN-ONE + WEBCAST SERVER
+	#forward_ssl $IP_ETH0
+	#forward_webcast $IP_ETH0 $IP_ETH0
+
+      # ENABLE THIS TO RUN 2 SERVERS SIDE-BY-SIDE
+	#forward_ssl $IP_ETH0  
+	#forward_ssl $IP_ETH1  
+	#forward_webcast $IP_ETH1 $IP_ETH1
+
+	;;
+  stop)
+	echo $"  Removing filters from iptables"
+	delete_filters $IP_ETH0
+	delete_filters $IP_ETH1
+	;;
+  restart)
+	$0 stop
+	$0 start
+	;;
+  *)
+	echo $"Usage OpenQwaq-iptables {start|stop|restart}"
+	RETVAL=3
+esac

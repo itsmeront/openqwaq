@@ -1,0 +1,31 @@
+# Configuration file to use Stunnel as a server
+#
+# The global settings
+#
+
+# Certificate Authority file
+# CAfile = /root/CERT/files
+# Path to trusted certificates
+CApath = /root/cert/
+
+# Debugging level (0=nothing, 7= a lot)
+#foreground = yes
+debug = syslog.6
+
+# Verification level of remote certificates
+;verify = 1
+
+cert = /root/cert/server.crt
+key = /root/cert/server.key
+
+pid = /var/run/OpenQwaq-tunnel.pid
+#setuid = stunnel
+#setgid = stunnel
+
+# session-cache
+session = 10
+
+# Service Qwaq Files
+[stunnel.files]
+accept = ETH_REPLACEMENT:8333
+connect = ETH_REPLACEMENT:9994

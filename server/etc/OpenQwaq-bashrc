@@ -1,0 +1,18 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific aliases and functions
+
+OpenQwaqToolsDir=${HOME}/OpenQwaqApps
+
+export JAVA_HOME=${OpenQwaqToolsDir}/OpenQwaqApps/jdk
+export JRE_HOME=${OpenQwaqToolsDir}/OpenQwaqApps/jdk/jre
+export ANT_HOME=${OpenQwaqToolsDir}/OpenQwaqApps/ant
+
+export LD_LIBRARY_PATH=${HOME}/server/third-party/lib:${HOME}/server/third-party/lib/gpac
+
+export PATH=${OpenQwaqTooslDir}/bin:${HOME}/server/third-party/bin:${HOME}/server/third-party/bin:${PATH}

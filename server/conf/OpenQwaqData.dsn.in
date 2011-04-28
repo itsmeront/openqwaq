@@ -1,0 +1,7 @@
+; sudo odbcinst -i -s -l -f OpenQwaqData.dsn
+[OpenQwaqData]
+Description=OpenQwaq Data
+Driver=MySQL
+Database=OpenQwaqData
+Server=localhost
+Port=3306

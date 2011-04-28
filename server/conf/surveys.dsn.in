@@ -1,0 +1,7 @@
+; sudo odbcinst -i -s -l -f OpenQwaqSurveys.dsn
+[OpenQwaqSurveys]
+Description=OpenQwaq Surveys Repository
+Driver=MySQL
+Database=OpenQwaqSurveys
+Server=localhost
+Port=3306

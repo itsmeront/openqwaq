@@ -1,0 +1,48 @@
+#
+#
+#
+#
+# 
+# NOTE: Invitation emails are not sent by the non hosted server.
+#       Instead invited users are auto-activated and the welcome email is sent.
+#
+#
+#
+#
+#
+#
+
+Subject: You have been invited by {!User.name} to OpenQWAQ organization {!User.organization}
+Email Body:
+
+You Have Been Invited to Join OpenQWAQ 
+
+OpenQWAQ: Immersive Collaboration Enviroment 
+
+In 15 minutes or less you can create a virtual meeting space, import your documents and working materials, and be collaborating with colleagues in a virtual business setting. 
+
+Learn more about OpenQWAQ http://www.OpenQWAQ.com/ 
+
+
+{!User.name} has invited you to join in a virtual collaboration space at OpenQWAQ. Personal Message:
+
+{!User.message}
+
+1. you will be granted a OpenQWAQ login, and 
+2. your login will become a member of the organization "{!User.organization}" 
+Click on the button below to accept the invitation from {!User.name}:
+
+{!Invitation.URL}
+You will be taken to a webpage where you can create your login and get started. 
+
+
+If you have any trouble, please contact support at: {!OpenQWAQ.Support}
+
+Welcome to OpenQWAQ!
+
+Regards,
+The OpenQWAQ Support Team
+
+
+If you believe you have received this email in error, please contact {!OpenQWAQ.Support} . 
+ 

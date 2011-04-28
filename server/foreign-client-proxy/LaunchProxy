@@ -1,0 +1,69 @@
+#!/bin/bash
+# Stops any existing client proxies for specified user and then launches one.
+ 
+# The things you need to make this work:
+#
+# Installation, on the PROXY host:
+#   Make sure chmod +x LaunchProxy
+#   Install the OpenQwaq client directly to here, and untar it
+#   Remove OpenQwaq.changes (because it won't be writeable by multiple simultaneous clients, and updates will try to write if present).
+#
+# Host Operating System:
+#   Make sure the screen save doesn't crash X. 
+#   Currently, if you have to restart the OpenQwaq service, you may need to
+#          DISPLAY=:0 xhost +        # or better, just localhost
+#   in the shell used to start the OpenQwaq service.  Really, this script should start a remote X (per client?).
+#
+# Configuration:
+#   Ensure that conf/server.conf of the ROUTER hosts have OpenQwaq.Router.HTTPS: true (or name:port to set up on other than 9997).
+#   Ensure the orgs you want to use (or ~/realms/forums.properties) has EnabledFeatures.ProxyLaunch: true
+#   Make the cd line, below, point to the client that you want to use.
+
+
+if [ $# != 5 ]; then
+    echo "Usage: $0 host orgName forumName userName streamID"
+    exit
+fi
+
+# TODO: change the squeak launcher to log the shell's standout rather than treating it as an error, 
+# and then here we can stop redirecting stdout to yet another different log file.
+LOGDIR=/home/openqwaq/server/logs/
+OUTFILE=${LOGDIR}`basename $0`.`date +%F`.out
+
+VM=squeak
+VMPATH=bin
+ARGS="-vm-display-X11 -single -title $4 -nosound OpenQwaq.image"
+
+cd `dirname $0`/"OpenQwaq 1.0.01"
+mv "../$4.qwq" .
+
+echo >> $OUTFILE
+echo `date` "Starting Proxy in" `pwd` ": \"$2\" \"$3\" \"$4\" \"$5\"" >> $OUTFILE
+
+# If we want to do something special for different logins, this is where we would do it:
+# OLDPID=`ps aux | grep $VM | grep "$4" | head -n 1 | awk '{print $2}'`
+#if [ "$4" == 'xx' ]; then
+#fi
+
+
+# We don't want any libraries set up for the older Squeak VMs used by the server.
+LD_LIBRARY_PATH=
+EXE=$VMPATH/$VM
+
+#rm -f special-dirs/preferences/QwaqCroquet/logs/Transcript-$4.log
+# Get the pid of any proxy clients already running for this particular user:
+#if [ "$OLDPID" != '' ]; then 
+#    echo "Killing existing proxy" >> $OUTFILE
+#    kill $OLDPID
+#fi
+
+#echo ulimiting
+#ulimit -c unlimited
+#echo ulimited
+#DISPLAY=":0.0" $EXE -nohandlers $ARGS mumble...
+
+echo DISPLAY=":0.0" $EXE $ARGS "$4.qwq"  >> $OUTFILE
+DISPLAY=":0.0" $EXE $ARGS "$4.qwq"  >> $OUTFILE &
+echo ps=$! >> $OUTFILE
+ps aux | grep openqwaq | grep -v $0 | grep stearns >> $OUTFILE
+echo >> $OUTFILE

@@ -1,0 +1,59 @@
+#!/bin/bash
+
+if [ -e /OpenQwaqApps/bin/firefox ] || [ -L /OpenQwaqApps/bin/firefox ]; then
+  program=/OpenQwaqApps/bin/firefox
+  myPath=/OpenQwaqApps/bin
+else
+  program=/usr/bin/firefox
+  myPath=/usr/bin
+fi
+
+export PATH=${myPath}:${PATH}
+#
+
+logFile="/tmp/${RUN_ME}"
+if [ ! -f $logFile ]; then
+  logFile=/tmp/run_me-xxx
+  touch /tmp/run_me-xxx
+fi
+
+echo "DISPLAY: $DISPLAY" >> $logFile
+echo "DATE: `date +%Y%m%d-%H%M%S`" >> $logFile
+echo "Launching Firefox ($program)" >> $logFile
+echo "Args are: $QwaqRemoteAppARGS" >> $logFile
+echo "" >> $logFile
+env >> $logFile
+
+# Ensure existence of profiles.ini:
+profile=~/.mozilla/firefox/profiles.ini
+if test ! -e $profile; then
+	echo "   ... profiles.ini not found; creating it" >> $logFile
+	mkdir -p ~/.mozilla/firefox
+	echo "[General]" >> $profile
+	echo "StartWithLastProfile=1" >> $profile
+	echo "" >> $profile
+	for((SUFFIX=10; SUFFIX <= 160; SUFFIX++)); do
+		# Append the profile entry to profiles.ini
+		echo "[Profile$(($SUFFIX-10))]" >> $profile
+		echo "Name=QwaqProfile-$SUFFIX" >> $profile
+		echo "IsRelative=1" >> $profile
+		echo "Path=qwaqqwaq-QwaqProfile-$SUFFIX" >> $profile
+		echo "" >> $profile
+	done
+	echo "   ... finished creating profiles.ini" >> $logFile
+fi
+
+# Ensure existence of profile data
+echo "   ... testing for profile $SUFFIX" >> $logFile
+profile=~/.mozilla/firefox/qwaqqwaq-QwaqProfile-$QwaqRemoteAppSCREEN
+if test ! -e $profile/extensions; then
+	echo "   ... profile not found; creating it" >> $logFile
+	unzip -q ~/OpenQwaqBin/QwaqFirefoxProfile.zip -d $profile
+	echo "   ... finished creating profile" >> $logFile
+fi
+
+rm -f ~/.mozilla/firefox/qwaqqwaq-QwaqProfile-$QwaqRemoteAppSCREEN/sessionstore*
+echo "   ... about to launch Firefox ($program)" >> $logFile
+exec $program -P QwaqProfile-$QwaqRemoteAppSCREEN $QwaqRemoteAppARGS
+echo "   ... Firefox launch failed" >> $logFile
+xmessage "Unable to launch $program: $?"

@@ -1,0 +1,101 @@
+#!/bin/sh
+
+# Ensure we have a profile, and launch OpenOffice
+
+echo "Launching QMS OpenOffice (using 'qstartup-OpenOffice2')"
+echo "Launching QMS OpenOffice with these arguments: $#"
+
+# Oldest office version in existance!
+if test -e /usr/bin/openoffice.org; then
+    program=/usr/bin/openoffice.org
+fi
+
+if test -e /opt/openoffice.org2.3/program/soffice; then
+    program=/opt/openoffice.org2.3/program/soffice
+fi
+
+# Assume that soffice is always pointing to the most recent openoffice
+if test -e /usr/bin/soffice; then
+    program=/usr/bin/soffice
+fi
+
+# OpenQwaq supplied binaries which are generally ahead of the RH releases
+if test -e /OpenQwaqApps/bin/soffice; then
+    program=/OpenQwaqApps/bin/soffice
+fi
+
+# chroot environment needs to have relative pathing.
+myRemoteAppARGS=`echo "$QwaqRemoteAppARGS"|sed -e 's/\//___/g'`
+myRemoteAppHOME=`echo "$QwaqRemoteAppHOME"|sed -e 's/\//___/g'`
+QwaqRemoteAppARGS=`echo "$myRemoteAppARGS"|sed -e 's/'"$myRemoteAppHOME"'//g' -e 's/___/\//g'`
+#QwaqRemoteAppHOME=`echo "$QwaqRemoteAppHOME"|sed -e 's/___/\//g'`
+
+# Used to set default OO home dir
+OOUserHomeDir=`echo "$QwaqRemoteAppARGS"|sed -e 's/\//___/g' -e "s/\(___sharedDocuments___forum___\)\(.*\)\(___.*\)/\1\2/" -e 's/___//' -e 's/___/\//g'`
+
+echo "   ... using program: $program"
+echo "   ... using args: $QwaqRemoteAppARGS"
+echo "   ... using user home dir: $OOUserHomeDir"
+
+USERS_DIR=~/ooffice/users
+SCREEN_DIR=$USERS_DIR/screen${QwaqRemoteAppSCREEN}
+TAR=~/OpenQwaqBin/QwaqOpenOfficeProfile.tar
+USERPATHFILE=${SCREEN_DIR}/user/registry/data/org/openoffice/Office/Paths.xcu
+
+mkdir -p "$USERS_DIR"
+
+if [ ! -e $SCREEN_DIR ]; then
+    if [ ! -e $TAR ]; then
+	echo "qstartup-OpenOffice2: ERROR: cannot find tarred user profile"
+	exit 1
+    fi
+    mkdir ${SCREEN_DIR}
+    (cd ${SCREEN_DIR}; tar xf ${TAR})
+    if test $? -ne 0; then
+	echo "qstartup-OpenOffice2: ERROR: failed to create user profile"
+	exit 1
+    fi
+    echo "qstartup-OpenOffice2: created profile for screen $QwaqRemoteAppSCREEN"
+fi
+
+if [ -f $USERPATHFILE ]; then
+  rm -f $USERPATHFILE
+fi
+cat <<EOF>> $USERPATHFILE
+<?xml version="1.0" encoding="UTF-8"?>
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" oor:name="Paths" oor:package="org.openoffice.Office">
+ <node oor:name="Paths">
+  <node oor:name="Work">
+   <prop oor:name="WritePath" oor:type="xs:string">
+    <value>\$(work)${OOUserHomeDir}/</value>
+   </prop>
+  </node>
+ </node>
+</oor:component-data>
+EOF
+
+echo "   ... finished setting up profiles, about to remove lockfile (if any)"
+
+/bin/rm -f ${SCREEN_DIR}.lock
+
+# Get rid of OOo 3s shiny new .~lock.document# lock file
+OO3Lock=`dirname "$QwaqRemoteAppARGS"`/.~lock.`basename "$QwaqRemoteAppARGS"`#
+/bin/rm -f "$OO3Lock"
+
+logFile="/tmp/${RUN_ME}"
+if [ ! -f $logFile ]; then
+  logFile=/tmp/run_me-xxx
+  touch /tmp/run_me-xxx
+fi
+
+echo "DISPLAY: $DISPLAY" >> $logFile
+echo "DATE: `date +%Y%m%d-%H%M%S`" >> $logFile
+echo "Launching OpenOffice ($program)" >> $logFile
+echo "Args are: $QwaqRemoteAppARGS" >> $logFile
+echo "" >> $logFile
+env >> $logFile
+
+exec $program -env:UserInstallation=file://$SCREEN_DIR \
+    -nofirststartwizard -norestore -nocrashreport "$QwaqRemoteAppARGS" 
+echo "   ... OpenOffice launch failed"
+xmessage "Unable to launch $program"

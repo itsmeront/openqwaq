@@ -1,0 +1,44 @@
+#!/bin/bash
+#
+# OpenQwaq-tweaks - OpenQwaq Server Linux Kernel Tweaks
+#
+# chkconfig: - 99 20
+#
+# description: OpenQwaq Server Linux Kernel Tweaks
+#
+
+# Source function library.
+. /etc/rc.d/init.d/functions
+
+RETVAL=0
+
+# See how we were called.
+case "$1" in
+  start)
+	# Apply tweaks
+	echo $"Applying OpenQwaq kernel tweaks :)"
+	# File system tweaks
+	echo anticipatory > /sys/block/sda/queue/scheduler
+	echo 16384 > /sys/block/sda/queue/read_ahead_kb
+	echo 256 > /sys/block/sda/queue/nr_requests
+	# network tweaks
+	echo "16384 32768 4194304" > /proc/sys/net/ipv4/tcp_rmem
+	echo "16384 32768 4194304" > /proc/sys/net/ipv4/tcp_wmem
+	echo 8192 > /proc/sys/net/ipv4/tcp_dma_copybreak
+	echo reno > /proc/sys/net/ipv4/tcp_congestion_control
+	echo 8192000 > /proc/sys/net/core/rmem_max
+	echo 8192000 > /proc/sys/net/core/wmem_max
+	# Set display beautifier
+	cat /etc/OpenQwaq-release > /etc/issue
+	cat /etc/OpenQwaq-release > /etc/issue.net
+	cat /etc/OpenQwaq-release > /etc/motd
+	;;
+  stop)
+	;;
+  restart)
+	$0 stop
+	$0 start
+	;;
+esac
+
+exit $RETVAL

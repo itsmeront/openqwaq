@@ -1,0 +1,50 @@
+#!/bin/bash
+
+if [ -e /OpenQwaqApps/bin/acroread ] || [ -L /OpenQwaqApps/bin/acroread ]; then
+  program=/OpenQwaqApps/bin/acroread
+  geo=1024x768
+  #geo=1024x768-33-33
+
+#  The above is empirical for Acroread 9+  (on QFES 2.5/3)
+#  which has strange placement behavior for unmanaged screens.
+#  The 1024x768 is the wired-in forums server size for these screens;
+#  the -33-33 is x-y offset left/up to compensate for Acrobat's defaulting.
+
+else
+  program=/usr/bin/acroread
+  geo=1024x768
+fi
+
+# chroot environment needs to have relative pathing.
+QwaqRemoteAppARGS=`echo "$QwaqRemoteAppARGS"|sed -e 's/\//___/g'`
+QwaqRemoteAppHOME=`echo "$QwaqRemoteAppHOME"|sed -e 's/\//___/g'`
+QwaqRemoteAppARGS=`echo "$QwaqRemoteAppARGS"|sed -e 's/'"$QwaqRemoteAppHOME"'//g' -e 's/___/\//g'`
+QwaqRemoteAppHOME=`echo "$QwaqRemoteAppHOME"|sed -e 's/___/\//g'`
+
+# Special hack
+export ACRO_ALLOW_SUDO=TRUE
+
+logFile="/tmp/${RUN_ME}"
+if [ ! -f $logFile ]; then
+  logFile=/tmp/run_me-xxx
+  touch /tmp/run_me-xxx
+fi
+
+echo "DISPLAY: $DISPLAY" >> $logFile
+echo "DATE: `date +%Y%m%d-%H%M%S`" >> $logFile
+echo "Launching Acrobat (using 'qstartup-Acrobat')" >> $logFile
+echo "   ... using path: $program" >> $logFile
+echo "   ... using args: $QwaqRemoteAppARGS" >> $logFile
+echo "Args are: $QwaqRemoteAppARGS" >> $logFile
+echo "" >> $logFile
+env >> $logFile
+echo "" >> $logFile
+echo "	Running this command:" >> $logFile
+echo "$program --screen=$QwaqRemoteAppSCREEN -geometry $geo "$QwaqRemoteAppARGS"" >> $logFile
+
+
+exec $program --screen=$QwaqRemoteAppSCREEN -geometry $geo "$QwaqRemoteAppARGS"
+
+# Hopefully we don't reach here.
+echo "   ... Acrobat launch failed"
+xmessage "Unable to launch $program"
