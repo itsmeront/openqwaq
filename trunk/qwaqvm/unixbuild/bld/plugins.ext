@@ -1,0 +1,15 @@
+# Automatically generated makefile include for external plugins
+EXTERNAL_PLUGINS = \
+B3DAcceleratorPlugin \
+CroquetPlugin \
+HostWindowPlugin \
+LocalePlugin \
+PNGLibPlugin \
+PSharePlugin \
+PyBridge \
+QAudioPlugin \
+QVideoCodecPluginMC \
+QWebcamPlugin \
+SqueakFFIPrims \
+UnixOSProcessPlugin \
+UUIDPlugin
