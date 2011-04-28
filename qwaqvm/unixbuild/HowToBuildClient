@@ -1,0 +1,78 @@
+How to Build the client QwaqVM on Unix
+
+1. Install the tools (gcc, X11-devel, etc (e.g. libpng, libX11 & libxt source))
+
+2. Check out the following sources from svn
+     svn co https://source.qwaq.com/svn/qwaqvm/trunk/platforms
+     svn co https://source.qwaq.com/svn/qwaqvm/trunk/unixbuild
+     svn co https://source.qwaq.com/svn/qwaqvm/trunk/src
+
+3. Check that unixbuild/python2.4-2.4.6/libpython2.4.a exists and if not,
+   build it via:
+	in unixbuild
+		mkdir python2.4-2.4.6
+		cd python2.4-2.4.6
+		../../platforms/Cross/third-party/Python-2.4.6/configure
+		make
+
+4. build libspeex:
+cd unixbuild
+cd bldspeex
+../../platforms/Cross/third-party/speex-1.2rc1-src/speex-1.2rc1/configure --prefix=`dirname \`pwd\``/libspeex
+make install
+Delete all dynamic libs from libspeex/lib
+rm ../libspeex/lib/*.so* ../libspeex/lib/*.la
+
+5. build OpenAL _without OSS support_ and having ensured that alGetError answers
+AL_NO_ERROR if there is no SuspendedContext.
+	Make sure cmake 2.4 or better is installed (e.g. yum install cmake)
+	cd unixbuild
+	cd libopenal
+	cmake -D OSS:BOOL=OFF ../../platforms/unix/third-party/openal-soft-1.10.622
+	make
+
+6. build libboost 1.40
+cd unixbuild
+mkdir buildboost
+cd buildboost
+svn cat https://dev.qwaq.com/svn/third-party/boost_1_40_0.tar.bz2 | bunzip2 -c | tar xvf -
+cd boost_1_40_0
+./bootstrap.sh --libdir=`dirname \`dirname \\\`pwd\\\`\``/libboost/lib --includedir=`dirname \`dirname \\\`pwd\\\`\``/libboost/include
+./bjam
+cp stage/lib/*.a ../../libboost # i.e. to unixbuild/libboost
+
+
+[7. if building libasound 
+	git clone -b v1.0.17a git://git.alsa-project.org/alsa-lib.git alsa-lib
+then from alsa-lib/INSTALL (these steps already done)
+	libtoolize --force --copy --automake
+    aclocal
+    autoheader
+    automake --foreign --copy --add-missing
+    autoconf
+then in a build directory
+	../alsa-lib/configure --with-configdir=/etc/alsa
+	make
+then copy the .so files to the lib dir]
+
+8. build client:
+Include -fno-omit-frame-pointer or -fomit-frame-pointer to taste, based on how
+you value debugability vs performance.  For now the client is -fno-omit
+whereas server is -fomit
+
+../../platforms/unix/config/configure --without-vm-sound-OSS --without-vm-sound-null --without-vm-display-fbdev --without-npsqueak CFLAGS="-g -O2 -msse2 -fomit-frame-pointer -D_GNU_SOURCE -DNDEBUG -DITIMER_HEARTBEAT=1 -DNO_VM_PROFILE=1 -DCOGMTVM=0 -DDEBUGVM=0" LIBS=-lpthread
+
+ ../../platforms/unix/config/configure --without-vm-sound-OSS --without-vm-sound-null --without-vm-display-fbdev --without-npsqueak CFLAGS="-g -O2 -fno-omit-frame-pointer -msse2 -D_GNU_SOURCE -DNDEBUG -DITIMER_HEARTBEAT=1 -DNO_VM_PROFILE=1 -DCOGMTVM=0 -DDEBUGVM=0" LIBS=-lpthread
+
+ ../../platforms/unix/config/configure --without-vm-sound-OSS --without-vm-sound-null --without-vm-display-fbdev --without-npsqueak CFLAGS="-g2 -O1 -fno-omit-frame-pointer -msse2 -D_GNU_SOURCE -DNDEBUG -DITIMER_HEARTBEAT=1 -DNO_VM_PROFILE=1 -DCOGMTVM=0 -DDEBUGVM=0" LIBS=-lpthread
+
+ ../../platforms/unix/config/configure --without-vm-sound-OSS --without-vm-sound-null --without-vm-display-fbdev --without-npsqueak CFLAGS="-g3 -msse2 -D_GNU_SOURCE -DDEBUG=1 -DITIMER_HEARTBEAT=1 -DNO_VM_PROFILE=1 -DCOGMTVM=0 -DDEBUGVM=1" LIBS=-lpthread
+
+make install prefix=root-directory-for-install
+
+THEN MANUALLY COPY RELEVANT SHARED OBJECTS TO installdir/lib/squeak/3.97.  e.g.
+
+../installClientLibs ../client/lib/squeak/3.9-7/
+
+
+Testing am external plugin has completely linked, use  -Wl,--warn-unresolved-symbols -Wl,--no-allow-shlib-undefined when manually repeating the link command

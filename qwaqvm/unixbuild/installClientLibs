@@ -1,0 +1,24 @@
+#!/bin/sh
+# Install the support libraries into a target directory
+UNIXBUILD="`/usr/bin/dirname $0`"
+echo $UNIXBUILD
+
+if [ $# != 1 -o "$1" = '-?' -o "$1" = "--help" -o ! -d "$1" ]; then
+	echo usage: $0 target '# where target is e.g. ~/myvm/lib/squeak/3.9-7'
+	exit 1
+fi
+if [ -d "$1/lib/squeak/3.9-7" ]; then
+	DIR="$1/lib/squeak/3.9-7"
+else
+	DIR="$1"
+fi
+MCa=CODECSDK-LX32_8.6.0_2010-02-22
+MCb=AACSDK-LX32_8.6.0_LINUX
+MCc=AVCSDK-LX32_8.6.0_LINUX
+(cd "$DIR"; rm -f lib*.so*)
+(cd "$UNIXBUILD/third-party/MainConcept/$MCa/bin" >/dev/null;tar cf - libdemo_trans_video_colorspace.so*) | (cd "$DIR";tar xvf -)
+(cd "$UNIXBUILD/third-party/MainConcept/$MCb/bin" >/dev/null;tar cf - libmc_[de][en]c_aac.so*) | (cd "$DIR";tar xvf -)
+(cd "$UNIXBUILD/third-party/MainConcept/$MCc/bin" >/dev/null;tar cf - libmc_[de][en]c_avc.so* libmc_std_enc_avc*) | (cd "$DIR";tar xvf -)
+(cd "$UNIXBUILD/libopenal" >/dev/null;tar cf - libopenal.so.*) | (cd "$DIR";tar xvf -)
+(cd "$DIR";ln -s libopenal.so.*.* libopenal.so)
+(cd "$UNIXBUILD/libasound/src/.libs" >/dev/null;tar cf - libasound.so*) | (cd "$DIR";tar xvf -)
