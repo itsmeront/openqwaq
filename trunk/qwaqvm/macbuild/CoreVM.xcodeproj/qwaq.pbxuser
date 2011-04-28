@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	08773EB400C6A1C4C0A80109 /* Project object */ = {
+		activeBuildConfigurationName = Deployment;
+		activeExecutable = DA60614B0AA50D250009E25D /* Qwaq VM */;
+		activeTarget = 941A3B2B09AA144000C9D25A /* Qwaq VM */;
+		addToTargets = (
+			941A3B2B09AA144000C9D25A /* Qwaq VM */,
+		);
+		breakpointsGroup = DA6061710AA50DCF0009E25D /* XCBreakpointsBucket */;
+		codeSenseManager = DA6061640AA50D450009E25D /* Code sense */;
+		executables = (
+			DA60614B0AA50D250009E25D /* Qwaq VM */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					290,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					200,
+					81,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 202846084;
+			PBXWorkspaceStateSaveDate = 202846084;
+		};
+		perUserProjectItems = {
+			DA0C78620C172FB40091EEDE /* PBXBookmark */ = DA0C78620C172FB40091EEDE /* PBXBookmark */;
+			DA0C78670C1732EC0091EEDE /* PBXTextBookmark */ = DA0C78670C1732EC0091EEDE /* PBXTextBookmark */;
+		};
+		sourceControlManager = DA6061630AA50D450009E25D /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	661A41BF037EF3FE00A80109 /* BMPReadWriterPlugin.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {754, 2954}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {0, 0}}";
+		};
+	};
+	664A73DB0300584000A80109 /* Squeak VM.r */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 429}}";
+			sepNavSelRange = "{726, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{107, 131}, {750, 558}}";
+		};
+	};
+	664A73DC0300584000A80109 /* Squeak.icns */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{61, 173}, {750, 558}}";
+		};
+	};
+	664A73DD0300584000A80109 /* SqueakChanges.icns */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{84, 152}, {750, 558}}";
+		};
+	};
+	664A73DE0300584000A80109 /* SqueakImage.icns */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{130, 110}, {750, 558}}";
+		};
+	};
+	94196AAE09974200005962BF /* sqMacUIEventsUniversal.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1076, 19278}}";
+			sepNavSelRange = "{26452, 0}";
+			sepNavVisRect = "{{0, 9846}, {711, 429}}";
+			sepNavWindowFrame = "{{590, 246}, {750, 558}}";
+		};
+	};
+	94196AAF09974200005962BF /* sqMacUIMenuBarUniversal.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {788, 1498}}";
+			sepNavSelRange = "{1608, 0}";
+			sepNavVisRect = "{{0, 352}, {711, 429}}";
+			sepNavWindowFrame = "{{110, 434}, {750, 558}}";
+		};
+	};
+	94196AB009974200005962BF /* sqMacWindowUniversal.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1082, 16394}}";
+			sepNavSelRange = "{2803, 0}";
+			sepNavVisRect = "{{0, 857}, {711, 429}}";
+			sepNavWindowFrame = "{{351, 184}, {750, 558}}";
+		};
+	};
+	941A3B2B09AA144000C9D25A /* Qwaq VM */ = {
+		activeExec = 0;
+		executables = (
+			DA60614B0AA50D250009E25D /* Qwaq VM */,
+		);
+	};
+	946DD777098FF9E3006BBA1E /* sqMacUnixFileInterface.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {836, 9730}}";
+			sepNavSelRange = "{17730, 43}";
+			sepNavVisRect = "{{0, 7746}, {711, 429}}";
+			sepNavWindowFrame = "{{442, 291}, {750, 558}}";
+		};
+	};
+	946DD91C099015C5006BBA1E /* sqMacImageIO.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {740, 2310}}";
+			sepNavSelRange = "{2821, 14}";
+			sepNavVisRect = "{{0, 1331}, {740, 180}}";
+			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
+		};
+	};
+	9481DDB309B38AE3005C4088 /* sqMacNSPluginUILogic.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {926, 14182}}";
+			sepNavSelRange = "{28584, 0}";
+			sepNavVisRect = "{{0, 13716}, {711, 429}}";
+			sepNavWindowFrame = "{{171, 370}, {750, 558}}";
+		};
+	};
+	94ECE73606ADBF47004FAE20 /* sqMacHostWindow.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {770, 3710}}";
+			sepNavSelRange = "{4027, 14}";
+			sepNavVisRect = "{{0, 1905}, {740, 180}}";
+		};
+	};
+	DA0C78620C172FB40091EEDE /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 94196AAF09974200005962BF /* sqMacUIMenuBarUniversal.c */;
+	};
+	DA0C78670C1732EC0091EEDE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 94196AAF09974200005962BF /* sqMacUIMenuBarUniversal.c */;
+		name = "sqMacUIMenuBarUniversal.c: 49";
+		rLen = 0;
+		rLoc = 1608;
+		rType = 0;
+		vrLen = 1138;
+		vrLoc = 818;
+	};
+	DA60614B0AA50D250009E25D /* Qwaq VM */ = {
+		isa = PBXExecutable;
+		activeArgIndex = 2147483647;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Qwaq VM";
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+	};
+	DA6061630AA50D450009E25D /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	DA6061640AA50D450009E25D /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	DA6061710AA50DCF0009E25D /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = "Project Breakpoints";
+		objects = (
+		);
+	};
+	DAD40DAF0AA60CE90082521A /* CoreVM.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 6104}}";
+			sepNavSelRange = "{10041, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
+		};
+	};
+	DAFB92ED0B9F50CF000B4B7C /* sqMacFileDialog.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 5516}}";
+			sepNavSelRange = "{234, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{81, 169}, {750, 558}}";
+		};
+	};
+	DAFB93050B9F5D00000B4B7C /* FileDialogPlugin.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 1792}}";
+			sepNavSelRange = "{434, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{132, 448}, {750, 558}}";
+		};
+	};
+	F5F8ADC602EB4E090100013C /* interp.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {3470, 327166}}";
+			sepNavSelRange = "{107854, 0}";
+			sepNavVisRect = "{{0, 43557}, {711, 429}}";
+			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
+		};
+	};
+	F5F8ADC902EB4E090100013C /* ADPCMCodecPlugin.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 11270}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{84, 152}, {750, 558}}";
+		};
+	};
+	F5F8AE0702EB4E090100013C /* sqNamedPrims.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 1190}}";
+			sepNavSelRange = "{714, 0}";
+			sepNavVisRect = "{{0, 165}, {711, 429}}";
+			sepNavWindowFrame = "{{107, 131}, {750, 558}}";
+		};
+	};
+	F5F8AEF402EB4E0A0100013C /* sqMacMain.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1250, 7602}}";
+			sepNavSelRange = "{8689, 0}";
+			sepNavVisRect = "{{0, 2497}, {711, 429}}";
+			sepNavWindowFrame = "{{18, 417}, {750, 558}}";
+		};
+	};
+	F5F8AF0602EB4E0A0100013C /* sqMacWindow.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {740, 378}}";
+			sepNavSelRange = "{735, 14}";
+			sepNavVisRect = "{{0, 183}, {740, 180}}";
+		};
+	};
+	F5F8AF1302EB4E0A0100013C /* AsynchFilePlugin.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 429}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{84, 152}, {750, 558}}";
+		};
+	};
+	F5F8AFDC02EB4E0A0100013C /* sq.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {890, 5866}}";
+			sepNavSelRange = "{365, 28}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{130, 110}, {750, 558}}";
+		};
+	};
+	F5F8AFDD02EB4E0A0100013C /* sqNamedPrims.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 7308}}";
+			sepNavSelRange = "{592, 26}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{222, 135}, {750, 558}}";
+		};
+	};
+}

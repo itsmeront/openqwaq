@@ -1,0 +1,5 @@
+//
+// Prefix header for all source files of the 'PNGLibPlugin' target in the 'PNGLibPlugin' project.
+//
+
+#include <Carbon/Carbon.h>

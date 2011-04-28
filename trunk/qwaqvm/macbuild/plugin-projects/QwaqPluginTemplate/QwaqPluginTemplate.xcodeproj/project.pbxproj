@@ -1,0 +1,271 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		508817F209F0CAA80071BF1A /* QwaqPluginTemplate.c in Sources */ = {isa = PBXBuildFile; fileRef = 508817F109F0CAA80071BF1A /* QwaqPluginTemplate.c */; };
+		5088180A09F0CE0A0071BF1A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5088180909F0CE0A0071BF1A /* CoreFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4536A98A0DD26C2500C57C6C /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = "../../../platforms/Mac OS/vm/config.h"; sourceTree = SOURCE_ROOT; };
+		4536A98B0DD26C2500C57C6C /* sqConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqConfig.h; path = "../../../platforms/Mac OS/vm/sqConfig.h"; sourceTree = SOURCE_ROOT; };
+		4536A98C0DD26C2500C57C6C /* sqPlatformSpecific.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqPlatformSpecific.h; path = "../../../platforms/Mac OS/vm/sqPlatformSpecific.h"; sourceTree = SOURCE_ROOT; };
+		4536A98D0DD26C4900C57C6C /* sq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sq.h; path = ../../../platforms/Cross/vm/sq.h; sourceTree = SOURCE_ROOT; };
+		4536A98E0DD26C4900C57C6C /* sqMemoryAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqMemoryAccess.h; path = ../../../platforms/Cross/vm/sqMemoryAccess.h; sourceTree = SOURCE_ROOT; };
+		4536A98F0DD26C4900C57C6C /* sqVirtualMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqVirtualMachine.h; path = ../../../platforms/Cross/vm/sqVirtualMachine.h; sourceTree = SOURCE_ROOT; };
+		4536A9900DD26C6400C57C6C /* interp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = interp.h; path = ../../../src/vm/interp.h; sourceTree = SOURCE_ROOT; };
+		508817D409F0C9AD0071BF1A /* QwaqPluginTemplate.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QwaqPluginTemplate.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		508817D609F0C9AD0071BF1A /* QwaqPluginTemplate-Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; path = "QwaqPluginTemplate-Info.plist"; sourceTree = "<group>"; };
+		508817E609F0CA040071BF1A /* QwaqPluginTemplateProj.xcconfig */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xcconfig; path = QwaqPluginTemplateProj.xcconfig; sourceTree = "<group>"; };
+		508817E709F0CA040071BF1A /* QwaqPluginTemplateTarget.xcconfig */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xcconfig; path = QwaqPluginTemplateTarget.xcconfig; sourceTree = "<group>"; };
+		508817F009F0CAA80071BF1A /* QwaqPluginTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QwaqPluginTemplate.h; sourceTree = "<group>"; };
+		508817F109F0CAA80071BF1A /* QwaqPluginTemplate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = QwaqPluginTemplate.c; sourceTree = "<group>"; };
+		5088180909F0CE0A0071BF1A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
+		5088181409F0CE7B0071BF1A /* QwaqPluginTemplate_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QwaqPluginTemplate_Prefix.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		508817D209F0C9AD0071BF1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5088180A09F0CE0A0071BF1A /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4536A9860DD26B8900C57C6C /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				4536A9890DD26B9A00C57C6C /* vm */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		4536A9890DD26B9A00C57C6C /* vm */ = {
+			isa = PBXGroup;
+			children = (
+				4536A9900DD26C6400C57C6C /* interp.h */,
+				4536A98D0DD26C4900C57C6C /* sq.h */,
+				4536A98E0DD26C4900C57C6C /* sqMemoryAccess.h */,
+				4536A98F0DD26C4900C57C6C /* sqVirtualMachine.h */,
+				4536A98A0DD26C2500C57C6C /* config.h */,
+				4536A98B0DD26C2500C57C6C /* sqConfig.h */,
+				4536A98C0DD26C2500C57C6C /* sqPlatformSpecific.h */,
+			);
+			name = vm;
+			sourceTree = "<group>";
+		};
+		508817C209F0C9740071BF1A = {
+			isa = PBXGroup;
+			children = (
+				4536A9860DD26B8900C57C6C /* Header */,
+				508817E509F0C9EF0071BF1A /* Configuration Files */,
+				508817D609F0C9AD0071BF1A /* QwaqPluginTemplate-Info.plist */,
+				508817F509F0CAB50071BF1A /* Sources */,
+				5088180609F0CDD00071BF1A /* External Frameworks and Libraries */,
+				508817D509F0C9AD0071BF1A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		508817D509F0C9AD0071BF1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				508817D409F0C9AD0071BF1A /* QwaqPluginTemplate.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		508817E509F0C9EF0071BF1A /* Configuration Files */ = {
+			isa = PBXGroup;
+			children = (
+				508817E609F0CA040071BF1A /* QwaqPluginTemplateProj.xcconfig */,
+				508817E709F0CA040071BF1A /* QwaqPluginTemplateTarget.xcconfig */,
+			);
+			name = "Configuration Files";
+			sourceTree = "<group>";
+		};
+		508817F509F0CAB50071BF1A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5088181409F0CE7B0071BF1A /* QwaqPluginTemplate_Prefix.pch */,
+				508817F009F0CAA80071BF1A /* QwaqPluginTemplate.h */,
+				508817F109F0CAA80071BF1A /* QwaqPluginTemplate.c */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		5088180609F0CDD00071BF1A /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				5088180909F0CE0A0071BF1A /* CoreFoundation.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		508817D309F0C9AD0071BF1A /* QwaqPluginTemplate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 508817D709F0C9AE0071BF1A /* Build configuration list for PBXNativeTarget "QwaqPluginTemplate" */;
+			buildPhases = (
+				508817D009F0C9AD0071BF1A /* Resources */,
+				508817D109F0C9AD0071BF1A /* Sources */,
+				508817D209F0C9AD0071BF1A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QwaqPluginTemplate;
+			productName = QwaqPluginTemplate;
+			productReference = 508817D409F0C9AD0071BF1A /* QwaqPluginTemplate.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		508817C409F0C9740071BF1A /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 508817C509F0C9740071BF1A /* Build configuration list for PBXProject "QwaqPluginTemplate" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 0;
+			mainGroup = 508817C209F0C9740071BF1A;
+			productRefGroup = 508817D509F0C9AD0071BF1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				508817D309F0C9AD0071BF1A /* QwaqPluginTemplate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		508817D009F0C9AD0071BF1A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		508817D109F0C9AD0071BF1A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				508817F209F0CAA80071BF1A /* QwaqPluginTemplate.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		508817C609F0C9740071BF1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 508817E609F0CA040071BF1A /* QwaqPluginTemplateProj.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = i386;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../platforms/MacOS/plugins/QwaqPluginTemplate,
+					../../../platforms/Cross/plugins/QwaqPluginTemplate,
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = YES;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		508817C709F0C9740071BF1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 508817E609F0CA040071BF1A /* QwaqPluginTemplateProj.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = i386;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../platforms/MacOS/plugins/QwaqPluginTemplate,
+					../../../platforms/Cross/plugins/QwaqPluginTemplate,
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = YES;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+		508817D809F0C9AE0071BF1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 508817E709F0CA040071BF1A /* QwaqPluginTemplateTarget.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QwaqPluginTemplate_Prefix.pch;
+				GENERATE_PKGINFO_FILE = YES;
+				PREBINDING = NO;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+			};
+			name = Debug;
+		};
+		508817D909F0C9AE0071BF1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 508817E709F0CA040071BF1A /* QwaqPluginTemplateTarget.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = QwaqPluginTemplate_Prefix.pch;
+				GENERATE_PKGINFO_FILE = YES;
+				PREBINDING = NO;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		508817C509F0C9740071BF1A /* Build configuration list for PBXProject "QwaqPluginTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				508817C609F0C9740071BF1A /* Debug */,
+				508817C709F0C9740071BF1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		508817D709F0C9AE0071BF1A /* Build configuration list for PBXNativeTarget "QwaqPluginTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				508817D809F0C9AE0071BF1A /* Debug */,
+				508817D909F0C9AE0071BF1A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 508817C409F0C9740071BF1A /* Project object */;
+}

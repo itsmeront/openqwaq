@@ -1,0 +1,26 @@
+One should just have to say
+	xcodebuild -project QAudioPlugin.xcodeproj
+but one may encounter errors such as
+/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/OpenAL.framework/Headers/alc.h:182: error: invalid use of 'ALCvoid'
+
+If so you will have to fix the bug in Apple's headers where alc.h reasonably
+defines:
+
+typedef void ALCvoid;
+
+but then uses it wrongly and illegally in a few places:
+
+ALC_API ALCcontext *    ALC_APIENTRY alcGetCurrentContext( ALCvoid );
+
+ALC_API ALCcontext *    (ALC_APIENTRY *alcGetCurrentContext)( ALCvoid );
+
+typedef ALCcontext *   (ALC_APIENTRY *LPALCGETCURRENTCONTEXT)( ALCvoid );
+
+
+If so sudo editor-of-choice /Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/OpenAL.framework/Headers/alc.h and fix the uses to read, e.g.
+
+ALC_API ALCcontext *    ALC_APIENTRY alcGetCurrentContext( void );
+
+ALC_API ALCcontext *    (ALC_APIENTRY *alcGetCurrentContext)( void );
+
+typedef ALCcontext *   (ALC_APIENTRY *LPALCGETCURRENTCONTEXT)( void );

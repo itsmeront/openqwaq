@@ -1,0 +1,134 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeTarget = 8D01CCC60486CAD60068D4B7 /* PyBridge */;
+		addToTargets = (
+			8D01CCC60486CAD60068D4B7 /* PyBridge */,
+		);
+		breakpointsGroup = DAE730CA0AA623FB0032C017 /* XCBreakpointsBucket */;
+		codeSenseManager = DAE730040AA61D490032C017 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 179191561;
+			PBXWorkspaceStateSaveDate = 179191561;
+		};
+		sourceControlManager = DAE730030AA61D490032C017 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D01CCC60486CAD60068D4B7 /* PyBridge */ = {
+		activeExec = 0;
+	};
+	DAE730030AA61D490032C017 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	DAE730040AA61D490032C017 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	DAE7305A0AA61F5E0032C017 /* convert.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {488, 3864}}";
+			sepNavSelRange = "{176, 32}";
+			sepNavVisRect = "{{0, 0}, {459, 186}}";
+			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
+		};
+	};
+	DAE7305C0AA61F5E0032C017 /* py2sq.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 2506}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
+		};
+	};
+	DAE7305D0AA61F5E0032C017 /* py2sqMap.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 2828}}";
+			sepNavSelRange = "{177, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{61, 173}, {750, 558}}";
+		};
+	};
+	DAE730610AA61F5E0032C017 /* pyErr.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 560}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{107, 131}, {750, 558}}";
+		};
+	};
+	DAE730620AA61F5E0032C017 /* pyInit.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 1022}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{130, 110}, {750, 558}}";
+		};
+	};
+	DAE730640AA61F5E0032C017 /* sq2py.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 2478}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{153, 89}, {750, 558}}";
+		};
+	};
+	DAE730650AA61F5E0032C017 /* sq2pyMap.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 3108}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{176, 68}, {750, 558}}";
+		};
+	};
+	DAE730670AA61F5E0032C017 /* sqObject.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 1302}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{15, 215}, {750, 558}}";
+		};
+	};
+	DAE730690AA61F5E0032C017 /* TObject.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 1358}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRect = "{{0, 0}, {711, 429}}";
+			sepNavWindowFrame = "{{38, 194}, {750, 558}}";
+		};
+	};
+	DAE730CA0AA623FB0032C017 /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = "Project Breakpoints";
+		objects = (
+		);
+	};
+}

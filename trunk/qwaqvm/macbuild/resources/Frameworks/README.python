@@ -1,0 +1,11 @@
+
+The Python here is a replacement from the Tiger universal framework,
+which has undergone
+
+	lipo Python -thin i386 -output Python386
+
+to strip the PowerPC code, saving several megabytes.
+
+Likewise, all the .so's in 'dynload' have been stripped down to i386-only with lipo -thin.
+
+

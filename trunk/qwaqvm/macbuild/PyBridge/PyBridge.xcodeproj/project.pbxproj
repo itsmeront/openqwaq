@@ -1,0 +1,292 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D01CCCE0486CAD60068D4B7 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */; };
+		DAAC235B0AAE3F3400547CA3 /* PyBridge.c in Sources */ = {isa = PBXBuildFile; fileRef = DAAC235A0AAE3F3400547CA3 /* PyBridge.c */; };
+		DAE7306B0AA61F5E0032C017 /* convert.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE7305A0AA61F5E0032C017 /* convert.c */; };
+		DAE7306C0AA61F5E0032C017 /* py2sq.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE7305C0AA61F5E0032C017 /* py2sq.c */; };
+		DAE7306D0AA61F5E0032C017 /* py2sqMap.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE7305D0AA61F5E0032C017 /* py2sqMap.c */; };
+		DAE7306F0AA61F5E0032C017 /* pyErr.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE730610AA61F5E0032C017 /* pyErr.c */; };
+		DAE730700AA61F5E0032C017 /* pyInit.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE730620AA61F5E0032C017 /* pyInit.c */; };
+		DAE730710AA61F5E0032C017 /* sq2py.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE730640AA61F5E0032C017 /* sq2py.c */; };
+		DAE730720AA61F5E0032C017 /* sq2pyMap.c in Sources */ = {isa = PBXBuildFile; fileRef = DAE730650AA61F5E0032C017 /* sq2pyMap.c */; };
+		DAE730AA0AA622730032C017 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE730A90AA622730032C017 /* Python.framework */; };
+		DAE730C70AA623E00032C017 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAE730C60AA623E00032C017 /* Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		8D01CCD20486CAD60068D4B7 /* PyBridge.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PyBridge.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAAC235A0AAE3F3400547CA3 /* PyBridge.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = PyBridge.c; path = ../../src/plugins/PyBridge/PyBridge.c; sourceTree = SOURCE_ROOT; };
+		DAAC235C0AAE3F6500547CA3 /* Python.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Python.h; path = /Library/Frameworks/Python.framework/Versions/2.4/include/python2.4/Python.h; sourceTree = "<absolute>"; };
+		DAE7305A0AA61F5E0032C017 /* convert.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = convert.c; sourceTree = "<group>"; };
+		DAE7305B0AA61F5E0032C017 /* convert.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = convert.h; sourceTree = "<group>"; };
+		DAE7305C0AA61F5E0032C017 /* py2sq.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = py2sq.c; sourceTree = "<group>"; };
+		DAE7305D0AA61F5E0032C017 /* py2sqMap.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = py2sqMap.c; sourceTree = "<group>"; };
+		DAE7305E0AA61F5E0032C017 /* py2sqMap.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = py2sqMap.h; sourceTree = "<group>"; };
+		DAE730600AA61F5E0032C017 /* PyBridge.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PyBridge.h; sourceTree = "<group>"; };
+		DAE730610AA61F5E0032C017 /* pyErr.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = pyErr.c; sourceTree = "<group>"; };
+		DAE730620AA61F5E0032C017 /* pyInit.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = pyInit.c; sourceTree = "<group>"; };
+		DAE730640AA61F5E0032C017 /* sq2py.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = sq2py.c; sourceTree = "<group>"; };
+		DAE730650AA61F5E0032C017 /* sq2pyMap.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = sq2pyMap.c; sourceTree = "<group>"; };
+		DAE730660AA61F5E0032C017 /* sq2pyMap.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = sq2pyMap.h; sourceTree = "<group>"; };
+		DAE7308E0AA621680032C017 /* sqVirtualMachine.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = sqVirtualMachine.h; path = ../../platforms/Cross/vm/sqVirtualMachine.h; sourceTree = SOURCE_ROOT; };
+		DAE7308F0AA621820032C017 /* config.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = config.h; path = "../../platforms/Mac OS/vm/config.h"; sourceTree = SOURCE_ROOT; };
+		DAE730900AA621820032C017 /* sqConfig.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = sqConfig.h; path = "../../platforms/Mac OS/vm/sqConfig.h"; sourceTree = SOURCE_ROOT; };
+		DAE730910AA621820032C017 /* sqPlatformSpecific.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = sqPlatformSpecific.h; path = "../../platforms/Mac OS/vm/sqPlatformSpecific.h"; sourceTree = SOURCE_ROOT; };
+		DAE730970AA621E80032C017 /* interp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = interp.h; path = ../../src/vm/interp.h; sourceTree = SOURCE_ROOT; };
+		DAE7309F0AA622210032C017 /* sqMemoryAccess.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = sqMemoryAccess.h; path = ../../platforms/Cross/vm/sqMemoryAccess.h; sourceTree = "<group>"; };
+		DAE730A90AA622730032C017 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = /Library/Frameworks/Python.framework; sourceTree = "<absolute>"; };
+		DAE730C60AA623E00032C017 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D01CCCD0486CAD60068D4B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D01CCCE0486CAD60068D4B7 /* Carbon.framework in Frameworks */,
+				DAE730AA0AA622730032C017 /* Python.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* PyBridge */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77ADFE841716C02AAC07 /* Source */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				19C28FB4FE9D528D11CA2CBB /* Products */,
+			);
+			name = PyBridge;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				DAE730A90AA622730032C017 /* Python.framework */,
+				08EA7FFBFE8413EDC02AAC07 /* Carbon.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DAE730C60AA623E00032C017 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77ADFE841716C02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DAE7308D0AA6214B0032C017 /* Misc */,
+				DAE730560AA61EFE0032C017 /* PyBridge */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		19C28FB4FE9D528D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D01CCD20486CAD60068D4B7 /* PyBridge.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAE730560AA61EFE0032C017 /* PyBridge */ = {
+			isa = PBXGroup;
+			children = (
+				DAAC235C0AAE3F6500547CA3 /* Python.h */,
+				DAAC235A0AAE3F3400547CA3 /* PyBridge.c */,
+				DAE7305A0AA61F5E0032C017 /* convert.c */,
+				DAE7305B0AA61F5E0032C017 /* convert.h */,
+				DAE7305C0AA61F5E0032C017 /* py2sq.c */,
+				DAE7305D0AA61F5E0032C017 /* py2sqMap.c */,
+				DAE7305E0AA61F5E0032C017 /* py2sqMap.h */,
+				DAE730600AA61F5E0032C017 /* PyBridge.h */,
+				DAE730610AA61F5E0032C017 /* pyErr.c */,
+				DAE730620AA61F5E0032C017 /* pyInit.c */,
+				DAE730640AA61F5E0032C017 /* sq2py.c */,
+				DAE730650AA61F5E0032C017 /* sq2pyMap.c */,
+				DAE730660AA61F5E0032C017 /* sq2pyMap.h */,
+			);
+			name = PyBridge;
+			path = ../../platforms/Cross/plugins/PyBridge;
+			sourceTree = "<group>";
+		};
+		DAE7308D0AA6214B0032C017 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				DAE7309F0AA622210032C017 /* sqMemoryAccess.h */,
+				DAE730970AA621E80032C017 /* interp.h */,
+				DAE7308F0AA621820032C017 /* config.h */,
+				DAE730900AA621820032C017 /* sqConfig.h */,
+				DAE730910AA621820032C017 /* sqPlatformSpecific.h */,
+				DAE7308E0AA621680032C017 /* sqVirtualMachine.h */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D01CCC60486CAD60068D4B7 /* PyBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FADC23308B4156C00ABE55E /* Build configuration list for PBXNativeTarget "PyBridge" */;
+			buildPhases = (
+				8D01CCC90486CAD60068D4B7 /* Resources */,
+				8D01CCCB0486CAD60068D4B7 /* Sources */,
+				8D01CCCD0486CAD60068D4B7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PyBridge;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = PyBridge;
+			productReference = 8D01CCD20486CAD60068D4B7 /* PyBridge.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4FADC23708B4156C00ABE55E /* Build configuration list for PBXProject "PyBridge" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* PyBridge */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D01CCC60486CAD60068D4B7 /* PyBridge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D01CCC90486CAD60068D4B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE730C70AA623E00032C017 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D01CCCB0486CAD60068D4B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE7306B0AA61F5E0032C017 /* convert.c in Sources */,
+				DAE7306C0AA61F5E0032C017 /* py2sq.c in Sources */,
+				DAE7306D0AA61F5E0032C017 /* py2sqMap.c in Sources */,
+				DAE7306F0AA61F5E0032C017 /* pyErr.c in Sources */,
+				DAE730700AA61F5E0032C017 /* pyInit.c in Sources */,
+				DAE730710AA61F5E0032C017 /* sq2py.c in Sources */,
+				DAE730720AA61F5E0032C017 /* sq2pyMap.c in Sources */,
+				DAAC235B0AAE3F3400547CA3 /* PyBridge.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4FADC23408B4156C00ABE55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PyBridge_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PRODUCT_NAME = PyBridge;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		4FADC23508B4156C00ABE55E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PyBridge_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PRODUCT_NAME = PyBridge;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		4FADC23808B4156C00ABE55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/Developer/Headers/FlatCarbon,
+					"$(inherited)",
+				);
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+			};
+			name = Debug;
+		};
+		4FADC23908B4156C00ABE55E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/Developer/Headers/FlatCarbon,
+					"$(inherited)",
+				);
+				PREBINDING = NO;
+				SDKROOT = /Developer/SDKs/MacOSX10.5.sdk;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FADC23308B4156C00ABE55E /* Build configuration list for PBXNativeTarget "PyBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FADC23408B4156C00ABE55E /* Debug */,
+				4FADC23508B4156C00ABE55E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FADC23708B4156C00ABE55E /* Build configuration list for PBXProject "PyBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FADC23808B4156C00ABE55E /* Debug */,
+				4FADC23908B4156C00ABE55E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

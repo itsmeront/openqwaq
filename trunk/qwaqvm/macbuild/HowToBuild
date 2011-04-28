@@ -1,0 +1,16 @@
+How to Build the Teleplace VM on MacOS
+--------------------------------
+1. Install the tools (xcode etc);
+   then install the Intel C++ compiler 11.1
+   (You can forgo the Intel Compiler, 
+   which may require changing 'Rules' in the XCode project,
+   although XCode will default to gcc4.2 I think.)
+
+2. Install Python 2.4.3 (from python.org)
+3. Check out the following sources from svn
+     svn co https://source.qwaq.com/svn/qwaqvm/trunk/platforms
+     svn co https://source.qwaq.com/svn/qwaqvm/trunk/macbuild
+4. Open a shell, cd into the macbuild directory and execute
+     ./makevm
+5. At the end of this process you should have a brand new Teleplace.app
+   in the macbuild folder (which does include Python support)

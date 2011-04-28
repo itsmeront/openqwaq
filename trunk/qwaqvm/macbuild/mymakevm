@@ -1,0 +1,164 @@
+#!/bin/bash
+# Build a "complete" Mac VM consisting of CoreVM + Plugins.
+# By default build the Deployment configuration into Teleplace.app.
+# N.B. We choose not to build several plugins to save time and just copy them
+# from a suitable installation
+QVER=3.5.52
+IFS='	
+'
+BUILD_CONFIGURATION=Deployment
+NSD_BUILD_CONFIGURATION=Deployment
+XCD_BUILD_CONFIGURATION=Release
+DEST="Teleplace.app"
+KEEP=
+COREVMONLY=
+
+USAGE="usage: `basename $0` -[adskh?]"
+
+while getopts 'acdskh?' opt $@; do
+	case $opt in
+	a)		BUILD_CONFIGURATION=Assert
+			DEST="Assert.app";;
+	c)		COREVMONLY=1;;
+	d)		BUILD_CONFIGURATION=Development
+			NSD_BUILD_CONFIGURATION=Development
+			XCD_BUILD_CONFIGURATION=Debug
+			DEST="Debug.app";;
+	s)		BUILD_CONFIGURATION=DeploymentSymbols
+			DEST="Fast.app";;
+	k)		KEEP=1;;
+	h|\?|*)	echo $USAGE
+			echo '	build the vm (defaults to a Deployment version)'
+			echo '  -a: compile Assert configuration in Assert.app for assert checks'
+			echo '  -d: compile Development configuration in Debug.app for debugging'
+			echo '  -s: compile DeploymentSymbols configuration in Fast.app for partial debugging'
+			echo '  -k: keep (do not delete) the existing Teleplace.app prior to the build'
+			echo '	-h: display this help'
+			exit 0;;
+	esac
+done
+
+if [ -z "$DEVELOPER_SDK_DIR" ]; then
+	DEVELOPER_SDK_DIR=/Developer/SDKs
+fi
+test -d "$DEVELOPER_SDK_DIR" || echo '$DEVELOPER_SDK_DIR' "$DEVELOPER_SDK_DIR" does not exist \(needed by SqueakFFIPrims project\)
+export DEVELOPER_SDK_DIR
+if [ ! -d "$DEVELOPER_SDK_DIR/MacOSX10.5.sdk" ]; then
+	if [ -d "$DEVELOPER_SDK_DIR/MacOSX10.4u.sdk" ]; then
+		export SDKROOT="$DEVELOPER_SDK_DIR/MacOSX10.4u.sdk"
+	fi
+fi
+
+test "$KEEP" = 1 || rm -rf "$DEST"/* "$DEST"/.??*
+
+# Build CoreVM using xcode
+echo
+echo CoreVM xcodebuild -project CoreVM.xcodeproj -configuration $BUILD_CONFIGURATION
+xcodebuild -project CoreVM.xcodeproj -configuration $BUILD_CONFIGURATION
+if [ -d "$DEST" ]; then
+	mv build/$BUILD_CONFIGURATION/Teleplace.app/* "$DEST"
+else
+	mv build/$BUILD_CONFIGURATION/Teleplace.app "$DEST"
+fi
+
+# Build the Float plugin
+echo
+echo FloatMathPlugin xcodebuild -project FloatMathPlugin/FloatMathPlugin.xcodeproj -configuration Release
+xcodebuild -project FloatMathPlugin/FloatMathPlugin.xcodeproj -configuration Release
+rm -rf "$DEST/Contents/Resources/FloatMathPlugin.bundle"
+cp -R FloatMathPlugin/build/Release/FloatMathPlugin.bundle "$DEST/Contents/Resources"
+
+# Build the FloatArray plugin
+echo
+echo FloatArrayPlugin xcodebuild -project FloatArrayPlugin/FloatArrayPlugin.xcodeproj -configuration Release
+xcodebuild -project FloatArrayPlugin/FloatArrayPlugin.xcodeproj -configuration Release
+rm -rf "$DEST/Contents/Resources/FloatArrayPlugin.bundle"
+cp -R FloatArrayPlugin/build/Release/FloatArrayPlugin.bundle "$DEST/Contents/Resources"
+
+# Build the Croquet plugin
+echo
+echo CroquetPlugin xcodebuild -project CroquetPlugin/CroquetPlugin.xcodeproj -configuration Release
+xcodebuild -project CroquetPlugin/CroquetPlugin.xcodeproj -configuration Release
+rm -rf "$DEST/Contents/Resources/CroquetPlugin.bundle"
+cp -R CroquetPlugin/build/Release/CroquetPlugin.bundle "$DEST/Contents/Resources"
+
+# Build the FFI plugin (New as of 27 March 2008)
+echo
+echo SqueakFFIPlugin xcodebuild -project SqueakFFIPrims/SqueakFFI.xcodeproj -configuration $NSD_BUILD_CONFIGURATION
+xcodebuild -project SqueakFFIPrims/SqueakFFI.xcodeproj -configuration $NSD_BUILD_CONFIGURATION
+rm -rf "$DEST/Contents/Resources/SqueakFFIPrims.bundle"
+cp -R SqueakFFIPrims/build/$NSD_BUILD_CONFIGURATION/SqueakFFIPrims.bundle "$DEST/Contents/Resources"
+
+# Build the Mpeg3Plugin plugin
+echo
+echo Mpeg3Plugin xcodebuild -project Mpeg3Plugin/Mpeg3Plugin.xcodeproj -configuration Deployment
+xcodebuild -project Mpeg3Plugin/Mpeg3Plugin.xcodeproj -configuration Deployment
+cp -R Mpeg3Plugin/build/Deployment/Mpeg3Plugin.bundle "$DEST/Contents/Resources"
+
+# Build the Audio plugin (New as of 13 May 2008)
+# XXXXX: For some reason, the Release version builds, but doesn't work.
+#        I looked carefully at all of the project settings, and still
+#        couldn't figure out why.
+echo
+echo AudioPlugin xcodebuild -project plugin-projects/QAudioPlugin/QAudioPlugin.xcodeproj -configuration $XCD_BUILD_CONFIGURATION
+xcodebuild -project plugin-projects/QAudioPlugin/QAudioPlugin.xcodeproj -configuration $XCD_BUILD_CONFIGURATION
+cp -R plugin-projects/QAudioPlugin/build/$XCD_BUILD_CONFIGURATION/QAudioPlugin.bundle "$DEST/Contents/Resources"
+
+# Build the video codec plugin
+echo
+echo QVideoCodecPluginMC xcodebuild -project QVideoCodecPluginMC/QVideoCodecPluginMC.xcodeproj -configuration $XCD_BUILD_CONFIGURATION
+xcodebuild -project QVideoCodecPluginMC/QVideoCodecPluginMC.xcodeproj -configuration $XCD_BUILD_CONFIGURATION
+cp -R QVideoCodecPluginMC/build/$XCD_BUILD_CONFIGURATION/QVideoCodecPluginMC.bundle "$DEST/Contents/Resources"
+
+# Build the Webcam plugin
+echo
+echo QWebcamPlugin xcodebuild -project plugin-projects/QWebcamPlugin/QWebcamPlugin.xcodeproj -configuration $XCD_BUILD_CONFIGURATION
+xcodebuild -project plugin-projects/QWebcamPlugin/QWebcamPlugin.xcodeproj -configuration $XCD_BUILD_CONFIGURATION
+cp -R plugin-projects/QWebcamPlugin/build/$XCD_BUILD_CONFIGURATION/QWebcamPlugin.bundle "$DEST/Contents/Resources"
+
+# Build the WebAuthPlugin (New as of 28 April 2010)
+echo
+echo WebAuthPlugin xcodebuild -project WebAuthPlugin/WebAuthPlugin.xcodeproj -configuration Deployment
+xcodebuild -project WebAuthPlugin/WebAuthPlugin.xcodeproj -configuration Deployment
+cp -R WebAuthPlugin/build/Release/WebAuthPlugin.bundle "$DEST/Contents/Resources"
+
+# Build the BochsIA32Plugin
+echo BochsIA32Plugin xcodebuild -configuration $XCD_BUILD_CONFIGURATION -project BochsIA32Plugin/BochsIA32Plugin.xcodeproj
+xcodebuild -configuration $XCD_BUILD_CONFIGURATION -project BochsIA32Plugin/BochsIA32Plugin.xcodeproj
+rm -rf "$DEST/Contents/Resources/BochsIA32Plugin.bundle"
+cp -R BochsIA32Plugin/build/$XCD_BUILD_CONFIGURATION/BochsIA32Plugin.bundle "$DEST/Contents/Resources"
+
+# Build the UnixOSProcessPlugin
+echo UnixOSProcessPlugin xcodebuild -configuration $XCD_BUILD_CONFIGURATION -project UnixOSProcessPlugin/UnixOSProcessPlugin.xcodeproj
+xcodebuild -configuration $XCD_BUILD_CONFIGURATION -project UnixOSProcessPlugin/UnixOSProcessPlugin.xcodeproj
+rm -rf "$DEST/Contents/Resources/UnixOSProcessPlugin.bundle"
+cp -R UnixOSProcessPlugin/build/$XCD_BUILD_CONFIGURATION/UnixOSProcessPlugin.bundle "$DEST/Contents/Resources"
+
+# N.B. We choose not to build several plugins to save time and just copy them
+# from a suitable installation
+export QVER DEST
+IFS=
+for f in ~/Qwaq/Teleplace-$QVER/Teleplace\ $QVER.app/Contents/Resources/*
+do
+	pf="`basename "$f"`"
+	if [ ! -d "$DEST/Contents/Resources/$pf" ]; then
+		echo copying $pf from $QVER
+		(cd ~/Qwaq/Teleplace-$QVER/Teleplace\ $QVER.app/Contents/Resources >/dev/null;tar cf - "$pf") | (cd "$DEST/Contents/Resources" >/dev/null; tar xf -)
+	fi
+done
+IFS='	
+'
+echo copying frameworks from $QVER
+(cd ~/Qwaq/Teleplace-$QVER/Teleplace\ $QVER.app/Contents >/dev/null;tar cf - Frameworks)|(cd "$DEST/Contents" >/dev/null; tar xf -)
+
+# Update PyBridge to use private Python framework
+install_name_tool -id \
+  @executable_path/../Frameworks/Python \
+  "$DEST/Contents/Frameworks/Python"
+install_name_tool -change \
+  /Library/Frameworks/Python.framework/Versions/2.4/Python \
+  @executable_path/../Frameworks/Python \
+  "$DEST/Contents/Resources/PyBridge.bundle/Contents/MacOS/PyBridge"
+
+# Clean out any .svn directories (result of copying) in the VM
+find "$DEST" -name .svn -exec rm -rf {} \;

@@ -1,0 +1,150 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = 8D01CCC60486CAD60068D4B7 /* PSharePlugin */;
+		addToTargets = (
+			8D01CCC60486CAD60068D4B7 /* PSharePlugin */,
+		);
+		breakpointsGroup = DA0E96FE0F3271CA003839E6 /* XCBreakpointsBucket */;
+		codeSenseManager = DA0E96DE0F326DCE003839E6 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					458,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 255037900;
+			PBXWorkspaceStateSaveDate = 255037900;
+		};
+		perUserProjectItems = {
+			DAE5D6290F339B3A008F9989 /* PBXTextBookmark */ = DAE5D6290F339B3A008F9989 /* PBXTextBookmark */;
+			DAE5D6440F33B2FF008F9989 /* PBXBookmark */ = DAE5D6440F33B2FF008F9989 /* PBXBookmark */;
+			DAE5D6510F33E99F008F9989 /* PBXTextBookmark */ = DAE5D6510F33E99F008F9989 /* PBXTextBookmark */;
+			DAE5D6520F33E99F008F9989 /* PBXTextBookmark */ = DAE5D6520F33E99F008F9989 /* PBXTextBookmark */;
+		};
+		sourceControlManager = DA0E96DD0F326DCE003839E6 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D01CCC60486CAD60068D4B7 /* PSharePlugin */ = {
+		activeExec = 0;
+	};
+	DA0E96DD0F326DCE003839E6 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+		scmType = "";
+	};
+	DA0E96DE0F326DCE003839E6 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	DA0E96EF0F32712E003839E6 /* PSharePlugin.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {653, 700}}";
+			sepNavSelRange = "{204, 0}";
+			sepNavVisRect = "{{0, 0}, {653, 439}}";
+			sepNavWindowFrame = "{{328, 302}, {692, 568}}";
+		};
+	};
+	DA0E96F00F327148003839E6 /* PSharePlugin.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {788, 8274}}";
+			sepNavSelRange = "{10884, 0}";
+			sepNavVisRect = "{{0, 5289}, {653, 439}}";
+			sepNavWindowFrame = "{{153, 239}, {692, 568}}";
+		};
+	};
+	DA0E96FE0F3271CA003839E6 /* XCBreakpointsBucket */ = {
+		isa = XCBreakpointsBucket;
+		name = "Project Breakpoints";
+		objects = (
+		);
+	};
+	DA0E97070F327286003839E6 /* sqMacPSharePlugin.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {902, 5096}}";
+			sepNavSelRange = "{11729, 0}";
+			sepNavVisRect = "{{0, 0}, {667, 443}}";
+			sepNavWindowFrame = "{{89, 106}, {706, 572}}";
+		};
+	};
+	DAE5D5D50F33953E008F9989 /* sqMacPShareInput.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {4556, 3640}}";
+			sepNavSelRange = "{8857, 0}";
+			sepNavVisRect = "{{0, 0}, {839, 546}}";
+			sepNavWindowFrame = "{{146, 244}, {878, 675}}";
+		};
+	};
+	DAE5D6290F339B3A008F9989 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DAE5D62A0F339B3A008F9989 /* sqWin32PShare.c */;
+		rLen = 0;
+		rLoc = 2147483647;
+		rType = 0;
+	};
+	DAE5D62A0F339B3A008F9989 /* sqWin32PShare.c */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.c;
+		name = sqWin32PShare.c;
+		path = /Users/qwaq/Desktop/CogVM/platforms/win32/plugins/PSharePlugin/sqWin32PShare.c;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {667, 8736}}";
+			sepNavSelRange = "{67, 0}";
+			sepNavVisRect = "{{0, 8239}, {667, 443}}";
+			sepNavWindowFrame = "{{410, 366}, {706, 572}}";
+		};
+	};
+	DAE5D6440F33B2FF008F9989 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = DAE5D5D50F33953E008F9989 /* sqMacPShareInput.c */;
+	};
+	DAE5D6510F33E99F008F9989 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DAE5D5D50F33953E008F9989 /* sqMacPShareInput.c */;
+		name = "sqMacPShareInput.c: 188";
+		rLen = 0;
+		rLoc = 8857;
+		rType = 0;
+		vrLen = 1662;
+		vrLoc = 0;
+	};
+	DAE5D6520F33E99F008F9989 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = DAE5D6530F33E99F008F9989 /* sqWin32PShare.c */;
+		name = "(null): 3";
+		rLen = 0;
+		rLoc = 67;
+		rType = 0;
+		vrLen = 817;
+		vrLoc = 16869;
+	};
+	DAE5D6530F33E99F008F9989 /* sqWin32PShare.c */ = {
+		isa = PBXFileReference;
+		name = sqWin32PShare.c;
+		path = /Users/qwaq/Desktop/CogVM/platforms/win32/plugins/PSharePlugin/sqWin32PShare.c;
+		sourceTree = "<absolute>";
+	};
+}
