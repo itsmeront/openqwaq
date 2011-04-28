@@ -1,0 +1,30 @@
+#############################################################################
+# Define CFLAGS for inclusion by the other makefiles.
+# One can't pass the CFLAGS as an argument to the .lib & .dll submakes because
+# gmake overrides any and all variable assignments in a makefile if a variable
+# is defined on the command line.  The solution to avoid writing the CFLAGS
+# twice is to define them here and include them.
+#############################################################################
+
+#############################################################################
+# DirectX definitions
+#
+DXDIR:= c:/dx7sdk/include
+
+#############################################################################
+# C compiler settings Visual C++ v6 for VM debugging
+#
+CC:=	cl
+# DO NOT USE := FOR OFLAGS BECAUSE SOME PLUGINS REDEFINE THIS!!
+OFLAGS= /Ot
+CFLAGS=	/DWIN32=1 /D_MSC_VER=1200 /Zi $(OFLAGS) \
+		-Dalloca=_alloca -Dinline=__inline -Dhuge=my_huge
+# Do _njot_ define NDEBUG.  The entire point of the msvc build is to debug with
+# MSVC and defining NDEBUG installs a default catch-everything exception handler
+# that effectively disables debugging.
+#DEFS:=	-DWIN32_FILE_SUPPORT -DNO_SERVICE -DNO_STD_FILE_SUPPORT -DNDEBUG \
+#	-DLSB_FIRST -DVM_NAME=\"$(VM)\" -DX86 $(XDEFS) $(CROQUET)
+DEFS:=	-DWIN32_FILE_SUPPORT -DNO_SERVICE -DNO_STD_FILE_SUPPORT \
+	-DLSB_FIRST -DVM_NAME=\"$(VM)\" -DX86 $(XDEFS) $(CROQUET)
+XDEFS=	-DSQUEAK_BUILTIN_PLUGIN
+INCLUDES:= -I. -I$(VMDIR) -I$(WIN32DIR) -I$(CROSSDIR) -I$(DXDIR) $(XINC)
