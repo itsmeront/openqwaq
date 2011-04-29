@@ -1,0 +1,4 @@
+C:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854/build/CMakeFiles/ALL_BUILD.dir
+C:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854/build/CMakeFiles/OpenAL32.dir
+C:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854/build/CMakeFiles/ZERO_CHECK.dir
+C:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854/build/CMakeFiles/openal-info.dir
