@@ -1,0 +1,5 @@
+#ifdef _WIN32
+1                       ICON    DISCARDABLE     "qwaq.ico"
+2                       ICON    DISCARDABLE     "qwaq.ico"
+3                       ICON    DISCARDABLE     "qwaq.ico"
+#endif

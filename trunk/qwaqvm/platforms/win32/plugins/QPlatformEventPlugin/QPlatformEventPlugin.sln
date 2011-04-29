@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QPlatformEventPlugin", "QPlatformEventPlugin.vcproj", "{01FD1023-01C3-4E5C-8AFA-4226A0484483}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QwaqFileHelper", "QwaqFileHelper\QwaqFileHelper.vcproj", "{190D28FC-C3C6-4EC9-BAE4-8E88D6B87F4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01FD1023-01C3-4E5C-8AFA-4226A0484483}.Debug|Win32.ActiveCfg = Debug|Win32
+		{01FD1023-01C3-4E5C-8AFA-4226A0484483}.Debug|Win32.Build.0 = Debug|Win32
+		{01FD1023-01C3-4E5C-8AFA-4226A0484483}.Release|Win32.ActiveCfg = Release|Win32
+		{01FD1023-01C3-4E5C-8AFA-4226A0484483}.Release|Win32.Build.0 = Release|Win32
+		{190D28FC-C3C6-4EC9-BAE4-8E88D6B87F4A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{190D28FC-C3C6-4EC9-BAE4-8E88D6B87F4A}.Debug|Win32.Build.0 = Debug|Win32
+		{190D28FC-C3C6-4EC9-BAE4-8E88D6B87F4A}.Release|Win32.ActiveCfg = Release|Win32
+		{190D28FC-C3C6-4EC9-BAE4-8E88D6B87F4A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

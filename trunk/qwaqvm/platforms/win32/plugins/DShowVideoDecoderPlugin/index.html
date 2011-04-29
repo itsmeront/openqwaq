@@ -1,0 +1,52 @@
+<HTML><HEAD><TITLE>A Video Decoder plugin for Squeak/Windows</TITLE>
+
+<H1>A Video Decoder plugin for Squeak/Windows</H1>
+
+  This is the page on a Squeak plugin that handles the live video stream from a camera.  Diego Gomez Deck and his friends have similar plugin (<A HREF="http://minnow.cc.gatech.edu/squeak/2411">Playing with Video</A>).  As I see it, the upsides of my stuff are:
+<UL>
+  <LI> Supports wider variety of camera, including DV camemas.
+  <LI> Faster frame rate.
+  <LI> Can bypass the Squeak Display mechanism, if you want.
+  <LI> More primitives.
+</UL>
+You might want to check out both plugins.  (Their high-level filter stuff should be able to port over my plugin.  That would be great, if someone volunteers:-)
+
+ <P>
+
+<H2>Install and Test</H2>
+
+<UL>
+  <LI> Get <A HREF="DShowVideoDecoderPlugin.zip">DShowVideoDecoderPlugin.zip</A>.
+  <LI> Copy <B>DShowVideoDecoderPlugin.dll</B> in the zip file to the folder where your Squeak VM resides.
+  <LI> File-in <B>Test-DirectShow.st</B> into your Squeak image.
+  <LI> Evaluate "DShowVideoController example1" to test it.  Oh, yes, you've got to connect your camera to your PC beforehand.
+  <LI> Closing the inspector should terminate the video, because the controller instance is finalized.  After this, you should be able to evaluate "DShowVideoController example2" in Morphic.  Don't forget to write SqueakToy script for the view finer!
+</UL>
+
+<H2>Compiling</H2>
+
+<UL>
+  <LI> Get <A HREF="dshowlib1.0.1.zip">dshowlib1.0.1.zip</A>.
+  <LI> Get <A HREF="DShowVideoDecoderPluginSource.zip">DShowVideoDecoderPluginSource.zip</A> and expand the contents into the Squeak VM source tree.
+  <LI> Get DirectX SDK from Microsoft web site.  I use Direct X 8.1 SDK.
+  <LI> Set up the mingw32 environment on which you can compile the Squeak VM.  See <A HREF="http://minnow.cc.gatech.edu/squeak/1787">Building Windows VM instruction</A> by Andreas.
+  <LI> Install the MS Visual Studio.  The plugin contains code that I only managed to compile with MS Visual Studio.  <B>Most</B> of the errors generated from GCC is the well-known redifined symbol problem so it <B>would</B> be possible to make it compile with GCC by "patching" the header files.  However, some header files come with the Visual Studio seems to be required by DXSDK and I didn't bother to dig into it too deep.
+  <LI> Open "dshowlib" project from Visual Studio and create "SampleGrabber.obj".
+  <LI> Create the "SampleGrabber.lib" library file by executing lib command on "SampleGrabber.obj".
+  <LI> Add something like:
+<PRE>
+DShowVideoDecoderPlugin.dll: c:/ohshima/vc/dshowlib/dshowlib/Release/SampleGrabber.lib
+		$(MD) -p -v Release\\DShowVideoDecoderPlugin
+		$(MAKE) -C ../DShowVideoDecoderPlugin -f ../win32/Makefile.mingw32 DLLDIR=DShowVideoDecoderPlugin DLLNAME=DShowVideoDecoderPlugin.dll DLL XDEFS=-DSTANDALONE
+		$(DLLTOOL) --output-def $(OUTDIR)/DShowVideoDecoderPlugin/DShowVideoDecoderPlugin.def --output-exp $(OUTDIR)/DShowVideoDecoderPlugin/DShowVideoDecoderPlugin.exp --output-lib $(OUTDIR)/DShowVideoDecoderPlugin/DShowVideoDecoderPlugin.lib $(OUTDIR)/DShowVideoDecoderPlugin/*.o c:/ohshima/vc/dshowlib/dshowlib/Release/SampleGrabber.lib
+		$(DLLWRAP) -mwindows -def $(OUTDIR)/DShowVideoDecoderPlugin/DShowVideoDecoderPlugin.def -o $(OUTDIR)/DShowVideoDecoderPlugin.dll $(OUTDIR)/DShowVideoDecoderPlugin/*.o c:/ohshima/vc/dshowlib/dshowlib/Release/SampleGrabber.lib $(LIBS) $(OUTDIR)/DShowVideoDecoderPlugin/DShowVideoDecoderPlugin.exp
+		strip --strip-all $(OUTDIR)/DShowVideoDecoderPlugin.dll
+</PRE>
+to Makefile.mingw32 (hmm, this can be much cleaner...).
+  <LI> Generate the DShowVideoDecoderPlugin.[ch] from Squeak and create "DShowVideoDecoderPlugin.dll".
+</UL>
+
+  It doesn't sound a trivial thing.  But at least this works for me.
+
+<H2>Contact</H2>
+  Feel free to ask any question to Yoshiki.Ohshima@acm.org.
