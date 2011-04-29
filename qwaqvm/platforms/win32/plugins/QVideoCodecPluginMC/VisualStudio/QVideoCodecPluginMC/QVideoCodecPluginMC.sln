@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QVideoCodecPluginMC", "QVideoCodecPluginMC.vcproj", "{7CD85425-E46C-4B04-B682-9DDE0D6AE86D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug-nondemo|Win32 = Debug-nondemo|Win32
+		Release-nondemo|Win32 = Release-nondemo|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CD85425-E46C-4B04-B682-9DDE0D6AE86D}.Debug-nondemo|Win32.ActiveCfg = Debug-nondemo|Win32
+		{7CD85425-E46C-4B04-B682-9DDE0D6AE86D}.Debug-nondemo|Win32.Build.0 = Debug-nondemo|Win32
+		{7CD85425-E46C-4B04-B682-9DDE0D6AE86D}.Release-nondemo|Win32.ActiveCfg = Release-nondemo|Win32
+		{7CD85425-E46C-4B04-B682-9DDE0D6AE86D}.Release-nondemo|Win32.Build.0 = Release-nondemo|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

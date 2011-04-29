@@ -1,0 +1,1 @@
+These files come from OpenAL11CoreSDK.exe (version 3.0.2).
