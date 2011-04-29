@@ -1,0 +1,1 @@
+XLDFLAGS=-lpng

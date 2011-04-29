@@ -1,0 +1,81 @@
+# Makefile for core VM				-*- makefile -*-
+# 
+#   Copyright (C) 1996-2004 by Ian Piumarta and other authors/contributors
+#                              listed elsewhere in this file.
+#   All rights reserved.
+#   
+#   This file is part of Unix Squeak.
+# 
+#    Permission is hereby granted, free of charge, to any person obtaining a copy
+#    of this software and associated documentation files (the "Software"), to deal
+#    in the Software without restriction, including without limitation the rights
+#    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#    copies of the Software, and to permit persons to whom the Software is
+#    furnished to do so, subject to the following conditions:
+#  
+#    The above copyright notice and this permission notice shall be included in
+#    all copies or substantial portions of the Software.
+#  
+#    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#    SOFTWARE.
+# 
+# Author: ian.piumarta@inria.fr
+# 
+# Last edited: 2010-09-17 10:44:14 by eem on mcstalker
+
+[make_cfg]
+[make_plg]
+
+TARGET		= vm$a
+OBJS		= $(INTERP)$o cogit$o sqNamedPrims$o sqVirtualMachine$o sqHeapMap$o\
+			sqExternalSemaphores$o sqTicker$o aio$o debug$o osExports$o \
+			sqUnixExternalPrims$o sqUnixMemory$o sqUnixCharConv$o sqUnixMain$o \
+			sqUnixVMProfile$o sqLinuxHeartbeat$o sqLinuxWatchdog$o sqUnixThreads$o
+
+XINCLUDES	= [includes] \
+		  -I$(topdir)/platforms/Cross/plugins/FilePlugin \
+		  -I$(topdir)/platforms/unix/plugins/B3DAcceleratorPlugin \
+		  $(X_INCLUDES)
+
+$(TARGET) : $(OBJS) Makefile
+	$(LINK) $(TARGET) $(OBJS)
+	$(RANLIB) $(TARGET)
+
+$(blddir)/sqNamedPrims.h:	$(vmmcfg)/plugins.int
+	$(topdir)/unixbuild/mkNamedPrims.sh $(vmmcfg)/plugins.int >$(blddir)/sqNamedPrims.h
+
+# rebuild sqNamedPrims.o if sqNamedPrims.h changes
+
+sqNamedPrims$o : $(blddir)/sqNamedPrims.h
+
+# rebuild sqExtPrims sqUnixMain (VM_VERSION) if config.h changes
+
+sqUnixExternalPrims$o sqUnixMain$o : ../config.h $(topdir)/platforms/unix/vm/dlfcn-dyld.c
+
+[make_targets]
+
+# Ensure the cogit is compiled with less aggressive optimization.  The cogit
+# contains a function that does two alloca's which is miscompiled by a number of
+# optimizing compilers (at least gcc 4.0.x 4.1.x & Intel icc 10.1) under the
+# -fomit-frame-pointer regime.  Also on gcc 4.1 linux -O2 causes an abort on
+# shutdown even though the VM starts correctly.  You have been warned :)
+#cogit$o : $(srcdir)/vm/cogit.c
+#	$(COMPILE) cogit$o -O1 -fno-omit-frame-pointer -momit-leaf-frame-pointer -mno-rtd -mno-accumulate-outgoing-args $(srcdir)/vm/cogit.c
+
+# Ensure the heartbeat is compiled with less aggressive optimization.  At
+# least with gcc 4.1.2 compiling with -O2 results in an apparently flakey VM;
+# so flakey the Squeak4.2-10856-beta.image image won't even start-up.
+sqLinuxHeartbeat$o : $(topdir)/platforms/unix/vm/sqLinuxHeartbeat.c
+	$(COMPILE) sqLinuxHeartbeat$o -O1 -fno-omit-frame-pointer -mno-rtd -mno-accumulate-outgoing-args $(topdir)/platforms/unix/vm/sqLinuxHeartbeat.c
+
+# Ensure the watchdog is compiled without optimization.  Compiling with gcc v
+# 4.1.2 produces something that doesn't work for r11032 of sqLinuxHeartbeat.c.
+sqLinuxWatchdog$o : $(topdir)/platforms/unix/vm/sqLinuxWatchdog.c
+	$(COMPILE) sqLinuxWatchdog$o -O0 -g3 $(topdir)/platforms/unix/vm/sqLinuxWatchdog.c
+
+.force :

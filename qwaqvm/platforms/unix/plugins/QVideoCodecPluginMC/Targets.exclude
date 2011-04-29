@@ -1,0 +1,8 @@
+qCPlusPlusUtils$o
+qCommandQueue$o
+qException$o
+qFeedbackChannel$o
+qReadback$o
+qRingBuffer$o
+qSharedQueue$o
+qThreadUtils$o
