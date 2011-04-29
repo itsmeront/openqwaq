@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding = "Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="openal-info"
+	ProjectGUID="{4B6FB77E-F8B3-4BDC-8142-195C3A51DB6C}"
+	Keyword="Win32Proj">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="openal-info.dir\Debug"
+			ConfigurationType="1"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions=" /Zm1000"
+				AdditionalIncludeDirectories="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\OpenAL32\Include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build;&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Include&quot;;"
+				BasicRuntimeChecks="3"
+				CompileAs="1"
+				DebugInformationFormat="3"
+				ExceptionHandling="0"
+				InlineFunctionExpansion="0"
+				Optimization="0"
+				RuntimeLibrary="3"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32,_WINDOWS,_DEBUG,_DEBUG,_WIN32,_CRT_SECURE_NO_WARNINGS,_CRT_NONSTDC_NO_DEPRECATE,strcasecmp=_stricmp,strncasecmp=_strnicmp,snprintf=_snprintf,isnan=_isnan,CMAKE_INTDIR=\&quot;Debug\&quot;"
+				AssemblerListingLocation="Debug"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\Debug/openal-info.pdb"
+/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\OpenAL32\Include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build;&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Include&quot;;"
+				PreprocessorDefinitions="WIN32,_WINDOWS,_DEBUG,_DEBUG,_WIN32,_CRT_SECURE_NO_WARNINGS,_CRT_NONSTDC_NO_DEPRECATE,strcasecmp=_stricmp,strncasecmp=_strnicmp,snprintf=_snprintf,isnan=_isnan,CMAKE_INTDIR=\&quot;Debug\&quot;"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="WIN32,_WINDOWS,_DEBUG,_DEBUG,_WIN32,_CRT_SECURE_NO_WARNINGS,_CRT_NONSTDC_NO_DEPRECATE,strcasecmp=_stricmp,strncasecmp=_strnicmp,snprintf=_snprintf,isnan=_isnan,CMAKE_INTDIR=\&quot;Debug\&quot;"
+				MkTypLibCompatible="FALSE"
+				TargetEnvironment="1"
+				GenerateStublessProxies="TRUE"
+				TypeLibraryName="$(InputName).tlb"
+				OutputDirectory="$(IntDir)"
+				HeaderFileName="$(InputName).h"
+				DLLDataFileName=""
+				InterfaceIdentifierFileName="$(InputName)_i.c"
+				ProxyFileName="$(InputName)_p.c"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				LinkLibraryDependencies="false"
+				AdditionalOptions=" /STACK:10000000 /machine:X86 /debug"
+				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib  Debug\OpenAL32.lib "
+				OutputFile="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\Debug\openal-info.exe"
+				Version="0.0"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories="&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Lib\$(OutDir)&quot;,&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Lib&quot;"
+				ProgramDataBaseFile="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\Debug/openal-info.pdb"
+				GenerateDebugInformation="TRUE"
+				SubSystem="1"
+				ImportLibrary="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\Debug\openal-info.lib"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="openal-info.dir\Release"
+			ConfigurationType="1"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions=" /Zm1000"
+				AdditionalIncludeDirectories="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\OpenAL32\Include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build;&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Include&quot;;"
+				CompileAs="1"
+				ExceptionHandling="0"
+				InlineFunctionExpansion="2"
+				Optimization="2"
+				RuntimeLibrary="2"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32,_WINDOWS,NDEBUG,NDEBUG,_WIN32,_CRT_SECURE_NO_WARNINGS,_CRT_NONSTDC_NO_DEPRECATE,strcasecmp=_stricmp,strncasecmp=_strnicmp,snprintf=_snprintf,isnan=_isnan,CMAKE_INTDIR=\&quot;Release\&quot;"
+				AssemblerListingLocation="Release"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\Release/openal-info.pdb"
+/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\OpenAL32\Include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build;&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Include&quot;;"
+				PreprocessorDefinitions="WIN32,_WINDOWS,NDEBUG,NDEBUG,_WIN32,_CRT_SECURE_NO_WARNINGS,_CRT_NONSTDC_NO_DEPRECATE,strcasecmp=_stricmp,strncasecmp=_strnicmp,snprintf=_snprintf,isnan=_isnan,CMAKE_INTDIR=\&quot;Release\&quot;"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="WIN32,_WINDOWS,NDEBUG,NDEBUG,_WIN32,_CRT_SECURE_NO_WARNINGS,_CRT_NONSTDC_NO_DEPRECATE,strcasecmp=_stricmp,strncasecmp=_strnicmp,snprintf=_snprintf,isnan=_isnan,CMAKE_INTDIR=\&quot;Release\&quot;"
+				MkTypLibCompatible="FALSE"
+				TargetEnvironment="1"
+				GenerateStublessProxies="TRUE"
+				TypeLibraryName="$(InputName).tlb"
+				OutputDirectory="$(IntDir)"
+				HeaderFileName="$(InputName).h"
+				DLLDataFileName=""
+				InterfaceIdentifierFileName="$(InputName)_i.c"
+				ProxyFileName="$(InputName)_p.c"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				LinkLibraryDependencies="false"
+				AdditionalOptions=" /STACK:10000000 /machine:X86"
+				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib  Release\OpenAL32.lib "
+				OutputFile="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\Release\openal-info.exe"
+				Version="0.0"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Lib\$(OutDir)&quot;,&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Lib&quot;"
+				ProgramDataBaseFile="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\Release/openal-info.pdb"
+				SubSystem="1"
+				ImportLibrary="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\Release\openal-info.lib"/>
+		</Configuration>
+		<Configuration
+			Name="MinSizeRel|Win32"
+			OutputDirectory="MinSizeRel"
+			IntermediateDirectory="openal-info.dir\MinSizeRel"
+			ConfigurationType="1"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions=" /Zm1000"
+				AdditionalIncludeDirectories="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\OpenAL32\Include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build;&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Include&quot;;"
+				CompileAs="1"
+				ExceptionHandling="0"
+				InlineFunctionExpansion="1"
+				Optimization="1"
+				RuntimeLibrary="2"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32,_WINDOWS,NDEBUG,NDEBUG,_WIN32,_CRT_SECURE_NO_WARNINGS,_CRT_NONSTDC_NO_DEPRECATE,strcasecmp=_stricmp,strncasecmp=_strnicmp,snprintf=_snprintf,isnan=_isnan,CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"
+				AssemblerListingLocation="MinSizeRel"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\MinSizeRel/openal-info.pdb"
+/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\OpenAL32\Include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build;&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Include&quot;;"
+				PreprocessorDefinitions="WIN32,_WINDOWS,NDEBUG,NDEBUG,_WIN32,_CRT_SECURE_NO_WARNINGS,_CRT_NONSTDC_NO_DEPRECATE,strcasecmp=_stricmp,strncasecmp=_strnicmp,snprintf=_snprintf,isnan=_isnan,CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="WIN32,_WINDOWS,NDEBUG,NDEBUG,_WIN32,_CRT_SECURE_NO_WARNINGS,_CRT_NONSTDC_NO_DEPRECATE,strcasecmp=_stricmp,strncasecmp=_strnicmp,snprintf=_snprintf,isnan=_isnan,CMAKE_INTDIR=\&quot;MinSizeRel\&quot;"
+				MkTypLibCompatible="FALSE"
+				TargetEnvironment="1"
+				GenerateStublessProxies="TRUE"
+				TypeLibraryName="$(InputName).tlb"
+				OutputDirectory="$(IntDir)"
+				HeaderFileName="$(InputName).h"
+				DLLDataFileName=""
+				InterfaceIdentifierFileName="$(InputName)_i.c"
+				ProxyFileName="$(InputName)_p.c"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				LinkLibraryDependencies="false"
+				AdditionalOptions=" /STACK:10000000 /machine:X86"
+				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib  MinSizeRel\OpenAL32.lib "
+				OutputFile="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\MinSizeRel\openal-info.exe"
+				Version="0.0"
+				LinkIncremental="1"
+				AdditionalLibraryDirectories="&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Lib\$(OutDir)&quot;,&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Lib&quot;"
+				ProgramDataBaseFile="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\MinSizeRel/openal-info.pdb"
+				SubSystem="1"
+				ImportLibrary="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\MinSizeRel\openal-info.lib"/>
+		</Configuration>
+		<Configuration
+			Name="RelWithDebInfo|Win32"
+			OutputDirectory="RelWithDebInfo"
+			IntermediateDirectory="openal-info.dir\RelWithDebInfo"
+			ConfigurationType="1"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions=" /Zm1000"
+				AdditionalIncludeDirectories="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\OpenAL32\Include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build;&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Include&quot;;"
+				CompileAs="1"
+				DebugInformationFormat="3"
+				ExceptionHandling="0"
+				InlineFunctionExpansion="1"
+				Optimization="2"
+				RuntimeLibrary="2"
+				WarningLevel="3"
+				PreprocessorDefinitions="WIN32,_WINDOWS,NDEBUG,_DEBUG,_WIN32,_CRT_SECURE_NO_WARNINGS,_CRT_NONSTDC_NO_DEPRECATE,strcasecmp=_stricmp,strncasecmp=_strnicmp,snprintf=_snprintf,isnan=_isnan,CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"
+				AssemblerListingLocation="RelWithDebInfo"
+				ObjectFile="$(IntDir)\"
+				ProgramDataBaseFileName="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\RelWithDebInfo/openal-info.pdb"
+/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				AdditionalIncludeDirectories="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\OpenAL32\Include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\include;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build;&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Include&quot;;"
+				PreprocessorDefinitions="WIN32,_WINDOWS,NDEBUG,_DEBUG,_WIN32,_CRT_SECURE_NO_WARNINGS,_CRT_NONSTDC_NO_DEPRECATE,strcasecmp=_stricmp,strncasecmp=_strnicmp,snprintf=_snprintf,isnan=_isnan,CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"/>
+			<Tool
+				Name="VCMIDLTool"
+				PreprocessorDefinitions="WIN32,_WINDOWS,NDEBUG,_DEBUG,_WIN32,_CRT_SECURE_NO_WARNINGS,_CRT_NONSTDC_NO_DEPRECATE,strcasecmp=_stricmp,strncasecmp=_strnicmp,snprintf=_snprintf,isnan=_isnan,CMAKE_INTDIR=\&quot;RelWithDebInfo\&quot;"
+				MkTypLibCompatible="FALSE"
+				TargetEnvironment="1"
+				GenerateStublessProxies="TRUE"
+				TypeLibraryName="$(InputName).tlb"
+				OutputDirectory="$(IntDir)"
+				HeaderFileName="$(InputName).h"
+				DLLDataFileName=""
+				InterfaceIdentifierFileName="$(InputName)_i.c"
+				ProxyFileName="$(InputName)_p.c"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCLinkerTool"
+				LinkLibraryDependencies="false"
+				AdditionalOptions=" /STACK:10000000 /machine:X86 /debug"
+				AdditionalDependencies="$(NOINHERIT) kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib  RelWithDebInfo\OpenAL32.lib "
+				OutputFile="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\RelWithDebInfo\openal-info.exe"
+				Version="0.0"
+				LinkIncremental="2"
+				AdditionalLibraryDirectories="&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Lib\$(OutDir)&quot;,&quot;C:\Program Files\Microsoft DirectX SDK (August 2007)\Lib&quot;"
+				ProgramDataBaseFile="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\RelWithDebInfo/openal-info.pdb"
+				GenerateDebugInformation="TRUE"
+				SubSystem="1"
+				ImportLibrary="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\RelWithDebInfo\openal-info.lib"/>
+		</Configuration>
+	</Configurations>
+	<Files>
+			<File
+				RelativePath="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt">
+				<FileConfiguration
+					Name="Debug|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854 -BC:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854/build --check-stamp-file CMakeFiles/generate.stamp"
+					AdditionalDependencies="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedLibraryExists.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckCCompilerFlag.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeVS9FindMake.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CMakeSystem.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CMakeCCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CMakeRCCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_LONG.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_LONG_LONG.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_UINT.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_VOIDP.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\config.h.in;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\openal.pc.in;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;"
+					Outputs="CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854 -BC:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854/build --check-stamp-file CMakeFiles/generate.stamp"
+					AdditionalDependencies="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedLibraryExists.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckCCompilerFlag.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeVS9FindMake.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CMakeSystem.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CMakeCCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CMakeRCCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_LONG.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_LONG_LONG.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_UINT.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_VOIDP.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\config.h.in;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\openal.pc.in;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;"
+					Outputs="CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="MinSizeRel|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854 -BC:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854/build --check-stamp-file CMakeFiles/generate.stamp"
+					AdditionalDependencies="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedLibraryExists.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckCCompilerFlag.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeVS9FindMake.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CMakeSystem.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CMakeCCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CMakeRCCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_LONG.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_LONG_LONG.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_UINT.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_VOIDP.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\config.h.in;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\openal.pc.in;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;"
+					Outputs="CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="RelWithDebInfo|Win32">
+					<Tool
+					Name="VCCustomBuildTool"
+					Description="Building Custom Rule C:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854/CMakeLists.txt"
+					CommandLine="&quot;C:\Program Files\CMake 2.8\bin\cmake.exe&quot; -HC:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854 -BC:/qwaqvm/platforms/Cross/third-party/openal-soft-1.12.854/build --check-stamp-file CMakeFiles/generate.stamp"
+					AdditionalDependencies="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedLibraryExists.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckCCompilerFlag.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeVS9FindMake.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CMakeSystem.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CMakeCCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CMakeRCCompiler.cmake;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_LONG.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_LONG_LONG.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_UINT.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\build\CMakeFiles\CheckTypeSize\SIZEOF_VOIDP.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;&quot;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in&quot;;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\config.h.in;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\openal.pc.in;C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;"
+					Outputs="CMakeFiles\generate.stamp"/>
+				</FileConfiguration>
+			</File>
+		<Filter
+			Name="Source Files"
+			Filter="">
+			<File
+				RelativePath="C:\qwaqvm\platforms\Cross\third-party\openal-soft-1.12.854\examples\openal-info.c">
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

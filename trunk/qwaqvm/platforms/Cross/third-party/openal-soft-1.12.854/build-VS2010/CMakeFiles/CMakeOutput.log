@@ -1,0 +1,1104 @@
+The system is: Windows - 6.1 - x86
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:26:43 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTryCompileExec.dir\Debug\".
+  Creating directory "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue testCCompiler.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue testCCompiler.c  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  testCCompiler.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\testCCompiler.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\testCCompiler.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.62
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:26:46 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  CMakeCCompilerABI.c
+  
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CMakeCCompilerABI.obj  /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CMakeCCompilerABI.obj  /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.29
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:26:47 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFile.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFile.c  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  CheckIncludeFile.c
+  
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.76
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:26:48 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFile.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFile.c  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.94
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:26:49 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFile.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFile.c  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.96
+
+
+Determining size of long passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:26:51 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue ..\CheckTypeSize\SIZEOF_LONG.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue ..\CheckTypeSize\SIZEOF_LONG.c  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  SIZEOF_LONG.c
+  
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\SIZEOF_LONG.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\SIZEOF_LONG.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.75
+
+
+Determining size of long long passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:26:51 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue ..\CheckTypeSize\SIZEOF_LONG_LONG.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue ..\CheckTypeSize\SIZEOF_LONG_LONG.c  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  SIZEOF_LONG_LONG.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\SIZEOF_LONG_LONG.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\SIZEOF_LONG_LONG.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.71
+
+
+Determining size of unsigned int passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:26:52 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue ..\CheckTypeSize\SIZEOF_UINT.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue ..\CheckTypeSize\SIZEOF_UINT.c  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  SIZEOF_UINT.c
+  
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\SIZEOF_UINT.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\SIZEOF_UINT.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.95
+
+
+Determining size of void* passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:26:53 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue ..\CheckTypeSize\SIZEOF_VOIDP.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue ..\CheckTypeSize\SIZEOF_VOIDP.c  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  SIZEOF_VOIDP.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\SIZEOF_VOIDP.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\SIZEOF_VOIDP.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.29
+
+
+Determining if the include file float.h exists passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:26:56 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFile.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFile.c  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.74
+
+
+Determining if the function _controlfp exists passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:26:59 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=_controlfp /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=_controlfp /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  CheckFunctionExists.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.79
+
+
+Determining if the function stat exists passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:27:00 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=stat /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=stat /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  CheckFunctionExists.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.69
+
+
+Determining if the function _stricmp exists passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:27:02 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=_stricmp /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=_stricmp /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  CheckFunctionExists.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.71
+
+
+Determining if the function _strnicmp exists passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:27:04 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=_strnicmp /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=_strnicmp /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  CheckFunctionExists.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.78
+
+
+Determining if the function _snprintf exists passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:27:05 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=_snprintf /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=_snprintf /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  CheckFunctionExists.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.68
+
+
+Determining if the function vsnprintf exists passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:27:06 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=vsnprintf /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=vsnprintf /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  CheckFunctionExists.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.77
+
+
+Determining if the function _isnan exists passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:27:07 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=_isnan /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=_isnan /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "..\..\..\..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c"  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  CheckFunctionExists.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckFunctionExists.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.89
+
+
+Determining if the include file windows.h exists passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:27:08 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0500 /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFile.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WIN32_WINNT=0x0500 /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFile.c  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.03
+
+
+Determining if the include file dsound.h exists passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:27:11 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFile.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFile.c  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.04
+
+
+Determining if the function DirectSoundCreate exists in the dsound passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:27:13 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WIN32 /D "ARGSTACK=void*,void*,void*" /D "CALLSTACK=NULL,NULL,NULL" /D CHECK_SHARED_FUNCTION_EXISTS=DirectSoundCreate /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue ..\..\..\cmake\CheckSharedFunctionExists.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WIN32 /D "ARGSTACK=void*,void*,void*" /D "CALLSTACK=NULL,NULL,NULL" /D CHECK_SHARED_FUNCTION_EXISTS=DirectSoundCreate /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue ..\..\..\cmake\CheckSharedFunctionExists.c  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  CheckSharedFunctionExists.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib dsound.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckSharedFunctionExists.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib dsound.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckSharedFunctionExists.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.85
+
+
+Determining if files windows.h;mmsystem.h exist passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:27:14 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFiles.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue CheckIncludeFiles.c  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  CheckIncludeFiles.c
+  
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFiles.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFiles.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.06
+
+
+Determining if the function waveInOpen exists in the winmm passed with the following output:
+Change Dir: C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.1]
+Copyright (C) Microsoft Corporation 2007. All rights reserved.
+
+Build started 6/15/2010 5:27:15 PM.
+Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" on node 1 (default targets).
+InitializeBuildStatus:
+  Creating "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WIN32 /D "ARGSTACK=void*,void*,void*,void*,void*,void*" /D "CALLSTACK=NULL,NULL,NULL,NULL,NULL,NULL" /D CHECK_SHARED_FUNCTION_EXISTS=waveInOpen /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue ..\..\..\cmake\CheckSharedFunctionExists.c  /Zm1000 
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /nologo- /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WIN32 /D "ARGSTACK=void*,void*,void*,void*,void*,void*" /D "CALLSTACK=NULL,NULL,NULL,NULL,NULL,NULL" /D CHECK_SHARED_FUNCTION_EXISTS=waveInOpen /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue ..\..\..\cmake\CheckSharedFunctionExists.c  /Zm1000 
+cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  
+  CheckSharedFunctionExists.c
+ManifestResourceCompile:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib winmm.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckSharedFunctionExists.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /VERSION:"0.0" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib winmm.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckSharedFunctionExists.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Deleting file "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Touching "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+Done Building Project "C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default targets).
+
+Build succeeded.
+
+"C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (default target) (1) ->
+(ClCompile target) -> 
+  cl : Command line warning D9035: option 'nologo-' has been deprecated and will be removed in a future release [C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.83
+
+

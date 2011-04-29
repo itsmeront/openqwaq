@@ -1,0 +1,4 @@
+C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/ALL_BUILD.dir
+C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/OpenAL32.dir
+C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/ZERO_CHECK.dir
+C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/CMakeFiles/openal-info.dir

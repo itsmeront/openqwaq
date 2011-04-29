@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{04342B59-30FA-49E0-9F64-30CE47FA58D1}</ProjectGUID>
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">OpenAL32.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">OpenAL32</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">OpenAL32.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">OpenAL32</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">OpenAL32.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">OpenAL32</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">OpenAL32.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">OpenAL32</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/OpenAL32/Include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_DEBUG;AL_ALEXT_PROTOTYPES;_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;strcasecmp=_stricmp;strncasecmp=_strnicmp;snprintf=_snprintf;isnan=_isnan;CMAKE_INTDIR="Debug";AL_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/Debug/OpenAL32.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/OpenAL32/Include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/OpenAL32/Include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/Debug/OpenAL32.lib</ImportLibrary>
+      <ProgramDataBaseFileName>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/Debug/OpenAL32.pdb</ProgramDataBaseFileName>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version>0.0</Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/OpenAL32/Include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NDEBUG;AL_ALEXT_PROTOTYPES;_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;strcasecmp=_stricmp;strncasecmp=_strnicmp;snprintf=_snprintf;isnan=_isnan;CMAKE_INTDIR="Release";AL_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/Release/OpenAL32.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/OpenAL32/Include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/OpenAL32/Include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/Release/OpenAL32.lib</ImportLibrary>
+      <ProgramDataBaseFileName>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/Release/OpenAL32.pdb</ProgramDataBaseFileName>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version>0.0</Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/OpenAL32/Include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NDEBUG;AL_ALEXT_PROTOTYPES;_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;strcasecmp=_stricmp;strncasecmp=_strnicmp;snprintf=_snprintf;isnan=_isnan;CMAKE_INTDIR="MinSizeRel";AL_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/MinSizeRel/OpenAL32.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/OpenAL32/Include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/OpenAL32/Include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/MinSizeRel/OpenAL32.lib</ImportLibrary>
+      <ProgramDataBaseFileName>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/MinSizeRel/OpenAL32.pdb</ProgramDataBaseFileName>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version>0.0</Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/OpenAL32/Include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_DEBUG;AL_ALEXT_PROTOTYPES;_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;strcasecmp=_stricmp;strncasecmp=_strnicmp;snprintf=_snprintf;isnan=_isnan;CMAKE_INTDIR="RelWithDebInfo";AL_BUILD_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/RelWithDebInfo/OpenAL32.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/OpenAL32/Include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/OpenAL32/Include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/include;C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;winmm.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/RelWithDebInfo/OpenAL32.lib</ImportLibrary>
+      <ProgramDataBaseFileName>C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/RelWithDebInfo/OpenAL32.pdb</ProgramDataBaseFileName>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version>0.0</Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854 -BC:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010 --check-stamp-file CMakeFiles/generate.stamp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/CMakeLists.txt;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeVS10FindMake.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_LONG.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_LONG_LONG.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_UINT.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_VOIDP.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\config.h.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\openal.pc.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854 -BC:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010 --check-stamp-file CMakeFiles/generate.stamp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/CMakeLists.txt;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeVS10FindMake.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_LONG.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_LONG_LONG.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_UINT.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_VOIDP.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\config.h.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\openal.pc.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854 -BC:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010 --check-stamp-file CMakeFiles/generate.stamp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/CMakeLists.txt;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeVS10FindMake.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_LONG.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_LONG_LONG.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_UINT.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_VOIDP.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\config.h.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\openal.pc.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HC:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854 -BC:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010 --check-stamp-file CMakeFiles/generate.stamp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/CMakeLists.txt;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckLibraryExists.cmake;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedLibraryExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckCCompilerFlag.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeVS10FindMake.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystem.cmake.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCCompiler.cmake.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompiler.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_LONG.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_LONG_LONG.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_UINT.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckTypeSize.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\build-VS2010\CMakeFiles\CheckTypeSize\SIZEOF_VOIDP.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeConfigurableFile.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\cmake\CheckSharedFunctionExists.c;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.c.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\config.h.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\openal.pc.in;C:\Users\josh\Desktop\hacking\Teleplace\svn\qwaqvm-src\platforms\Cross\third-party\openal-soft-1.12.854\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CMakeFiles\generate.stamp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\OpenAL32\alAuxEffectSlot.c" />
+    <ClCompile Include="..\OpenAL32\alBuffer.c" />
+    <ClCompile Include="..\OpenAL32\alDatabuffer.c" />
+    <ClCompile Include="..\OpenAL32\alEffect.c" />
+    <ClCompile Include="..\OpenAL32\alError.c" />
+    <ClCompile Include="..\OpenAL32\alExtension.c" />
+    <ClCompile Include="..\OpenAL32\alFilter.c" />
+    <ClCompile Include="..\OpenAL32\alListener.c" />
+    <ClCompile Include="..\OpenAL32\alSource.c" />
+    <ClCompile Include="..\OpenAL32\alState.c" />
+    <ClCompile Include="..\OpenAL32\alThunk.c" />
+    <ClCompile Include="..\Alc\ALc.c" />
+    <ClCompile Include="..\Alc\ALu.c" />
+    <ClCompile Include="..\Alc\alcConfig.c" />
+    <ClCompile Include="..\Alc\alcEcho.c" />
+    <ClCompile Include="..\Alc\alcReverb.c" />
+    <ClCompile Include="..\Alc\alcRing.c" />
+    <ClCompile Include="..\Alc\alcThread.c" />
+    <ClCompile Include="..\Alc\bs2b.c" />
+    <ClCompile Include="..\Alc\wave.c" />
+    <ClCompile Include="..\Alc\dsound.c" />
+    <ClCompile Include="..\Alc\winmm.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/josh/Desktop/hacking/Teleplace/svn/qwaqvm-src/platforms/Cross/third-party/openal-soft-1.12.854/build-VS2010/ZERO_CHECK.vcxproj">
+      <Project>DDB60011-C8EF-4FE5-A176-A5416FAD5313</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OpenAL.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
