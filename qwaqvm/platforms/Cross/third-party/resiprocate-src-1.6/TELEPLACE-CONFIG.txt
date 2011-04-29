@@ -1,0 +1,82 @@
+Here's how I ran the ./configure script.  At some point, it would be useful to have an optimized build.  There's a dependency on libpopt that I satisfied with MacPorts (hence my use of /opt/local/include and /opt/local/lib).
+
+Have fun! 
+Josh
+
+
+./configure --disable-ssl
+
+Which toolchain do you want to use?
+(gnu, intel, sunpro, msgnu, gnu-cross) [gnu] 
+
+What compile profile will you use?
+(debug, nodebug, opt, gopt, prof, small) [debug]
+
+Should the resip libraries be built shared?
+(yes, no) [no] 
+
+Will you be using distcc?
+(yes, no) [no] 
+
+Will you be using ccache?
+(yes, no) [no] 
+
+Build the Repro proxy server?
+(yes, no) [yes] no
+
+Build the RADIUS authentication module? (requires radiusclient-ng)
+(yes, no) [no] 
+
+Build the TFM test framework?
+(yes, no) [no] 
+
+Build the reCon Conversation Manager? (requires dtls-srtp patched OpenSSL)
+(yes, no) [no] 
+
+Build the reTurn client?
+(yes, no) [no] 
+
+Build the reTurn server?
+(yes, no) [no] 
+
+Include SIP over TLS, SMIME or Identity header support? (Requires OpenSSL)
+(yes, no) [no] 
+
+Should DUM use curl to retreive identity information?
+(yes, no) [no] 
+
+Use the Google malloc() implementation?
+(yes, no) [no] 
+
+Use Google cpuperf?
+(yes, no) [no] 
+
+Compile in IPv6 support?
+(yes, no) [no] 
+
+Use popt to read commandline options?
+(yes, no) [yes] 
+
+Where is popt.h?
+[/usr/local/include] /opt/local/include
+
+Where is libpopt?
+[/usr/local/lib] /opt/local/lib
+
+Compile with no floating point functions?
+(yes, no) [no] 
+
+Force stack to fully parse every message it receives?
+(yes, no) [no] 
+
+Where should the libraries be installed?
+[/usr/local] 
+
+Which DNS resolution library do you want to use?
+(resip-ares, c-ares) [resip-ares] 
+
+Where should ares be installed?
+[/usr/local] 
+
+Writing Makefile.conf...
+
