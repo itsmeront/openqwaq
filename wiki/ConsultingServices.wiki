@@ -12,3 +12,5 @@ Westminster, MD  21157<br>
 *Contact:* Ron Teitelbaum<br>
 *Phone*: 443-244-7664<br>
 *Website*: [http://www.3dicc.com www.3dicc.com]
+
+Please visit the [http://groups.google.com/group/openqwaq OpenQwaq Community Discussions] for additional resources to support OpenQwaq or Teleplace deployments.
