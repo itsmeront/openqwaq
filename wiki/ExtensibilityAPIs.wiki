@@ -37,7 +37,8 @@ OpenQwaq offers several areas for customization, enhancement and integration wit
 ----
 == Python API ==
 
-Documentation can be found here *_[link to doc in wiki]_*
+Documentation can be found here 
+     http://code.google.com/p/openqwaq/source/browse/trunk/docs/OpenQwaq%20Python%20Programmer%20Guide.odt
 
 Some reasons to use the Python API include:
 
@@ -58,19 +59,21 @@ Some purposes for which it is not well suited:
 
 === Samples ===
 
-*_[these will need to be uploaded to code.google.com]_*
+A zip of samples:  http://code.google.com/p/openqwaq/source/browse/trunk/docs/PythonAPISampleApps.zip
 
-        * Builtin applications:
+containing:
+
+        * Example applications referred to in programmer's guide
+        * OpsCenter.tpz: interactive 3-D datacenter "racks" front-ending external system
+        * MakeSticky.tpz: (keyboard controlled for quick creation of multiple notes)
+        * StockGraphing.tpz: live data from yahoo stock quotes graphed
+        * Gallery.tpz:  interactive 3-D photo gallery
+
+The following applications are built into the client:
                 * WhiteBoard
                 * FeedReader (RSS viewer)
                 * Timer 
                 * (look in Objects Catalog under "Builtin Apps")
-        * Example applications referred to in documentation (zip)
-        * OpsCenter.tpz: interactive 3-D datacenter "racks" front-ending external system
-        * MakeSticky.tpz: (keyboard controlled for quick creation of multiple notes)
-        * StockGraphing.tpz: live data from yahoo stock quotes graphed
-
-Look in My Documents\OpenQwaq\cache to see the running code.
 
 ----
 
