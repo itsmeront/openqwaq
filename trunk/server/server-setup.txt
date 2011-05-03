@@ -1,3 +1,5 @@
+0. The server has been verified with SELinux disabled, on 32-bit Linuxen. Changes for 64-bit or SELinux is not covered here.
+
 1. Install necessary packages
    On RHEL/CentOS:
    sudo yum install subversion
@@ -9,7 +11,7 @@
    sudo yum install mysql-connector-odbc
    sudo yum install php-odbc
    sudo yum install vnc*
-   suod yum install mod-ssl
+   sudo yum install mod_ssl
    
 2. Add user and group openqwaq with correct uid and gid:
    groupadd -g 1234 openqwaq
@@ -40,8 +42,8 @@
    sudo /sbin/service httpd restart
 
    => Verify that http works properly by going to:
-      http://localhost:8443/clients
-      http://localhost:8443/admin
+      https://localhost:8443/clients
+      https://localhost:8443/admin
 
 8. Set up the MySQL database:
    sudo /sbin/service mysqld start
