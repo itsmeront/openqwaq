@@ -8,15 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		451352850FE2D0F5009B60F6 /* qAudioEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 451352840FE2D0F5009B60F6 /* qAudioEncoder.cpp */; };
-		451352900FE2D6DD009B60F6 /* qAudioEncoderAAC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4513528F0FE2D6DD009B60F6 /* qAudioEncoderAAC.cpp */; };
 		45206C8F0FD615AC008D2F67 /* qPortAudioInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45206C8D0FD615AC008D2F67 /* qPortAudioInterface.cpp */; };
 		4534BF7F0E3459C70073DF5C /* qFeedbackChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4534BF7D0E3459C70073DF5C /* qFeedbackChannel.cpp */; };
-		4534C0EC0E356D460073DF5C /* qPhoneEvents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4534C0EB0E356D460073DF5C /* qPhoneEvents.cpp */; };
 		45385C2B0DF0DC690060F9DD /* speex_jitter_buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 45385C2A0DF0DC690060F9DD /* speex_jitter_buffer.c */; };
-		453A3C4C0FE5C8550081694E /* mc_enc_aac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453A3C4B0FE5C8550081694E /* mc_enc_aac.framework */; };
-		453A3C7E0FE5C89B0081694E /* mc_enc_aac.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 453A3C4B0FE5C8550081694E /* mc_enc_aac.framework */; };
-		453C4EAF0F9E41F300061927 /* mc_dec_aac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453C4EAE0F9E41F300061927 /* mc_dec_aac.framework */; };
-		453C4EC70F9E42FF00061927 /* mc_dec_aac.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 453C4EAE0F9E41F300061927 /* mc_dec_aac.framework */; };
 		4546A6A20DE391C50095536B /* qPluginHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4546A69F0DE391C50095536B /* qPluginHelpers.cpp */; };
 		4546A6A30DE391C50095536B /* qAudioSpeex.c in Sources */ = {isa = PBXBuildFile; fileRef = 4546A6A00DE391C50095536B /* qAudioSpeex.c */; };
 		4546A6A40DE391C50095536B /* qAudioOpenAL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4546A6A10DE391C50095536B /* qAudioOpenAL.cpp */; };
@@ -42,12 +36,8 @@
 		45929A290FD9A2D400C16E67 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45929A280FD9A2D400C16E67 /* CoreServices.framework */; };
 		4594134610917A3000420095 /* qThreadUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4594134510917A3000420095 /* qThreadUtils.cpp */; };
 		45971BFE113895A8001B4382 /* qEventTimeLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45971BFD113895A8001B4382 /* qEventTimeLogger.cpp */; };
-		4598A1E30FE1EBF0006892B9 /* buf_single.c in Sources */ = {isa = PBXBuildFile; fileRef = 4598A1E10FE1EBF0006892B9 /* buf_single.c */; };
 		459A51601090D90B00225F08 /* libboost_thread-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A515F1090D90B00225F08 /* libboost_thread-mt.a */; };
-		45B46C1F0E329ACA00AEEED5 /* qPhoneUser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45B46C1E0E329ACA00AEEED5 /* qPhoneUser.cpp */; };
-		45B46C700E332C1900AEEED5 /* libiaxclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B46C6F0E332C1900AEEED5 /* libiaxclient.a */; };
 		45F5EBCC0F5351B600E4E9A1 /* qAudioDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45F5EBCB0F5351B600E4E9A1 /* qAudioDecoder.cpp */; };
-		45F5EBD20F53582B00E4E9A1 /* qAudioDecoderAAC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45F5EBD10F53582B00E4E9A1 /* qAudioDecoderAAC.cpp */; };
 		727EE0640E8C50D2004E742D /* ../../../platforms/Mac OS/plugins/QAudioPlugin/qDevices.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 727EE0630E8C50D2004E742D /* ../../../platforms/Mac OS/plugins/QAudioPlugin/qDevices.cpp */; };
 		72D9F0E60E929D880062278A /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72D9F0E50E929D880062278A /* CoreAudio.framework */; };
 /* End PBXBuildFile section */
@@ -70,8 +60,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				453A3C7E0FE5C89B0081694E /* mc_enc_aac.framework in CopyFiles */,
-				453C4EC70F9E42FF00061927 /* mc_dec_aac.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,24 +69,13 @@
 		451352830FE2D0F5009B60F6 /* qAudioEncoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioEncoder.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioEncoder.hpp; sourceTree = SOURCE_ROOT; };
 		451352840FE2D0F5009B60F6 /* qAudioEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioEncoder.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioEncoder.cpp; sourceTree = SOURCE_ROOT; };
 		451352880FE2D32E009B60F6 /* qAudioCodec.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioCodec.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioCodec.hpp; sourceTree = SOURCE_ROOT; };
-		4513528E0FE2D6DD009B60F6 /* qAudioEncoderAAC.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioEncoderAAC.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioEncoderAAC.hpp; sourceTree = SOURCE_ROOT; };
-		4513528F0FE2D6DD009B60F6 /* qAudioEncoderAAC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioEncoderAAC.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioEncoderAAC.cpp; sourceTree = SOURCE_ROOT; };
-		451353060FE2D84A009B60F6 /* auxinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = auxinfo.h; path = "../../third-party/MainConcept/AVCSDK-OSXINTL32_8.5.0_OSX/include/auxinfo.h"; sourceTree = SOURCE_ROOT; };
-		451353070FE2D84A009B60F6 /* enc_aac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = enc_aac.h; path = "../../third-party/MainConcept/AVCSDK-OSXINTL32_8.5.0_OSX/include/enc_aac.h"; sourceTree = SOURCE_ROOT; };
 		45206C8D0FD615AC008D2F67 /* qPortAudioInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qPortAudioInterface.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qPortAudioInterface.cpp; sourceTree = SOURCE_ROOT; };
 		45206C8E0FD615AC008D2F67 /* qPortAudioInterface.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qPortAudioInterface.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qPortAudioInterface.hpp; sourceTree = SOURCE_ROOT; };
 		4534BF7C0E3459C70073DF5C /* qFeedbackChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qFeedbackChannel.h; path = ../../../platforms/Cross/plugins/QwaqLib/qFeedbackChannel.h; sourceTree = SOURCE_ROOT; };
 		4534BF7D0E3459C70073DF5C /* qFeedbackChannel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qFeedbackChannel.cpp; path = ../../../platforms/Cross/plugins/QwaqLib/qFeedbackChannel.cpp; sourceTree = SOURCE_ROOT; };
 		4534BF7E0E3459C70073DF5C /* qFeedbackChannel-interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "qFeedbackChannel-interface.h"; path = "../../../platforms/Cross/plugins/QwaqLib/qFeedbackChannel-interface.h"; sourceTree = SOURCE_ROOT; };
-		4534C0EA0E356D460073DF5C /* qPhoneEvents.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qPhoneEvents.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qPhoneEvents.hpp; sourceTree = SOURCE_ROOT; };
-		4534C0EB0E356D460073DF5C /* qPhoneEvents.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qPhoneEvents.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qPhoneEvents.cpp; sourceTree = SOURCE_ROOT; };
 		45385C290DF0DC690060F9DD /* speex_jitter_buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = speex_jitter_buffer.h; path = "../../../platforms/Cross/third-party/speexclient/speex_jitter_buffer.h"; sourceTree = "<group>"; };
 		45385C2A0DF0DC690060F9DD /* speex_jitter_buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = speex_jitter_buffer.c; path = "../../../platforms/Cross/third-party/speexclient/speex_jitter_buffer.c"; sourceTree = "<group>"; };
-		453A3C4B0FE5C8550081694E /* mc_enc_aac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mc_enc_aac.framework; path = "../../third-party/MainConcept/AVCSDK-OSXINTL32_8.5.0_OSX/Frameworks/mc_enc_aac.framework"; sourceTree = SOURCE_ROOT; };
-		453C4EA60F9E41AF00061927 /* bufstrm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bufstrm.h; path = "../../third-party/MainConcept/AVCSDK-OSXINTL32_8.5.0_OSX/include/bufstrm.h"; sourceTree = SOURCE_ROOT; };
-		453C4EA70F9E41AF00061927 /* dec_aac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dec_aac.h; path = "../../third-party/MainConcept/AVCSDK-OSXINTL32_8.5.0_OSX/include/dec_aac.h"; sourceTree = SOURCE_ROOT; };
-		453C4EA80F9E41AF00061927 /* mcdefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mcdefs.h; path = "../../third-party/MainConcept/AVCSDK-OSXINTL32_8.5.0_OSX/include/mcdefs.h"; sourceTree = SOURCE_ROOT; };
-		453C4EAE0F9E41F300061927 /* mc_dec_aac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = mc_dec_aac.framework; path = "../../third-party/MainConcept/AVCSDK-OSXINTL32_8.5.0_OSX/Frameworks/mc_dec_aac.framework"; sourceTree = SOURCE_ROOT; };
 		4546A6870DE3907A0095536B /* speex_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = speex_types.h; path = speex/speex_types.h; sourceTree = "<group>"; };
 		4546A6880DE3907A0095536B /* speex_stereo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = speex_stereo.h; path = speex/speex_stereo.h; sourceTree = "<group>"; };
 		4546A6890DE3907A0095536B /* speex_resampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = speex_resampler.h; path = speex/speex_resampler.h; sourceTree = "<group>"; };
@@ -161,19 +138,10 @@
 		4594134710917A5E00420095 /* qThreadUtils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qThreadUtils.hpp; path = ../../../platforms/Cross/plugins/QwaqLib/qThreadUtils.hpp; sourceTree = SOURCE_ROOT; };
 		45971BFC11389581001B4382 /* qEventTimeLogger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qEventTimeLogger.hpp; path = ../../../platforms/Cross/plugins/QwaqLib/qEventTimeLogger.hpp; sourceTree = SOURCE_ROOT; };
 		45971BFD113895A8001B4382 /* qEventTimeLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qEventTimeLogger.cpp; path = ../../../platforms/Cross/plugins/QwaqLib/qEventTimeLogger.cpp; sourceTree = SOURCE_ROOT; };
-		4598A1E10FE1EBF0006892B9 /* buf_single.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = buf_single.c; path = ../../../platforms/Cross/plugins/QAudioPlugin/buf_single.c; sourceTree = SOURCE_ROOT; };
-		4598A1E20FE1EBF0006892B9 /* buf_single.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buf_single.h; path = ../../../platforms/Cross/plugins/QAudioPlugin/buf_single.h; sourceTree = SOURCE_ROOT; };
 		459A515F1090D90B00225F08 /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_thread-mt.a"; path = "../../third-party/boost_1_40_0/lib/libboost_thread-mt.a"; sourceTree = SOURCE_ROOT; };
-		45B46C1D0E329ACA00AEEED5 /* qPhoneUser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qPhoneUser.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qPhoneUser.hpp; sourceTree = SOURCE_ROOT; };
-		45B46C1E0E329ACA00AEEED5 /* qPhoneUser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qPhoneUser.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qPhoneUser.cpp; sourceTree = SOURCE_ROOT; };
-		45B46C3D0E332BB300AEEED5 /* iaxclient_lib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iaxclient_lib.h; path = "../../third-party/Digium/qwaq-iaxclient-2.0.2.1/lib/iaxclient_lib.h"; sourceTree = SOURCE_ROOT; };
-		45B46C3E0E332BB300AEEED5 /* iaxclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iaxclient.h; path = "../../third-party/Digium/qwaq-iaxclient-2.0.2.1/lib/iaxclient.h"; sourceTree = SOURCE_ROOT; };
-		45B46C6F0E332C1900AEEED5 /* libiaxclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiaxclient.a; path = "../../third-party/Digium/libiaxclient.a"; sourceTree = SOURCE_ROOT; };
 		45EE40610EA7EF21008A5B6F /* qSpeexInternalDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qSpeexInternalDefs.h; path = ../../../platforms/Cross/plugins/QAudioPlugin/qSpeexInternalDefs.h; sourceTree = SOURCE_ROOT; };
 		45F5EBC60F534EFE00E4E9A1 /* qAudioDecoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioDecoder.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioDecoder.hpp; sourceTree = SOURCE_ROOT; };
 		45F5EBCB0F5351B600E4E9A1 /* qAudioDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioDecoder.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioDecoder.cpp; sourceTree = SOURCE_ROOT; };
-		45F5EBD00F53582B00E4E9A1 /* qAudioDecoderAAC.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioDecoderAAC.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioDecoderAAC.hpp; sourceTree = SOURCE_ROOT; };
-		45F5EBD10F53582B00E4E9A1 /* qAudioDecoderAAC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioDecoderAAC.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioDecoderAAC.cpp; sourceTree = SOURCE_ROOT; };
 		508817D409F0C9AD0071BF1A /* QAudioPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QAudioPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		508817D609F0C9AD0071BF1A /* QAudioPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QAudioPlugin-Info.plist"; sourceTree = "<group>"; };
 		508817E609F0CA040071BF1A /* QAudioPluginProj.xcconfig */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xcconfig; path = QAudioPluginProj.xcconfig; sourceTree = "<group>"; };
@@ -190,15 +158,12 @@
 				4546A6D80DE392F00095536B /* libspeexdsp.a in Frameworks */,
 				4546A6D90DE392F00095536B /* libspeex.a in Frameworks */,
 				4546A6DB0DE393010095536B /* OpenAL.framework in Frameworks */,
-				45B46C700E332C1900AEEED5 /* libiaxclient.a in Frameworks */,
 				72D9F0E60E929D880062278A /* CoreAudio.framework in Frameworks */,
-				453C4EAF0F9E41F300061927 /* mc_dec_aac.framework in Frameworks */,
 				457C02C50FD33B9C000FCB6F /* AudioToolbox.framework in Frameworks */,
 				459299F60FD9A1A600C16E67 /* libportaudio.a in Frameworks */,
 				45929A1F0FD9A26600C16E67 /* CoreFoundation.framework in Frameworks */,
 				45929A240FD9A29700C16E67 /* AudioUnit.framework in Frameworks */,
 				45929A290FD9A2D400C16E67 /* CoreServices.framework in Frameworks */,
-				453A3C4C0FE5C8550081694E /* mc_enc_aac.framework in Frameworks */,
 				459A51601090D90B00225F08 /* libboost_thread-mt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,17 +236,12 @@
 				4548DA9B0FBCDEB900B11844 /* qAudioSinkMixer.hpp */,
 				4546A69D0DE3914F0095536B /* qAudioOpenAL.h */,
 				4546A69B0DE3914F0095536B /* qAudioSpeex.h */,
-				45B46C1D0E329ACA00AEEED5 /* qPhoneUser.hpp */,
-				4534C0EA0E356D460073DF5C /* qPhoneEvents.hpp */,
 				45EE40610EA7EF21008A5B6F /* qSpeexInternalDefs.h */,
 				45F5EBC60F534EFE00E4E9A1 /* qAudioDecoder.hpp */,
-				45F5EBD00F53582B00E4E9A1 /* qAudioDecoderAAC.hpp */,
-				4513528E0FE2D6DD009B60F6 /* qAudioEncoderAAC.hpp */,
 				451352830FE2D0F5009B60F6 /* qAudioEncoder.hpp */,
 				457C01E60FD306D8000FCB6F /* qAudioSinkPortAudio.hpp */,
 				45206C8E0FD615AC008D2F67 /* qPortAudioInterface.hpp */,
 				45720E0F0FDF32AA00386BE3 /* qAudioSinkBufferedResampler.hpp */,
-				4598A1E20FE1EBF0006892B9 /* buf_single.h */,
 				451352880FE2D32E009B60F6 /* qAudioCodec.hpp */,
 			);
 			name = plugin;
@@ -318,8 +278,6 @@
 			children = (
 				459299CB0FD99D0200C16E67 /* PortAudio */,
 				4546A6860DE390610095536B /* speex */,
-				45F5ED8E0F53EF2000E4E9A1 /* MainConcept */,
-				45B46C3C0E332B9500AEEED5 /* iaxclient */,
 			);
 			name = "3rd-party";
 			sourceTree = "<group>";
@@ -330,27 +288,6 @@
 				459299CC0FD99D6D00C16E67 /* portaudio.h */,
 			);
 			name = PortAudio;
-			sourceTree = "<group>";
-		};
-		45B46C3C0E332B9500AEEED5 /* iaxclient */ = {
-			isa = PBXGroup;
-			children = (
-				45B46C3D0E332BB300AEEED5 /* iaxclient_lib.h */,
-				45B46C3E0E332BB300AEEED5 /* iaxclient.h */,
-			);
-			name = iaxclient;
-			sourceTree = "<group>";
-		};
-		45F5ED8E0F53EF2000E4E9A1 /* MainConcept */ = {
-			isa = PBXGroup;
-			children = (
-				451353060FE2D84A009B60F6 /* auxinfo.h */,
-				451353070FE2D84A009B60F6 /* enc_aac.h */,
-				453C4EA60F9E41AF00061927 /* bufstrm.h */,
-				453C4EA70F9E41AF00061927 /* dec_aac.h */,
-				453C4EA80F9E41AF00061927 /* mcdefs.h */,
-			);
-			name = MainConcept;
 			sourceTree = "<group>";
 		};
 		508817C209F0C9740071BF1A = {
@@ -397,19 +334,14 @@
 				4548DA9C0FBCDEB900B11844 /* qAudioSinkMixer.cpp */,
 				4546A6A10DE391C50095536B /* qAudioOpenAL.cpp */,
 				4546A6A00DE391C50095536B /* qAudioSpeex.c */,
-				4534C0EB0E356D460073DF5C /* qPhoneEvents.cpp */,
-				45B46C1E0E329ACA00AEEED5 /* qPhoneUser.cpp */,
 				45787A040E090B93000E65D1 /* qAudioPluginGlue.cpp */,
 				4546A69F0DE391C50095536B /* qPluginHelpers.cpp */,
 				4546A6A70DE392710095536B /* QAudioPlugin_Prefix.pch */,
 				45F5EBCB0F5351B600E4E9A1 /* qAudioDecoder.cpp */,
-				45F5EBD10F53582B00E4E9A1 /* qAudioDecoderAAC.cpp */,
 				451352840FE2D0F5009B60F6 /* qAudioEncoder.cpp */,
-				4513528F0FE2D6DD009B60F6 /* qAudioEncoderAAC.cpp */,
 				457C01E70FD306D8000FCB6F /* qAudioSinkPortAudio.cpp */,
 				45206C8D0FD615AC008D2F67 /* qPortAudioInterface.cpp */,
 				45720E100FDF32AA00386BE3 /* qAudioSinkBufferedResampler.cpp */,
-				4598A1E10FE1EBF0006892B9 /* buf_single.c */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -422,10 +354,7 @@
 				45929A1E0FD9A26600C16E67 /* CoreFoundation.framework */,
 				459299F50FD9A1A600C16E67 /* libportaudio.a */,
 				457C02C40FD33B9C000FCB6F /* AudioToolbox.framework */,
-				453C4EAE0F9E41F300061927 /* mc_dec_aac.framework */,
-				453A3C4B0FE5C8550081694E /* mc_enc_aac.framework */,
 				72D9F0E50E929D880062278A /* CoreAudio.framework */,
-				45B46C6F0E332C1900AEEED5 /* libiaxclient.a */,
 				459A515F1090D90B00225F08 /* libboost_thread-mt.a */,
 				4546A6DA0DE393010095536B /* OpenAL.framework */,
 				4546A6D60DE392F00095536B /* libspeexdsp.a */,
@@ -524,21 +453,16 @@
 				457879E00E08E37F000E65D1 /* qLogger.cpp in Sources */,
 				45787A050E090B93000E65D1 /* qAudioPluginGlue.cpp in Sources */,
 				456E8BE10E109CE000481EA0 /* qAudioSinkSpeex.cpp in Sources */,
-				45B46C1F0E329ACA00AEEED5 /* qPhoneUser.cpp in Sources */,
 				4534BF7F0E3459C70073DF5C /* qFeedbackChannel.cpp in Sources */,
-				4534C0EC0E356D460073DF5C /* qPhoneEvents.cpp in Sources */,
 				4569C1EB0E7347FA00331BE2 /* qAudioSinkForDebugFeedback.cpp in Sources */,
 				727EE0640E8C50D2004E742D /* ../../../platforms/Mac OS/plugins/QAudioPlugin/qDevices.cpp in Sources */,
 				45F5EBCC0F5351B600E4E9A1 /* qAudioDecoder.cpp in Sources */,
-				45F5EBD20F53582B00E4E9A1 /* qAudioDecoderAAC.cpp in Sources */,
 				4548DA9D0FBCDEB900B11844 /* qAudioSinkMixer.cpp in Sources */,
 				457C01E80FD306D8000FCB6F /* qAudioSinkPortAudio.cpp in Sources */,
 				457C035B0FD38FB9000FCB6F /* qRingBuffer.cpp in Sources */,
 				45206C8F0FD615AC008D2F67 /* qPortAudioInterface.cpp in Sources */,
 				45720E110FDF32AA00386BE3 /* qAudioSinkBufferedResampler.cpp in Sources */,
-				4598A1E30FE1EBF0006892B9 /* buf_single.c in Sources */,
 				451352850FE2D0F5009B60F6 /* qAudioEncoder.cpp in Sources */,
-				451352900FE2D6DD009B60F6 /* qAudioEncoderAAC.cpp in Sources */,
 				4594134610917A3000420095 /* qThreadUtils.cpp in Sources */,
 				45971BFE113895A8001B4382 /* qEventTimeLogger.cpp in Sources */,
 			);
@@ -582,7 +506,7 @@
 				PREBINDING = NO;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = debugging;
 			};
@@ -628,7 +552,7 @@
 				PREBINDING = NO;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -651,7 +575,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/speex",
-					"$(SRCROOT)/../../third-party/Digium",
 					"$(SRCROOT)/../../third-party/PortAudio",
 					"\"$(SRCROOT)/../../third-party/boost_1_40_0/lib\"",
 				);
@@ -678,7 +601,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/speex",
-					"$(SRCROOT)/../../third-party/Digium",
 					"$(SRCROOT)/../../third-party/PortAudio",
 					"\"$(SRCROOT)/../../third-party/boost_1_40_0/lib\"",
 				);

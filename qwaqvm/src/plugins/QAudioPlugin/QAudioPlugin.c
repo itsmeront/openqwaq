@@ -449,8 +449,9 @@ primitiveCreatePhoneUser(void) {
 	}
 
 	/* Free the C-strings */
-
+#if !EXCLUDE_IAX
 	handle = qCreatePhoneUser(username, password, hostname, channelHandle);
+#endif
 	free(username);
 	free(password);
 	free(hostname);
@@ -645,8 +646,9 @@ primitiveDestroyPhoneInterfaceIAX(void) {
 	handle = interpreterProxy->positive32BitValueOf(interpreterProxy->stackValue(0));
 
 	/* reuse handle for result */
-
+#if !EXCLUDE_IAX
 	handle = qDestroyPhoneInterfaceIAX(handle);
+#endif
 	if (!(handle == 0)) {
 		return interpreterProxy->primitiveFail();
 	}
@@ -762,7 +764,9 @@ primitiveGenerateTestPhoneEvents(void) {
 	if (interpreterProxy->failed()) {
 		return null;
 	}
+#if !EXCLUDE_IAX
 	qGenerateTestPhoneEvents(addressPtr);
+#endif
 	return interpreterProxy->pop(1);
 }
 
@@ -810,7 +814,9 @@ primitiveHackPushGSM(void) {
 	;
 	;
 	;
+#if !EXCLUDE_IAX
 	result = iaxc_write_output_buffer(0, bytePtr, byteSize);
+#endif
 	result = interpreterProxy->signed32BitIntegerFor(result);
 	return interpreterProxy->popthenPush(2, result);
 }
@@ -831,7 +837,9 @@ primitiveIaxcAnswerCall(void) {
 	if (interpreterProxy->failed()) {
 		return null;
 	}
+#if !EXCLUDE_IAX
 	iaxc_answer_call(callNo);
+#endif
 	return interpreterProxy->pop(1);
 }
 
@@ -852,7 +860,9 @@ primitiveIaxcCall(void) {
 		free(dialString);
 		return null;
 	}
+#if !EXCLUDE_IAX
 	result = iaxc_call(dialString);
+#endif
 	result = interpreterProxy->signed32BitIntegerFor(result);
 	free(dialString);
 	return interpreterProxy->popthenPush(2, result);
@@ -875,6 +885,7 @@ primitiveIaxcHangupCall(void) {
 	if (interpreterProxy->failed()) {
 		return null;
 	}
+#if !EXCLUDE_IAX
 	current = iaxc_selected_call();
 	result = iaxc_select_call(callNo);
 	if (!(result == 0)) {
@@ -885,6 +896,7 @@ primitiveIaxcHangupCall(void) {
 	if (!(current == callNo)) {
 		iaxc_select_call(current);
 	}
+#endif
 	return interpreterProxy->pop(1);
 }
 
@@ -895,7 +907,9 @@ primitiveIaxcInit(void) {
 	if (!(validateArgCount(0))) {
 		return null;
 	}
+#if !EXCLUDE_IAX
 	result = qIaxInit();
+#endif
 	if (result < 0) {
 		interpreterProxy->primitiveFail();
 	}
@@ -925,7 +939,9 @@ primitiveIaxcQuelchCall(void) {
 	if (interpreterProxy->failed()) {
 		return null;
 	}
+#if !EXCLUDE_IAX
 	result = iaxc_quelch(callNo, moh);
+#endif
 	result = interpreterProxy->signed32BitIntegerFor(result);
 	return interpreterProxy->popthenPush(3, result);
 }
@@ -946,7 +962,9 @@ primitiveIaxcRejectCall(void) {
 	if (interpreterProxy->failed()) {
 		return null;
 	}
+#if !EXCLUDE_IAX
 	iaxc_reject_call_number(callNo);
+#endif
 	return interpreterProxy->pop(1);
 }
 
@@ -967,7 +985,9 @@ primitiveIaxcSelectCall(void) {
 	if (interpreterProxy->failed()) {
 		return null;
 	}
+#if !EXCLUDE_IAX
 	result = iaxc_select_call(callNo);
+#endif
 	result = interpreterProxy->signed32BitIntegerFor(result);
 	return interpreterProxy->popthenPush(2, result);
 }
@@ -988,7 +1008,9 @@ primitiveIaxcSendBusyForCall(void) {
 	if (interpreterProxy->failed()) {
 		return null;
 	}
+#if !EXCLUDE_IAX
 	iaxc_send_busy_on_incoming_call(callNo);
+#endif
 	return interpreterProxy->pop(1);
 }
 
@@ -997,7 +1019,9 @@ primitiveIaxcShutdown(void) {
 	if (!(validateArgCount(0))) {
 		return null;
 	}
+#if !EXCLUDE_IAX
 	qIaxShutdown();
+#endif
 	return null;
 }
 
@@ -1018,7 +1042,9 @@ primitiveIaxcUnquelchCall(void) {
 	if (interpreterProxy->failed()) {
 		return null;
 	}
+#if !EXCLUDE_IAX
 	result = iaxc_unquelch(callNo);
+#endif
 	result = interpreterProxy->signed32BitIntegerFor(result);
 	return interpreterProxy->popthenPush(2, result);
 }

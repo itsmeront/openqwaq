@@ -33,7 +33,7 @@ int qInitModule(void)
 #endif
 
 	qInitLogging();
-/*	qLogToFile("QAudioPlugin.log");   /* We now explicitly set the log-file from Squeak */
+//	qLogToFile("QAudioPlugin.log");   /* We now explicitly set the log-file from Squeak */
 	qOalInit();
 #if !EXCLUDE_IAX
 	qIaxInit();
