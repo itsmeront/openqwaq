@@ -22,6 +22,8 @@
 #ifndef __Q_AUDIO_CODEC_PLUGIN_H__
 #define __Q_AUDIO_CODEC_PLUGIN_H__
 
+#define EXCLUDE_IAX 1
+
 #include "qAudioSpeex.h"
 #include "qAudioOpenAL.h"
 #include "qLogger.h"
