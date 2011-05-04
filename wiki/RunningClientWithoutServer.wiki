@@ -15,7 +15,7 @@ Here is how you enable this:
   * Hit "Login"
 
 When you've done this, the client will launch a very simple local
-server which is sufficient to enter a place and play with a few
+server which is sufficient to enter a forum and play with a few
 things. It also establishes a connection point which allows other
 users to connect to the client if they are on the local network
 (although this has not been tested in ages so YMMV). You will not be
