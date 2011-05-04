@@ -1,4 +1,4 @@
-#Explains how to run an OpenQwaq client without the need for a public server
+#summary Explains how to run an OpenQwaq client without the need for a public server
 
 = Introduction =
 
