@@ -8,6 +8,8 @@ There has been a www.SqueakSource.com Monticello repository created to facilitat
 
 
 = Details =
+The Monticello repository is used for building the image and contains the Smalltalk code.  The SVN repository contains everything else: Smalltalk images (client and server), linux code, dll's (source and binary), C code, plugin code, VM build structure, documentation, python, web applications and a bunch more stuff that is needed to build OpenQWAQ.
+
 If you would like to be added to the SqueakSource repository so that you can submit changes please send a request to the google OpenQWAQ list for consideration.  Also if you would like to be added as a member to this group you should also do the same.
 
 We look forward to working with you!  Welcome to OpenQWAQ!
