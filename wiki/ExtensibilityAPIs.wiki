@@ -1,6 +1,6 @@
-= Extensibility and API's =
-
 #summary Ways of extending OpenQwaq other than modifying the source, including the Python API, the Smart Rooms web interface, 3-D content import and RFB bridge.
+
+= Extensibility and API's =
 
 == Introduction ==
 
