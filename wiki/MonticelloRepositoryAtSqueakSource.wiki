@@ -1,4 +1,4 @@
-Monticello Repository at SqueakSource.
+#summary Explains the purpose of the Monticello Repository at SqueakSource.
 
 = Introduction =
 
