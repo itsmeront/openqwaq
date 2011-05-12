@@ -24,6 +24,6 @@ If you would like to be added to the !SqueakSource repository so that you can su
 
 We look forward to working with you!  Welcome to OpenQWAQ!
 
-||Ron Teitelbaum || 
-||3d Immersive Collaboration Consultants||
-||http://www.3dicc.com|| 
+{{{Ron Teitelbaum 
+3d Immersive Collaboration Consultants
+http://www.3dicc.com}}}
