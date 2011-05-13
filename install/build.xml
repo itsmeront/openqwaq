@@ -1,0 +1,65 @@
+<project name="OpenQwaq">
+  <!-- Override any properties locally in build.properties -->
+  <property file="build.properties"/>
+  <property name="version" value="OpenQwaq 1.0.01"/>
+  <property name="svn" value="/usr/bin/svn"/>
+  <property name="svnbase" value="http://openqwaq.googlecode.com/svn/trunk"/>
+
+  <target name="win">
+    <zip destfile="${version}.zip">
+
+      <!-- First comes all the relevant client content -->
+      <zipfileset dir="../client/" defaultexcludes="yes" prefix="">
+        <include name="OpenQwaq.*"/>
+	<include name="*.txt"/>
+      </zipfileset>
+      <zipfileset dir="../client/icons" defaultexcludes="yes" prefix="icons"/>
+      <zipfileset dir="../client/Objects" defaultexcludes="yes" prefix="Objects"/>
+      <zipfileset dir="../client/objects-menu" defaultexcludes="yes" prefix="objects-menu"/>
+      <zipfileset dir="../client/PreCache" defaultexcludes="yes" prefix="PreCache"/>
+      <zipfileset dir="../client/scripts" defaultexcludes="yes" prefix="scripts"/>
+
+      <!-- On top of the client content goes the VM -->
+      <zipfileset dir="../qwaqvm-binary/win" defaultexcludes="yes" prefix="">
+        <exclude name="OpenQwaq.ini"/>
+      </zipfileset>
+      <!-- And a product OpenQwaq.ini to boot -->
+      <zipfileset dir="." prefix="">
+        <include name="OpenQwaq.ini"/>
+      </zipfileset>
+    </zip>
+  </target>
+
+  <target name="mac">
+
+    <!-- Prepare production Info.plist -->
+    <copy file="OpenQwaq.plist" tofile="Info.plist" overwrite="true"/>
+    <replace file="Info.plist" token="OPENQWAQ_VERSION" value="${version}"/>
+
+    <!-- Build the .app.zip file -->
+    <zip destfile="${version}.app.zip">
+
+      <!-- First comes all the relevant client content -->
+      <zipfileset dir="../client/" defaultexcludes="yes" prefix="Contents/Resources">
+        <include name="OpenQwaq.*"/>
+	<include name="*.txt"/>
+      </zipfileset>
+      <zipfileset dir="../client/icons" defaultexcludes="yes" prefix="Contents/Resources/icons"/>
+      <zipfileset dir="../client/Objects" defaultexcludes="yes" prefix="Contents/Resources/Objects"/>
+      <zipfileset dir="../client/objects-menu" defaultexcludes="yes" prefix="Contents/Resources/objects-menu"/>
+      <zipfileset dir="../client/PreCache" defaultexcludes="yes" prefix="Contents/Resources/PreCache"/>
+      <zipfileset dir="../client/scripts" defaultexcludes="yes" prefix="Contents/Resources/scripts"/>
+
+      <!-- On top of the client content goes the VM -->
+      <zipfileset dir="../qwaqvm-binary/mac/OpenQwaq.app" defaultexcludes="yes" prefix="" filemode="755">
+        <exclude name="Contents/Info.plist"/>
+      </zipfileset>
+      <!-- And a product Info.plist to boot -->
+      <zipfileset dir="." prefix="Contents/">
+        <include name="Info.plist"/>
+      </zipfileset>
+    </zip>
+    <!-- Clean out the old Info.plist -->
+    <delete file="Info.plist"/>
+  </target>
+</project>

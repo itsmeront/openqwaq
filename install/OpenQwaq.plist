@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+
+	<key>LSMinimumSystemVersion</key>
+	<string>10.5.0</string>
+	<key>LSArchitecturePriority</key>
+	<array>
+		<string>i386</string>
+	</array>
+
+	<!-- UTI keys are for ignored in Mac OS X v10.4 but used in Mac OS X v10.5. -->
+	<key>UTExportedTypeDeclarations</key>
+	<array> 
+	  <dict> 
+	    <key>UTTypeDescription</key>
+	    <string>Qwaq Forums Place Specification</string>
+	    <key>UTTypeIdentifier</key> 
+	    <string>com.qwaq.qwq</string> 
+	    <key>UTTypeConformsTo</key> 
+	    <array> 
+              <string>public.xml</string> 
+	    </array>
+	    <key>UTTypeIconFile</key>
+	    <string>OpenQwaq</string>
+	    <key>UTTypeTagSpecification</key>                 
+	    <dict>
+              <key>public.filename-extension</key>                 
+	      <array>
+		<string>qwq</string>                     
+	      </array>
+	      <key>public.mime-type</key>
+	      <array>
+		<string>application/x-qwq</string>
+		<string>application/xml-qwq</string>  <!-- generated as a bug in older versions of sp -->
+	      </array>
+	    </dict>
+	  </dict>
+	  <!-- Should also add dict's for each of the other squeak type extensions (image, changes, etc.). 
+	       However, they are not strictly required, and things are working, so why mess with success? -->
+	</array>
+
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+		  <key>CFBundleTypeExtensions</key>
+		  <array>
+		    <string>qwq</string>
+		  </array>
+		  <key>CFBundleTypeMIMETypes</key> <!-- ignored on OSXen that respect LSItemContentTypes -->
+		  <array>
+		    <string>application/x-qwq</string>
+		    <string>application/xml-qwq</string>  <!-- generated as a bug in older versions of sp -->
+		  </array>
+		  <key>CFBundleTypeOSTypes</key>  <!-- not needed and obsolete? -->
+		  <array>
+		    <string>QFqw</string>
+		  </array>
+		  <key>LSItemContentTypes</key> <!-- Ignored before 10.5 -->
+		  <array>
+		    <string>com.qwaq.qwq</string> 
+		  </array>
+		  <key>LSHandlerRank</key>
+		  <string>Owner</string>
+		  <key>CFBundleTypeIconFile</key>
+		  <string>OpenQwaq.icns</string>
+		  <key>CFBundleTypeName</key>
+		  <string>Qwaq Forums Place Specification</string>
+		  <key>CFBundleTypeRole</key>
+		  <string>Editor</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>image</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>OpenQwaq.icns</string>
+			<key>CFBundleTypeName</key>
+			<string>OpenQwaq Image File</string>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>STim</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>OpenQwaq</string>
+	<key>CFBundleGetInfoString</key>
+	<string>OPENQWAQ_VERSION</string>
+	<key>CFBundleIconFile</key>
+	<string>OpenQwaq.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.openqwaq</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>OpenQwaq</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>OPENQWAQ_VERSION</string>
+	<key>CFBundleSignature</key>
+	<string>qwaq</string>
+	<key>CFBundleVersion</key>
+	<string>OPENQWAQ_VERSION</string>
+	<key>CGDisableCoalescedUpdates</key>
+	<true/>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Squeak DoIt</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>doitandreturn</string>
+			<key>NSPortName</key>
+			<string>Squeak</string>
+			<key>NSReturnTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+		</dict>
+	</array>
+
+	<key>SqueakMouseCmdButton1</key>
+	<integer>3</integer>
+	<key>SqueakMouseCmdButton2</key>
+	<integer>3</integer>
+	<key>SqueakMouseCmdButton3</key>
+	<integer>2</integer>
+	<key>SqueakMouseControlButton1</key>
+	<integer>1</integer>
+	<key>SqueakMouseControlButton2</key>
+	<integer>3</integer>
+	<key>SqueakMouseControlButton3</key>
+	<integer>2</integer>
+	<key>SqueakMouseNoneButton1</key>
+	<integer>1</integer>
+	<key>SqueakMouseNoneButton2</key>
+	<integer>3</integer>
+	<key>SqueakMouseNoneButton3</key>
+	<integer>2</integer>
+	<key>SqueakMouseOptionButton1</key>
+	<integer>2</integer>
+	<key>SqueakMouseOptionButton2</key>
+	<integer>3</integer>
+	<key>SqueakMouseOptionButton3</key>
+	<integer>2</integer>
+
+	<key>SqueakBrowserMouseCmdButton1</key>
+	<integer>3</integer>
+	<key>SqueakBrowserMouseCmdButton2</key>
+	<integer>3</integer>
+	<key>SqueakBrowserMouseCmdButton3</key>
+	<integer>2</integer>
+	<key>SqueakBrowserMouseControlButton1</key>
+	<integer>1</integer>
+	<key>SqueakBrowserMouseControlButton2</key>
+	<integer>3</integer>
+	<key>SqueakBrowserMouseControlButton3</key>
+	<integer>2</integer>
+	<key>SqueakBrowserMouseNoneButton1</key>
+	<integer>1</integer>
+	<key>SqueakBrowserMouseNoneButton2</key>
+	<integer>3</integer>
+	<key>SqueakBrowserMouseNoneButton3</key>
+	<integer>2</integer>
+	<key>SqueakBrowserMouseOptionButton1</key>
+	<integer>2</integer>
+	<key>SqueakBrowserMouseOptionButton2</key>
+	<integer>3</integer>
+	<key>SqueakBrowserMouseOptionButton3</key>
+	<integer>2</integer>
+
+	<key>SqueakEncodingType</key>
+	<string>UTF-8</string>
+	<key>SqueakExplicitWindowOpenNeeded</key>
+	<false/>
+	<key>SqueakFloatingWindowGetsFocus</key>
+	<true/>
+	<key>SqueakHasQuitWithoutSaving</key>
+	<false/>
+	<key>SqueakImageName</key>
+	<string>OpenQwaq.image</string>
+	<key>SqueakMaxHeapSize</key>
+	<integer>536870912</integer>
+	<key>SqueakPluginsBuiltInOrLocalOnly</key>
+	<false/>
+	<key>SqueakUIFlushPrimaryDeferNMilliseconds</key>
+	<integer>20</integer>
+	<key>SqueakUIFlushSecondaryCheckForPossibleNeedEveryNMilliseconds</key>
+	<integer>20</integer>
+	<key>SqueakUIFlushSecondaryCleanupDelayMilliseconds</key>
+	<integer>25</integer>
+	<key>SqueakUIFlushUseHighPercisionClock</key>
+	<true/>
+	<key>SqueakUnTrustedDirectory</key>
+	<string>~/Library/Preferences/OpenQwaq/Internet/Untrusted/</string>
+
+	<key>SqueakWindowAttribute</key>
+	<data>
+	ggAAHw==
+	</data>
+	<key>SqueakWindowHasTitle</key>
+	<true/>
+	<key>SqueakWindowType</key>
+	<integer>6</integer>
+</dict>
+</plist>
