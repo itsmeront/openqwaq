@@ -4,7 +4,7 @@
 
 Monticello is a Smalltalk Repository used for developing code in Squeak.  When you make changes it automatically tracks changes, allows you to merge others changes, and keeps a local copy of the code you work with.
 
-There has been a [http://www.squeaksource.com/@QXzFfG1tPIy_1h47/_QZTifZJ Squeaksource.com] Monticello repository created to facilitate a squeak image build.  The results of submissions will be merged by responsible community members to build a Squeak Smalltalk Image for a client and a server.  The images will be posted back to the Community here on Google Code.  
+There has been a [http://www.squeaksource.com/openqwaq.html Squeaksource.com] Monticello repository created to facilitate a squeak image build.  The results of submissions will be merged by responsible community members to build a Squeak Smalltalk Image for a client and a server.  The images will be posted back to the Community here on Google Code.  
 
 = Details =
 
