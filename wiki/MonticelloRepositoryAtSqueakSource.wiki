@@ -22,7 +22,7 @@ The Monticello repository is used for building the image and contains the Smallt
 
 If you would like to be added to the !SqueakSource repository so that you can submit changes please send a request to the [mailto:openqwaq@googlegroups.com Google OpenQwaq Group] for consideration.  Also if you would like to be added as a member to this group you should [http://groups.google.com/group/openqwaq join here.]
 
-We look forward to working with you!  Welcome to OpenQWAQ!
+We look forward to working with you!  Welcome to !OpenQwaq!
 
 Ron Teitelbaum <br>
 3D Immersive Collaboration Consultants<br>
