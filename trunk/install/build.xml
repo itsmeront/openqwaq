@@ -6,7 +6,7 @@
   <property name="svnbase" value="http://openqwaq.googlecode.com/svn/trunk"/>
 
   <target name="win">
-    <zip destfile="${version}.zip">
+    <zip destfile="${version}-win.zip">
 
       <!-- First comes all the relevant client content -->
       <zipfileset dir="../client/" defaultexcludes="yes" prefix="">
@@ -37,7 +37,7 @@
     <replace file="Info.plist" token="OPENQWAQ_VERSION" value="${version}"/>
 
     <!-- Build the .app.zip file -->
-    <zip destfile="${version}.app.zip">
+    <zip destfile="${version}-mac.zip">
 
       <!-- First comes all the relevant client content -->
       <zipfileset dir="../client/" defaultexcludes="yes" prefix="${version}.app/Contents/Resources">
