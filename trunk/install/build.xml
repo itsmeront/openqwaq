@@ -40,22 +40,22 @@
     <zip destfile="${version}.app.zip">
 
       <!-- First comes all the relevant client content -->
-      <zipfileset dir="../client/" defaultexcludes="yes" prefix="Contents/Resources">
+      <zipfileset dir="../client/" defaultexcludes="yes" prefix="${version}.app/Contents/Resources">
         <include name="OpenQwaq.*"/>
 	<include name="*.txt"/>
       </zipfileset>
-      <zipfileset dir="../client/icons" defaultexcludes="yes" prefix="Contents/Resources/icons"/>
-      <zipfileset dir="../client/Objects" defaultexcludes="yes" prefix="Contents/Resources/Objects"/>
-      <zipfileset dir="../client/objects-menu" defaultexcludes="yes" prefix="Contents/Resources/objects-menu"/>
-      <zipfileset dir="../client/PreCache" defaultexcludes="yes" prefix="Contents/Resources/PreCache"/>
-      <zipfileset dir="../client/scripts" defaultexcludes="yes" prefix="Contents/Resources/scripts"/>
+      <zipfileset dir="../client/icons" defaultexcludes="yes" prefix="${version}.app/Contents/Resources/icons"/>
+      <zipfileset dir="../client/Objects" defaultexcludes="yes" prefix="${version}.app/Contents/Resources/Objects"/>
+      <zipfileset dir="../client/objects-menu" defaultexcludes="yes" prefix="${version}.app/Contents/Resources/objects-menu"/>
+      <zipfileset dir="../client/PreCache" defaultexcludes="yes" prefix="${version}.app/Contents/Resources/PreCache"/>
+      <zipfileset dir="../client/scripts" defaultexcludes="yes" prefix="${version}.app/Contents/Resources/scripts"/>
 
       <!-- On top of the client content goes the VM -->
-      <zipfileset dir="../qwaqvm-binary/mac/OpenQwaq.app" defaultexcludes="yes" prefix="" filemode="755">
+      <zipfileset dir="../qwaqvm-binary/mac/OpenQwaq.app" defaultexcludes="yes" prefix="${version}.app/" filemode="755">
         <exclude name="Contents/Info.plist"/>
       </zipfileset>
       <!-- And a product Info.plist to boot -->
-      <zipfileset dir="." prefix="Contents/">
+      <zipfileset dir="." prefix="${version}.app/Contents/">
         <include name="Info.plist"/>
       </zipfileset>
     </zip>
