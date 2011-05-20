@@ -62,4 +62,25 @@
     <!-- Clean out the old Info.plist -->
     <delete file="Info.plist"/>
   </target>
+
+
+  <target name="linux">
+    <!-- Build the .app.zip file -->
+    <tar destfile="${version}-linux.tgz" compression="gzip">
+
+      <!-- First comes all the relevant client content -->
+      <tarfileset dir="../client/" defaultexcludes="yes" prefix="${version}">
+        <include name="OpenQwaq.*"/>
+	<include name="*.txt"/>
+      </tarfileset>
+      <tarfileset dir="../client/icons" defaultexcludes="yes" prefix="${version}/icons"/>
+      <tarfileset dir="../client/Objects" defaultexcludes="yes" prefix="${version}/Objects"/>
+      <tarfileset dir="../client/objects-menu" defaultexcludes="yes" prefix="${version}/objects-menu"/>
+      <tarfileset dir="../client/PreCache" defaultexcludes="yes" prefix="${version}/PreCache"/>
+      <tarfileset dir="../client/scripts" defaultexcludes="yes" prefix="${version}/scripts"/>
+
+      <!-- On top of the client content goes the VM -->
+      <tarfileset dir="../qwaqvm-binary/unix/qwaqvm" defaultexcludes="yes" prefix="${version}/" mode="755"/>
+    </tar>
+  </target>
 </project>
