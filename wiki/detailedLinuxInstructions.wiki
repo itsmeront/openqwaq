@@ -14,7 +14,8 @@ Brandon Pate
 = Details =
 
 0. The server has been verified with SELinux disabled, on 32-bit Linuxen. Changes for 64-bit or SELinux is not covered here.
-   * I know there is a command to disable SElinux but I didn't go look it up, I saw it on the forms here. The reason I didn't disable it, is there is a check box when you install CentOS to turn it off, so I used that instead.
+   * I know there is a command to disable SElinux but I didn't go look it up, I saw it on the forms here. The reason I didn't disable it, is there is a check box when you install CentOS to turn it off, so I used that instead. 
+   * Edit: The command is 'sudo setenforce 0'
 
 1. Install necessary packages
 On RHEL/CentOS:
