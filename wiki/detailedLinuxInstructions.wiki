@@ -1,4 +1,4 @@
-Detailed server installation instructions for people less familiar with Linux
+#summary Detailed server installation instructions for people less familiar with Linux
 
 = Introduction =
 
@@ -166,5 +166,3 @@ Notes:
    * There are no admin or user docs, nor support pages prepared for OpenQwaq so don't bother clicking help anywhere as the links wont work
    * To connect to this server type "/sbin/ifconfig" into the terminal, and get the IP address from the print out, and connect to that.
       * Remember, all users need an account - they can be created in the http://localhost/admin page, under users.
-
-
