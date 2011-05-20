@@ -2,4 +2,4 @@
 # foo/bar/../baz is a tad scruffy.  Two dirnames gets us foo/baz.
 #ROOT=`/usr/bin/dirname "$0"`/..
 ROOT=`/usr/bin/dirname "\`/usr/bin/dirname \"$0\"\`"`
-exec "$ROOT/bin/squeak" "$ROOT/Teleplace.image"
+exec "$ROOT/bin/squeak" "$ROOT/OpenQwaq.image"
