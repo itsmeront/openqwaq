@@ -82,3 +82,30 @@ Smalltalk saveAs: 'oqbase.image'
 }}}
 
 At this point you have a suitable OpenQwaq base image that can be used for creating either a client or a server image.
+
+= Step 4: Building a Client image =
+With the base image ready and available, let's create a client image:
+
+{{{
+"Save the base image first"
+Smalltalk saveAs: 'oqclient.image'.
+"The run the image builder"
+QClientImageBuilder run.
+}}}
+
+The resulting image is a *developer* image, not a sealed client image. To prepare a sealed client image, run the following code:
+
+{{{
+"Set the client version properly (replace x.y.zz with your version)"
+QwaqVersion newVersion: 'OpenQwaq x.y.zz'.
+"Save the image under the sealed image name"
+Smalltalk saveAs: 'OpenQwaq.image'.
+"Set the interrupt password"
+QwaqForumsUI interruptPassword: ''.
+"And run the client as standalone app"
+WorldState addDeferredUIMessage:
+	(MessageSend
+		receiver: QwaqForumsUI
+		selector: #runAsApp:
+		argument: false).
+}}}
