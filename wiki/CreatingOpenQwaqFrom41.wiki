@@ -16,7 +16,7 @@ Smalltalk unloadAllKnownPackages.
 
 "Get Installer back since it is useful for loading stuff:"
 ((MCHttpRepository
-        location: 'http://source.squeak.org/squeak41'
+        location: 'http://www.squeaksource.com/openqwaq'
         user: '' password:'')
         versionFromFileNamed: 'Installer-Core-nice.338.mcz') load.
 }}}
@@ -78,7 +78,7 @@ SystemOrganization removeEmptyCategories; sortCategories.
 
 "Condense changes for the base image"
 Smalltalk condenseChanges.
-Smalltalk saveAs: 'OpenQwaq-Base.image'
+Smalltalk saveAs: 'oqbase.image'
 }}}
 
 At this point you have a suitable OpenQwaq base image that can be used for creating either a client or a server image.
