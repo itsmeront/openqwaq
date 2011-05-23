@@ -109,3 +109,30 @@ WorldState addDeferredUIMessage:
 		selector: #runAsApp:
 		argument: false).
 }}}
+
+= Step 5: Building a Server image =
+The server image build process is almost identical to the client image build process. It starts with an oqbase.image and then loads the required server packages:
+
+{{{
+"Save the base image first"
+Smalltalk saveAs: 'oqserver.image'.
+"The run the image builder"
+QServerImageBuilder run.
+}}}
+
+Again, the resulting image is a *developer* image, not a sealed server image. To seal the server image execute the following:
+
+{{{
+"Set the client version properly (replace x.y.zz with your version)"
+QwaqVersion newVersion: 'Server x.y.zz'.
+"Save the image under the sealed image name"
+Smalltalk saveAs: 'server.image'.
+"Set the interrupt password"
+QwaqServerUI interruptPassword: ''.
+"And run the server as standalone app"
+WorldState addDeferredUIMessage:
+	(MessageSend
+		receiver: QwaqServerUI
+		selector: #runAsApp:
+		argument: false).
+}}}
