@@ -136,3 +136,13 @@ WorldState addDeferredUIMessage:
 		selector: #runAsApp:
 		argument: false).
 }}}
+
+= Step 6: Keeping the images up-to-date =
+Once you have a developer image (either oqclient.image or oqserver.image), you can also incrementally update it instead of rebuilding it. In order to update all the packages in your image, evaluate the following:
+
+{{{
+"Update all packages"
+UsefulScripts updateAllLoadedPackages
+}}}
+
+This will update all the loaded packages in your image to the latest versions in the repository. The image can then be sealed again for deployment by executing the code shown above.
