@@ -74,11 +74,19 @@ Smalltalk garbageCollect.
     select:[:wc| wc packageName = 'OldMutex']
     thenDo:[:wc| wc unload]).
 Smalltalk removeClassNamed: 'OldMutex'.
+Smalltalk removeClassNamed: 'MorphObjectOut'.
+1 to: 31 do:[:i| 
+	(Smalltalk compactClassesArray at: i) ifNotNil:[:aClass|
+		aClass isObsolete 
+			ifTrue:[Smalltalk compactClassesArray at: i put: nil]]].
+Smalltalk recreateSpecialObjectsArray.
 SystemOrganization removeEmptyCategories; sortCategories.
-
+DebuggerMethodMap voidMapCache.
+Compiler recompileAll.
+Smalltalk garbageCollect.
 "Condense changes for the base image"
+Smalltalk saveAs: 'oqbase.image'.
 Smalltalk condenseChanges.
-Smalltalk saveAs: 'oqbase.image'
 }}}
 
 At this point you have a suitable OpenQwaq base image that can be used for creating either a client or a server image.
