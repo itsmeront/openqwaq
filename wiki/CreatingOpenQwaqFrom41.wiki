@@ -4,6 +4,7 @@
 
 The images released initially with OpenQwaq include two different base images. The client image is based on the Croquet Hedgehog SDK release (which is a variant on Squeak 3.8) and the server image is based on Squeak 4.1. This page explains how to transform a Squeak 4.1 image into a suitable OpenQwaq base image.
 
+_NOTE: The first three steps are mostly for documenting the entire process. You can skip straight to step 4 if you use the oqbase image from the [http://code.google.com/p/openqwaq/source/browse/#svn%2Ftrunk%2Fimages SVN location]._
 
 = Step 1: Unloading everything =
 
@@ -92,7 +93,7 @@ Smalltalk condenseChanges.
 At this point you have a suitable OpenQwaq base image that can be used for creating either a client or a server image.
 
 = Step 4: Building a Client image =
-With the base image ready and available, let's create a client image:
+With the base image ready and available from the [http://code.google.com/p/openqwaq/source/browse/#svn%2Ftrunk%2Fimages SVN location], let's create a client image:
 
 {{{
 "Save the base image first"
@@ -119,7 +120,7 @@ WorldState addDeferredUIMessage:
 }}}
 
 = Step 5: Building a Server image =
-The server image build process is almost identical to the client image build process. It starts with an oqbase.image and then loads the required server packages:
+The server image build process is almost identical to the client image build process. It starts with an oqbase.image from the [http://code.google.com/p/openqwaq/source/browse/#svn%2Ftrunk%2Fimages SVN location] and then loads the required server packages:
 
 {{{
 "Save the base image first"
