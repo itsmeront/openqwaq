@@ -1,7 +1,7 @@
 /**
  * Project OpenQwaq
  *
- * Copyright (c) 2005-20011, Teleplace, Inc., All Rights Reserved
+ * Copyright (c) 2005-2011, Teleplace, Inc., All Rights Reserved
  *
  * Redistributions in source code form must reproduce the above
  * copyright and this condition.
