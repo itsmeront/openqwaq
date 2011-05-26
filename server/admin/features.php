@@ -34,7 +34,9 @@ function getLicenseOwner() {
   if(isset($features)) {
     return "Registered To ".$features->RegisteredTo;
   }
-  return '<span style="color: red">UNLICENSED COPY</span>';
+  # Don't scare OpenQwaq users
+  # return '<span style="color: red">UNLICENSED COPY</span>';
+  return '';
 }
 
 function printFeatureInfo() {
