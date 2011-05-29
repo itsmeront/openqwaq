@@ -65,7 +65,7 @@
 		451925F60CFE607400835F4A /* sqPlatformSpecific.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqPlatformSpecific.h; path = "../../platforms/Mac OS/vm/sqPlatformSpecific.h"; sourceTree = SOURCE_ROOT; };
 		451925F70CFE607400835F4A /* sqConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqConfig.h; path = "../../platforms/Mac OS/vm/sqConfig.h"; sourceTree = SOURCE_ROOT; };
 		451926000CFE60A400835F4A /* interp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = interp.h; path = ../../src/vm/interp.h; sourceTree = SOURCE_ROOT; };
-		451F4B950D3DE37100D2D4DB /* qVideoCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qVideoCommon.cpp; path = ../../platforms/Cross/plugins/QVideoCodecPluginMC/qVideoCommon.cpp; sourceTree = SOURCE_ROOT; };
+		451F4B950D3DE37100D2D4DB /* qVideoCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qVideoCommon.cpp; path = ../../platforms/Cross/plugins/QVideoCodecPlugin/qVideoCommon.cpp; sourceTree = SOURCE_ROOT; };
 		451F4BE70D3DEB4900D2D4DB /* qBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qBuffer.cpp; path = ../../platforms/Cross/plugins/QwaqLib/qBuffer.cpp; sourceTree = SOURCE_ROOT; };
 		451F4C410D3DF23900D2D4DB /* qLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qLogger.cpp; path = ../../platforms/Cross/plugins/QwaqLib/qLogger.cpp; sourceTree = SOURCE_ROOT; };
 		451F4C420D3DF23900D2D4DB /* qLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qLogger.h; path = ../../platforms/Cross/plugins/QwaqLib/qLogger.h; sourceTree = SOURCE_ROOT; };
@@ -259,7 +259,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 45C7117A0CFE48AD00F4FD35 /* Build configuration list for PBXProject "QVideoCodecPluginMC" */;
 			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 45C711750CFE48AD00F4FD35;
 			productRefGroup = 4511BD200CFE55CD000916C2 /* Products */;
 			projectDirPath = "";

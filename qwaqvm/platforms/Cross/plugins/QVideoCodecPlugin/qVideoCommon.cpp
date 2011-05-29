@@ -15,7 +15,7 @@
 
 /*
  * qVideoCommon.cpp
- * QVideoCodecPluginMC
+ * QVideoCodecPlugin
  *
  */
 
