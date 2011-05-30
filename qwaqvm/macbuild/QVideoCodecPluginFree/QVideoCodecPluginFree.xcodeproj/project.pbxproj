@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03497A071392D8DF00A58BC5 /* qBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03497A041392D8DF00A58BC5 /* qBuffer.cpp */; };
+		03497A0B1392DB3F00A58BC5 /* QVideoCodecPluginFree.c in Sources */ = {isa = PBXBuildFile; fileRef = 03497A0A1392DB3F00A58BC5 /* QVideoCodecPluginFree.c */; };
+		03497A0F1392DB6F00A58BC5 /* qVideoEncoder.inc in Sources */ = {isa = PBXBuildFile; fileRef = 03497A0C1392DB6F00A58BC5 /* qVideoEncoder.inc */; };
+		03497A101392DB6F00A58BC5 /* qVideoDecoder.inc in Sources */ = {isa = PBXBuildFile; fileRef = 03497A0D1392DB6F00A58BC5 /* qVideoDecoder.inc */; };
+		03497A111392DB6F00A58BC5 /* qVideoCommon.inc in Sources */ = {isa = PBXBuildFile; fileRef = 03497A0E1392DB6F00A58BC5 /* qVideoCommon.inc */; };
+		03497A131392DB7800A58BC5 /* qLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03497A121392DB7800A58BC5 /* qLogger.cpp */; };
+		03497A151392DC6A00A58BC5 /* qVideoDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03497A141392DC6A00A58BC5 /* qVideoDecoder.cpp */; };
+		03497A3D1392DE6700A58BC5 /* qVideoCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03497A3C1392DE6700A58BC5 /* qVideoCommon.cpp */; };
+		03497A641392E0CD00A58BC5 /* qVideoEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03497A631392E0CD00A58BC5 /* qVideoEncoder.cpp */; };
+		03497AD8139406B700A58BC5 /* qVideoFreePlatformSpecific.c in Sources */ = {isa = PBXBuildFile; fileRef = 03497AD7139406B700A58BC5 /* qVideoFreePlatformSpecific.c */; };
+		03497ADC1394329800A58BC5 /* libboost_thread-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03497ADB1394329800A58BC5 /* libboost_thread-mt.a */; };
+		03497AEA13944CD000A58BC5 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03497AE913944CD000A58BC5 /* libavcodec.a */; };
+		8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49A704867FD3000E48DA /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03497A041392D8DF00A58BC5 /* qBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qBuffer.cpp; path = ../../platforms/Cross/plugins/QwaqLib/qBuffer.cpp; sourceTree = SOURCE_ROOT; };
+		03497A0A1392DB3F00A58BC5 /* QVideoCodecPluginFree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = QVideoCodecPluginFree.c; path = ../../src/plugins/QVideoCodecPluginFree/QVideoCodecPluginFree.c; sourceTree = SOURCE_ROOT; };
+		03497A0C1392DB6F00A58BC5 /* qVideoEncoder.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; name = qVideoEncoder.inc; path = ../../platforms/Cross/plugins/QVideoCodecPlugin/qVideoEncoder.inc; sourceTree = SOURCE_ROOT; };
+		03497A0D1392DB6F00A58BC5 /* qVideoDecoder.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; name = qVideoDecoder.inc; path = ../../platforms/Cross/plugins/QVideoCodecPlugin/qVideoDecoder.inc; sourceTree = SOURCE_ROOT; };
+		03497A0E1392DB6F00A58BC5 /* qVideoCommon.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; name = qVideoCommon.inc; path = ../../platforms/Cross/plugins/QVideoCodecPlugin/qVideoCommon.inc; sourceTree = SOURCE_ROOT; };
+		03497A121392DB7800A58BC5 /* qLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qLogger.cpp; path = ../../platforms/Cross/plugins/QwaqLib/qLogger.cpp; sourceTree = SOURCE_ROOT; };
+		03497A141392DC6A00A58BC5 /* qVideoDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qVideoDecoder.cpp; path = ../../platforms/Cross/plugins/QVideoCodecPluginFree/qVideoDecoder.cpp; sourceTree = SOURCE_ROOT; };
+		03497A3C1392DE6700A58BC5 /* qVideoCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qVideoCommon.cpp; path = ../../platforms/Cross/plugins/QVideoCodecPlugin/qVideoCommon.cpp; sourceTree = SOURCE_ROOT; };
+		03497A631392E0CD00A58BC5 /* qVideoEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qVideoEncoder.cpp; path = ../../platforms/Cross/plugins/QVideoCodecPluginFree/qVideoEncoder.cpp; sourceTree = SOURCE_ROOT; };
+		03497AD7139406B700A58BC5 /* qVideoFreePlatformSpecific.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = qVideoFreePlatformSpecific.c; path = ../../platforms/Cross/plugins/QVideoCodecPluginFree/qVideoFreePlatformSpecific.c; sourceTree = SOURCE_ROOT; };
+		03497ADB1394329800A58BC5 /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_thread-mt.a"; path = "/opt/local/lib/libboost_thread-mt.a"; sourceTree = "<absolute>"; };
+		03497AE913944CD000A58BC5 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = "../../platforms/Cross/third-party/libav-0.7_beta2/lib/libavcodec.a"; sourceTree = SOURCE_ROOT; };
+		03497B0113944EE500A58BC5 /* interp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = interp.h; path = ../../src/vm/interp.h; sourceTree = SOURCE_ROOT; };
+		03497B0213944EE500A58BC5 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = "../../platforms/Mac OS/vm/config.h"; sourceTree = SOURCE_ROOT; };
+		03497B0313944EE500A58BC5 /* sqPlatformSpecific.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqPlatformSpecific.h; path = "../../platforms/Mac OS/vm/sqPlatformSpecific.h"; sourceTree = SOURCE_ROOT; };
+		03497B0413944EE500A58BC5 /* sqConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqConfig.h; path = "../../platforms/Mac OS/vm/sqConfig.h"; sourceTree = SOURCE_ROOT; };
+		03497B0513944EE500A58BC5 /* sq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sq.h; path = ../../platforms/Cross/vm/sq.h; sourceTree = SOURCE_ROOT; };
+		03497B0613944EE500A58BC5 /* sqMemoryAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqMemoryAccess.h; path = ../../platforms/Cross/vm/sqMemoryAccess.h; sourceTree = SOURCE_ROOT; };
+		03497B0713944EE500A58BC5 /* sqVirtualMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqVirtualMachine.h; path = ../../platforms/Cross/vm/sqVirtualMachine.h; sourceTree = SOURCE_ROOT; };
+		03497B0A139450F300A58BC5 /* qVideoCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qVideoCommon.h; path = ../../platforms/Cross/plugins/QVideoCodecPlugin/qVideoCommon.h; sourceTree = SOURCE_ROOT; };
+		03497B0B139450F300A58BC5 /* qVideoDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qVideoDecoder.h; path = ../../platforms/Cross/plugins/QVideoCodecPlugin/qVideoDecoder.h; sourceTree = SOURCE_ROOT; };
+		03497B0C139450F300A58BC5 /* qVideoEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qVideoEncoder.h; path = ../../platforms/Cross/plugins/QVideoCodecPlugin/qVideoEncoder.h; sourceTree = SOURCE_ROOT; };
+		03497B11139451C300A58BC5 /* qLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qLogger.h; path = ../../platforms/Cross/plugins/QwaqLib/qLogger.h; sourceTree = SOURCE_ROOT; };
+		03497B1A139452A500A58BC5 /* avcodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = avcodec.h; path = libavcodec/avcodec.h; sourceTree = "<group>"; };
+		03497B1B139452A500A58BC5 /* avfft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = avfft.h; path = libavcodec/avfft.h; sourceTree = "<group>"; };
+		03497B1C139452A500A58BC5 /* dxva2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dxva2.h; path = libavcodec/dxva2.h; sourceTree = "<group>"; };
+		03497B1D139452A500A58BC5 /* opt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opt.h; path = libavcodec/opt.h; sourceTree = "<group>"; };
+		03497B1E139452A500A58BC5 /* vaapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vaapi.h; path = libavcodec/vaapi.h; sourceTree = "<group>"; };
+		03497B1F139452A500A58BC5 /* vdpau.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vdpau.h; path = libavcodec/vdpau.h; sourceTree = "<group>"; };
+		03497B20139452A500A58BC5 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = libavcodec/version.h; sourceTree = "<group>"; };
+		03497B21139452A500A58BC5 /* xvmc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = xvmc.h; path = libavcodec/xvmc.h; sourceTree = "<group>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8D576316048677EA00EA77CD /* QVideoCodecPluginFree.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QVideoCodecPluginFree.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D576313048677EA00EA77CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03497ADC1394329800A58BC5 /* libboost_thread-mt.a in Frameworks */,
+				03497AEA13944CD000A58BC5 /* libavcodec.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03497A3E1392DEE500A58BC5 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				03497A3C1392DE6700A58BC5 /* qVideoCommon.cpp */,
+				03497A041392D8DF00A58BC5 /* qBuffer.cpp */,
+				03497A0C1392DB6F00A58BC5 /* qVideoEncoder.inc */,
+				03497A0D1392DB6F00A58BC5 /* qVideoDecoder.inc */,
+				03497A0E1392DB6F00A58BC5 /* qVideoCommon.inc */,
+				03497A121392DB7800A58BC5 /* qLogger.cpp */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		03497AF813944D1400A58BC5 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				03497B0913944EF300A58BC5 /* libavcodec */,
+				03497B0813944EED00A58BC5 /* plugin */,
+				03497AF913944D2B00A58BC5 /* vm */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		03497AF913944D2B00A58BC5 /* vm */ = {
+			isa = PBXGroup;
+			children = (
+				03497B0113944EE500A58BC5 /* interp.h */,
+				03497B0213944EE500A58BC5 /* config.h */,
+				03497B0313944EE500A58BC5 /* sqPlatformSpecific.h */,
+				03497B0413944EE500A58BC5 /* sqConfig.h */,
+				03497B0513944EE500A58BC5 /* sq.h */,
+				03497B0613944EE500A58BC5 /* sqMemoryAccess.h */,
+				03497B0713944EE500A58BC5 /* sqVirtualMachine.h */,
+			);
+			name = vm;
+			sourceTree = "<group>";
+		};
+		03497B0813944EED00A58BC5 /* plugin */ = {
+			isa = PBXGroup;
+			children = (
+				03497B11139451C300A58BC5 /* qLogger.h */,
+				03497B0A139450F300A58BC5 /* qVideoCommon.h */,
+				03497B0B139450F300A58BC5 /* qVideoDecoder.h */,
+				03497B0C139450F300A58BC5 /* qVideoEncoder.h */,
+			);
+			name = plugin;
+			sourceTree = "<group>";
+		};
+		03497B0913944EF300A58BC5 /* libavcodec */ = {
+			isa = PBXGroup;
+			children = (
+				03497B1A139452A500A58BC5 /* avcodec.h */,
+				03497B1B139452A500A58BC5 /* avfft.h */,
+				03497B1C139452A500A58BC5 /* dxva2.h */,
+				03497B1D139452A500A58BC5 /* opt.h */,
+				03497B1E139452A500A58BC5 /* vaapi.h */,
+				03497B1F139452A500A58BC5 /* vdpau.h */,
+				03497B20139452A500A58BC5 /* version.h */,
+				03497B21139452A500A58BC5 /* xvmc.h */,
+			);
+			name = libavcodec;
+			path = "../../platforms/Cross/third-party/libav-0.7_beta2/include";
+			sourceTree = "<group>";
+		};
+		089C166AFE841209C02AAC07 /* QVideoCodecPluginFree */ = {
+			isa = PBXGroup;
+			children = (
+				03497AF813944D1400A58BC5 /* Header */,
+				08FB77AFFE84173DC02AAC07 /* Source */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				19C28FB6FE9D52B211CA2CBB /* Products */,
+			);
+			name = QVideoCodecPluginFree;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				03497AE913944CD000A58BC5 /* libavcodec.a */,
+				03497ADB1394329800A58BC5 /* libboost_thread-mt.a */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D576317048677EA00EA77CD /* Info.plist */,
+				8D5B49A704867FD3000E48DA /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				03497A3E1392DEE500A58BC5 /* common */,
+				03497A0A1392DB3F00A58BC5 /* QVideoCodecPluginFree.c */,
+				03497A141392DC6A00A58BC5 /* qVideoDecoder.cpp */,
+				03497A631392E0CD00A58BC5 /* qVideoEncoder.cpp */,
+				03497AD7139406B700A58BC5 /* qVideoFreePlatformSpecific.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		19C28FB6FE9D52B211CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D576316048677EA00EA77CD /* QVideoCodecPluginFree.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D57630D048677EA00EA77CD /* QVideoCodecPluginFree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB911A08733D790010E9CD /* Build configuration list for PBXNativeTarget "QVideoCodecPluginFree" */;
+			buildPhases = (
+				8D57630F048677EA00EA77CD /* Resources */,
+				8D576311048677EA00EA77CD /* Sources */,
+				8D576313048677EA00EA77CD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QVideoCodecPluginFree;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = QVideoCodecPluginFree;
+			productReference = 8D576316048677EA00EA77CD /* QVideoCodecPluginFree.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB911E08733D790010E9CD /* Build configuration list for PBXProject "QVideoCodecPluginFree" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* QVideoCodecPluginFree */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D57630D048677EA00EA77CD /* QVideoCodecPluginFree */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D57630F048677EA00EA77CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D576311048677EA00EA77CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03497A071392D8DF00A58BC5 /* qBuffer.cpp in Sources */,
+				03497A0B1392DB3F00A58BC5 /* QVideoCodecPluginFree.c in Sources */,
+				03497A0F1392DB6F00A58BC5 /* qVideoEncoder.inc in Sources */,
+				03497A101392DB6F00A58BC5 /* qVideoDecoder.inc in Sources */,
+				03497A111392DB6F00A58BC5 /* qVideoCommon.inc in Sources */,
+				03497A131392DB7800A58BC5 /* qLogger.cpp in Sources */,
+				03497A151392DC6A00A58BC5 /* qVideoDecoder.cpp in Sources */,
+				03497A3D1392DE6700A58BC5 /* qVideoCommon.cpp in Sources */,
+				03497A641392E0CD00A58BC5 /* qVideoEncoder.cpp in Sources */,
+				03497AD8139406B700A58BC5 /* qVideoFreePlatformSpecific.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8D5B49A704867FD3000E48DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB911B08733D790010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					"\"$(SRCROOT)/../third-party/libav-0.7_beta2\"",
+					"\"$(SRCROOT)/../../platforms/Cross/third-party/libav-0.7_beta2/lib\"",
+				);
+				PRODUCT_NAME = QVideoCodecPluginFree;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		1DEB911C08733D790010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					"\"$(SRCROOT)/../third-party/libav-0.7_beta2\"",
+					"\"$(SRCROOT)/../../platforms/Cross/third-party/libav-0.7_beta2/lib\"",
+				);
+				PRODUCT_NAME = QVideoCodecPluginFree;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		1DEB911F08733D790010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/Developer/Headers/FlatCarbon,
+					"$(SRCROOT)/../../platforms/Cross/plugins/QVideoCodecPlugin",
+					"$(SRCROOT)/../../platforms/Cross/plugins/QVideoCodecPluginFree",
+					"$(SRCROOT)/../../platforms/Cross/third-party/libav-0.7_beta2/include",
+					/opt/local/include,
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		1DEB912008733D790010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/Developer/Headers/FlatCarbon,
+					"$(SRCROOT)/../../platforms/Cross/plugins/QVideoCodecPlugin",
+					"$(SRCROOT)/../../platforms/Cross/plugins/QVideoCodecPluginFree",
+					"$(SRCROOT)/../../platforms/Cross/third-party/libav-0.7_beta2/include",
+					/opt/local/include,
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB911A08733D790010E9CD /* Build configuration list for PBXNativeTarget "QVideoCodecPluginFree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB911B08733D790010E9CD /* Debug */,
+				1DEB911C08733D790010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB911E08733D790010E9CD /* Build configuration list for PBXProject "QVideoCodecPluginFree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB911F08733D790010E9CD /* Debug */,
+				1DEB912008733D790010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}
