@@ -1,0 +1,14 @@
+prefix=./install-dir
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavdevice
+Description: Libav device handling library
+Version: 53.0.0
+Requires: libavformat = 53.0.3
+Requires.private: 
+Conflicts:
+Libs: -L${libdir} -lavdevice -lx264 -lm -lbz2 -lz
+Libs.private: 
+Cflags: -I${includedir}
