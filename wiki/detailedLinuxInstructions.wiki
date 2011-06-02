@@ -98,9 +98,10 @@ On RHEL/CentOS:
       * type ":wq" and press enter
    * isql OpenQwaqData openqwaq openqwaq -b < ./OpenQwaqData.sql
    * isql OpenQwaqActivityLog openqwaq openqwaq -b < ./OpenQwaqActivityLog.sql
+      * The isql commands create the SQL tables required by openqwaq
    * isql OpenQwaqData openqwaq openqwaq -b < ./default-servers.sql
    * isql OpenQwaqData openqwaq openqwaq -b < ./default-visitor.sql
-      * The previous four commands are using the "isql" command to add default data to the SQL tables you set up above. (I think)
+      * The previous commands are using the "isql" command to add default data to the SQL tables you set up above.
 
 10. Verify mysql initialization by going to
    * http://localhost/admin
@@ -154,13 +155,13 @@ On RHEL/CentOS:
 
 
 14. Configure the Server
-   * Goto: http://localhost:8443/admin/serverconf.php?server=localhost
+   * Goto: http://localhost/admin/serverconf.php?server=localhost
    * Configure SMTP options
    * Configure support and bug email
 
 
 15. Run the server tests
-   * http://localhost:8443/admin/servertest.php
+   * http://localhost/admin/servertest.php
 
 Notes:
    * This list of instructions was edited from previous versions to help people who don't know much about CentOS or Linux in general, there is no regard to server security when following these instructions. Best advice is to do this in a virtual machine, to avoid angering IT-Security people :) 
