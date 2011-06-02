@@ -58,6 +58,10 @@ chrootMounts() {
     mount -o bind,ro /etc/pam.d ${Q_HOMEDIR}/etc/pam.d
     log "chroot environment: mounted ${Q_HOMEDIR}/etc/pam.d"
   fi
+  if [ "`echo $mountedDirs|grep "/etc/gre.d on"`" == "" ]; then
+    mount -o bind,ro /etc/gre.d ${Q_HOMEDIR}/etc/gre.d
+    log "chroot environment: mounted ${Q_HOMEDIR}/etc/gre.d"
+  fi
   if [ "`echo $mountedDirs|grep "/etc/security on"`" == "" ]; then
     mount -o bind,ro /etc/security ${Q_HOMEDIR}/etc/security
     log "chroot environment: mounted ${Q_HOMEDIR}/etc/security"
