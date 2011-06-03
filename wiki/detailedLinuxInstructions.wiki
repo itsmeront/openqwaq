@@ -179,8 +179,8 @@ On RHEL/CentOS:
       * Test OpenOffice by dropping a .doc or .odt file on the client
 
 21. Installing the Adobe Flash Plugin for Firefox
-   * yum groupinstall "Sound and Video"
-   * yum install flash-plugin nspluginwrapper curl
+   * sudo yum groupinstall "Sound and Video"
+   * sudo yum install flash-plugin nspluginwrapper curl
       * Test this by going to your favorite flash site
 
 Notes:
