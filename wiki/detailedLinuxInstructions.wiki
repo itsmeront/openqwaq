@@ -123,6 +123,7 @@ On RHEL/CentOS:
    * mkdir /home/openqwaq/realms
    * mkdir /home/openqwaq/users
    * mkdir /home/openqwaq/tmp
+   * mkdir /home/openqwaq/OpenQwaqApps
    * cp /home/openqwaq/server/etc/forums.properties /home/openqwaq/realms
    * ln -s /home/openqwaq/server/system-resources /home/openqwaq/realms
    * sudo ln -s /home/openqwaq/server/etc/OpenQwaq /etc/init.d/
