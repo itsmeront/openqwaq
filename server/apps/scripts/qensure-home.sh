@@ -46,6 +46,10 @@ chrootMounts() {
     mount -o bind,ro /bin ${Q_HOMEDIR}/bin
     log "chroot environment: mounted ${Q_HOMEDIR}/bin"
   fi
+  if [ "`echo $mountedDirs|grep "^/opt\ on"`" == "" ]; then
+    mount -o bind,ro /opt ${Q_HOMEDIR}/opt
+    log "chroot environment: mounted ${Q_HOMEDIR}/opt"
+  fi
   if [ "`echo $mountedDirs|grep "/usr/lib on"`" == "" ]; then
     mount -o bind,ro /usr/lib ${Q_HOMEDIR}/usr/lib
     log "chroot environment: mounted ${Q_HOMEDIR}/usr/lib"
