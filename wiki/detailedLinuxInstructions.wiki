@@ -115,7 +115,7 @@ On RHEL/CentOS:
    * sudo ./MakeWrappers.sh /home/openqwaq/server/apps/scripts/
 
 
-10. Prepare various server bits
+12. Prepare various server bits
    * cd /home/openqwaq/server/mail_templates
    * ./fixlinks.sh hosted
    * cp /home/openqwaq/server/conf/server.conf.in /home/openqwaq/server/conf/server.conf
@@ -130,7 +130,7 @@ On RHEL/CentOS:
    * sudo ln -s /home/openqwaq/server/etc/OpenQwaq-tunnel /etc/init.d/
 
 
-11. Fix permissions and Start the server
+13. Fix permissions and Start the server
    * cd /home/openqwaq/server/etc
    * chmod 775 OpenQwaq
    * chmod 755 OpenQwaq-iptables
@@ -139,10 +139,10 @@ On RHEL/CentOS:
    * sudo /sbin/service OpenQwaq-iptables start
 
 
-12. Start Postfix
+14. Start Postfix
    * sudo /sbin/service postfix start
 
-13. Configure OpenQwaq and necessary services to start on reboot
+15. Configure OpenQwaq and necessary services to start on reboot
    * sudo /sbin/chkconfig --levels 345 OpenQwaq on
    * sudo /sbin/chkconfig --levels 345 OpenQwaq-iptables on
    * sudo /sbin/chkconfig --levels 345 OpenQwaq-tunnel on
@@ -154,13 +154,13 @@ On RHEL/CentOS:
 
 
 
-14. Configure the Server
+16. Configure the Server
    * Goto: http://localhost/admin/serverconf.php?server=localhost
    * Configure SMTP options
    * Configure support and bug email
 
 
-15. Run the server tests
+17. Run the server tests
    * http://localhost/admin/servertest.php
 
 Notes:
