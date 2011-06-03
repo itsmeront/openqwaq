@@ -178,6 +178,11 @@ On RHEL/CentOS:
    * sudo yum install openoffice.org-draw.i386
       * Test OpenOffice by dropping a .doc or .odt file on the client
 
+21. Installing the Adobe Flash Plugin for Firefox
+   * yum groupinstall "Sound and Video"
+   * yum install flash-plugin nspluginwrapper curl
+      * Test this by going to your favorite flash site
+
 Notes:
    * This list of instructions was edited from previous versions to help people who don't know much about CentOS or Linux in general, there is no regard to server security when following these instructions. Best advice is to do this in a virtual machine, to avoid angering IT-Security people :) 
    * There are no admin or user docs, nor support pages prepared for OpenQwaq so don't bother clicking help anywhere as the links wont work
