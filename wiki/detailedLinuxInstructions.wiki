@@ -151,17 +151,31 @@ On RHEL/CentOS:
    * sudo /sbin/chkconfig --levels 345 httpd on
    * sudo /sbin/chkconfig --levels 345 ntpd on
 
-
-
-
 16. Configure the Server
    * Goto: http://localhost/admin/serverconf.php?server=localhost
    * Configure SMTP options
    * Configure support and bug email
 
-
 17. Run the server tests
    * http://localhost/admin/servertest.php
+
+18. Installing Firefox
+   * sudo yum install firefox
+      * Test Firefox by launching the client and choosing File>>Web Link...
+
+19. Installing Adobe Reader
+   * sudo rpm -ivh http://linuxdownload.adobe.com/adobe-release/adobe-release-i386-1.0-1.noarch.rpm
+   * sudo rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-adobe-linux
+   * sudo yum install AdobeReader_enu
+      * Test Adobe Reader by dropping a PDF file on the client
+
+20. Installing OpenOffice.org
+   * sudo yum install openoffice.org-core.i386
+   * sudo yum install openoffice.org-writer.i386
+   * sudo yum install openoffice.org-calc.i386
+   * sudo yum install openoffice.org-base.i386
+   * sudo yum install openoffice.org-draw.i386
+      * Test OpenOffice by dropping a .doc or .odt file on the client
 
 Notes:
    * This list of instructions was edited from previous versions to help people who don't know much about CentOS or Linux in general, there is no regard to server security when following these instructions. Best advice is to do this in a virtual machine, to avoid angering IT-Security people :) 
