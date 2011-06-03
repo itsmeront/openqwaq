@@ -59,8 +59,8 @@ On RHEL/CentOS:
       * type password setup earlier.
 
 6. Check out server from SVN
-   * cd /home
-   * svn co http://openqwaq.googlecode.com/svn/trunk/ openqwaq
+   * cd /home/openqwaq
+   * svn co http://openqwaq.googlecode.com/svn/trunk/server
 
 7. Set up httpd for the server:
    * sudo ln -s /home/openqwaq/server/etc/OpenQwaq-http.conf /etc/httpd/conf.d
