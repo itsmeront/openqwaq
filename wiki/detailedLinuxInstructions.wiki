@@ -28,6 +28,7 @@ On RHEL/CentOS:
    * sudo yum install mysql-connector-odbc
    * sudo yum install php-odbc
    * sudo yum install vnc
+   * sudo yum install vnc-server
    * sudo yum install mod_ssl
    * sudo yum install postfix
 
