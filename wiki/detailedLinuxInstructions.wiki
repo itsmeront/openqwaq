@@ -31,6 +31,7 @@ On RHEL/CentOS:
    * sudo yum install vnc-server
    * sudo yum install mod_ssl
    * sudo yum install postfix
+   * sudo yum install ntp
 
 2. Add user and group openqwaq with correct uid and gid:
    * groupadd -g 1234 openqwaq
