@@ -24,6 +24,8 @@
 		03669EDF13949F8B0043B937 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03669EDE13949F8B0043B937 /* libz.a */; };
 		03669EE313949FD00043B937 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03669EE213949FD00043B937 /* libx264.a */; };
 		03669EE71394A01B0043B937 /* libbz2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03669EE61394A01B0043B937 /* libbz2.a */; };
+		0366A0451398CC5F0043B937 /* qLibAVLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0366A0441398CC5F0043B937 /* qLibAVLogger.cpp */; };
+		0366A0DB139F6E060043B937 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0366A0DA139F6E060043B937 /* libswscale.a */; };
 		8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49A704867FD3000E48DA /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,14 @@
 		03669EDE13949F8B0043B937 /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libz.a; path = /opt/local/lib/libz.a; sourceTree = "<absolute>"; };
 		03669EE213949FD00043B937 /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libx264.a; path = /usr/local/lib/libx264.a; sourceTree = "<absolute>"; };
 		03669EE61394A01B0043B937 /* libbz2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbz2.a; path = /opt/local/lib/libbz2.a; sourceTree = "<absolute>"; };
+		0366A0281398CB0A0043B937 /* qLogger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qLogger.hpp; path = ../../platforms/Cross/plugins/QwaqLib/qLogger.hpp; sourceTree = SOURCE_ROOT; };
+		0366A0431398CC5F0043B937 /* qLibAVLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qLibAVLogger.h; path = ../../platforms/Cross/plugins/QVideoCodecPluginFree/qLibAVLogger.h; sourceTree = SOURCE_ROOT; };
+		0366A0441398CC5F0043B937 /* qLibAVLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qLibAVLogger.cpp; path = ../../platforms/Cross/plugins/QVideoCodecPluginFree/qLibAVLogger.cpp; sourceTree = SOURCE_ROOT; };
+		0366A0B9139F6A390043B937 /* swscale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = swscale.h; path = "../../platforms/Cross/third-party/libav/include/libswscale/swscale.h"; sourceTree = SOURCE_ROOT; };
+		0366A0C1139F6B040043B937 /* x264cli.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x264cli.h; path = "../../platforms/Cross/third-party/libx264/include/x264cli.h"; sourceTree = SOURCE_ROOT; };
+		0366A0C2139F6B040043B937 /* x264.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x264.h; path = "../../platforms/Cross/third-party/libx264/include/x264.h"; sourceTree = SOURCE_ROOT; };
+		0366A0C3139F6B040043B937 /* x264_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x264_config.h; path = "../../platforms/Cross/third-party/libx264/include/x264_config.h"; sourceTree = SOURCE_ROOT; };
+		0366A0DA139F6E060043B937 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = "../../platforms/Mac OS/third-party/libav/lib/libswscale.a"; sourceTree = SOURCE_ROOT; };
 		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8D576316048677EA00EA77CD /* QVideoCodecPluginFree.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QVideoCodecPluginFree.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +94,7 @@
 				03669EDF13949F8B0043B937 /* libz.a in Frameworks */,
 				03669EE313949FD00043B937 /* libx264.a in Frameworks */,
 				03669EE71394A01B0043B937 /* libbz2.a in Frameworks */,
+				0366A0DB139F6E060043B937 /* libswscale.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,10 +117,13 @@
 		03497AF813944D1400A58BC5 /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				0366A0C0139F6AE30043B937 /* libx264 */,
+				0366A0B0139F6A2A0043B937 /* libswscale */,
 				03497B651394551900A58BC5 /* libavformat */,
 				03497B0913944EF300A58BC5 /* libavcodec */,
 				03497B0813944EED00A58BC5 /* plugin */,
 				03497AF913944D2B00A58BC5 /* vm */,
+				0366A0431398CC5F0043B937 /* qLibAVLogger.h */,
 			);
 			name = Header;
 			sourceTree = "<group>";
@@ -132,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				03497B11139451C300A58BC5 /* qLogger.h */,
+				0366A0281398CB0A0043B937 /* qLogger.hpp */,
 				03497B0A139450F300A58BC5 /* qVideoCommon.h */,
 				03497B0B139450F300A58BC5 /* qVideoDecoder.h */,
 				03497B0C139450F300A58BC5 /* qVideoEncoder.h */,
@@ -166,6 +181,24 @@
 			path = "../../platforms/Cross/third-party/libav/include/libavformat";
 			sourceTree = "<group>";
 		};
+		0366A0B0139F6A2A0043B937 /* libswscale */ = {
+			isa = PBXGroup;
+			children = (
+				0366A0B9139F6A390043B937 /* swscale.h */,
+			);
+			name = libswscale;
+			sourceTree = "<group>";
+		};
+		0366A0C0139F6AE30043B937 /* libx264 */ = {
+			isa = PBXGroup;
+			children = (
+				0366A0C1139F6B040043B937 /* x264cli.h */,
+				0366A0C2139F6B040043B937 /* x264.h */,
+				0366A0C3139F6B040043B937 /* x264_config.h */,
+			);
+			name = libx264;
+			sourceTree = "<group>";
+		};
 		089C166AFE841209C02AAC07 /* QVideoCodecPluginFree */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +214,7 @@
 		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				0366A0DA139F6E060043B937 /* libswscale.a */,
 				03669EE213949FD00043B937 /* libx264.a */,
 				03669EC313949E510043B937 /* libavformat.a */,
 				03669EC713949E860043B937 /* libavcodec.a */,
@@ -209,6 +243,7 @@
 				03497A141392DC6A00A58BC5 /* qVideoDecoder.cpp */,
 				03497A631392E0CD00A58BC5 /* qVideoEncoder.cpp */,
 				03497AD7139406B700A58BC5 /* qVideoFreePlatformSpecific.c */,
+				0366A0441398CC5F0043B937 /* qLibAVLogger.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -292,6 +327,7 @@
 				03497A3D1392DE6700A58BC5 /* qVideoCommon.cpp in Sources */,
 				03497A641392E0CD00A58BC5 /* qVideoEncoder.cpp in Sources */,
 				03497AD8139406B700A58BC5 /* qVideoFreePlatformSpecific.c in Sources */,
+				0366A0451398CC5F0043B937 /* qLibAVLogger.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

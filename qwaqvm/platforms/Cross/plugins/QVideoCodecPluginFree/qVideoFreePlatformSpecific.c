@@ -14,16 +14,19 @@
 /* this is in Cross for now, but if we really need platform-specific initialization,
     create variants in "Mac OS", "win32", etc., and reference them in the appropriate
 	Makefiles. */
- 
 #include "qVideoCodecPlatformSpecific.h"
 #include "qVideoCommon.h"
+#include "qLibAVLogger.h"
 
 #include "avformat.h"
+#include "avcodec.h"
 
 /* Declared in ../QVideoCodecPlugin/qVideoCodecPlatformSpecific.h */
 void qInitPlatform(void)
 {
+	av_log_set_callback(q_av_log_callback);
 	av_register_all();
+	avcodec_init();
 }
 
 /* Declared in ../QVideoCodecPlugin/qVideoCodecPlatformSpecific.h */
@@ -40,8 +43,9 @@ void qShutdownPlatform(void)
 */
 #if defined __APPLE__
 #include <memory.h>
-void *posix_memalign(unsigned int size)
+int posix_memalign(void **memptr, size_t alignment, size_t size)
 {
-    return malloc(size);
+	*memptr = malloc(size);
+	return *memptr ? 0 : ENOMEM;
 }
 #endif 
