@@ -16,6 +16,11 @@
 #include "../QwaqLib/qSharedQueue.h"
 #include "../QwaqLib/qLogger.hpp"
 
+extern "C" {
+#include "x264.h"
+#include "libswscale/swscale.h"
+}
+
 using namespace Qwaq;
 
 
@@ -27,6 +32,12 @@ typedef struct QEncoder {
 	int inFrameCount;
 	int width;
 	int height;
+	
+	x264_t *x264;
+	x264_picture_t pic_in, pic_out;
+	unsigned char *pic_rgb24;
+	
+	struct SwsContext *scaler;
 	
 	BufferPool2 pool;
 	SharedQueue<BufferPtr> queue;
@@ -58,26 +69,121 @@ int qCreateEncoderAPI(QEncoder **eptr, char *args, int argsSize, int semaIndex, 
 	encoder->height = height;
 	encoder->inFrameCount = encoder->outFrameCount = 0;
 	
-	qerr << endl << "qCreateEncoderFree(): not yet implemented";
-	qDestroyEncoderAPI(encoder);
-	return -1;
+	encoder->x264 = NULL;
+	encoder->pic_rgb24 = NULL;
+	encoder->scaler = NULL;
 	
-	//*eptr = encoder;
-	//return 0; // success!
+	// Initialize x264 encoder.  We use low-latency settings optimized for video-conferencing,
+	// as described by: http://x264dev.multimedia.cx/archives/249
+	x264_param_t param;
+	x264_param_default_preset(&param, "medium", "zerolatency");
+	param.i_width = width;
+	param.i_height = height;
+	param.i_slice_max_size = 1380; // XXXXX should fit in QwON datagram-slice... can tune this later		
+	param.i_fps_num = vargs->frameRate;
+	param.rc.i_vbv_max_bitrate = vargs->bitRate;
+	param.rc.i_vbv_buffer_size = 30; // XXXXX should tune w/ bit-rate & fps
+	// quality target
+	param.rc.f_rf_constant = 20;
+	param.rc.i_rc_method = X264_RC_CRF;
+	// fancy fancy to avoid large keyframes... spread refresh info out
+	param.b_intra_refresh = 1;
+	param.i_frame_reference = 1; // needed for intra-refresh
+	// XXXXX need to see whether this is the right thing to be compatible with legacy MainConcept codec
+	param.b_annexb = 1;
+	
+	// XXXXX Our decoder can handle this, but if we want to stream video to an iPhone then
+	// we'll need to select a less fancy profile.
+	x264_param_apply_profile(&param, "high");
+
+	// Do this first, because we want the image-plane to be set (either to NULL on failure
+	// or a ptr on success, we don't care) before calling qDestroyEncoderAPI().
+	if (x264_picture_alloc(&encoder->pic_in, X264_CSP_I420, width, height) == -1) {
+		qerr << endl << "qCreateEncoderFree(): cannot allocate input-picture";
+		qDestroyEncoderAPI(encoder);
+		return -1;
+	}
+	
+	encoder->x264 = x264_encoder_open(&param);
+	if (!encoder->x264) {
+		qerr << endl << "qCreateEncoderFree(): cannot allocate x264 encoder";		
+		qDestroyEncoderAPI(encoder);
+		return -1;
+	}
+
+	encoder->scaler = sws_getContext(width, height, PIX_FMT_BGRA, width, height, PIX_FMT_YUV420P, SWS_POINT, NULL, NULL, NULL);
+	if (!encoder->scaler) {
+		qerr << endl << "qCreateEncoderFree(): cannot allocate scaler";		
+		qDestroyEncoderAPI(encoder);
+		return -1;
+	}
+	
+
+	qerr << endl << "qCreateEncoderFree(): opened codec!!!"; 
+	*eptr = encoder;
+	return 0; // success!
 }
 
 
 void qDestroyEncoderAPI(QEncoder *encoder)
 {
 	if (encoder == NULL) return;  // ... even though we won't be called if there is no encoder to destroy.
+
+	// Because of our order of initialization, we know this is safe to call; see comment in qCreateEncoderAPI().
+	x264_picture_clean(&encoder->pic_in);
+	
+	if (encoder->x264) {
+		x264_encoder_close(encoder->x264);
+		encoder->x264 = NULL;
+	}
+
+	if (encoder->scaler) {
+		sws_freeContext(encoder->scaler);
+		encoder->scaler = NULL;
+	}
+	
 	delete encoder;
 }
 
 
 int qEncodeAPI(QEncoder *encoder, char* bytes, int byteSize) 
 {
-	qerr << endl << "qEncodeAPI(): not yet implemented";
-	return -1;
+	// Transform to I420 colorspace, as required by x264.
+	int stride = encoder->width*4;
+		
+	sws_scale(encoder->scaler, (const uint8_t* const*)&bytes, &stride, 0, encoder->height, encoder->pic_in.img.plane, encoder->pic_in.img.i_stride);
+	
+	// XXXXX need to experiment with this setting, both whether to enable it
+	// at all, and also the frequency.  Is this only useful for lossy transport?
+	// I don't think so... one of the benefits is that it smooths out frame-sizes,
+	// so that we don't have large keyframes bunging up the pipeline.
+	if (encoder->inFrameCount % 30 == 0) {
+		// x264_encoder_intra_refresh(encoder->x264);
+	}
+
+	x264_nal_t *nals;
+	int nalCount;
+	qerr << endl << "... encoding frame	 " << flush;
+	int frameSize = x264_encoder_encode(encoder->x264, &nals, &nalCount, &encoder->pic_in, &encoder->pic_out);
+	
+	if (frameSize < 0) {
+		qerr << endl << "encode failed with code: " << frameSize;
+		return -1;
+	}
+	else if (frameSize > 0) {
+		// There is data to return to Squeak!
+		BufferPtr output = encoder->pool.getBuffer(frameSize+1);
+		unsigned char* outputPtr = output->getPointer();
+		// Figure out if this is a keyframe
+		outputPtr[0] = encoder->pic_out.b_keyframe ? 1 : 0;
+		// The NALs are guaranteed to be sequential in memory, so we start copying from the 
+		// payload of the first one.
+		memcpy(outputPtr+1, nals[0].p_payload, frameSize);
+		// Enqueue the buffer for readback.
+		encoder->queue.add(output);
+		interpreterProxy->signalSemaphoreWithIndex(encoder->semaIndex);
+	}
+	return 0; // success!
 }
 
 
