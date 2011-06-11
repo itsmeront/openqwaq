@@ -19,6 +19,7 @@
 extern "C" {
 #include "x264.h"
 #include "libswscale/swscale.h"
+#include "qLibAVLogger.h"
 }
 
 using namespace Qwaq;
@@ -104,6 +105,9 @@ int qCreateEncoderAPI(QEncoder **eptr, char *args, int argsSize, int semaIndex, 
 		return -1;
 	}
 	
+	// Set up logging, so that X264 log messages go to the same place as the rest of the plugin's.
+	param.pf_log = q_x264_log_callback;
+	
 	encoder->x264 = x264_encoder_open(&param);
 	if (!encoder->x264) {
 		qerr << endl << "qCreateEncoderFree(): cannot allocate x264 encoder";		
@@ -161,9 +165,9 @@ int qEncodeAPI(QEncoder *encoder, char* bytes, int byteSize)
 		// x264_encoder_intra_refresh(encoder->x264);
 	}
 
+	// Encode the frame.
 	x264_nal_t *nals;
 	int nalCount;
-	qerr << endl << "... encoding frame	 " << flush;
 	int frameSize = x264_encoder_encode(encoder->x264, &nals, &nalCount, &encoder->pic_in, &encoder->pic_out);
 	
 	if (frameSize < 0) {
