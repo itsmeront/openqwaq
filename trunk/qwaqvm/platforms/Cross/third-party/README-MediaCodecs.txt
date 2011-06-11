@@ -1,4 +1,11 @@
 # BUILDING ON OS X:
+# Prerequisites ------------------------------------------------------
+# The following libraries need to be installed in /opt/local/lib:
+#   - libboost_thread-mt.a
+#   - libz.a
+#   - libbz.a
+# They can most easily be installed via MacPorts.
+
 
 # Building X264 ------------------------------------------------------
 export CFLAGS="-m32 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5"
