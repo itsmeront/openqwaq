@@ -20,6 +20,12 @@ void q_av_log_callback(void* ptr, int level, const char* fmt, va_list args) {
 	qvprintf(fmt, args);
 }
 
+/* Ditto for x264 logs */
+void q_x264_log_callback(void* ptr, int level, const char* fmt, va_list args) {
+	qerr << endl << "X264[" << level << "]: ";
+	qvprintf(fmt, args);
+}
+
 } // extern "C"
 
 
