@@ -67,7 +67,7 @@
 		03669EC713949E860043B937 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = "../../platforms/Mac OS/third-party/libav/lib/libavcodec.a"; sourceTree = SOURCE_ROOT; };
 		03669ECB13949EAA0043B937 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = "../../platforms/Mac OS/third-party/libav/lib/libavutil.a"; sourceTree = SOURCE_ROOT; };
 		03669EDE13949F8B0043B937 /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libz.a; path = /opt/local/lib/libz.a; sourceTree = "<absolute>"; };
-		03669EE213949FD00043B937 /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libx264.a; path = /usr/local/lib/libx264.a; sourceTree = "<absolute>"; };
+		03669EE213949FD00043B937 /* libx264.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libx264.a; path = "../../platforms/Mac OS/third-party/libx264/libx264.a"; sourceTree = "<group>"; };
 		03669EE61394A01B0043B937 /* libbz2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbz2.a; path = /opt/local/lib/libbz2.a; sourceTree = "<absolute>"; };
 		0366A0281398CB0A0043B937 /* qLogger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qLogger.hpp; path = ../../platforms/Cross/plugins/QwaqLib/qLogger.hpp; sourceTree = SOURCE_ROOT; };
 		0366A0431398CC5F0043B937 /* qLibAVLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qLibAVLogger.h; path = ../../platforms/Cross/plugins/QVideoCodecPluginFree/qLibAVLogger.h; sourceTree = SOURCE_ROOT; };
