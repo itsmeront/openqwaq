@@ -178,6 +178,7 @@ On RHEL/CentOS:
    * sudo yum install openoffice.org-calc.i386
    * sudo yum install openoffice.org-base.i386
    * sudo yum install openoffice.org-draw.i386
+   * sudo yum install openoffice.org-impress.i386
       * Test OpenOffice by dropping a .doc or .odt file on the client
 
 21. Installing the Adobe Flash Plugin for Firefox
