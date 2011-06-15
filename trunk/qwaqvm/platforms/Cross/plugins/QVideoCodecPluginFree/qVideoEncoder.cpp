@@ -193,7 +193,40 @@ int qEncodeAPI(QEncoder *encoder, char* bytes, int byteSize)
 
 char* qEncoderGetPropertyAPI(QEncoder *encoder, char* propertyName, int* resultSize)
 {
-	qerr << endl << "qEncoderGetPropertyAPI(): no properties accessible yet";
-	*resultSize = 0;
-	return NULL;
+	if (!(strcmp(propertyName, "PARAMETER_SETS"))) {
+		x264_nal_t *nals;
+		int nalCount;
+		x264_encoder_headers(encoder->x264, &nals, &nalCount);
+		
+		// Compute the total size of all NAL units.
+		int totalNalSize = 0;
+		for (int i=0; i<nalCount; i++) {
+			totalNalSize += nals[i].i_payload;
+		}
+		// Allocate the necessary space.
+		char *result = (char*)malloc(totalNalSize);
+		if (!result) {	
+			*resultSize = 0;
+			return NULL;
+		}		
+		// Since the NAL units are guaranteed to be adjacent in memory,
+		// we just need one memcpy.
+		memcpy(result, nals[0].p_payload, totalNalSize);
+		*resultSize = totalNalSize;
+		return result;
+	}
+	else if (!(strcmp(propertyName, "CAN_I_GET_A_HELL_YEAH"))) {
+		char *result = (char*)malloc(13);
+		if (!result) {
+			*resultSize = 0;
+			return NULL;
+		}
+		*resultSize = 12;  //skip the trailing zero
+		strcpy(result, "Hell Yeah!!!");
+		return result; 
+	}
+	else {
+		*resultSize = 0;
+		return NULL;
+	}
 }
