@@ -4,10 +4,15 @@
 #   - libboost_thread-mt.a
 #   - libz.a
 #   - libbz.a
-# They can most easily be installed via MacPorts.
+# They can most easily be installed via MacPorts.  Be sure to use the +universal parameter, since the plugin is built as 32-bit, not 64-bit.
+# eg: sudo port install zlib +universal
 
 
 # Building X264 ------------------------------------------------------
+# (optional step; pre-compiled binaries are provided)
+# Install the following via MacPorts:
+# - libyasm
+# If you're using XCode 4.0, you'll need to use the 10.6 SDK instead of 10.5.  Unfortunately, this means that your plugin won't work for 10.5 users (still nearly a quarter of users).
 export CFLAGS="-m32 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-min=10.5"
 ./configure --host=i686-darwin 
 
@@ -21,9 +26,12 @@ make install-lib-static
 
 
 # Building LIBAVCODEC ------------------------------------------------
+# (optional step; pre-compiled binaries are provided)
 mkdir install-dir
 
-./configure --prefix=./install-dir --extra-cflags="-arch i386" --extra-ldflags='-arch i386' --arch=x86_32 --target-os=darwin --enable-cross-compile --enable-libx264 --enable-gpl
+# We're using libx264 directly, so don't bother including it in libavcodec.
+#./configure --prefix=./install-dir --extra-cflags="-arch i386" --extra-ldflags='-arch i386' --arch=x86_32 --target-os=darwin --enable-cross-compile --disable-everything --enable-decoder=h264 --enable-decoder=aac --enable-decoder=aac_latm --enable-encoder=aac --enable-encoder=libx264 --enable-libx264 --enable-gpl --enable-parser=aac --enable-parser=aac_latm --enable-parser=h264
+./configure --prefix=./install-dir --extra-cflags="-arch i386" --extra-ldflags='-arch i386' --arch=x86_32 --target-os=darwin --enable-cross-compile --disable-everything --enable-decoder=h264 --enable-decoder=aac --enable-decoder=aac_latm --enable-encoder=aac --enable-parser=aac --enable-parser=aac_latm --enable-parser=h264
 
 make install
 
