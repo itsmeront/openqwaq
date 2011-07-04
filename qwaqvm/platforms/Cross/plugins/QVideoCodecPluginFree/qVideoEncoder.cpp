@@ -76,8 +76,9 @@ int qCreateEncoderAPI(QEncoder **eptr, char *args, int argsSize, int semaIndex, 
 	
 	// Initialize x264 encoder.  We use low-latency settings optimized for video-conferencing,
 	// as described by: http://x264dev.multimedia.cx/archives/249
-	x264_param_t param;
+	x264_param_t param; 
 	x264_param_default_preset(&param, "medium", "zerolatency");
+	param.b_annexb = 1; // expected by both MainConcept and libavcodec decoders
 	param.i_width = width;
 	param.i_height = height;
 	param.i_slice_max_size = 1380; // XXXXX should fit in QwON datagram-slice... can tune this later		
@@ -90,8 +91,9 @@ int qCreateEncoderAPI(QEncoder **eptr, char *args, int argsSize, int semaIndex, 
 	// fancy fancy to avoid large keyframes... spread refresh info out
 	param.b_intra_refresh = 1;
 	param.i_frame_reference = 1; // needed for intra-refresh
-	// XXXXX need to see whether this is the right thing to be compatible with legacy MainConcept codec
-	param.b_annexb = 1;
+
+	// XXXXX send SPS/PPS before every keyframe
+	param.b_repeat_headers = 1;
 	
 	// XXXXX Our decoder can handle this, but if we want to stream video to an iPhone then
 	// we'll need to select a less fancy profile.
@@ -122,7 +124,6 @@ int qCreateEncoderAPI(QEncoder **eptr, char *args, int argsSize, int semaIndex, 
 		return -1;
 	}
 	
-
 	qerr << endl << "qCreateEncoderFree(): opened codec!!!"; 
 	*eptr = encoder;
 	return 0; // success!
@@ -175,6 +176,13 @@ int qEncodeAPI(QEncoder *encoder, char* bytes, int byteSize)
 		return -1;
 	}
 	else if (frameSize > 0) {
+		// Uncomment this if you feel the need for debugging.
+//		qerr << endl << "encoded NAL types:  ";
+//		for (int i=0; i<nalCount; i++) {
+//			qerr << nals[i].i_type << " ";
+//		}
+//		qerr << flush;
+	
 		// There is data to return to Squeak!
 		BufferPtr output = encoder->pool.getBuffer(frameSize+1);
 		unsigned char* outputPtr = output->getPointer();
