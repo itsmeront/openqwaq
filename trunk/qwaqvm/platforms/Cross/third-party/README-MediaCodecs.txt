@@ -4,11 +4,13 @@
 #   - libboost_thread-mt.a
 #   - libz.a
 #   - libbz.a
+#   - libspeex.a
+#   - libportaudio.a
 # They can most easily be installed via MacPorts.  Be sure to use the +universal parameter, since the plugin is built as 32-bit, not 64-bit.
 # eg: sudo port install zlib +universal
 
 
-# Building X264 ------------------------------------------------------
+# Building X264 (OS X)------------------------------------------------------
 # (optional step; pre-compiled binaries are provided)
 # Install the following via MacPorts:
 # - libyasm
@@ -23,6 +25,14 @@ export CFLAGS="-m32 -isysroot /Developer/SDKs/MacOSX10.5.sdk -mmacosx-version-mi
 make install-lib-static
 
 # Finally, copy the static lib to macbuild/third-party
+
+# Building X264 (Windows)------------------------------------------------------
+# - Install MinGW and yasm (from mingw.org and yasm.tortall.net)
+# - copy yasm.exe into your MinGW/bin directory
+export CFLAGS="-m32"
+./configure --enable-shared 
+# use the resulting libx264.dll.a and libx264-115.dll 
+# - the former is an "import library" that is statically linked with our plugin
 
 
 # Building LIBAVCODEC ------------------------------------------------
