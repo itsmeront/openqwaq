@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FE7935EA-E760-4ABC-8728-8158FCE09C3F}</ProjectGuid>
+    <RootNamespace>QVideoCodecPluginFree</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\header;..\..\vm;..\..\..\..\src\vm;..\..\..\Cross\vm;..\..\..\Cross\plugins\QwaqLib;..\..\..\Cross\plugins\QVideoCodecPlugin;..\..\..\Cross\plugins\QVideoCodecPluginFree;..\..\..\Cross\third-party\boost_1_40_0;..\..\..\Cross\third-party\libx264\include;..\..\..\Cross\third-party\libav\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;BOOST_ALL_DYN_LINK;__STDC_CONSTANT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\header;..\..\vm;..\..\..\..\src\vm;..\..\..\Cross\vm;..\..\..\Cross\plugins\QwaqLib;..\..\..\Cross\plugins\QVideoCodecPlugin;..\..\..\Cross\plugins\QVideoCodecPluginFree;..\..\..\Cross\third-party\boost_1_40_0;..\..\..\Cross\third-party\libx264\include;..\..\..\Cross\third-party\libav\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;BOOST_ALL_DYN_LINK;__STDC_CONSTANT_MACROS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Cross\plugins\QVideoCodecPluginFree\qLibAVLogger.h" />
+    <ClInclude Include="..\..\..\Cross\plugins\QVideoCodecPluginFree\QVideoCodecPluginFree.h" />
+    <ClInclude Include="..\..\..\Cross\plugins\QVideoCodecPlugin\qVideoCommon.h" />
+    <ClInclude Include="..\..\..\Cross\plugins\QVideoCodecPlugin\qVideoDecoder.h" />
+    <ClInclude Include="..\..\..\Cross\plugins\QVideoCodecPlugin\qVideoEncoder.h" />
+    <ClInclude Include="..\..\..\Cross\plugins\QwaqLib\qBuffer.h" />
+    <ClInclude Include="..\..\..\Cross\plugins\QwaqLib\qLogger.h" />
+    <ClInclude Include="..\..\..\Cross\plugins\QwaqLib\qLogger.hpp" />
+    <ClInclude Include="..\..\..\Cross\plugins\QwaqLib\qSharedQueue.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Cross\plugins\QVideoCodecPluginFree\qLibAVLogger.cpp" />
+    <ClCompile Include="..\..\..\Cross\plugins\QVideoCodecPluginFree\qVideoDecoder.cpp" />
+    <ClCompile Include="..\..\..\Cross\plugins\QVideoCodecPluginFree\qVideoEncoder.cpp" />
+    <ClCompile Include="..\..\..\Cross\plugins\QVideoCodecPluginFree\qVideoEncoder_libavcodec.cpp" />
+    <ClCompile Include="..\..\..\Cross\plugins\QVideoCodecPluginFree\qVideoFreePlatformSpecific.c" />
+    <ClCompile Include="..\..\..\Cross\plugins\QVideoCodecPlugin\qSharedQueue.cpp" />
+    <ClCompile Include="..\..\..\Cross\plugins\QVideoCodecPlugin\qVideoCommon.cpp" />
+    <ClCompile Include="..\..\..\Cross\plugins\QwaqLib\qBuffer.cpp" />
+    <ClCompile Include="..\..\..\Cross\plugins\QwaqLib\qLogger.cpp" />
+    <ClCompile Include="..\..\..\Cross\plugins\QwaqLib\qSharedQueue.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
