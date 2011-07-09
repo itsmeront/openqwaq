@@ -1,0 +1,6 @@
+Downloaded libav-win32-0.7_beta2.7z from http://win32.libav.org/win32/, and copied the bin/ and lib/ directories.  At some point we should build a custom version of libav, because this one is much bigger than it needs to be, and requires unnecessary DLLs.  For example, we don't need support for:
+- vorbis
+- ogg
+- lame
+- rtmps
+- x264 (since we use it directly)
