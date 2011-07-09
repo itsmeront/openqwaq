@@ -20,7 +20,7 @@
 #include "../QwaqLib/qLogger.hpp"
 
 extern "C" {
-#include "avcodec.h"
+#include "libavcodec/avcodec.h"
 }
 
 using namespace Qwaq;
@@ -103,8 +103,12 @@ int qCreateEncoderAPI(QEncoder **eptr, char *args, int argsSize, int semaIndex, 
 	c->codec_type = AVMEDIA_TYPE_VIDEO; 
 	c->pix_fmt = PIX_FMT_ARGB; // ARGB, RGBA, ABGR, BGRA ???!?
 	qerr << endl << "WARN qCreateEncoderFree(): hardcode 30fps";
-	c->time_base = (AVRational){1,30};
-	
+
+	// Visual Studio isn't happy with this syntax.  I guess a C99 thing?
+//	c->time_base = (AVRational){1,30};
+	c->time_base.num = 1;
+	c->time_base.den = 30;
+
 	qerr << endl << "qCreateEncoderFree(): about to set context parameters";
 	
 	// libx264-medium.ffpreset preset

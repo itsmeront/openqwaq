@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C++ Express 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QVideoCodecPluginFree", "QVideoCodecPluginFree.vcxproj", "{FE7935EA-E760-4ABC-8728-8158FCE09C3F}"
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QVideoCodecPluginFree", "QVideoCodecPluginFree.vcproj", "{E8E308E4-D499-44EA-A7B7-7A66F3B2058E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FE7935EA-E760-4ABC-8728-8158FCE09C3F}.Debug|Win32.ActiveCfg = Debug|Win32
-		{FE7935EA-E760-4ABC-8728-8158FCE09C3F}.Debug|Win32.Build.0 = Debug|Win32
-		{FE7935EA-E760-4ABC-8728-8158FCE09C3F}.Release|Win32.ActiveCfg = Release|Win32
-		{FE7935EA-E760-4ABC-8728-8158FCE09C3F}.Release|Win32.Build.0 = Release|Win32
+		{E8E308E4-D499-44EA-A7B7-7A66F3B2058E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E8E308E4-D499-44EA-A7B7-7A66F3B2058E}.Debug|Win32.Build.0 = Debug|Win32
+		{E8E308E4-D499-44EA-A7B7-7A66F3B2058E}.Release|Win32.ActiveCfg = Release|Win32
+		{E8E308E4-D499-44EA-A7B7-7A66F3B2058E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
