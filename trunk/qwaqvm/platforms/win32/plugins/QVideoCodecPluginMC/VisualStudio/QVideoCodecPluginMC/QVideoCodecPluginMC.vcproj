@@ -193,7 +193,7 @@
 				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\..\Cross\plugins\QVideoCodecPluginMC\qVideoCommon.cpp"
+				RelativePath="..\..\..\..\..\Cross\plugins\QVideoCodecPlugin\qVideoCommon.cpp"
 				>
 			</File>
 			<File
