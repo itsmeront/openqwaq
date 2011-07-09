@@ -14,6 +14,10 @@
 /* this is in Cross for now, but if we really need platform-specific initialization,
     create variants in "Mac OS", "win32", etc., and reference them in the appropriate
 	Makefiles. */
+
+// Everything needs to be extern "C".  Originally, this was a C file, but I renamed 
+// it to be a C++ file because otherwise VisualStudio has trouble compiling it.
+extern "C" {
 #include "qVideoCodecPlatformSpecific.h"
 #include "qVideoCommon.h"
 #include "qLibAVLogger.h"
@@ -49,3 +53,5 @@ int posix_memalign(void **memptr, size_t alignment, size_t size)
 	return *memptr ? 0 : ENOMEM;
 }
 #endif 
+
+} // extern "C"

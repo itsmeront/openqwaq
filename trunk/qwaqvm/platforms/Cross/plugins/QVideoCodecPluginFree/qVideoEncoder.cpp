@@ -17,6 +17,9 @@
 #include "../QwaqLib/qLogger.hpp"
 
 extern "C" {
+#ifdef WIN32
+#include "inttypes.h"
+#endif
 #include "x264.h"
 #include "libswscale/swscale.h"
 #include "qLibAVLogger.h"
@@ -33,13 +36,13 @@ typedef struct QEncoder {
 	int inFrameCount;
 	int width;
 	int height;
-	
+
 	x264_t *x264;
 	x264_picture_t pic_in, pic_out;
 	unsigned char *pic_rgb24;
 	
 	struct SwsContext *scaler;
-	
+
 	BufferPool2 pool;
 	SharedQueue<BufferPtr> queue;
 } QEncoder;
