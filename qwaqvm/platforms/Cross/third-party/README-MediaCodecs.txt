@@ -11,7 +11,7 @@
 
 
 # Building X264 (OS X)------------------------------------------------------
-# (optional step; pre-compiled binaries are provided)
+# (optional step; pre-compiled binaries are provided) ----------------------
 # Install the following via MacPorts:
 # - libyasm
 # If you're using XCode 4.0, you'll need to use the 10.6 SDK instead of 10.5.  Unfortunately, this means that your plugin won't work for 10.5 users (still nearly a quarter of users).
@@ -27,6 +27,7 @@ make install-lib-static
 # Finally, copy the static lib to macbuild/third-party
 
 # Building X264 (Windows)------------------------------------------------------
+# (optional step; pre-compiled binaries are provided) -------------------------
 # - Install MinGW and yasm (from mingw.org and yasm.tortall.net)
 # - copy yasm.exe into your MinGW/bin directory
 export CFLAGS="-m32"
@@ -35,8 +36,8 @@ export CFLAGS="-m32"
 # - the former is an "import library" that is statically linked with our plugin
 
 
-# Building LIBAVCODEC ------------------------------------------------
-# (optional step; pre-compiled binaries are provided)
+# Building LIBAVCODEC (OS X) --------------------------------------------------
+# (optional step; pre-compiled binaries are provided) -------------------------
 mkdir install-dir
 
 # We're using libx264 directly, so don't bother including it in libavcodec.
