@@ -22,6 +22,12 @@
 #include "qLogger.hpp"
 #include "qTickee.hpp"
 
+extern "C" {
+#include "qLibAVLogger.h"
+#include "avformat.h"
+#include "avcodec.h"
+}
+
 #if !EXCLUDE_IAX
 int isIaxInitialized;
 #endif
@@ -39,6 +45,11 @@ int qInitModule(void)
 	qIaxInit();
 #endif
 //	qPortAudioInit();
+
+	av_log_set_callback(q_av_log_callback);
+	av_register_all();
+	avcodec_init();
+	
 	return 1; /* true */
 }
 int qShutdownModule(void)

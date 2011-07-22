@@ -23,7 +23,10 @@
 #include "qAudioDecoder.hpp"
 #ifdef _MAINCONCEPT_
 #include "qAudioDecoderAAC.hpp"
+#else
+#include "qAudioDecoderAAC_libav.hpp"
 #endif
+
 #include "qLogger.hpp"
 
 using namespace Qwaq;
@@ -36,11 +39,13 @@ unsigned qCreateAudioDecoder(unsigned codecType, unsigned char* config, unsigned
 {
 	AudioDecoder *decoder;
 	switch (codecType) {
-#ifdef _MAINCONCEPT_
 		case CodecTypeAAC:
+#ifdef _MAINCONCEPT_		
 			decoder = new AudioDecoderAAC(config, configSize);
+#else
+			decoder = new AudioDecoderAAC_libav(config, configSize);
+#endif
 			break;
-#endif 
 		default:
 			qLog() << "qCreateAudioDecoder(): unexpected decoder type: " << codecType << flush;
 			return 0;

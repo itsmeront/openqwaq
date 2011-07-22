@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03212B1E13ADF3BD00EBA6CA /* libportaudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03212B1D13ADF3BD00EBA6CA /* libportaudio.a */; };
+		03212B5F13AEAEBB00EBA6CA /* qAudioDecoderAAC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03212B5D13AEAEBB00EBA6CA /* qAudioDecoderAAC.cpp */; };
+		03212B8C13AEB5A800EBA6CA /* qAudioDecoderAAC_libav.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03212B8A13AEB5A800EBA6CA /* qAudioDecoderAAC_libav.cpp */; };
+		03212B8D13AEB5A800EBA6CA /* qAudioEncoderAAC_libav.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03212B8B13AEB5A800EBA6CA /* qAudioEncoderAAC_libav.cpp */; };
+		03212C6413B0492F00EBA6CA /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03212C6313B0492F00EBA6CA /* libavcodec.a */; };
+		03212C7013B0498000EBA6CA /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03212C6F13B0498000EBA6CA /* libavformat.a */; };
+		03212C7813B0499700EBA6CA /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03212C7713B0499700EBA6CA /* libavutil.a */; };
+		03212C8313B04AA300EBA6CA /* qAudioPlatformSpecific.c in Sources */ = {isa = PBXBuildFile; fileRef = 03212C8213B04AA300EBA6CA /* qAudioPlatformSpecific.c */; };
+		03212CA013B068F900EBA6CA /* qLibAVLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03212C9F13B068F900EBA6CA /* qLibAVLogger.cpp */; };
+		034E56AA13D2BDA400FCCB66 /* qAudioEncoderAAC_apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 034E56A913D2BDA400FCCB66 /* qAudioEncoderAAC_apple.cpp */; };
 		451352850FE2D0F5009B60F6 /* qAudioEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 451352840FE2D0F5009B60F6 /* qAudioEncoder.cpp */; };
 		45206C8F0FD615AC008D2F67 /* qPortAudioInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45206C8D0FD615AC008D2F67 /* qPortAudioInterface.cpp */; };
 		4534BF7F0E3459C70073DF5C /* qFeedbackChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4534BF7D0E3459C70073DF5C /* qFeedbackChannel.cpp */; };
@@ -15,8 +25,8 @@
 		4546A6A30DE391C50095536B /* qAudioSpeex.c in Sources */ = {isa = PBXBuildFile; fileRef = 4546A6A00DE391C50095536B /* qAudioSpeex.c */; };
 		4546A6A40DE391C50095536B /* qAudioOpenAL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4546A6A10DE391C50095536B /* qAudioOpenAL.cpp */; };
 		4546A6AA0DE392C40095536B /* QAudioPlugin.c in Sources */ = {isa = PBXBuildFile; fileRef = 4546A6A90DE392C40095536B /* QAudioPlugin.c */; };
-		4546A6D80DE392F00095536B /* libspeexdsp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4546A6D60DE392F00095536B /* libspeexdsp.a */; };
-		4546A6D90DE392F00095536B /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4546A6D70DE392F00095536B /* libspeex.a */; };
+		4546A6D80DE392F00095536B /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4546A6D60DE392F00095536B /* libspeex.a */; };
+		4546A6D90DE392F00095536B /* libspeexdsp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4546A6D70DE392F00095536B /* libspeexdsp.a */; };
 		4546A6DB0DE393010095536B /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4546A6DA0DE393010095536B /* OpenAL.framework */; };
 		4548DA9D0FBCDEB900B11844 /* qAudioSinkMixer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4548DA9C0FBCDEB900B11844 /* qAudioSinkMixer.cpp */; };
 		4569C1EB0E7347FA00331BE2 /* qAudioSinkForDebugFeedback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4569C1EA0E7347FA00331BE2 /* qAudioSinkForDebugFeedback.cpp */; };
@@ -30,7 +40,6 @@
 		457C02C50FD33B9C000FCB6F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457C02C40FD33B9C000FCB6F /* AudioToolbox.framework */; };
 		457C035B0FD38FB9000FCB6F /* qRingBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 457C035A0FD38FB9000FCB6F /* qRingBuffer.cpp */; };
 		45879BF50E072390003F652D /* qAudioSinkOpenAL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45879BF40E072390003F652D /* qAudioSinkOpenAL.cpp */; };
-		459299F60FD9A1A600C16E67 /* libportaudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 459299F50FD9A1A600C16E67 /* libportaudio.a */; };
 		45929A1F0FD9A26600C16E67 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45929A1E0FD9A26600C16E67 /* CoreFoundation.framework */; };
 		45929A240FD9A29700C16E67 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45929A230FD9A29700C16E67 /* AudioUnit.framework */; };
 		45929A290FD9A2D400C16E67 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45929A280FD9A2D400C16E67 /* CoreServices.framework */; };
@@ -66,6 +75,67 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03212B1D13ADF3BD00EBA6CA /* libportaudio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libportaudio.a; path = /opt/local/lib/libportaudio.a; sourceTree = "<absolute>"; };
+		03212B5A13AEAE8D00EBA6CA /* qAudioDecoderAAC.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioDecoderAAC.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioDecoderAAC.hpp; sourceTree = SOURCE_ROOT; };
+		03212B5B13AEAE8D00EBA6CA /* qAudioEncoderAAC.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioEncoderAAC.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioEncoderAAC.hpp; sourceTree = SOURCE_ROOT; };
+		03212B5D13AEAEBB00EBA6CA /* qAudioDecoderAAC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioDecoderAAC.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioDecoderAAC.cpp; sourceTree = SOURCE_ROOT; };
+		03212B8A13AEB5A800EBA6CA /* qAudioDecoderAAC_libav.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioDecoderAAC_libav.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioDecoderAAC_libav.cpp; sourceTree = SOURCE_ROOT; };
+		03212B8B13AEB5A800EBA6CA /* qAudioEncoderAAC_libav.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioEncoderAAC_libav.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioEncoderAAC_libav.cpp; sourceTree = SOURCE_ROOT; };
+		03212B8E13AEB5B400EBA6CA /* qAudioDecoderAAC_libav.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioDecoderAAC_libav.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioDecoderAAC_libav.hpp; sourceTree = SOURCE_ROOT; };
+		03212B8F13AEB5B400EBA6CA /* qAudioEncoderAAC_libav.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioEncoderAAC_libav.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioEncoderAAC_libav.hpp; sourceTree = SOURCE_ROOT; };
+		03212BE213B0467300EBA6CA /* avcodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avcodec.h; sourceTree = "<group>"; };
+		03212BE313B0467300EBA6CA /* avfft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avfft.h; sourceTree = "<group>"; };
+		03212BE413B0467300EBA6CA /* dxva2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dxva2.h; sourceTree = "<group>"; };
+		03212BE513B0467300EBA6CA /* opt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opt.h; sourceTree = "<group>"; };
+		03212BE613B0467300EBA6CA /* vaapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vaapi.h; sourceTree = "<group>"; };
+		03212BE713B0467300EBA6CA /* vdpau.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vdpau.h; sourceTree = "<group>"; };
+		03212BE813B0467300EBA6CA /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		03212BE913B0467300EBA6CA /* xvmc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xvmc.h; sourceTree = "<group>"; };
+		03212BEB13B0467300EBA6CA /* avformat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avformat.h; sourceTree = "<group>"; };
+		03212BEC13B0467300EBA6CA /* avio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avio.h; sourceTree = "<group>"; };
+		03212BED13B0467300EBA6CA /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		03212C0113B0474500EBA6CA /* adler32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = adler32.h; sourceTree = "<group>"; };
+		03212C0213B0474500EBA6CA /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		03212C0313B0474500EBA6CA /* attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = attributes.h; sourceTree = "<group>"; };
+		03212C0413B0474500EBA6CA /* audioconvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioconvert.h; sourceTree = "<group>"; };
+		03212C0513B0474500EBA6CA /* avassert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avassert.h; sourceTree = "<group>"; };
+		03212C0613B0474500EBA6CA /* avconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avconfig.h; sourceTree = "<group>"; };
+		03212C0713B0474500EBA6CA /* avstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avstring.h; sourceTree = "<group>"; };
+		03212C0813B0474500EBA6CA /* avutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avutil.h; sourceTree = "<group>"; };
+		03212C0913B0474500EBA6CA /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		03212C0A13B0474500EBA6CA /* bswap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bswap.h; sourceTree = "<group>"; };
+		03212C0B13B0474500EBA6CA /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		03212C0C13B0474500EBA6CA /* cpu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu.h; sourceTree = "<group>"; };
+		03212C0D13B0474500EBA6CA /* crc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crc.h; sourceTree = "<group>"; };
+		03212C0E13B0474500EBA6CA /* error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
+		03212C0F13B0474500EBA6CA /* eval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eval.h; sourceTree = "<group>"; };
+		03212C1013B0474500EBA6CA /* fifo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fifo.h; sourceTree = "<group>"; };
+		03212C1113B0474500EBA6CA /* file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file.h; sourceTree = "<group>"; };
+		03212C1213B0474500EBA6CA /* imgutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imgutils.h; sourceTree = "<group>"; };
+		03212C1313B0474500EBA6CA /* intfloat_readwrite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intfloat_readwrite.h; sourceTree = "<group>"; };
+		03212C1413B0474500EBA6CA /* intreadwrite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intreadwrite.h; sourceTree = "<group>"; };
+		03212C1513B0474500EBA6CA /* lfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lfg.h; sourceTree = "<group>"; };
+		03212C1613B0474500EBA6CA /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		03212C1713B0474500EBA6CA /* lzo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzo.h; sourceTree = "<group>"; };
+		03212C1813B0474500EBA6CA /* mathematics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mathematics.h; sourceTree = "<group>"; };
+		03212C1913B0474500EBA6CA /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		03212C1A13B0474500EBA6CA /* mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mem.h; sourceTree = "<group>"; };
+		03212C1B13B0474500EBA6CA /* opt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opt.h; sourceTree = "<group>"; };
+		03212C1C13B0474500EBA6CA /* parseutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parseutils.h; sourceTree = "<group>"; };
+		03212C1D13B0474500EBA6CA /* pixdesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pixdesc.h; sourceTree = "<group>"; };
+		03212C1E13B0474500EBA6CA /* pixfmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pixfmt.h; sourceTree = "<group>"; };
+		03212C1F13B0474500EBA6CA /* random_seed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = random_seed.h; sourceTree = "<group>"; };
+		03212C2013B0474500EBA6CA /* rational.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rational.h; sourceTree = "<group>"; };
+		03212C2113B0474500EBA6CA /* samplefmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = samplefmt.h; sourceTree = "<group>"; };
+		03212C2213B0474500EBA6CA /* sha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha.h; sourceTree = "<group>"; };
+		03212C6313B0492F00EBA6CA /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = "../../../platforms/Mac OS/third-party/libav/lib/libavcodec.a"; sourceTree = SOURCE_ROOT; };
+		03212C6F13B0498000EBA6CA /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = "../../../platforms/Mac OS/third-party/libav/lib/libavformat.a"; sourceTree = SOURCE_ROOT; };
+		03212C7713B0499700EBA6CA /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = "../../../platforms/Mac OS/third-party/libav/lib/libavutil.a"; sourceTree = SOURCE_ROOT; };
+		03212C8213B04AA300EBA6CA /* qAudioPlatformSpecific.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = qAudioPlatformSpecific.c; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioPlatformSpecific.c; sourceTree = SOURCE_ROOT; };
+		03212C9E13B068F100EBA6CA /* qLibAVLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qLibAVLogger.h; path = ../../../platforms/Cross/plugins/QAudioPlugin/qLibAVLogger.h; sourceTree = SOURCE_ROOT; };
+		03212C9F13B068F900EBA6CA /* qLibAVLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qLibAVLogger.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qLibAVLogger.cpp; sourceTree = SOURCE_ROOT; };
+		034E56A913D2BDA400FCCB66 /* qAudioEncoderAAC_apple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioEncoderAAC_apple.cpp; path = "../../../platforms/Mac OS/plugins/QAudioPlugin/qAudioEncoderAAC_apple.cpp"; sourceTree = SOURCE_ROOT; };
+		034E56D513D2C1B800FCCB66 /* qAudioEncoderAAC_apple.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioEncoderAAC_apple.hpp; path = "../../../platforms/Mac OS/plugins/QAudioPlugin/qAudioEncoderAAC_apple.hpp"; sourceTree = SOURCE_ROOT; };
 		451352830FE2D0F5009B60F6 /* qAudioEncoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioEncoder.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioEncoder.hpp; sourceTree = SOURCE_ROOT; };
 		451352840FE2D0F5009B60F6 /* qAudioEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioEncoder.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioEncoder.cpp; sourceTree = SOURCE_ROOT; };
 		451352880FE2D32E009B60F6 /* qAudioCodec.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioCodec.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioCodec.hpp; sourceTree = SOURCE_ROOT; };
@@ -103,8 +173,8 @@
 		4546A6A10DE391C50095536B /* qAudioOpenAL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioOpenAL.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioOpenAL.cpp; sourceTree = SOURCE_ROOT; };
 		4546A6A70DE392710095536B /* QAudioPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAudioPlugin_Prefix.pch; sourceTree = "<group>"; };
 		4546A6A90DE392C40095536B /* QAudioPlugin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = QAudioPlugin.c; path = ../../../src/plugins/QAudioPlugin/QAudioPlugin.c; sourceTree = SOURCE_ROOT; };
-		4546A6D60DE392F00095536B /* libspeexdsp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libspeexdsp.a; path = speex/libspeexdsp.a; sourceTree = "<group>"; };
-		4546A6D70DE392F00095536B /* libspeex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libspeex.a; path = speex/libspeex.a; sourceTree = "<group>"; };
+		4546A6D60DE392F00095536B /* libspeex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libspeex.a; path = /opt/local/lib/libspeex.a; sourceTree = "<absolute>"; };
+		4546A6D70DE392F00095536B /* libspeexdsp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libspeexdsp.a; path = /opt/local/lib/libspeexdsp.a; sourceTree = "<absolute>"; };
 		4546A6DA0DE393010095536B /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		4548DA9B0FBCDEB900B11844 /* qAudioSinkMixer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioSinkMixer.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioSinkMixer.hpp; sourceTree = SOURCE_ROOT; };
 		4548DA9C0FBCDEB900B11844 /* qAudioSinkMixer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioSinkMixer.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioSinkMixer.cpp; sourceTree = SOURCE_ROOT; };
@@ -130,7 +200,6 @@
 		45879BF30E072390003F652D /* qAudioSinkOpenAL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioSinkOpenAL.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioSinkOpenAL.hpp; sourceTree = SOURCE_ROOT; };
 		45879BF40E072390003F652D /* qAudioSinkOpenAL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioSinkOpenAL.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioSinkOpenAL.cpp; sourceTree = SOURCE_ROOT; };
 		459299CC0FD99D6D00C16E67 /* portaudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = portaudio.h; path = "../../third-party/PortAudio/portaudio.h"; sourceTree = SOURCE_ROOT; };
-		459299F50FD9A1A600C16E67 /* libportaudio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libportaudio.a; path = "../../third-party/PortAudio/libportaudio.a"; sourceTree = SOURCE_ROOT; };
 		45929A1E0FD9A26600C16E67 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		45929A230FD9A29700C16E67 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = /System/Library/Frameworks/AudioUnit.framework; sourceTree = "<absolute>"; };
 		45929A280FD9A2D400C16E67 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
@@ -138,7 +207,7 @@
 		4594134710917A5E00420095 /* qThreadUtils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qThreadUtils.hpp; path = ../../../platforms/Cross/plugins/QwaqLib/qThreadUtils.hpp; sourceTree = SOURCE_ROOT; };
 		45971BFC11389581001B4382 /* qEventTimeLogger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qEventTimeLogger.hpp; path = ../../../platforms/Cross/plugins/QwaqLib/qEventTimeLogger.hpp; sourceTree = SOURCE_ROOT; };
 		45971BFD113895A8001B4382 /* qEventTimeLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qEventTimeLogger.cpp; path = ../../../platforms/Cross/plugins/QwaqLib/qEventTimeLogger.cpp; sourceTree = SOURCE_ROOT; };
-		459A515F1090D90B00225F08 /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_thread-mt.a"; path = "../../third-party/boost_1_40_0/lib/libboost_thread-mt.a"; sourceTree = SOURCE_ROOT; };
+		459A515F1090D90B00225F08 /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_thread-mt.a"; path = "/opt/local/lib/libboost_thread-mt.a"; sourceTree = "<absolute>"; };
 		45EE40610EA7EF21008A5B6F /* qSpeexInternalDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qSpeexInternalDefs.h; path = ../../../platforms/Cross/plugins/QAudioPlugin/qSpeexInternalDefs.h; sourceTree = SOURCE_ROOT; };
 		45F5EBC60F534EFE00E4E9A1 /* qAudioDecoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioDecoder.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioDecoder.hpp; sourceTree = SOURCE_ROOT; };
 		45F5EBCB0F5351B600E4E9A1 /* qAudioDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioDecoder.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioDecoder.cpp; sourceTree = SOURCE_ROOT; };
@@ -155,22 +224,104 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4546A6D80DE392F00095536B /* libspeexdsp.a in Frameworks */,
-				4546A6D90DE392F00095536B /* libspeex.a in Frameworks */,
+				4546A6D80DE392F00095536B /* libspeex.a in Frameworks */,
+				4546A6D90DE392F00095536B /* libspeexdsp.a in Frameworks */,
 				4546A6DB0DE393010095536B /* OpenAL.framework in Frameworks */,
 				72D9F0E60E929D880062278A /* CoreAudio.framework in Frameworks */,
 				457C02C50FD33B9C000FCB6F /* AudioToolbox.framework in Frameworks */,
-				459299F60FD9A1A600C16E67 /* libportaudio.a in Frameworks */,
 				45929A1F0FD9A26600C16E67 /* CoreFoundation.framework in Frameworks */,
 				45929A240FD9A29700C16E67 /* AudioUnit.framework in Frameworks */,
 				45929A290FD9A2D400C16E67 /* CoreServices.framework in Frameworks */,
 				459A51601090D90B00225F08 /* libboost_thread-mt.a in Frameworks */,
+				03212B1E13ADF3BD00EBA6CA /* libportaudio.a in Frameworks */,
+				03212C6413B0492F00EBA6CA /* libavcodec.a in Frameworks */,
+				03212C7013B0498000EBA6CA /* libavformat.a in Frameworks */,
+				03212C7813B0499700EBA6CA /* libavutil.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03212BB513B045DB00EBA6CA /* libav */ = {
+			isa = PBXGroup;
+			children = (
+				03212C0013B0474500EBA6CA /* libavutil */,
+				03212BE113B0467300EBA6CA /* libavcodec */,
+				03212BEA13B0467300EBA6CA /* libavformat */,
+			);
+			name = libav;
+			sourceTree = "<group>";
+		};
+		03212BE113B0467300EBA6CA /* libavcodec */ = {
+			isa = PBXGroup;
+			children = (
+				03212BE213B0467300EBA6CA /* avcodec.h */,
+				03212BE313B0467300EBA6CA /* avfft.h */,
+				03212BE413B0467300EBA6CA /* dxva2.h */,
+				03212BE513B0467300EBA6CA /* opt.h */,
+				03212BE613B0467300EBA6CA /* vaapi.h */,
+				03212BE713B0467300EBA6CA /* vdpau.h */,
+				03212BE813B0467300EBA6CA /* version.h */,
+				03212BE913B0467300EBA6CA /* xvmc.h */,
+			);
+			name = libavcodec;
+			path = "../../../platforms/Cross/third-party/libav/include/libavcodec";
+			sourceTree = SOURCE_ROOT;
+		};
+		03212BEA13B0467300EBA6CA /* libavformat */ = {
+			isa = PBXGroup;
+			children = (
+				03212BEB13B0467300EBA6CA /* avformat.h */,
+				03212BEC13B0467300EBA6CA /* avio.h */,
+				03212BED13B0467300EBA6CA /* version.h */,
+			);
+			name = libavformat;
+			path = "../../../platforms/Cross/third-party/libav/include/libavformat";
+			sourceTree = SOURCE_ROOT;
+		};
+		03212C0013B0474500EBA6CA /* libavutil */ = {
+			isa = PBXGroup;
+			children = (
+				03212C0113B0474500EBA6CA /* adler32.h */,
+				03212C0213B0474500EBA6CA /* aes.h */,
+				03212C0313B0474500EBA6CA /* attributes.h */,
+				03212C0413B0474500EBA6CA /* audioconvert.h */,
+				03212C0513B0474500EBA6CA /* avassert.h */,
+				03212C0613B0474500EBA6CA /* avconfig.h */,
+				03212C0713B0474500EBA6CA /* avstring.h */,
+				03212C0813B0474500EBA6CA /* avutil.h */,
+				03212C0913B0474500EBA6CA /* base64.h */,
+				03212C0A13B0474500EBA6CA /* bswap.h */,
+				03212C0B13B0474500EBA6CA /* common.h */,
+				03212C0C13B0474500EBA6CA /* cpu.h */,
+				03212C0D13B0474500EBA6CA /* crc.h */,
+				03212C0E13B0474500EBA6CA /* error.h */,
+				03212C0F13B0474500EBA6CA /* eval.h */,
+				03212C1013B0474500EBA6CA /* fifo.h */,
+				03212C1113B0474500EBA6CA /* file.h */,
+				03212C1213B0474500EBA6CA /* imgutils.h */,
+				03212C1313B0474500EBA6CA /* intfloat_readwrite.h */,
+				03212C1413B0474500EBA6CA /* intreadwrite.h */,
+				03212C1513B0474500EBA6CA /* lfg.h */,
+				03212C1613B0474500EBA6CA /* log.h */,
+				03212C1713B0474500EBA6CA /* lzo.h */,
+				03212C1813B0474500EBA6CA /* mathematics.h */,
+				03212C1913B0474500EBA6CA /* md5.h */,
+				03212C1A13B0474500EBA6CA /* mem.h */,
+				03212C1B13B0474500EBA6CA /* opt.h */,
+				03212C1C13B0474500EBA6CA /* parseutils.h */,
+				03212C1D13B0474500EBA6CA /* pixdesc.h */,
+				03212C1E13B0474500EBA6CA /* pixfmt.h */,
+				03212C1F13B0474500EBA6CA /* random_seed.h */,
+				03212C2013B0474500EBA6CA /* rational.h */,
+				03212C2113B0474500EBA6CA /* samplefmt.h */,
+				03212C2213B0474500EBA6CA /* sha.h */,
+			);
+			name = libavutil;
+			path = "../../../platforms/Cross/third-party/libav/include/libavutil";
+			sourceTree = SOURCE_ROOT;
+		};
 		45385C280DF0DC540060F9DD /* speex */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +394,12 @@
 				45206C8E0FD615AC008D2F67 /* qPortAudioInterface.hpp */,
 				45720E0F0FDF32AA00386BE3 /* qAudioSinkBufferedResampler.hpp */,
 				451352880FE2D32E009B60F6 /* qAudioCodec.hpp */,
+				03212B5A13AEAE8D00EBA6CA /* qAudioDecoderAAC.hpp */,
+				03212B5B13AEAE8D00EBA6CA /* qAudioEncoderAAC.hpp */,
+				03212B8E13AEB5B400EBA6CA /* qAudioDecoderAAC_libav.hpp */,
+				03212B8F13AEB5B400EBA6CA /* qAudioEncoderAAC_libav.hpp */,
+				034E56D513D2C1B800FCCB66 /* qAudioEncoderAAC_apple.hpp */,
+				03212C9E13B068F100EBA6CA /* qLibAVLogger.h */,
 			);
 			name = plugin;
 			sourceTree = "<group>";
@@ -276,6 +433,7 @@
 		459299CA0FD99CE100C16E67 /* 3rd-party */ = {
 			isa = PBXGroup;
 			children = (
+				03212BB513B045DB00EBA6CA /* libav */,
 				459299CB0FD99D0200C16E67 /* PortAudio */,
 				4546A6860DE390610095536B /* speex */,
 			);
@@ -342,6 +500,12 @@
 				457C01E70FD306D8000FCB6F /* qAudioSinkPortAudio.cpp */,
 				45206C8D0FD615AC008D2F67 /* qPortAudioInterface.cpp */,
 				45720E100FDF32AA00386BE3 /* qAudioSinkBufferedResampler.cpp */,
+				03212B5D13AEAEBB00EBA6CA /* qAudioDecoderAAC.cpp */,
+				03212B8A13AEB5A800EBA6CA /* qAudioDecoderAAC_libav.cpp */,
+				03212B8B13AEB5A800EBA6CA /* qAudioEncoderAAC_libav.cpp */,
+				034E56A913D2BDA400FCCB66 /* qAudioEncoderAAC_apple.cpp */,
+				03212C8213B04AA300EBA6CA /* qAudioPlatformSpecific.c */,
+				03212C9F13B068F900EBA6CA /* qLibAVLogger.cpp */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -352,13 +516,16 @@
 				45929A280FD9A2D400C16E67 /* CoreServices.framework */,
 				45929A230FD9A29700C16E67 /* AudioUnit.framework */,
 				45929A1E0FD9A26600C16E67 /* CoreFoundation.framework */,
-				459299F50FD9A1A600C16E67 /* libportaudio.a */,
 				457C02C40FD33B9C000FCB6F /* AudioToolbox.framework */,
 				72D9F0E50E929D880062278A /* CoreAudio.framework */,
-				459A515F1090D90B00225F08 /* libboost_thread-mt.a */,
 				4546A6DA0DE393010095536B /* OpenAL.framework */,
-				4546A6D60DE392F00095536B /* libspeexdsp.a */,
-				4546A6D70DE392F00095536B /* libspeex.a */,
+				4546A6D60DE392F00095536B /* libspeex.a */,
+				4546A6D70DE392F00095536B /* libspeexdsp.a */,
+				03212B1D13ADF3BD00EBA6CA /* libportaudio.a */,
+				459A515F1090D90B00225F08 /* libboost_thread-mt.a */,
+				03212C6313B0492F00EBA6CA /* libavcodec.a */,
+				03212C6F13B0498000EBA6CA /* libavformat.a */,
+				03212C7713B0499700EBA6CA /* libavutil.a */,
 			);
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
@@ -465,6 +632,12 @@
 				451352850FE2D0F5009B60F6 /* qAudioEncoder.cpp in Sources */,
 				4594134610917A3000420095 /* qThreadUtils.cpp in Sources */,
 				45971BFE113895A8001B4382 /* qEventTimeLogger.cpp in Sources */,
+				03212B5F13AEAEBB00EBA6CA /* qAudioDecoderAAC.cpp in Sources */,
+				03212B8C13AEB5A800EBA6CA /* qAudioDecoderAAC_libav.cpp in Sources */,
+				03212B8D13AEB5A800EBA6CA /* qAudioEncoderAAC_libav.cpp in Sources */,
+				03212C8313B04AA300EBA6CA /* qAudioPlatformSpecific.c in Sources */,
+				03212CA013B068F900EBA6CA /* qLibAVLogger.cpp in Sources */,
+				034E56AA13D2BDA400FCCB66 /* qAudioEncoderAAC_apple.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,17 +669,22 @@
 					"$(SRCROOT)/../../../platforms/MacOS/plugins/QAudioPlugin",
 					"$(SRCROOT)/../../../platforms/Cross/plugins/QAudioPlugin",
 					"$(SRCROOT)/../../../platforms/Cross/third-party",
-					"$(SRCROOT)/../../../platforms/Cross/third-party/boost_1_40_0",
+					"$(SRCROOT)/../../../platforms/Cross/third-party/libav/include",
+					/opt/local/include,
 					.,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../src/plugins/QAudioPlugin",
 					"$(SRCROOT)/speex",
 				);
+				OTHER_LDFLAGS = (
+					"-read_only_relocs",
+					suppress,
+				);
 				PREBINDING = NO;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				SDKROOT = macosx;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = debugging;
 			};
@@ -538,7 +716,8 @@
 					"$(SRCROOT)/../../../platforms/MacOS/plugins/QAudioPlugin",
 					"$(SRCROOT)/../../../platforms/Cross/plugins/QAudioPlugin",
 					"$(SRCROOT)/../../../platforms/Cross/third-party",
-					"$(SRCROOT)/../../../platforms/Cross/third-party/boost_1_40_0",
+					"$(SRCROOT)/../../../platforms/Cross/third-party/libav/include",
+					/opt/local/include,
 					.,
 				);
 				ICC_FP_MODEL = src;
@@ -549,10 +728,14 @@
 					"$(SRCROOT)/../../../src/plugins/QAudioPlugin",
 					"$(SRCROOT)/speex",
 				);
+				OTHER_LDFLAGS = (
+					"-read_only_relocs",
+					suppress,
+				);
 				PREBINDING = NO;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				SDKROOT = macosx;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
 			name = Release;
 		};
@@ -577,6 +760,8 @@
 					"$(SRCROOT)/speex",
 					"$(SRCROOT)/../../third-party/PortAudio",
 					"\"$(SRCROOT)/../../third-party/boost_1_40_0/lib\"",
+					/opt/local/lib,
+					"\"$(SRCROOT)/../../../platforms/Mac OS/third-party/libav/lib\"",
 				);
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
 				ZERO_LINK = YES;
@@ -603,6 +788,8 @@
 					"$(SRCROOT)/speex",
 					"$(SRCROOT)/../../third-party/PortAudio",
 					"\"$(SRCROOT)/../../third-party/boost_1_40_0/lib\"",
+					/opt/local/lib,
+					"\"$(SRCROOT)/../../../platforms/Mac OS/third-party/libav/lib\"",
 				);
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
 				STRIP_INSTALLED_PRODUCT = YES;

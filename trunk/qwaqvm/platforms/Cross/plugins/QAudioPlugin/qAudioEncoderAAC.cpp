@@ -19,6 +19,9 @@
  *
  */
 
+// Disable use of MainConcept libraries
+#ifdef _MAINCONCEPT_
+
 #include "QAudioPlugin.h"
 #include "qAudioEncoderAAC.hpp"
 #include "qLogger.hpp"
@@ -142,3 +145,5 @@ int AudioEncoderAAC::asyncEncode(short *bufferPtr, int sampleCount)
 	}
 	return 0;
 }
+
+#endif // #ifdef _MAINCONCEPT_
