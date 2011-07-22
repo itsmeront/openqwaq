@@ -19,6 +19,9 @@
  *
  */
 
+// Disable use of MainConcept libraries
+#ifdef _MAINCONCEPT_
+
 #include "QAudioPlugin.h"
 #include "qAudioDecoderAAC.hpp"
 #include "qLogger.hpp"
@@ -144,3 +147,6 @@ AudioDecoderAAC::decode(unsigned char* input, int inputSize, unsigned short* out
 	
 	return 0;
 }
+
+#endif // #ifdef _MAINCONCEPT_
+

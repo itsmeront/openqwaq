@@ -21,6 +21,7 @@
 
 #ifndef __Q_AUDIO_ENCODER_AAC_HPP__
 #define __Q_AUDIO_ENCODER_AAC_HPP__
+#ifdef _MAINCONCEPT_
 
 #include "qAudioEncoder.hpp"
 #include "qFeedbackChannel.h"
@@ -55,4 +56,5 @@ class AudioEncoderAAC : public AudioEncoder
 
 }; // namespace Qwaq
 
+#endif // #ifdef _MAINCONCEPT_
 #endif // #ifndef __Q_AUDIO_ENCODER_AAC_HPP__

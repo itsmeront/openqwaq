@@ -23,6 +23,9 @@
 #include "qAudioEncoder.hpp"
 #ifdef _MAINCONCEPT_
 #include "qAudioEncoderAAC.hpp"
+#else
+// XXXXX will need to be fixed for Windows
+#include "qAudioEncoderAAC_apple.hpp"
 #endif
 #include "qLogger.hpp"
 
@@ -80,11 +83,15 @@ unsigned qCreateAudioEncoder(unsigned codecType, void* feedbackChannel, unsigned
 	if (feedbackChannel) channel = *((FeedbackChannel**)feedbackChannel);
 	
 	switch (codecType) {
-#ifdef _MAINCONCEPT_
 		case CodecTypeAAC:
+#ifdef _MAINCONCEPT_		
 			encoder = new AudioEncoderAAC(channel, config, configSize);
-			break;
+#else			
+// XXXX will need to fix this when we make it work on Windows.
+			encoder = new AudioEncoderAAC_apple(channel, config, configSize);
 #endif
+			break;
+
 		default:
 			qLog() << "qCreateAudioEncoder(): unexpected encoder type: " << codecType << flush;
 			return 0;
