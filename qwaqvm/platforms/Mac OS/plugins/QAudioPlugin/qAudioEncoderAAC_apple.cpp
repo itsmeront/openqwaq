@@ -47,7 +47,8 @@ const int MAX_OUTPUT_BYTES = 2048; // more than enough... this is the same as th
 struct Qwaq::AudioEncoderAAC_apple_priv {
 
 	AudioConverterRef converter;
-	int bytesPerPacket;
+	int inBytesPerPacket;
+	int outBytesPerPacket;
 	int framesPerPacket;
 	int sampleRate;
 	int maxPacketSize;
@@ -58,7 +59,7 @@ struct Qwaq::AudioEncoderAAC_apple_priv {
 	AudioBufferList obuflist;
 	
 	uint8_t buf[MAX_OUTPUT_BYTES];  // more than enough space... this is how much the unencoded audio takes.
-	int16_t* in_buf;
+	int16_t in_buf[1024];
 	unsigned in_size;
 	
 	AudioEncoderAAC_config config;
@@ -126,9 +127,8 @@ AudioEncoderAAC_apple_priv* createPrivateContext(unsigned char* config, unsigned
 	AudioConverterSetProperty(priv->converter, kAudioConverterCodecQuality, tmpsiz, &tmp);
 	
 	// Variable bitrate, within reason.
-// XXXXX try disable this to see if it helps us	
-	tmp = kAudioCodecBitRateControlMode_Constant;
-//	tmp = kAudioCodecBitRateControlMode_VariableConstrained;
+//	tmp = kAudioCodecBitRateControlMode_Constant;
+	tmp = kAudioCodecBitRateControlMode_VariableConstrained;
 	AudioConverterSetProperty(priv->converter, kAudioCodecPropertyBitRateControlMode, tmpsiz, &tmp);
 	
 	// Prepare to set output bitrate.  The parameter currently passed by Squeak is "4".  This
@@ -182,20 +182,16 @@ AudioEncoderAAC_apple_priv* createPrivateContext(unsigned char* config, unsigned
 	
 	// Stash actual encoder settings, in case they come in handy later.
 	priv->maxPacketSize = tmp;
-	priv->bytesPerPacket = 2048; // why can't we use: output.mBytesPerPacket  ?
-	priv->framesPerPacket = 1024; // why can't we use: output.mFramesPerPacket  ?
+	priv->outBytesPerPacket = output.mBytesPerPacket;
+	priv->framesPerPacket = output.mFramesPerPacket;
 	priv->sampleRate = output.mSampleRate;
 	priv->numChannels = sqc->inputChannels;
-	
-// XXXXX write out the actual values
-	priv->bytesPerPacket = output.mBytesPerPacket;
-	priv->framesPerPacket = output.mFramesPerPacket;
 
 	// Log the actual encoder settings, and verify their sanity.
 	qLog() << "created encoder with:"
 		<< "\n\t\t\t input/output channels: " << priv->numChannels	
 		<< "\n\t\t\t max output packet-size: " << priv->maxPacketSize	
-		<< "\n\t\t\t bytes-per-packet: " << priv->bytesPerPacket
+		<< "\n\t\t\t out bytes-per-packet: " << priv->outBytesPerPacket
 		<< "\n\t\t\t frames-per-packet: " << priv->framesPerPacket
 		<< "\n\t\t\t output sample-rate: " << priv->sampleRate
 		<< "\n\t\t\t output bit-rate: " << bitrate;
@@ -224,7 +220,7 @@ void destroyPrivateContext(AudioEncoderAAC_apple_priv* priv)
 
  
 AudioEncoderAAC_apple::AudioEncoderAAC_apple(FeedbackChannel* feedbackChannel, unsigned char* config, unsigned configSize) 
-: AudioEncoder(feedbackChannel), inFrameCount(0), outFrameCount(0)
+: AudioEncoder(feedbackChannel), ring(50000), inFrameCount(0), outFrameCount(0)
 {
 	priv = createPrivateContext(config, configSize);
 	if (priv) {
@@ -254,36 +250,44 @@ int AudioEncoderAAC_apple::asyncEncode(short *bufferPtr, int sampleCount)
 		qLog() << "AudioEncoderAAC_apple::asyncEncode() ...  missing CoreAudio converter!" << flush;
 		return -1;
 	}
-	if (sampleCount != priv->framesPerPacket) {
-		qLog() << "AudioEncoderAAC_apple::asyncEncode() ...  invalid sample-count: " << sampleCount << " (expected: " << priv->framesPerPacket << ")";
+	
+	// We first push the data into a ring-buffer, which allows us to deal with input that isn't a 
+	// multiple of 1024.
+	try {
+		ring.put(bufferPtr, sampleCount*2);
+	}
+	catch(std::string e) {
+		qLog() << "AudioEncoderAAC_apple::asyncEncode() ...  " << e;
+		ring.clear();
 		return -1;
 	}
 	
-	AudioStreamPacketDescription odesc;
-	odesc.mStartOffset = 0;
-	odesc.mVariableFramesInPacket = 0;  // since this a constant value (always 1024), we use zero
-	odesc.mDataByteSize = 0;
-	AudioBufferList obuflist;
-	obuflist.mNumberBuffers = 1;
-	obuflist.mBuffers[0].mNumberChannels = priv->numChannels;
-	obuflist.mBuffers[0].mDataByteSize = MAX_OUTPUT_BYTES;
-	obuflist.mBuffers[0].mData = priv->buf; 
-	
-	priv->in_buf = bufferPtr;
-	priv->in_size = sampleCount;
-	UInt32 npackets = 1;
-	OSStatus err = AudioConverterFillComplexBuffer( priv->converter, encoderCallback, priv, &npackets, &obuflist, &odesc );
-	priv->in_buf = NULL;
-	priv->in_size = 0;
-	if (err) {
-		qLog() << "AudioEncoderAAC_apple::asyncEncode() ...  encode failed with status: " << err << flush;
-		return -1;
-	}
+	priv->in_size = priv->numChannels * 1024;
+	while (ring.dataSize() > priv->in_size*2) { 
+		ring.get(priv->in_buf, priv->in_size*2);
 
-	// Fill in the data to be read back by Squeak.
-	int encodedSize = obuflist.mBuffers[0].mDataByteSize;
-	pushFeedbackData(priv->buf, encodedSize);
-	
+		AudioStreamPacketDescription odesc;
+		odesc.mStartOffset = 0;
+		odesc.mVariableFramesInPacket = 0;  // since this a constant value (always 1024), we use zero
+		odesc.mDataByteSize = 0;
+		AudioBufferList obuflist;
+		obuflist.mNumberBuffers = 1;
+		obuflist.mBuffers[0].mNumberChannels = priv->numChannels;
+		obuflist.mBuffers[0].mDataByteSize = MAX_OUTPUT_BYTES;
+		obuflist.mBuffers[0].mData = priv->buf; 
+				
+		UInt32 npackets = 1;
+		OSStatus err = AudioConverterFillComplexBuffer( priv->converter, encoderCallback, priv, &npackets, &obuflist, &odesc );
+
+		if (err) {
+			qLog() << "AudioEncoderAAC_apple::asyncEncode() ...  encode failed with status: " << err << flush;
+			return -1;
+		}
+
+		// Fill in the data to be read back by Squeak.
+		int encodedSize = obuflist.mBuffers[0].mDataByteSize;
+		pushFeedbackData(priv->buf, encodedSize);
+	}
 	return 0;
 }
 

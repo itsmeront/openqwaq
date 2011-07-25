@@ -39,6 +39,7 @@ class QRingBuffer
 		bool hasData() { return dataSize() > 0; }
 		void put(void* data, int size);
 		void get(void* data, int size);
+		void clear();
 
 	protected:
 		char* _data;
