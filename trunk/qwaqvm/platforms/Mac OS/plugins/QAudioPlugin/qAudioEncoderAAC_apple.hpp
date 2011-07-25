@@ -17,6 +17,7 @@
 
 #include "qAudioEncoder.hpp"
 #include "qFeedbackChannel.h"
+#include "qRingBuffer.hpp"
 
 namespace Qwaq
 {
@@ -37,6 +38,8 @@ class AudioEncoderAAC_apple : public AudioEncoder
 		
 	protected:
 		struct AudioEncoderAAC_apple_priv* priv;
+		
+		QRingBuffer ring;
 		
 		int outFrameCount;
 		int inFrameCount;

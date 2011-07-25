@@ -93,3 +93,9 @@ QRingBuffer::get(void* data, int size)
 	_read = (_read + size) % _totalDataSize;
 	_storedDataSize -= size;
 }
+
+void
+QRingBuffer::clear()
+{
+	_read = _write = _storedDataSize = 0;
+}
