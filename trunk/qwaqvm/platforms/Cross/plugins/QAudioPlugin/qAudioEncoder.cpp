@@ -21,12 +21,18 @@
 
 #include "QAudioPlugin.h"
 #include "qAudioEncoder.hpp"
+
 #ifdef _MAINCONCEPT_
 #include "qAudioEncoderAAC.hpp"
 #else
-// XXXXX will need to be fixed for Windows
+#if defined __APPLE__
 #include "qAudioEncoderAAC_apple.hpp"
+#else
+#include "qAudioEncoderAAC_libav.hpp"
 #endif
+
+#endif // _MAINCONCEPT_
+
 #include "qLogger.hpp"
 
 using namespace Qwaq;
@@ -87,8 +93,11 @@ unsigned qCreateAudioEncoder(unsigned codecType, void* feedbackChannel, unsigned
 #ifdef _MAINCONCEPT_		
 			encoder = new AudioEncoderAAC(channel, config, configSize);
 #else			
-// XXXX will need to fix this when we make it work on Windows.
+#if defined __APPLE__
 			encoder = new AudioEncoderAAC_apple(channel, config, configSize);
+#else
+			encoder = new AudioEncoderAAC_libav(channel, config, configSize);
+#endif
 #endif
 			break;
 

@@ -20,7 +20,7 @@
 #include "qLogger.hpp"
 
 extern "C" {
-#include "avcodec.h"
+#include "libavcodec/avcodec.h"
 }
 
 using namespace Qwaq;
@@ -109,7 +109,8 @@ AudioEncoderAAC_libav_priv* createPrivateContext(unsigned char* config, unsigned
 	priv->ctxt->sample_fmt = SAMPLE_FMT_S16;
 	priv->ctxt->channels = sqc->inputChannels;
 	priv->ctxt->profile = FF_PROFILE_AAC_LOW; // the only one supported, according to the libavcodec source code.
-	priv->ctxt->time_base = (AVRational){1, priv->ctxt->sample_rate};
+	priv->ctxt->time_base.num = 1;
+	priv->ctxt->time_base.den = priv->ctxt->sample_rate;
 	priv->ctxt->codec_type = AVMEDIA_TYPE_AUDIO;
 	
 	// Open the codec.

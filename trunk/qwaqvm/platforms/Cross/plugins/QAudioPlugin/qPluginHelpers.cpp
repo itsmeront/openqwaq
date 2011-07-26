@@ -24,8 +24,8 @@
 
 extern "C" {
 #include "qLibAVLogger.h"
-#include "avformat.h"
-#include "avcodec.h"
+#include "libavformat/avformat.h"
+#include "libavcodec/avcodec.h"
 }
 
 #if !EXCLUDE_IAX

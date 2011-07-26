@@ -20,17 +20,21 @@
 #include "qLogger.hpp"
 
 extern "C" {
-#include "avcodec.h"
+#include "libavcodec/avcodec.h"
 }
 
 using namespace Qwaq;
 
+const int ALIGNED_BUF_SIZE = 8192;
 struct Qwaq::AudioDecoderAAC_libav_priv {
 	AVCodec *codec;
 	AVCodecContext *ctxt;
 	AVCodecParserContext *parser;
 	uint8_t *extradata;
 	int extradata_size;
+
+	// "everything" in libav needs to be 16-byte aligned, or things get crashy.
+	uint8_t *outbuf;
 };
 
 static AudioDecoderAAC_libav_priv* createPrivateContext(unsigned char* config, unsigned configSize);
@@ -46,7 +50,8 @@ AudioDecoderAAC_libav_priv* createPrivateContext(unsigned char* config, unsigned
 	priv->parser = NULL;
 	priv->extradata = NULL;
 	priv->extradata_size = 0;
-	
+	priv->outbuf = NULL;
+
 	// If AudioSpecificConfig is specified (see AAC spec: ISO-14496-3 section 1.6),
 	// then allocate space for it
 	if (configSize) {
@@ -92,6 +97,14 @@ AudioDecoderAAC_libav_priv* createPrivateContext(unsigned char* config, unsigned
 	}
 	qLog() << "   4: initialized codec";
 
+	priv->outbuf = (uint8_t*)av_malloc(ALIGNED_BUF_SIZE);
+	if (!priv->outbuf) {
+		qLog() << "createPrivateContext(): cannot allocate aligned output buffers";
+		destroyPrivateContext(priv);
+		return NULL;
+	}
+	qLog() << "   5: allocated aligned output buffer";
+
 	return priv;
 }
 
@@ -108,6 +121,11 @@ void destroyPrivateContext(AudioDecoderAAC_libav_priv* priv)
 	if (priv->parser) {
 		av_parser_close(priv->parser);
 		priv->parser = NULL;
+	}
+
+	if (priv->outbuf) {
+		av_free(priv->outbuf);
+		priv->outbuf = NULL;
 	}
 
 	delete priv;
@@ -148,6 +166,11 @@ AudioDecoderAAC_libav::isValid()
 int 
 AudioDecoderAAC_libav::decode(unsigned char* input, int inputSize, unsigned short* output, int outputSize, unsigned flags)
 {
+	if (!isValid()) {
+		qLog() << "AAC decoder is not in a valid state" << flush;
+		return -1;
+	}
+
 	++inputFrameCount;
 
 	AVPacket packet;
@@ -156,15 +179,24 @@ AudioDecoderAAC_libav::decode(unsigned char* input, int inputSize, unsigned shor
 	packet.size = inputSize;
 	int outSize = outputSize*2;  // outputSize is number of samples, not bytes
 	
+	// Sanity-check to make sure our 16-byte-aligned buffer is big enough
+	if (outSize > ALIGNED_BUF_SIZE) {
+		qLog() << "aligned output buffer is too small (" << ALIGNED_BUF_SIZE << " bytes vs " << outSize << " bytes)";
+		return -1;
+	}
+
 	// HACK!! avcodec_decode_audio3() has a FIXME about this... because not all audio decoders
 	// have a check to ensure that the available space is sufficient, it is extra-conservative
 	// and requires a big-ass buffer.  We know how much space AAC output-buffers require, so
 	// we fake it out.
 	outSize = AVCODEC_MAX_AUDIO_FRAME_SIZE; 
 	
-	int err = avcodec_decode_audio3(priv->ctxt, (int16_t*)output, &outSize, &packet);
+	qLog() << "about to decode AAC packet of size: " << outputSize << flush;
+
+
+	int err = avcodec_decode_audio3(priv->ctxt, (int16_t*)priv->outbuf, &outSize, &packet);
 	if (err < 0) {
-		qLog() << "error decoding AAC packet" << err << flush;
+		qLog() << "error decoding AAC packet: " << err << flush;
 		return -1;
 	}
 	
@@ -173,6 +205,9 @@ AudioDecoderAAC_libav::decode(unsigned char* input, int inputSize, unsigned shor
 		qLog() << "CATASTROPHIC ERROR: stomped on memory because buffer was too small" << flush;
 		return -1;
 	}
+
+	// Copy data out from aligned memory
+	memcpy(output, priv->outbuf, outSize);
 
 	return 0;
 }
