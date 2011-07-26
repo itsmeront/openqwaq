@@ -47,3 +47,5 @@ mkdir install-dir
 make install
 
 # then copy the newly-built libs somewhere
+
+# ignore this line
