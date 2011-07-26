@@ -41,8 +41,8 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/wd4996&#x0D;&#x0A;"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\vm;..\..\..\Cross\vm;..\..\..\Cross\plugins\QAudioPlugin;..\..\..\Cross\plugins\QwaqLib;&quot;..\..\..\Cross\third-party&quot;;&quot;..\..\..\Cross\third-party\boost_1_40_0&quot;;..\..\..\..\src\vm;.\dependencies\speex\include;&quot;.\dependencies\iaxclient-2.1beta3-binary-win32\include&quot;;.\dependencies\OpenAL\include;&quot;..\..\third-party\MainConcept\AACSDK-W32_8.6.0_2010-02-22\include&quot;"
-				PreprocessorDefinitions="VM_PROXY_MINOR=11;WIN32"
+				AdditionalIncludeDirectories="..\..\vm;..\..\..\Cross\vm;..\..\..\Cross\plugins\QAudioPlugin;..\..\..\Cross\plugins\QwaqLib;&quot;..\..\..\Cross\third-party&quot;;&quot;..\..\..\Cross\third-party\boost_1_40_0&quot;;..\..\..\..\src\vm;.\dependencies\header;.\dependencies\speex\include;&quot;.\dependencies\iaxclient-2.1beta3-binary-win32\include&quot;;&quot;..\..\..\Cross\third-party\libav\include&quot;;.\dependencies\OpenAL\include;&quot;..\..\third-party\MainConcept\AACSDK-W32_8.6.0_2010-02-22\include&quot;"
+				PreprocessorDefinitions="VM_PROXY_MINOR=11;WIN32;BOOST_ALL_DYN_LINK;__STDC_CONSTANT_MACROS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -63,10 +63,12 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/NODEFAULTLIB:LIBCMT.lib"
-				AdditionalDependencies="libspeex.lib libspeexdsp.lib OpenAL32.lib winmm.lib"
-				AdditionalLibraryDirectories=".\dependencies\speex\lib;.\dependencies\OpenAL\libs;&quot;..\..\third-party\boost_1_40_0\lib&quot;;&quot;..\\..\third-party\MainConcept\AACSDK-W32_8.6.0_2010-02-22\lib&quot;"
+				AdditionalDependencies="avcodec-53.lib avutil-51.lib avformat-53.lib libspeex.lib libspeexdsp.lib OpenAL32.lib winmm.lib boost_thread-vc90-mt-1_40.lib"
+				AdditionalLibraryDirectories=".\dependencies\speex\lib;.\dependencies\OpenAL\libs;&quot;..\..\third-party\libav\bin&quot;;&quot;..\..\third-party\boost_1_40_0\lib&quot;;&quot;..\..\third-party\MainConcept\AACSDK-W32_8.6.0_2010-02-22\lib&quot;"
 				GenerateDebugInformation="true"
-				AssemblyDebug="1"
+				AssemblyDebug="0"
+				RandomizedBaseAddress="1"
+				DataExecutionPrevention="0"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -119,10 +121,10 @@
 				AdditionalOptions="/wd4996&#x0D;&#x0A;"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="..\..\vm;..\..\..\Cross\vm;..\..\..\Cross\plugins\QAudioPlugin;..\..\..\Cross\plugins\QwaqLib;&quot;..\..\..\Cross\third-party&quot;;&quot;..\..\..\Cross\third-party\boost_1_40_0&quot;;..\..\..\..\src\vm;.\dependencies\speex\include;&quot;.\dependencies\iaxclient-2.1beta3-binary-win32\include&quot;;.\dependencies\OpenAL\include;&quot;..\..\third-party\MainConcept\AACSDK-W32_8.6.0_2010-02-22\include&quot;"
-				PreprocessorDefinitions="VM_PROXY_MINOR=11;WIN32"
+				AdditionalIncludeDirectories="..\..\vm;..\..\..\Cross\vm;..\..\..\Cross\plugins\QAudioPlugin;..\..\..\Cross\plugins\QwaqLib;&quot;..\..\..\Cross\third-party&quot;;&quot;..\..\..\Cross\third-party\boost_1_40_0&quot;;..\..\..\..\src\vm;.\dependencies\header;.\dependencies\speex\include;&quot;.\dependencies\iaxclient-2.1beta3-binary-win32\include&quot;;&quot;..\..\..\Cross\third-party\libav\include&quot;;.\dependencies\OpenAL\include;&quot;..\..\third-party\MainConcept\AACSDK-W32_8.6.0_2010-02-22\include&quot;"
+				PreprocessorDefinitions="VM_PROXY_MINOR=11;WIN32;BOOST_ALL_DYN_LINK;__STDC_CONSTANT_MACROS"
 				RuntimeLibrary="2"
-				EnableFunctionLevelLinking="true"
+				EnableFunctionLevelLinking="false"
 				WarningLevel="3"
 				DebugInformationFormat="3"
 			/>
@@ -138,11 +140,14 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions=" /NODEFAULTLIB:libcmt.lib"
-				AdditionalDependencies="libspeex.lib libspeexdsp.lib OpenAL32.lib winmm.lib"
-				AdditionalLibraryDirectories=".\dependencies\speex\lib;.\dependencies\OpenAL\libs;&quot;..\..\third-party\boost_1_40_0\lib&quot;;&quot;..\\..\third-party\MainConcept\AACSDK-W32_8.6.0_2010-02-22\lib&quot;"
+				AdditionalDependencies="avcodec-53.lib avutil-51.lib avformat-53.lib libspeex.lib libspeexdsp.lib OpenAL32.lib winmm.lib boost_thread-vc90-mt-1_40.lib"
+				AdditionalLibraryDirectories=".\dependencies\speex\lib;.\dependencies\OpenAL\libs;&quot;..\..\third-party\libav\bin&quot;;&quot;..\..\third-party\boost_1_40_0\lib&quot;;&quot;..\..\third-party\MainConcept\AACSDK-W32_8.6.0_2010-02-22\lib&quot;"
 				GenerateDebugInformation="true"
-				OptimizeReferences="2"
-				EnableCOMDATFolding="2"
+				OptimizeReferences="0"
+				EnableCOMDATFolding="0"
+				LinkTimeCodeGeneration="0"
+				RandomizedBaseAddress="1"
+				DataExecutionPrevention="0"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -224,7 +229,15 @@
 					>
 				</File>
 				<File
+					RelativePath="..\..\..\Cross\plugins\QAudioPlugin\qAudioDecoderAAC_libav.cpp"
+					>
+				</File>
+				<File
 					RelativePath="..\..\..\Cross\plugins\QAudioPlugin\qAudioEncoder.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\Cross\plugins\QAudioPlugin\qAudioEncoderAAC_libav.cpp"
 					>
 				</File>
 				<File
@@ -260,6 +273,10 @@
 					>
 				</File>
 				<File
+					RelativePath="..\..\..\Cross\plugins\QAudioPlugin\qLibAVLogger.cpp"
+					>
+				</File>
+				<File
 					RelativePath="..\..\..\Cross\plugins\QAudioPlugin\qPhoneEvents.cpp"
 					>
 				</File>
@@ -268,7 +285,7 @@
 					>
 				</File>
 				<File
-					RelativePath="..\..\..\win32\plugins\QAudioPlugin\qPluginHelpers.c"
+					RelativePath="..\..\..\Cross\plugins\QAudioPlugin\qPluginHelpers.cpp"
 					>
 				</File>
 				<File
@@ -322,7 +339,15 @@
 					>
 				</File>
 				<File
+					RelativePath="..\..\..\Cross\plugins\QAudioPlugin\qAudioDecoderAAC_libav.hpp"
+					>
+				</File>
+				<File
 					RelativePath="..\..\..\Cross\plugins\QAudioPlugin\qAudioEncoder.hpp"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\Cross\plugins\QAudioPlugin\qAudioEncoderAAC_libav.hpp"
 					>
 				</File>
 				<File
@@ -355,6 +380,10 @@
 				</File>
 				<File
 					RelativePath="..\..\..\Cross\plugins\QAudioPlugin\qAudioSpeex.h"
+					>
+				</File>
+				<File
+					RelativePath="..\..\..\Cross\plugins\QAudioPlugin\qLibAVLogger.h"
 					>
 				</File>
 				<File
@@ -413,6 +442,10 @@
 			<Filter
 				Name="third-party"
 				>
+				<File
+					RelativePath="..\..\..\Cross\third-party\libav\include\libavcodec\avcodec.h"
+					>
+				</File>
 				<File
 					RelativePath=".\dependencies\iaxclient-2.1beta3-binary-win32\include\iaxclient.h"
 					>
