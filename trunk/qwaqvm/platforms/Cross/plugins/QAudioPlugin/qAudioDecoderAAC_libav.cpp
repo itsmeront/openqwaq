@@ -190,9 +190,6 @@ AudioDecoderAAC_libav::decode(unsigned char* input, int inputSize, unsigned shor
 	// and requires a big-ass buffer.  We know how much space AAC output-buffers require, so
 	// we fake it out.
 	outSize = AVCODEC_MAX_AUDIO_FRAME_SIZE; 
-	
-	qLog() << "about to decode AAC packet of size: " << outputSize << flush;
-
 
 	int err = avcodec_decode_audio3(priv->ctxt, (int16_t*)priv->outbuf, &outSize, &packet);
 	if (err < 0) {
