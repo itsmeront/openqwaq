@@ -30,11 +30,12 @@ struct Qwaq::AudioDecoderAAC_libav_priv {
 	AVCodec *codec;
 	AVCodecContext *ctxt;
 	AVCodecParserContext *parser;
+	ReSampleContext *resampler;
 	uint8_t *extradata;
 	int extradata_size;
 
 	// "everything" in libav needs to be 16-byte aligned, or things get crashy.
-	uint8_t *outbuf;
+	int16_t *outbuf;
 };
 
 static AudioDecoderAAC_libav_priv* createPrivateContext(unsigned char* config, unsigned configSize);
@@ -48,6 +49,7 @@ AudioDecoderAAC_libav_priv* createPrivateContext(unsigned char* config, unsigned
 	priv->codec = NULL;
 	priv->ctxt = NULL;
 	priv->parser = NULL;
+	priv->resampler = NULL;
 	priv->extradata = NULL;
 	priv->extradata_size = 0;
 	priv->outbuf = NULL;
@@ -87,7 +89,26 @@ AudioDecoderAAC_libav_priv* createPrivateContext(unsigned char* config, unsigned
 		destroyPrivateContext(priv);
 		return NULL;
 	}
-	qLog() << "   3: opened codec";
+	qLog() << "   3: opened codec (" << priv->ctxt->channels << " channels) ";
+    
+	if (priv->ctxt->channels > 1) {
+		priv->resampler = av_audio_resample_init(1, 
+												 priv->ctxt->channels,
+												 // Can't use priv->ctxt->sample_rate, because it is zero.
+												 // Depending on how tuned the resampler is to human
+												 // psychoacoustics, this may cause a small loss of quality.
+												 16000,
+												 16000,
+												 AV_SAMPLE_FMT_S16, 
+												 AV_SAMPLE_FMT_S16, 
+												 // these last 4 are copied from ffmpeg.c, so you know they're good!
+												 16, 10, 0, 0.8); 
+		if (!priv->resampler) {
+			qLog() << "createPrivateContext(): cannot instantiate resampler";			
+			destroyPrivateContext(priv);
+			return NULL;
+		}
+	}
 
 	priv->parser = av_parser_init(CODEC_ID_AAC);
 	if (!priv->parser) {
@@ -97,7 +118,7 @@ AudioDecoderAAC_libav_priv* createPrivateContext(unsigned char* config, unsigned
 	}
 	qLog() << "   4: initialized codec";
 
-	priv->outbuf = (uint8_t*)av_malloc(ALIGNED_BUF_SIZE);
+	priv->outbuf = (int16_t*)av_malloc(ALIGNED_BUF_SIZE);
 	if (!priv->outbuf) {
 		qLog() << "createPrivateContext(): cannot allocate aligned output buffers";
 		destroyPrivateContext(priv);
@@ -122,12 +143,17 @@ void destroyPrivateContext(AudioDecoderAAC_libav_priv* priv)
 		av_parser_close(priv->parser);
 		priv->parser = NULL;
 	}
+	
+	if (priv->resampler) {
+		audio_resample_close(priv->resampler);
+		priv->resampler = NULL;
+	}
 
 	if (priv->outbuf) {
 		av_free(priv->outbuf);
 		priv->outbuf = NULL;
 	}
-
+	
 	delete priv;
 }
 
@@ -164,7 +190,7 @@ AudioDecoderAAC_libav::isValid()
 }
 
 int 
-AudioDecoderAAC_libav::decode(unsigned char* input, int inputSize, unsigned short* output, int outputSize, unsigned flags)
+AudioDecoderAAC_libav::decode(unsigned char* input, int inputSize, short* output, int outputSampleCount, unsigned flags)
 {
 	if (!isValid()) {
 		qLog() << "AAC decoder is not in a valid state" << flush;
@@ -177,7 +203,7 @@ AudioDecoderAAC_libav::decode(unsigned char* input, int inputSize, unsigned shor
 	av_init_packet(&packet);
 	packet.data = (uint8_t*)input;
 	packet.size = inputSize;
-	int outSize = outputSize*2;  // outputSize is number of samples, not bytes
+	int outSize = outputSampleCount*2;
 	
 	// Sanity-check to make sure our 16-byte-aligned buffer is big enough
 	if (outSize > ALIGNED_BUF_SIZE) {
@@ -191,21 +217,25 @@ AudioDecoderAAC_libav::decode(unsigned char* input, int inputSize, unsigned shor
 	// we fake it out.
 	outSize = AVCODEC_MAX_AUDIO_FRAME_SIZE; 
 
-	int err = avcodec_decode_audio3(priv->ctxt, (int16_t*)priv->outbuf, &outSize, &packet);
+	int err = avcodec_decode_audio3(priv->ctxt, priv->outbuf, &outSize, &packet);
 	if (err < 0) {
 		qLog() << "error decoding AAC packet: " << err << flush;
 		return -1;
 	}
 	
-	// Sanity check for above hack... verify that we did have enough space available.
-	if (outSize > outputSize*2) {
-		qLog() << "CATASTROPHIC ERROR: stomped on memory because buffer was too small" << flush;
-		return -1;
+	if (priv->resampler) {
+		qLog() << "resampling " << outputSampleCount << " samples" << flush;
+		audio_resample(priv->resampler, output, priv->outbuf, outputSampleCount);
 	}
-
-	// Copy data out from aligned memory
-	memcpy(output, priv->outbuf, outSize);
-
+	else {
+		// Sanity check for above hack... verify that we did have enough space available.
+		if (outSize > outputSampleCount*2) {
+			qLog() << "truncated some data" << flush;
+		}		
+		// Copy data out from aligned memory
+		memcpy(output, priv->outbuf, outSize);
+	}
+	
 	return 0;
 }
 

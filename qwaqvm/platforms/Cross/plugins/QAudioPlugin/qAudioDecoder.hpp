@@ -40,7 +40,7 @@ class AudioDecoder
 		virtual ~AudioDecoder();
 		
 		virtual bool isValid() = 0;
-		virtual int decode(unsigned char* input, int inputSize, unsigned short* output, int outputSize, unsigned flags) = 0;
+		virtual int decode(unsigned char* input, int inputSize, short* output, int outputSize, unsigned flags) = 0;
 		
 	protected:	
 		// MAGIC HERE!!!

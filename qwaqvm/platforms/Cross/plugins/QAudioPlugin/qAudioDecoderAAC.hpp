@@ -37,7 +37,7 @@ class AudioDecoderAAC : public AudioDecoder
 		virtual ~AudioDecoderAAC();
 		
 		virtual bool isValid();
-		virtual int decode(unsigned char* input, int inputSize, unsigned short* output, int outputSize, unsigned flags);
+		virtual int decode(unsigned char* input, int inputSize, short* output, int outputSize, unsigned flags);
 		
 	protected:
 		bufstream_tt *stream;

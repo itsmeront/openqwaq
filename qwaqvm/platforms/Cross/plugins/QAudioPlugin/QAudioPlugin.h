@@ -94,7 +94,7 @@ int qPortAudioShutdown();
 /* Audio decoding */
 unsigned qCreateAudioDecoder(unsigned codecType, unsigned char* config, unsigned configSize);
 void qDestroyAudioDecoder(unsigned handle);
-int qAudioDecode(unsigned handle, unsigned char* input, int inSize, unsigned short* output, int outSize, unsigned flags);
+int qAudioDecode(unsigned handle, unsigned char* input, int inSize, short* output, int outSize, unsigned flags);
 
 /* Audio encoding */
 unsigned qCreateAudioEncoder(unsigned codecType, void* feedbackChannel, unsigned char* config, unsigned configSize);
