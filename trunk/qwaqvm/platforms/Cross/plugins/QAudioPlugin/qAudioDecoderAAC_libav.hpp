@@ -34,7 +34,7 @@ class AudioDecoderAAC_libav : public AudioDecoder
 		virtual ~AudioDecoderAAC_libav();
 		
 		virtual bool isValid();
-		virtual int decode(unsigned char* input, int inputSize, unsigned short* output, int outputSize, unsigned flags);
+		virtual int decode(unsigned char* input, int inputSize, short* output, int outputSize, unsigned flags);
 		
 	protected:
 		struct AudioDecoderAAC_libav_priv* priv;

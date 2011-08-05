@@ -58,7 +58,7 @@ void qDestroyAudioDecoder(unsigned handle)
 	AudioDecoder::releaseKey(handle);
 }
 
-int qAudioDecode(unsigned handle, unsigned char* input, int inSize, unsigned short* output, int outSize, unsigned flags)
+int qAudioDecode(unsigned handle, unsigned char* input, int inSize, short* output, int outSize, unsigned flags)
 {
 	shared_ptr<AudioDecoder> decoder = AudioDecoder::withKey(handle);
 	if (!decoder.get()) {
