@@ -44,11 +44,17 @@ struct Qwaq::AudioEncoderAAC_config
 };
 #pragma pack(pop)
 
+const int ALIGNED_BUF_SIZE = 2048;
 struct Qwaq::AudioEncoderAAC_libav_priv {
 	AVCodec *codec;
 	AVCodecContext *ctxt;
 	
 	AudioEncoderAAC_config config;	
+
+	// Let's see if using 16-byte-aligned input/output buffers has
+	// any impact on the 100% crashiness :-)
+	uint8_t *outbuf;
+	uint16_t *inbuf;
 };
 
 static AudioEncoderAAC_libav_priv* createPrivateContext(unsigned char* config, unsigned configSize);
@@ -88,17 +94,28 @@ AudioEncoderAAC_libav_priv* createPrivateContext(unsigned char* config, unsigned
 		
 	priv->codec = NULL;
 	priv->ctxt = NULL;
+	priv->inbuf = NULL;
+	priv->outbuf = NULL;
+
+	// Allocate some 16-byte-aligned input and output buffers.
+	priv->outbuf = (uint8_t*)av_malloc(ALIGNED_BUF_SIZE);
+	priv->inbuf = (uint16_t*)av_malloc(ALIGNED_BUF_SIZE);
+	if (!priv->outbuf || !priv->inbuf) {
+		qLog() << "createPrivateContext(): cannot allocate enuff 16-byte aligned scratch-space";
+		destroyPrivateContext(priv);
+		return NULL;
+	}
 	
 	// Find the codec-type for AAC, and allocate a context for it.
 	priv->codec = avcodec_find_encoder(CODEC_ID_AAC);  
 	if (!priv->codec) {
-		qerr << endl << "createPrivateContext(): cannot find AAC encoder";
+		qLog() << "createPrivateContext(): cannot find AAC encoder";
 		destroyPrivateContext(priv);
 		return NULL;
 	}
 	priv->ctxt = avcodec_alloc_context();
 	if (!priv->ctxt) {
-		qerr << endl << "createPrivateContext(): cannot allocate AAC context";
+		qLog() << "createPrivateContext(): cannot allocate AAC context";
 		destroyPrivateContext(priv);
 		return NULL;
 	}
@@ -115,7 +132,7 @@ AudioEncoderAAC_libav_priv* createPrivateContext(unsigned char* config, unsigned
 	
 	// Open the codec.
 	if (avcodec_open(priv->ctxt, priv->codec) < 0) {
-		qerr << endl << "createPrivateContext(): cannot open AAC codec";
+		qLog() << "createPrivateContext(): cannot open AAC codec";
 		destroyPrivateContext(priv);
 		return NULL;
 	}
@@ -130,6 +147,14 @@ void destroyPrivateContext(AudioEncoderAAC_libav_priv* priv) {
 		avcodec_close(priv->ctxt);
 		av_free(priv->ctxt);
 		priv->ctxt = NULL;
+	}
+
+	if (priv->inbuf) {
+		av_free(priv->inbuf);
+	}
+
+	if (priv->outbuf) {
+		av_free(priv->outbuf);
 	}
 	
 	delete priv;
@@ -166,9 +191,15 @@ int AudioEncoderAAC_libav::asyncEncode(short *bufferPtr, int sampleCount)
 		return -1;	
 	}
 	
-	uint8_t output[10000];
+	// Copy input data into mem-aligned buffer.
+	if (sampleCount*2 > ALIGNED_BUF_SIZE) { 
+		qLog() << "AudioEncoderAAC_libav::asyncEncode() ...  16-byte aligned buffer is too small (" << ALIGNED_BUF_SIZE << "bytes)";
+		return -1;
+	}
+	memcpy(priv->inbuf, bufferPtr, sampleCount*2);
+
 	int frameBytes = priv->ctxt->frame_size * priv->ctxt->channels * 2;  // 16 bits per sample
-	int packetSize = avcodec_encode_audio(priv->ctxt, output, 10000, bufferPtr);
+	int packetSize = avcodec_encode_audio(priv->ctxt, priv->outbuf, ALIGNED_BUF_SIZE, (short*)priv->inbuf);
 	
 	// Check for error.
 	if (packetSize < 0) {
@@ -182,7 +213,7 @@ int AudioEncoderAAC_libav::asyncEncode(short *bufferPtr, int sampleCount)
 
 	// Success!  Return the data to Squeak via a feedback channel.
 	qLog() << "AudioEncoderAAC_libav::asyncEncode() ...  encoded packet of size: " << packetSize;
-	pushFeedbackData(output, packetSize);
+	pushFeedbackData(priv->outbuf, packetSize);
 
 	return 0;
 }
