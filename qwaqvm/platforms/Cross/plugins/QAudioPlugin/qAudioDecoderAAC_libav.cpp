@@ -224,7 +224,7 @@ AudioDecoderAAC_libav::decode(unsigned char* input, int inputSize, short* output
 	}
 	
 	if (priv->resampler) {
-		qLog() << "resampling " << outputSampleCount << " samples" << flush;
+//		qLog() << "resampling " << outputSampleCount << " samples" << flush;
 		audio_resample(priv->resampler, output, priv->outbuf, outputSampleCount);
 	}
 	else {

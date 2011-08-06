@@ -162,7 +162,7 @@ void destroyPrivateContext(AudioEncoderAAC_libav_priv* priv) {
 
 
 AudioEncoderAAC_libav::AudioEncoderAAC_libav(FeedbackChannel* feedbackChannel, unsigned char* config, unsigned configSize) 
-: AudioEncoder(feedbackChannel), inFrameCount(0), outFrameCount(0)
+: AudioEncoder(feedbackChannel), ring(50000), inFrameCount(0), outFrameCount(0)
 {	
 	priv = createPrivateContext(config, configSize);
 	if (priv) {
@@ -186,34 +186,40 @@ int AudioEncoderAAC_libav::asyncEncode(short *bufferPtr, int sampleCount)
 		qLog() << "AudioEncoderAAC_libav::asyncEncode() ...  no encoder available!" << flush;
 		return -1;
 	}
-	if (sampleCount != priv->ctxt->frame_size * priv->ctxt->channels) {
-		qLog() << "AudioEncoderAAC_libav::asyncEncode() ...  sampleCount must be frame-size * #channels" << flush;
-		return -1;	
+
+	// We first push the data into a ring-buffer, which allows us to deal with input that isn't a 
+	// multiple of 1024.
+	try {
+		ring.put(bufferPtr, sampleCount*2);
 	}
-	
-	// Copy input data into mem-aligned buffer.
-	if (sampleCount*2 > ALIGNED_BUF_SIZE) { 
-		qLog() << "AudioEncoderAAC_libav::asyncEncode() ...  16-byte aligned buffer is too small (" << ALIGNED_BUF_SIZE << "bytes)";
+	catch(std::string e) {
+		qLog() << "AudioEncoderAAC_libav::asyncEncode() ...  ring-buffer error: " << e;
+		ring.clear();
 		return -1;
 	}
-	memcpy(priv->inbuf, bufferPtr, sampleCount*2);
-
+	
+	// Keep pulling from the ring-buffer and decoding, as long as there is enough data.
 	int frameBytes = priv->ctxt->frame_size * priv->ctxt->channels * 2;  // 16 bits per sample
-	int packetSize = avcodec_encode_audio(priv->ctxt, priv->outbuf, ALIGNED_BUF_SIZE, (short*)priv->inbuf);
-	
-	// Check for error.
-	if (packetSize < 0) {
-		qLog() << "AudioEncoderAAC_libav::asyncEncode() ...  encode failed with status: " << packetSize << flush;
-		return -1;
-	}
-	else if (packetSize == 0) {
-		qLog() << "AudioEncoderAAC_libav::asyncEncode() ...  no packet was encoded";
-		return 0;
-	}
+	while (ring.dataSize() >= frameBytes) { 
+		ring.get(priv->inbuf, frameBytes);
 
-	// Success!  Return the data to Squeak via a feedback channel.
-	qLog() << "AudioEncoderAAC_libav::asyncEncode() ...  encoded packet of size: " << packetSize;
-	pushFeedbackData(priv->outbuf, packetSize);
+		int packetSize = avcodec_encode_audio(priv->ctxt, priv->outbuf, frameBytes, (short*)priv->inbuf);
+		qLog() << "PULLED " << frameBytes << " bytes AND ENCODED " << packetSize << " bytes" << flush;
+	
+		// Check for error.
+		if (packetSize < 0) {
+			qLog() << "AudioEncoderAAC_libav::asyncEncode() ...  encode failed with status: " << packetSize << flush;
+			return -1;
+		}
+		else if (packetSize == 0) {
+		//	qLog() << "AudioEncoderAAC_libav::asyncEncode() ...  no packet was encoded";
+			return 0; // this is fairly normal... no need to log anything.
+		}
+
+		// Success!  Return the data to Squeak via a feedback channel.
+		// qLog() << "AudioEncoderAAC_libav::asyncEncode() ...  encoded packet of size: " << packetSize;
+		pushFeedbackData(priv->outbuf, packetSize);
+	}
 
 	return 0;
 }

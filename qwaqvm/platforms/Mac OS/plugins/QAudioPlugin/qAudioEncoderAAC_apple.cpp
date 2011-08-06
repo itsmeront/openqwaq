@@ -257,7 +257,7 @@ int AudioEncoderAAC_apple::asyncEncode(short *bufferPtr, int sampleCount)
 		ring.put(bufferPtr, sampleCount*2);
 	}
 	catch(std::string e) {
-		qLog() << "AudioEncoderAAC_apple::asyncEncode() ...  " << e;
+		qLog() << "AudioEncoderAAC_apple::asyncEncode() ...  ring-buffer error: " << e;
 		ring.clear();
 		return -1;
 	}
