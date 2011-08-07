@@ -108,6 +108,7 @@ AudioEncoderAAC_libav_priv* createPrivateContext(unsigned char* config, unsigned
 	
 	// Find the codec-type for AAC, and allocate a context for it.
 	priv->codec = avcodec_find_encoder(CODEC_ID_AAC);  
+//	priv->codec = avcodec_find_encoder_by_name("libfaac"); //("libvo_aacenc");
 	if (!priv->codec) {
 		qLog() << "createPrivateContext(): cannot find AAC encoder";
 		destroyPrivateContext(priv);
