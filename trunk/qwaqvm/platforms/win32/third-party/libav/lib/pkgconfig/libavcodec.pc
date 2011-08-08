@@ -5,10 +5,10 @@ includedir=${prefix}/include
 
 Name: libavcodec
 Description: Libav codec library
-Version: 53.3.0
+Version: 53.7.1
 Requires: 
-Requires.private: libavutil = 51.1.0
+Requires.private: libavutil = 51.8.0
 Conflicts:
 Libs: -L${libdir} -lavcodec 
-Libs.private: -lavicap32 -lws2_32 -lx264 -lvorbisenc -lvorbis -logg -L/usr/mingw32/usr/lib -lrtmp -lz -lpolarssl -lws2_32 -lwinmm -lgdi32 -lmp3lame -lavifil32 -lm -lz -lpsapi
+Libs.private: -lavicap32 -lws2_32 -lx264 -lvpx -lvpx -lvorbisenc -lvorbis -logg -L/usr/mingw32/usr/lib -lrtmp -lz -lpolarssl -lws2_32 -lwinmm -lgdi32 -lmp3lame -lavifil32 -lm -lz -lpsapi
 Cflags: -I${includedir}

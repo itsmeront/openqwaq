@@ -5,9 +5,9 @@ includedir=${prefix}/include
 
 Name: libswscale
 Description: Libav image rescaling library
-Version: 1.1.0
+Version: 2.0.0
 Requires: 
-Requires.private: libavutil = 51.1.0
+Requires.private: libavutil = 51.8.0
 Conflicts:
 Libs: -L${libdir} -lswscale 
 Libs.private: -lm

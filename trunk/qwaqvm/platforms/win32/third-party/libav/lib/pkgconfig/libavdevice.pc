@@ -7,8 +7,8 @@ Name: libavdevice
 Description: Libav device handling library
 Version: 53.0.0
 Requires: 
-Requires.private: libavformat = 53.0.3
+Requires.private: libavformat = 53.3.0
 Conflicts:
 Libs: -L${libdir} -lavdevice 
-Libs.private: -lavicap32 -lws2_32 -lx264 -lvorbisenc -lvorbis -logg -L/usr/mingw32/usr/lib -lrtmp -lz -lpolarssl -lws2_32 -lwinmm -lgdi32 -lmp3lame -lavifil32 -lm -lz -lpsapi
+Libs.private: -lavicap32 -lws2_32 -lx264 -lvpx -lvpx -lvorbisenc -lvorbis -logg -L/usr/mingw32/usr/lib -lrtmp -lz -lpolarssl -lws2_32 -lwinmm -lgdi32 -lmp3lame -lavifil32 -lm -lz -lpsapi
 Cflags: -I${includedir}
