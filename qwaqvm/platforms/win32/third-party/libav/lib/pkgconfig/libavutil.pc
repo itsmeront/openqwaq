@@ -5,7 +5,7 @@ includedir=${prefix}/include
 
 Name: libavutil
 Description: Libav utility library
-Version: 51.1.0
+Version: 51.8.0
 Requires: 
 Requires.private: 
 Conflicts:

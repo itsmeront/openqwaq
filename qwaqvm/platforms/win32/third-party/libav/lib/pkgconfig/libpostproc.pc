@@ -4,10 +4,10 @@ libdir=${prefix}/lib
 includedir=${prefix}/include
 
 Name: libpostproc
-Description: Libav post processing library
+Description: Libav postprocessing library
 Version: 52.0.0
 Requires: 
-Requires.private: libavutil = 51.1.0
+Requires.private: libavutil = 51.8.0
 Conflicts:
 Libs: -L${libdir} -lpostproc 
 Libs.private: 
