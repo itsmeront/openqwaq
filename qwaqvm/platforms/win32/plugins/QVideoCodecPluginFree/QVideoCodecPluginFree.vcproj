@@ -61,7 +61,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="avcodec-53.lib avformat-53.lib avutil-51.lib swscale-1.lib boost_thread-vc90-mt-1_40.lib libx264.dll.a"
+				AdditionalDependencies="avcodec-53.lib avformat-53.lib avutil-51.lib swscale-2.lib boost_thread-vc90-mt-1_40.lib libx264.dll.a"
 				OutputFile="$(OutDir)\$(ProjectName).dll"
 				AdditionalLibraryDirectories="&quot;..\..\third-party\boost_1_40_0\lib&quot;;&quot;..\..\..\win32\third-party\libx264&quot;;&quot;..\..\..\win32\third-party\libav\bin&quot;"
 				GenerateDebugInformation="true"
@@ -138,7 +138,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="avcodec-53.lib avformat-53.lib avutil-51.lib swscale-1.lib boost_thread-vc90-mt-1_40.lib libx264.dll.a"
+				AdditionalDependencies="avcodec-53.lib avformat-53.lib avutil-51.lib swscale-2.lib boost_thread-vc90-mt-1_40.lib libx264.dll.a"
 				OutputFile="$(OutDir)\$(ProjectName).dll"
 				AdditionalLibraryDirectories="&quot;..\..\third-party\boost_1_40_0\lib&quot;;&quot;..\..\..\win32\third-party\libx264&quot;;&quot;..\..\..\win32\third-party\libav\bin&quot;"
 				GenerateDebugInformation="true"
