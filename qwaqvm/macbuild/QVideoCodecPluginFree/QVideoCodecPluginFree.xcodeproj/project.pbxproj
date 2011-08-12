@@ -16,7 +16,6 @@
 		03497A151392DC6A00A58BC5 /* qVideoDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03497A141392DC6A00A58BC5 /* qVideoDecoder.cpp */; };
 		03497A3D1392DE6700A58BC5 /* qVideoCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03497A3C1392DE6700A58BC5 /* qVideoCommon.cpp */; };
 		03497A641392E0CD00A58BC5 /* qVideoEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03497A631392E0CD00A58BC5 /* qVideoEncoder.cpp */; };
-		03497ADC1394329800A58BC5 /* libboost_thread-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03497ADB1394329800A58BC5 /* libboost_thread-mt.a */; };
 		034E555E13C8E95200FCCB66 /* qVideoFreePlatformSpecific.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 034E555D13C8E95200FCCB66 /* qVideoFreePlatformSpecific.cpp */; };
 		03669EC413949E510043B937 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03669EC313949E510043B937 /* libavformat.a */; };
 		03669EC813949E860043B937 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03669EC713949E860043B937 /* libavcodec.a */; };
@@ -26,6 +25,7 @@
 		03669EE71394A01B0043B937 /* libbz2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03669EE61394A01B0043B937 /* libbz2.a */; };
 		0366A0451398CC5F0043B937 /* qLibAVLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0366A0441398CC5F0043B937 /* qLibAVLogger.cpp */; };
 		0366A0DB139F6E060043B937 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0366A0DA139F6E060043B937 /* libswscale.a */; };
+		03FB829A13F51FD900AFD55D /* libboost_thread-mt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FB829913F51FD900AFD55D /* libboost_thread-mt.a */; };
 		8D5B49A804867FD3000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49A704867FD3000E48DA /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,6 @@
 		03497A141392DC6A00A58BC5 /* qVideoDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qVideoDecoder.cpp; path = ../../platforms/Cross/plugins/QVideoCodecPluginFree/qVideoDecoder.cpp; sourceTree = SOURCE_ROOT; };
 		03497A3C1392DE6700A58BC5 /* qVideoCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qVideoCommon.cpp; path = ../../platforms/Cross/plugins/QVideoCodecPlugin/qVideoCommon.cpp; sourceTree = SOURCE_ROOT; };
 		03497A631392E0CD00A58BC5 /* qVideoEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qVideoEncoder.cpp; path = ../../platforms/Cross/plugins/QVideoCodecPluginFree/qVideoEncoder.cpp; sourceTree = SOURCE_ROOT; };
-		03497ADB1394329800A58BC5 /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_thread-mt.a"; path = "/opt/local/lib/libboost_thread-mt.a"; sourceTree = "<absolute>"; };
 		03497B0113944EE500A58BC5 /* interp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = interp.h; path = ../../src/vm/interp.h; sourceTree = SOURCE_ROOT; };
 		03497B0213944EE500A58BC5 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = "../../platforms/Mac OS/vm/config.h"; sourceTree = SOURCE_ROOT; };
 		03497B0313944EE500A58BC5 /* sqPlatformSpecific.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqPlatformSpecific.h; path = "../../platforms/Mac OS/vm/sqPlatformSpecific.h"; sourceTree = SOURCE_ROOT; };
@@ -77,6 +76,7 @@
 		0366A0C2139F6B040043B937 /* x264.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x264.h; path = "../../platforms/Cross/third-party/libx264/include/x264.h"; sourceTree = SOURCE_ROOT; };
 		0366A0C3139F6B040043B937 /* x264_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = x264_config.h; path = "../../platforms/Cross/third-party/libx264/include/x264_config.h"; sourceTree = SOURCE_ROOT; };
 		0366A0DA139F6E060043B937 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = "../../platforms/Mac OS/third-party/libav/lib/libswscale.a"; sourceTree = SOURCE_ROOT; };
+		03FB829913F51FD900AFD55D /* libboost_thread-mt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libboost_thread-mt.a"; path = "../../platforms/Mac OS/third-party/boost/libboost_thread-mt.a"; sourceTree = "<group>"; };
 		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8D576316048677EA00EA77CD /* QVideoCodecPluginFree.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QVideoCodecPluginFree.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D576317048677EA00EA77CD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,7 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03497ADC1394329800A58BC5 /* libboost_thread-mt.a in Frameworks */,
 				03669EC413949E510043B937 /* libavformat.a in Frameworks */,
 				03669EC813949E860043B937 /* libavcodec.a in Frameworks */,
 				03669ECC13949EAA0043B937 /* libavutil.a in Frameworks */,
@@ -95,6 +94,7 @@
 				03669EE313949FD00043B937 /* libx264.a in Frameworks */,
 				03669EE71394A01B0043B937 /* libbz2.a in Frameworks */,
 				0366A0DB139F6E060043B937 /* libswscale.a in Frameworks */,
+				03FB829A13F51FD900AFD55D /* libboost_thread-mt.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,12 +214,12 @@
 		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				03FB829913F51FD900AFD55D /* libboost_thread-mt.a */,
 				0366A0DA139F6E060043B937 /* libswscale.a */,
 				03669EE213949FD00043B937 /* libx264.a */,
 				03669EC313949E510043B937 /* libavformat.a */,
 				03669EC713949E860043B937 /* libavcodec.a */,
 				03669ECB13949EAA0043B937 /* libavutil.a */,
-				03497ADB1394329800A58BC5 /* libboost_thread-mt.a */,
 				03669EDE13949F8B0043B937 /* libz.a */,
 				03669EE61394A01B0043B937 /* libbz2.a */,
 			);
@@ -282,6 +282,9 @@
 /* Begin PBXProject section */
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = 1DEB911E08733D790010E9CD /* Build configuration list for PBXProject "QVideoCodecPluginFree" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -358,8 +361,8 @@
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../platforms/Mac OS/third-party/libav/lib\"",
-					/opt/local/lib,
+					"$(SRCROOT)/../../platforms/Mac\\ OS/third-party/boost",
+					"$(SRCROOT)/../../platforms/Mac\\ OS/third-party/libav/lib",
 				);
 				PRODUCT_NAME = QVideoCodecPluginFree;
 				WRAPPER_EXTENSION = bundle;
@@ -376,8 +379,8 @@
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../platforms/Mac OS/third-party/libav/lib\"",
-					/opt/local/lib,
+					"$(SRCROOT)/../../platforms/Mac\\ OS/third-party/boost",
+					"$(SRCROOT)/../../platforms/Mac\\ OS/third-party/libav/lib",
 				);
 				PRODUCT_NAME = QVideoCodecPluginFree;
 				WRAPPER_EXTENSION = bundle;
@@ -400,16 +403,17 @@
 					/opt/local/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../../platforms/Mac OS/third-party/libav/lib\"",
-					/opt/local/lib,
+					"$(SRCROOT)/../../platforms/Mac\\ OS/third-party/libx264",
+					"$(SRCROOT)/../../platforms/Mac\\ OS/third-party/boost",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-read_only_relocs",
 					suppress,
 				);
 				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -429,16 +433,17 @@
 					/opt/local/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"\"$(SRCROOT)/../../platforms/Mac OS/third-party/libav/lib\"",
-					/opt/local/lib,
+					"$(SRCROOT)/../../platforms/Mac\\ OS/third-party/libx264",
+					"$(SRCROOT)/../../platforms/Mac\\ OS/third-party/boost",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-read_only_relocs",
 					suppress,
 				);
 				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
