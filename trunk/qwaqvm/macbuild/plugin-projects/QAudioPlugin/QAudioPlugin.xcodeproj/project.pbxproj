@@ -674,8 +674,9 @@
 					"$(SRCROOT)/../../../platforms/Cross/plugins/QAudioPlugin",
 					"$(SRCROOT)/../../../platforms/Cross/third-party",
 					"$(SRCROOT)/../../../platforms/Cross/third-party/libav/include",
-					/opt/local/include,
+					"$(SRCROOT)/../../../platforms/Cross/third-party/ffboost_1_40_0/",
 					.,
+					/opt/local/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../src/plugins/QAudioPlugin",
@@ -720,8 +721,9 @@
 					"$(SRCROOT)/../../../platforms/Cross/plugins/QAudioPlugin",
 					"$(SRCROOT)/../../../platforms/Cross/third-party",
 					"$(SRCROOT)/../../../platforms/Cross/third-party/libav/include",
-					/opt/local/include,
+					"$(SRCROOT)/../../../platforms/Cross/third-party/ffboost_1_40_0/",
 					.,
+					/opt/local/include,
 				);
 				ICC_FP_MODEL = src;
 				ICC_OPTLEVEL = speedHLO;
@@ -746,10 +748,7 @@
 			baseConfigurationReference = 508817E709F0CA040071BF1A /* QAudioPluginTarget.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/System/Library/Frameworks",
-					"$(SRCROOT)/../../third-party/MainConcept/AVCSDK-OSXINTL32_8.5.0_OSX/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SDKROOT)/System/Library/Frameworks";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -761,10 +760,10 @@
 					"$(inherited)",
 					"$(SRCROOT)/speex",
 					"$(SRCROOT)/../../third-party/PortAudio",
-					"\"$(SRCROOT)/../../third-party/boost_1_40_0/lib\"",
+					"\"$(SRCROOT)/../../../platforms/Mac OS/third-party/boost\"",
 					"\"$(SRCROOT)/../../../platforms/Mac OS/third-party/libav/lib\"",
 					"\"$(SRCROOT)/../../../platforms/Mac OS/third-party/speex\"",
-					/opt/local/lib,
+					"\"$(SRCROOT)/../../../platforms/Mac OS/third-party/portaudio\"",
 				);
 				SDKROOT = macosx10.6;
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
@@ -776,10 +775,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 508817E709F0CA040071BF1A /* QAudioPluginTarget.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/System/Library/Frameworks",
-					"$(SRCROOT)/../../third-party/MainConcept/AVCSDK-OSXINTL32_8.5.0_OSX/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SDKROOT)/System/Library/Frameworks";
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = QAudioPlugin_Prefix.pch;
@@ -792,10 +788,10 @@
 					"$(inherited)",
 					"$(SRCROOT)/speex",
 					"$(SRCROOT)/../../third-party/PortAudio",
-					"\"$(SRCROOT)/../../third-party/boost_1_40_0/lib\"",
+					"\"$(SRCROOT)/../../../platforms/Mac OS/third-party/boost\"",
 					"\"$(SRCROOT)/../../../platforms/Mac OS/third-party/libav/lib\"",
 					"\"$(SRCROOT)/../../../platforms/Mac OS/third-party/speex\"",
-					/opt/local/lib,
+					"\"$(SRCROOT)/../../../platforms/Mac OS/third-party/portaudio\"",
 				);
 				SDKROOT = macosx10.6;
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
