@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 44;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		03212C7813B0499700EBA6CA /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03212C7713B0499700EBA6CA /* libavutil.a */; };
 		03212C8313B04AA300EBA6CA /* qAudioPlatformSpecific.c in Sources */ = {isa = PBXBuildFile; fileRef = 03212C8213B04AA300EBA6CA /* qAudioPlatformSpecific.c */; };
 		03212CA013B068F900EBA6CA /* qLibAVLogger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03212C9F13B068F900EBA6CA /* qLibAVLogger.cpp */; };
+		0332951913F507DF00E91EAA /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0332951713F507DF00E91EAA /* libspeex.a */; };
+		0332951A13F507DF00E91EAA /* libspeexdsp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0332951813F507DF00E91EAA /* libspeexdsp.a */; };
 		034E56AA13D2BDA400FCCB66 /* qAudioEncoderAAC_apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 034E56A913D2BDA400FCCB66 /* qAudioEncoderAAC_apple.cpp */; };
 		451352850FE2D0F5009B60F6 /* qAudioEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 451352840FE2D0F5009B60F6 /* qAudioEncoder.cpp */; };
 		45206C8F0FD615AC008D2F67 /* qPortAudioInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45206C8D0FD615AC008D2F67 /* qPortAudioInterface.cpp */; };
@@ -25,8 +27,6 @@
 		4546A6A30DE391C50095536B /* qAudioSpeex.c in Sources */ = {isa = PBXBuildFile; fileRef = 4546A6A00DE391C50095536B /* qAudioSpeex.c */; };
 		4546A6A40DE391C50095536B /* qAudioOpenAL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4546A6A10DE391C50095536B /* qAudioOpenAL.cpp */; };
 		4546A6AA0DE392C40095536B /* QAudioPlugin.c in Sources */ = {isa = PBXBuildFile; fileRef = 4546A6A90DE392C40095536B /* QAudioPlugin.c */; };
-		4546A6D80DE392F00095536B /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4546A6D60DE392F00095536B /* libspeex.a */; };
-		4546A6D90DE392F00095536B /* libspeexdsp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4546A6D70DE392F00095536B /* libspeexdsp.a */; };
 		4546A6DB0DE393010095536B /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4546A6DA0DE393010095536B /* OpenAL.framework */; };
 		4548DA9D0FBCDEB900B11844 /* qAudioSinkMixer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4548DA9C0FBCDEB900B11844 /* qAudioSinkMixer.cpp */; };
 		4569C1EB0E7347FA00331BE2 /* qAudioSinkForDebugFeedback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4569C1EA0E7347FA00331BE2 /* qAudioSinkForDebugFeedback.cpp */; };
@@ -134,6 +134,8 @@
 		03212C8213B04AA300EBA6CA /* qAudioPlatformSpecific.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = qAudioPlatformSpecific.c; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioPlatformSpecific.c; sourceTree = SOURCE_ROOT; };
 		03212C9E13B068F100EBA6CA /* qLibAVLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = qLibAVLogger.h; path = ../../../platforms/Cross/plugins/QAudioPlugin/qLibAVLogger.h; sourceTree = SOURCE_ROOT; };
 		03212C9F13B068F900EBA6CA /* qLibAVLogger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qLibAVLogger.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qLibAVLogger.cpp; sourceTree = SOURCE_ROOT; };
+		0332951713F507DF00E91EAA /* libspeex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libspeex.a; path = "../../../platforms/Mac OS/third-party/speex/libspeex.a"; sourceTree = "<group>"; };
+		0332951813F507DF00E91EAA /* libspeexdsp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libspeexdsp.a; path = "../../../platforms/Mac OS/third-party/speex/libspeexdsp.a"; sourceTree = "<group>"; };
 		034E56A913D2BDA400FCCB66 /* qAudioEncoderAAC_apple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioEncoderAAC_apple.cpp; path = "../../../platforms/Mac OS/plugins/QAudioPlugin/qAudioEncoderAAC_apple.cpp"; sourceTree = SOURCE_ROOT; };
 		034E56D513D2C1B800FCCB66 /* qAudioEncoderAAC_apple.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioEncoderAAC_apple.hpp; path = "../../../platforms/Mac OS/plugins/QAudioPlugin/qAudioEncoderAAC_apple.hpp"; sourceTree = SOURCE_ROOT; };
 		451352830FE2D0F5009B60F6 /* qAudioEncoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioEncoder.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioEncoder.hpp; sourceTree = SOURCE_ROOT; };
@@ -173,8 +175,6 @@
 		4546A6A10DE391C50095536B /* qAudioOpenAL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioOpenAL.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioOpenAL.cpp; sourceTree = SOURCE_ROOT; };
 		4546A6A70DE392710095536B /* QAudioPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAudioPlugin_Prefix.pch; sourceTree = "<group>"; };
 		4546A6A90DE392C40095536B /* QAudioPlugin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = QAudioPlugin.c; path = ../../../src/plugins/QAudioPlugin/QAudioPlugin.c; sourceTree = SOURCE_ROOT; };
-		4546A6D60DE392F00095536B /* libspeex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libspeex.a; path = /opt/local/lib/libspeex.a; sourceTree = "<absolute>"; };
-		4546A6D70DE392F00095536B /* libspeexdsp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libspeexdsp.a; path = /opt/local/lib/libspeexdsp.a; sourceTree = "<absolute>"; };
 		4546A6DA0DE393010095536B /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		4548DA9B0FBCDEB900B11844 /* qAudioSinkMixer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = qAudioSinkMixer.hpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioSinkMixer.hpp; sourceTree = SOURCE_ROOT; };
 		4548DA9C0FBCDEB900B11844 /* qAudioSinkMixer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qAudioSinkMixer.cpp; path = ../../../platforms/Cross/plugins/QAudioPlugin/qAudioSinkMixer.cpp; sourceTree = SOURCE_ROOT; };
@@ -224,8 +224,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4546A6D80DE392F00095536B /* libspeex.a in Frameworks */,
-				4546A6D90DE392F00095536B /* libspeexdsp.a in Frameworks */,
 				4546A6DB0DE393010095536B /* OpenAL.framework in Frameworks */,
 				72D9F0E60E929D880062278A /* CoreAudio.framework in Frameworks */,
 				457C02C50FD33B9C000FCB6F /* AudioToolbox.framework in Frameworks */,
@@ -237,6 +235,8 @@
 				03212C6413B0492F00EBA6CA /* libavcodec.a in Frameworks */,
 				03212C7013B0498000EBA6CA /* libavformat.a in Frameworks */,
 				03212C7813B0499700EBA6CA /* libavutil.a in Frameworks */,
+				0332951913F507DF00E91EAA /* libspeex.a in Frameworks */,
+				0332951A13F507DF00E91EAA /* libspeexdsp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,8 +519,8 @@
 				457C02C40FD33B9C000FCB6F /* AudioToolbox.framework */,
 				72D9F0E50E929D880062278A /* CoreAudio.framework */,
 				4546A6DA0DE393010095536B /* OpenAL.framework */,
-				4546A6D60DE392F00095536B /* libspeex.a */,
-				4546A6D70DE392F00095536B /* libspeexdsp.a */,
+				0332951713F507DF00E91EAA /* libspeex.a */,
+				0332951813F507DF00E91EAA /* libspeexdsp.a */,
 				03212B1D13ADF3BD00EBA6CA /* libportaudio.a */,
 				459A515F1090D90B00225F08 /* libboost_thread-mt.a */,
 				03212C6313B0492F00EBA6CA /* libavcodec.a */,
@@ -558,8 +558,11 @@
 /* Begin PBXProject section */
 		508817C409F0C9740071BF1A /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = 508817C509F0C9740071BF1A /* Build configuration list for PBXProject "QAudioPlugin" */;
-			compatibilityVersion = "Xcode 3.0";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -662,6 +665,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_USE_GCC3_PFE_SUPPORT = NO;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -681,10 +685,9 @@
 					"-read_only_relocs",
 					suppress,
 				);
-				PREBINDING = NO;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = macosx10.6;
 				STRIP_INSTALLED_PRODUCT = NO;
 				STRIP_STYLE = debugging;
 			};
@@ -708,7 +711,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_USE_GCC3_PFE_SUPPORT = NO;
-				GCC_VERSION = 4.2;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -732,10 +735,9 @@
 					"-read_only_relocs",
 					suppress,
 				);
-				PREBINDING = NO;
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				SDKROOT = macosx10.6;
 			};
 			name = Release;
 		};
@@ -749,20 +751,22 @@
 					"$(SRCROOT)/../../third-party/MainConcept/AVCSDK-OSXINTL32_8.5.0_OSX/Frameworks",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = QAudioPlugin_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
 				GENERATE_PKGINFO_FILE = YES;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/speex",
 					"$(SRCROOT)/../../third-party/PortAudio",
 					"\"$(SRCROOT)/../../third-party/boost_1_40_0/lib\"",
-					/opt/local/lib,
 					"\"$(SRCROOT)/../../../platforms/Mac OS/third-party/libav/lib\"",
+					"\"$(SRCROOT)/../../../platforms/Mac OS/third-party/speex\"",
+					/opt/local/lib,
 				);
+				SDKROOT = macosx10.6;
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = static;
 				ZERO_LINK = YES;
 			};
@@ -780,6 +784,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = QAudioPlugin_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
 				GENERATE_PKGINFO_FILE = YES;
 				ICC_FP_MODEL = src;
 				ICC_OPTLEVEL = speedHLO;
@@ -788,9 +793,11 @@
 					"$(SRCROOT)/speex",
 					"$(SRCROOT)/../../third-party/PortAudio",
 					"\"$(SRCROOT)/../../third-party/boost_1_40_0/lib\"",
-					/opt/local/lib,
 					"\"$(SRCROOT)/../../../platforms/Mac OS/third-party/libav/lib\"",
+					"\"$(SRCROOT)/../../../platforms/Mac OS/third-party/speex\"",
+					/opt/local/lib,
 				);
+				SDKROOT = macosx10.6;
 				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
 				STRIP_INSTALLED_PRODUCT = YES;
 				STRIP_STYLE = debugging;
