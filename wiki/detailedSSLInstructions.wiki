@@ -30,8 +30,8 @@ Mark Loparco<br>
 # 1. install prerequisite components<br>
 # ===========================================<br>
 # these may already be installed from step 1 of the OQ installation instructions, but just in case:<br>
-yum install mod_ssl<br>
-yum install openssl<br>
+<b>yum install mod_ssl</b><br>
+<b>yum install openssl</b><br>
 
 # 2. enable https connections<br>
 # ===========================================<br>
@@ -42,7 +42,7 @@ vi /home/openqwaq/server/etc/OpenQwaq-https.conf<br>
 # change the ServerName from openqwaq.openqwaq.org to YOUR_SERVER_NAME or YOUR_SERVER_IP<br>
 # change "loadlhost" typo in file (not sure if needed but why not?):<br>
 # change "Allow from loadlhost.localdomain" to "Allow from localhost.localdomain"<br>
-# make sure that the # SSL cert/key line within <VirtualHost *:8443> reads:<br>
+# make sure that the # SSL cert/key line after VirtualHost *:8443 reads:<br>
 # SSLCertificateFile /home/openqwaq/server/etc/keys/openqwaq.com.crt<br>
 # SSLCertificateKeyFile /home/openqwaq/server/etc/keys/openqwaq.com.key.insecure<br>
 # note: these file names must match those created in Step #4 below<br>
