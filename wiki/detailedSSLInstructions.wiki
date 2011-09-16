@@ -2,39 +2,39 @@
 
 = Introduction =
 
-It's best to login to the OpenQwaq Admin pages using the secure HTTPS protocol. I took a stab at this and have been able to get it to work a couple times by following the directions verbatim (copy-and-paste recommended!). 
+For security reasons, it's best to login to the OpenQwaq Admin pages using the secure HTTPS protocol. I took a stab at this and have been able to get it to work a couple times by implementing the directions verbatim (copy-and-paste recommended!). 
 <p>
 Notes:<br>
--- cobbled together from various sources, including Ron T. and Patrick (thanks to both)<br>
 -- this is an alternative to a Verisign-type certificate, saving you $$$<br>
 -- your firewall needs to open up port 8443 for this to work<br>
 -- the browser will bark at you for the self-signed key but since it's just your own admin pages your customers won't see it so shouldn't be a problem<br>
 -- copy-and-paste the lines that don't have the # comment symbol<br>
-<br>
+-- cobbled together from various sources, including Ron T. and Patrick (thanks to both)<br>
+
 Feel free to try it out and let me know if there's any issues or typos.
 
 Good luck!
 
-Mark Loparco
+Mark Loparco<br>
 09.16.2011
 
 
 = Details =
 
 # 0. gain root access to your server<br>
-# ==================================<br>
+# ====================<br>
 # depends on how your server and ssh login works:<br>
 # can either be password-less root login (not recommended)<br>
 # or login as openqwaq and "sudo su" to root (saves sudo-ing the commands)<br>
 
 # 1. install prerequisite components<br>
-# ==================================<br>
+# ====================<br>
 # these may already be installed from step 1 of the OQ installation instructions, but just in case:<br>
 yum install mod_ssl<br>
 yum install openssl<br>
 
 # 2. enable https connections<br>
-# ===========================<br>
+# ====================<br>
 # make a symbolic link to the OpenQwaq-https.conf file<br>
 ln -s /home/openqwaq/server/etc/OpenQwaq-https.conf /etc/httpd/conf.d/OpenQwaq-https.conf<br>
 # edit the OpenQwaq-https.conf file<br>
@@ -48,7 +48,7 @@ vi /home/openqwaq/server/etc/OpenQwaq-https.conf<br>
 # note: these file names must match those created in Step #4 below<br>
 
 # 3. generate the necessary keys and certificates<br>
-# ===============================================<br>
+# ====================<br>
 # navigate to keys directory (not necessary to be in this directory but I like to work here)<br>
 cd /home/openqwaq/server/etc/keys<br>
 # generate private key<br>
@@ -62,12 +62,12 @@ openssl req -new -key ca.key -out ca.csr<br>
 openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt<br>
 
 # 4. copy the files to correct location<br>
-# =====================================<br>
+# ====================<br>
 cp ca.crt /home/openqwaq/server/etc/keys/openqwaq.com.crt<br>
 cp ca.key /home/openqwaq/server/etc/keys/openqwaq.com.key.insecure<br>
 
 # 5. set admin username and password to what you want<br>
-# ===================================================<br>
+# ====================<br>
 # option a: create a new user and assign password<br>
 htdigest /home/openqwaq/server/etc/OpenQwaq-digests 'OpenQwaq Server Admin Pages' someNewUserName<br>
 # you will be prompted to enter and confirm the password<br>
@@ -76,8 +76,10 @@ htpasswd /home/openqwaq/server/etc/OpenQwaq-digests someExistingUserName<br>
 # you will be prompted to enter and confirm the password<br>
 
 # 6. restart apache<br>
+# ====================<br>
 /etc/init.d/httpd restart<br>
 
 # 7. test it out by going to the admin web page - note to type https and port number<br>
+# ====================<br>
 https://YOUR_IP:8443/admin/<br>
 # enter username and password and hopefully you're in!<br>
