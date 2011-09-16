@@ -21,7 +21,7 @@ Mark Loparco<br>
 
 = Details =
 
-<noautolink>
+<pre>
 # 0. gain root access to your server<br>
 # ===========================================<br>
 # depends on how your server and ssh login works:<br>
@@ -85,4 +85,4 @@ Mark Loparco<br>
 # ===========================================<br>
 <b><font color="red">https://YOUR_IP:8443/admin/</font></b><br>
 # enter username and password and hopefully you're in!<br>
-</noautolink>
+</pre>
