@@ -47,37 +47,37 @@ vi /home/openqwaq/server/etc/OpenQwaq-https.conf<br>
 # SSLCertificateKeyFile /home/openqwaq/server/etc/keys/openqwaq.com.key.insecure<br>
 # note: these file names must match those created in Step #4 below<br>
 
-# 3. generate the necessary keys and certificates
-# ===============================================
-# navigate to keys directory (not necessary to be in this directory but I like to work here)
-cd /home/openqwaq/server/etc/keys
-# generate private key
-openssl genrsa -out ca.key 1024 
-# note: when I used 4096 it didn't work, perhaps for 32-bit reasons (?)
+# 3. generate the necessary keys and certificates<br>
+# ===============================================<br>
+# navigate to keys directory (not necessary to be in this directory but I like to work here)<br>
+cd /home/openqwaq/server/etc/keys<br>
+# generate private key<br>
+openssl genrsa -out ca.key 1024 <br>
+# note: when I used 4096 it didn't work, perhaps for 32-bit reasons (?)<br>
 
-# generate Certificate Signing Request (CSR)
-openssl req -new -key ca.key -out ca.csr
+# generate Certificate Signing Request (CSR)<br>
+openssl req -new -key ca.key -out ca.csr<br>
 
-# generate self-signed key
-openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt
+# generate self-signed key<br>
+openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt<br>
 
-# 4. copy the files to correct location
-# =====================================
-cp ca.crt /home/openqwaq/server/etc/keys/openqwaq.com.crt
-cp ca.key /home/openqwaq/server/etc/keys/openqwaq.com.key.insecure
+# 4. copy the files to correct location<br>
+# =====================================<br>
+cp ca.crt /home/openqwaq/server/etc/keys/openqwaq.com.crt<br>
+cp ca.key /home/openqwaq/server/etc/keys/openqwaq.com.key.insecure<br>
 
-# 5. set admin username and password to what you want
-# ===================================================
-# option a: create a new user and assign password
-htdigest /home/openqwaq/server/etc/OpenQwaq-digests 'OpenQwaq Server Admin Pages' someNewUserName
-# you will be prompted to enter and confirm the password
-# option b: change the password on an existing user
-htpasswd /home/openqwaq/server/etc/OpenQwaq-digests someExistingUserName
-# you will be prompted to enter and confirm the password
+# 5. set admin username and password to what you want<br>
+# ===================================================<br>
+# option a: create a new user and assign password<br>
+htdigest /home/openqwaq/server/etc/OpenQwaq-digests 'OpenQwaq Server Admin Pages' someNewUserName<br>
+# you will be prompted to enter and confirm the password<br>
+# option b: change the password on an existing user<br>
+htpasswd /home/openqwaq/server/etc/OpenQwaq-digests someExistingUserName<br>
+# you will be prompted to enter and confirm the password<br>
 
-# 6. restart apache
-/etc/init.d/httpd restart
+# 6. restart apache<br>
+/etc/init.d/httpd restart<br>
 
-# 7. test it out by going to the admin web page - note to type https and port number
-https://YOUR_IP:8443/admin/
-# enter username and password and hopefully you're in!
+# 7. test it out by going to the admin web page - note to type https and port number<br>
+https://YOUR_IP:8443/admin/<br>
+# enter username and password and hopefully you're in!<br>
