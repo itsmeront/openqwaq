@@ -30,8 +30,8 @@ Mark Loparco<br>
 # 1. install prerequisite components<br>
 # ===========================================<br>
 # these may already be installed from step 1 of the OQ installation instructions, but just in case:<br>
-<b>yum install mod_ssl</b><br>
-<b>yum install openssl</b><br>
+<b><font color="red">yum install mod_ssl</font></b><br>
+<b><font color="red">yum install openssl</font></b><br>
 
 # 2. enable https connections<br>
 # ===========================================<br>
