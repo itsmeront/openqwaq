@@ -3,14 +3,14 @@
 = Introduction =
 
 It's best to login to the OpenQwaq Admin pages using the secure HTTPS protocol. I took a stab at this and have been able to get it to work a couple times by following the directions verbatim (copy-and-paste recommended!). 
-
+<p>
 Notes:
--- cobbled together from various sources, including Ron T. and Patrick (thanks to both)
--- this is an alternative to a Verisign-type certificate, saving you $$$
--- your firewall needs to open up port 8443 for this to work
--- the browser will bark at you for the self-signed key but since it's just your own admin pages your customers won't see it so shouldn't be a problem
--- copy-and-paste the lines that don't have the # comment symbol
-
+-- cobbled together from various sources, including Ron T. and Patrick (thanks to both)<br>
+-- this is an alternative to a Verisign-type certificate, saving you $$$<br>
+-- your firewall needs to open up port 8443 for this to work<br>
+-- the browser will bark at you for the self-signed key but since it's just your own admin pages your customers won't see it so shouldn't be a problem<br>
+-- copy-and-paste the lines that don't have the # comment symbol<br>
+<br>
 Feel free to try it out and let me know if there's any issues or typos.
 
 Good luck!
