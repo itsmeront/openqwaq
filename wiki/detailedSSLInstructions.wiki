@@ -65,7 +65,7 @@ Mark Loparco<br>
 # 4. copy the files to correct location<br>
 # ===========================================<br>
 <b><font color="red">cp ca.crt /home/openqwaq/server/etc/keys/openqwaq.com.crt</font></b><br>
-<pre><b><font color="red">cp ca.key /home/openqwaq/server/etc/keys/openqwaq.com.key.insecure</font></b><br>
+<b><font color="red">cp ca.key /home/openqwaq/server/etc/keys/openqwaq.com.key.insecure</font></b><br>
 
 # 5. set admin username and password to what you want<br>
 # ===========================================<br>
@@ -74,7 +74,7 @@ Mark Loparco<br>
 <b><font color="red">htdigest /home/openqwaq/server/etc/OpenQwaq-digests 'OpenQwaq Server Admin Pages' someNewUserName</font></b><br>
 # you will be prompted to enter and confirm the password<br>
 # option b: change the password on an existing user<br>
-<pre><b><font color="red">htpasswd /home/openqwaq/server/etc/OpenQwaq-digests someExistingUserName</font></b><br>
+<b><font color="red">htpasswd /home/openqwaq/server/etc/OpenQwaq-digests someExistingUserName</font></b><br>
 # you will be prompted to enter and confirm the password<br>
 
 # 6. restart apache<br>
