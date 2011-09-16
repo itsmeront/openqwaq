@@ -83,5 +83,5 @@ Mark Loparco<br>
 
 # 7. test it out by going to the admin web page<br>
 # ===========================================<br>
-<b><font color="red"><pre>https://YOUR_IP:8443/admin/</pre></font></b><br>
+<b><font color="red">https://YOUR_IP:8443/admin/</font></b><br>
 # enter username and password and hopefully you're in!<br>
