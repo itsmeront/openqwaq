@@ -8,7 +8,7 @@ Notes:<br>
 -- this is an alternative to a Verisign-type certificate, saving you $$$<br>
 -- your firewall needs to open up port 8443 for this to work<br>
 -- the browser will bark at you for the self-signed key but since it's just your own admin pages your customers won't see it so shouldn't be a problem<br>
--- copy-and-paste the red bold lines (i.e., the ones without the # comment symbol)<br>
+-- copy-and-paste the red bold lines (i.e., as well as the blue Wiki autolinking text - anyone know how to turn this off?)<br>
 -- cobbled together from various sources, including Ron T. and Patrick (thanks to both)<br>
 
 Feel free to try it out and let me know if there's any issues or typos.
