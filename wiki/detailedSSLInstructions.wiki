@@ -1,4 +1,4 @@
-Detailed installation instructions for enabling secure SSL login to OQ Admin pages.
+#summary Detailed installation instructions for enabling secure SSL login to OQ Admin pages.
 
 = Introduction =
 
