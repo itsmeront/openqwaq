@@ -21,7 +21,7 @@ Mark Loparco<br>
 
 = Details =
 
-<pre>
+
 # 0. gain root access to your server<br>
 # ===========================================<br>
 # depends on how your server and ssh login works:<br>
@@ -65,7 +65,7 @@ Mark Loparco<br>
 # 4. copy the files to correct location<br>
 # ===========================================<br>
 <b><font color="red">cp ca.crt /home/openqwaq/server/etc/keys/openqwaq.com.crt</font></b><br>
-<b><font color="red">cp ca.key /home/openqwaq/server/etc/keys/openqwaq.com.key.insecure</font></b><br>
+<pre><b><font color="red">cp ca.key /home/openqwaq/server/etc/keys/openqwaq.com.key.insecure</font></b><br>
 
 # 5. set admin username and password to what you want<br>
 # ===========================================<br>
@@ -74,7 +74,7 @@ Mark Loparco<br>
 <b><font color="red">htdigest /home/openqwaq/server/etc/OpenQwaq-digests 'OpenQwaq Server Admin Pages' someNewUserName</font></b><br>
 # you will be prompted to enter and confirm the password<br>
 # option b: change the password on an existing user<br>
-<b><font color="red">htpasswd /home/openqwaq/server/etc/OpenQwaq-digests someExistingUserName</font></b><br>
+<pre><b><font color="red">htpasswd /home/openqwaq/server/etc/OpenQwaq-digests someExistingUserName</font></b><br>
 # you will be prompted to enter and confirm the password<br>
 
 # 6. restart apache<br>
@@ -83,6 +83,5 @@ Mark Loparco<br>
 
 # 7. test it out by going to the admin web page<br>
 # ===========================================<br>
-<b><font color="red">https://YOUR_IP:8443/admin/</font></b><br>
+<b><font color="red"><pre>https://YOUR_IP:8443/admin/</pre></font></b><br>
 # enter username and password and hopefully you're in!<br>
-</pre>
