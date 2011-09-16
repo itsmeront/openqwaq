@@ -4,7 +4,7 @@
 
 It's best to login to the OpenQwaq Admin pages using the secure HTTPS protocol. I took a stab at this and have been able to get it to work a couple times by following the directions verbatim (copy-and-paste recommended!). 
 <p>
-Notes:
+Notes:<br>
 -- cobbled together from various sources, including Ron T. and Patrick (thanks to both)<br>
 -- this is an alternative to a Verisign-type certificate, saving you $$$<br>
 -- your firewall needs to open up port 8443 for this to work<br>
@@ -21,31 +21,31 @@ Mark Loparco
 
 = Details =
 
-# 0. gain root access to your server
-# ==================================
-# depends on how your server and ssh login works:
-# can either be password-less root login (not recommended)
-# or login as openqwaq and "sudo su" to root (saves sudo-ing the commands)
+# 0. gain root access to your server<br>
+# ==================================<br>
+# depends on how your server and ssh login works:<br>
+# can either be password-less root login (not recommended)<br>
+# or login as openqwaq and "sudo su" to root (saves sudo-ing the commands)<br>
 
-# 1. install prerequisite components
-# ==================================
-# these may already be installed from step 1 of the OQ installation instructions, but just in case:
-yum install mod_ssl
-yum install openssl
+# 1. install prerequisite components<br>
+# ==================================<br>
+# these may already be installed from step 1 of the OQ installation instructions, but just in case:<br>
+yum install mod_ssl<br>
+yum install openssl<br>
 
-# 2. enable https connections
-# ===========================
-# make a symbolic link to the OpenQwaq-https.conf file
-ln -s /home/openqwaq/server/etc/OpenQwaq-https.conf /etc/httpd/conf.d/OpenQwaq-https.conf
-# edit the OpenQwaq-https.conf file
-vi /home/openqwaq/server/etc/OpenQwaq-https.conf
-# change the ServerName from openqwaq.openqwaq.org to YOUR_SERVER_NAME or YOUR_SERVER_IP
-# change "loadlhost" typo in file (not sure if needed but why not?):
-# change "Allow from loadlhost.localdomain" to "Allow from localhost.localdomain"
-# make sure that the # SSL cert/key line within <VirtualHost *:8443> reads:
-# SSLCertificateFile /home/openqwaq/server/etc/keys/openqwaq.com.crt
-# SSLCertificateKeyFile /home/openqwaq/server/etc/keys/openqwaq.com.key.insecure
-# note: these file names must match those created in Step #4 below
+# 2. enable https connections<br>
+# ===========================<br>
+# make a symbolic link to the OpenQwaq-https.conf file<br>
+ln -s /home/openqwaq/server/etc/OpenQwaq-https.conf /etc/httpd/conf.d/OpenQwaq-https.conf<br>
+# edit the OpenQwaq-https.conf file<br>
+vi /home/openqwaq/server/etc/OpenQwaq-https.conf<br>
+# change the ServerName from openqwaq.openqwaq.org to YOUR_SERVER_NAME or YOUR_SERVER_IP<br>
+# change "loadlhost" typo in file (not sure if needed but why not?):<br>
+# change "Allow from loadlhost.localdomain" to "Allow from localhost.localdomain"<br>
+# make sure that the # SSL cert/key line within <VirtualHost *:8443> reads:<br>
+# SSLCertificateFile /home/openqwaq/server/etc/keys/openqwaq.com.crt<br>
+# SSLCertificateKeyFile /home/openqwaq/server/etc/keys/openqwaq.com.key.insecure<br>
+# note: these file names must match those created in Step #4 below<br>
 
 # 3. generate the necessary keys and certificates
 # ===============================================
