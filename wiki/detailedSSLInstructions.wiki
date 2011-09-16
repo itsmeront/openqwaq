@@ -8,7 +8,7 @@ Notes:<br>
 -- this is an alternative to a Verisign-type certificate, saving you $$$<br>
 -- your firewall needs to open up port 8443 for this to work<br>
 -- the browser will bark at you for the self-signed key but since it's just your own admin pages your customers won't see it so shouldn't be a problem<br>
--- copy-and-paste the lines that don't have the # comment symbol<br>
+-- copy-and-paste the red bold lines (i.e., the ones without the # comment symbol)<br>
 -- cobbled together from various sources, including Ron T. and Patrick (thanks to both)<br>
 
 Feel free to try it out and let me know if there's any issues or typos.
@@ -36,9 +36,9 @@ Mark Loparco<br>
 # 2. enable https connections<br>
 # ===========================================<br>
 # make a symbolic link to the OpenQwaq-https.conf file<br>
-ln -s /home/openqwaq/server/etc/OpenQwaq-https.conf /etc/httpd/conf.d/OpenQwaq-https.conf<br>
+<b><font color="red">ln -s /home/openqwaq/server/etc/OpenQwaq-https.conf /etc/httpd/conf.d/OpenQwaq-https.conf</font></b><br>
 # edit the OpenQwaq-https.conf file<br>
-vi /home/openqwaq/server/etc/OpenQwaq-https.conf<br>
+<b><font color="red">vi /home/openqwaq/server/etc/OpenQwaq-https.conf</font></b><br>
 # change the ServerName from openqwaq.openqwaq.org to YOUR_SERVER_NAME or YOUR_SERVER_IP<br>
 # change "loadlhost" typo in file (not sure if needed but why not?):<br>
 # change "Allow from loadlhost.localdomain" to "Allow from localhost.localdomain"<br>
@@ -50,36 +50,37 @@ vi /home/openqwaq/server/etc/OpenQwaq-https.conf<br>
 # 3. generate the necessary keys and certificates<br>
 # ===========================================<br>
 # navigate to keys directory (not necessary to be in this directory but I like to work here)<br>
-cd /home/openqwaq/server/etc/keys<br>
+<b><font color="red">cd /home/openqwaq/server/etc/keys</font></b><br>
 # generate private key<br>
-openssl genrsa -out ca.key 1024 <br>
+<b><font color="red">openssl genrsa -out ca.key 1024</font></b><br>
 # note: when I used 4096 it didn't work, perhaps for 32-bit reasons (?)<br>
 
 # generate Certificate Signing Request (CSR)<br>
-openssl req -new -key ca.key -out ca.csr<br>
+<b><font color="red">openssl req -new -key ca.key -out ca.csr</font></b><br>
 
 # generate self-signed key<br>
-openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt<br>
+<b><font color="red">openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt</font></b><br>
 
 # 4. copy the files to correct location<br>
 # ===========================================<br>
-cp ca.crt /home/openqwaq/server/etc/keys/openqwaq.com.crt<br>
-cp ca.key /home/openqwaq/server/etc/keys/openqwaq.com.key.insecure<br>
+<b><font color="red">cp ca.crt /home/openqwaq/server/etc/keys/openqwaq.com.crt</font></b><br>
+<b><font color="red">cp ca.key /home/openqwaq/server/etc/keys/openqwaq.com.key.insecure</font></b><br>
 
 # 5. set admin username and password to what you want<br>
 # ===========================================<br>
 # option a: create a new user and assign password<br>
-htdigest /home/openqwaq/server/etc/OpenQwaq-digests 'OpenQwaq Server Admin Pages' someNewUserName<br>
+# replace someNewUserName with the login name of your choice
+<b><font color="red">htdigest /home/openqwaq/server/etc/OpenQwaq-digests 'OpenQwaq Server Admin Pages' someNewUserName</font></b><br>
 # you will be prompted to enter and confirm the password<br>
 # option b: change the password on an existing user<br>
-htpasswd /home/openqwaq/server/etc/OpenQwaq-digests someExistingUserName<br>
+<b><font color="red">htpasswd /home/openqwaq/server/etc/OpenQwaq-digests someExistingUserName</font></b><br>
 # you will be prompted to enter and confirm the password<br>
 
 # 6. restart apache<br>
 # ===========================================<br>
-/etc/init.d/httpd restart<br>
+<b><font color="red">/sbin/service httpd restart</font></b><br>
 
 # 7. test it out by going to the admin web page<br>
 # ===========================================<br>
-https://YOUR_IP:8443/admin/<br>
+<b><font color="red">https://YOUR_IP:8443/admin/</font></b><br>
 # enter username and password and hopefully you're in!<br>
