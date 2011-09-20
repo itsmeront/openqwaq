@@ -79,7 +79,7 @@ On RHEL/CentOS:
 
 8. Verify that http works properly by going to:
    * http://localhost/clients
-   * http://localhostadmin
+   * http://localhost/admin
 
 9. Set up the MySQL database:
 
