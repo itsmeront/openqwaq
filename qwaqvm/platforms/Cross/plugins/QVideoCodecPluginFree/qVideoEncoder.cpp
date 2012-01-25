@@ -53,8 +53,8 @@ extern "C"
 #include "../QVideoCodecPlugin/qVideoEncoder.inc"
 }
 
-/* Now we must define the API-specific functions declared in the .inc file */
 
+/* Now we must define the API-specific functions declared in the .inc file */
 int qCreateEncoderAPI(QEncoder **eptr, char *args, int argsSize, int semaIndex, int width, int height) 
 {
 	QEncoder *encoder;
@@ -68,6 +68,10 @@ int qCreateEncoderAPI(QEncoder **eptr, char *args, int argsSize, int semaIndex, 
 		return -2;
 	}
 	
+	// The profile is stored in the 2 least-significant bits of the second flag byte.
+	enum H264_PROFILE { ZEROLATENCY=0, BASELINE, MAIN, HIGH };
+	H264_PROFILE profile = (H264_PROFILE) (vargs->flags[2] & 3);
+	
 	encoder->semaIndex = semaIndex;
 	encoder->width = width;
 	encoder->height = height;
@@ -80,7 +84,8 @@ int qCreateEncoderAPI(QEncoder **eptr, char *args, int argsSize, int semaIndex, 
 	// Initialize x264 encoder.  We use low-latency settings optimized for video-conferencing,
 	// as described by: http://x264dev.multimedia.cx/archives/249
 	x264_param_t param; 
-	x264_param_default_preset(&param, "medium", "zerolatency");
+	
+	x264_param_default_preset(&param, "medium", (profile == ZEROLATENCY) ? "zerolatency" : NULL);
 	param.b_annexb = 1; // expected by both MainConcept and libavcodec decoders
 	param.i_width = width;
 	param.i_height = height;
@@ -92,15 +97,32 @@ int qCreateEncoderAPI(QEncoder **eptr, char *args, int argsSize, int semaIndex, 
 	param.rc.f_rf_constant = 20;
 	param.rc.i_rc_method = X264_RC_CRF;
 	// fancy fancy to avoid large keyframes... spread refresh info out
-	param.b_intra_refresh = 1;
-	param.i_frame_reference = 1; // needed for intra-refresh
-
+	if (profile == ZEROLATENCY) {
+		param.b_intra_refresh = 1;
+		param.i_frame_reference = 1; // needed for intra-refresh
+	}
+	
 	// XXXXX send SPS/PPS before every keyframe
 	param.b_repeat_headers = 1;
 	
-	// XXXXX Our decoder can handle this, but if we want to stream video to an iPhone then
-	// we'll need to select a less fancy profile.
-	x264_param_apply_profile(&param, "high");
+	// Yeah, I know that "zero latency" isn't a "profile" per-se...
+	char *profileString;
+	switch (profile) {
+		case ZEROLATENCY:
+		case HIGH:
+			profileString = (char*)"high";
+			break;
+		case MAIN:
+			profileString = (char*)"main";
+			break;
+		case BASELINE:
+			profileString = (char*)"baseline";
+			break;
+		default:
+			qerr << endl << "qCreateEncoderFree(): 100% impossible to reach here";
+			profileString = (char*)"baseline";
+	}
+	x264_param_apply_profile(&param, profileString);
 
 	// Do this first, because we want the image-plane to be set (either to NULL on failure
 	// or a ptr on success, we don't care) before calling qDestroyEncoderAPI().
