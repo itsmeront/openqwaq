@@ -84,31 +84,66 @@ int qCreateEncoderAPI(QEncoder **eptr, char *args, int argsSize, int semaIndex, 
 	// Initialize x264 encoder.  We use low-latency settings optimized for video-conferencing,
 	// as described by: http://x264dev.multimedia.cx/archives/249
 	x264_param_t param; 
-	
-	x264_param_default_preset(&param, "medium", (profile == ZEROLATENCY) ? "zerolatency" : NULL);
-	param.b_annexb = 1; // expected by both MainConcept and libavcodec decoders
+
+	// Initialize params with x264 defaults, which we will then modify.
+	x264_param_default_preset(&param, "fast", (profile == ZEROLATENCY) ? "zerolatency" : NULL);
+
+	// ZEROLATENCY is for videoconferencing...
+	if (profile == ZEROLATENCY) {
+		param.i_slice_max_size = 1380; // XXXXX should fit in QwON datagram-slice... can tune this later
+		
+		// fancy x264 hotness to avoid large keyframes, instead spreading refreshes out across frames.
+		param.b_intra_refresh = 1;
+		param.i_frame_reference = 1; // needed for intra-refresh
+		
+		// send SPS/PPS before every keyframe so that receivers can
+		// join in the middle of a stream without performing a session
+		// negotiation (eg: SIP) to receive this information.
+		param.b_repeat_headers = 1;
+		
+		// B-frames add too much latency for videoconferencing
+		param.i_bframe = 0;
+		param.i_bframe_pyramid = 0;
+	}
+	// ... everything else is for session-recording.
+	else {
+		// B-frames allow higher compression rates.
+		// TODO: enable them (but not until after we fix "lip-syncing")
+		param.i_bframe = 0;
+		param.i_bframe_pyramid = 0;
+	}
+		
 	param.i_width = width;
 	param.i_height = height;
-	param.i_slice_max_size = 1380; // XXXXX should fit in QwON datagram-slice... can tune this later		
 	param.i_fps_num = vargs->frameRate;
-	param.rc.i_vbv_max_bitrate = vargs->bitRate;
-	param.rc.i_vbv_buffer_size = 30; // XXXXX should tune w/ bit-rate & fps
+	param.i_fps_den = 1;
+
+	param.i_frame_total = 0;  // don't know in advance how many frames.
+	param.b_annexb = 1; // expected by both MainConcept and libavcodec decoders
+	
+	// Pretend that we have a fixed frame rate, 
+	// even though we actually throttle the capture
+	// rate in Squeak.  x264 does support variable
+	// frame-rate modes, but I'm not quite sure how
+	// to make it work.
+	param.b_vfr_input = 0;
+	
+	param.rc.i_bitrate = vargs->bitRate;
+
+	// We used to use these, but they don't seem to be needed???
+//	param.rc.i_vbv_max_bitrate = vargs->bitRate;
+//	param.rc.i_vbv_buffer_size = 30; 
+
 	// quality target
 	param.rc.f_rf_constant = 20;
 	param.rc.i_rc_method = X264_RC_CRF;
-	// fancy fancy to avoid large keyframes... spread refresh info out
-	if (profile == ZEROLATENCY) {
-		param.b_intra_refresh = 1;
-		param.i_frame_reference = 1; // needed for intra-refresh
-	}
-	
-	// XXXXX send SPS/PPS before every keyframe
-	param.b_repeat_headers = 1;
 	
 	// Yeah, I know that "zero latency" isn't a "profile" per-se...
 	char *profileString;
 	switch (profile) {
 		case ZEROLATENCY:
+			// Treat it as high-profile, since we know that the
+			// H.264 decoder that we use for video-chat supports it.
 		case HIGH:
 			profileString = (char*)"high";
 			break;
@@ -134,6 +169,7 @@ int qCreateEncoderAPI(QEncoder **eptr, char *args, int argsSize, int semaIndex, 
 	
 	// Set up logging, so that X264 log messages go to the same place as the rest of the plugin's.
 	param.pf_log = q_x264_log_callback;
+//	param.i_log_level = X264_LOG_DEBUG;
 	
 	encoder->x264 = x264_encoder_open(&param);
 	if (!encoder->x264) {
@@ -173,6 +209,7 @@ void qDestroyEncoderAPI(QEncoder *encoder)
 	}
 	
 	delete encoder;
+	qerr << endl << "qDestroyEncoderFree(): DESTROYED ENCODER"; 
 }
 
 
