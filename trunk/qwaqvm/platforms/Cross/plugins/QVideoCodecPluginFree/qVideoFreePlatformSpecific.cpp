@@ -29,6 +29,7 @@ extern "C" {
 void qInitPlatform(void)
 {
 	av_log_set_callback(q_av_log_callback);
+//	av_log_set_level(AV_LOG_VERBOSE);
 	av_register_all();
 	avcodec_init();
 }

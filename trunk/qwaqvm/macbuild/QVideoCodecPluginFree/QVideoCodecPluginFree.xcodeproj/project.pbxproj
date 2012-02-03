@@ -365,6 +365,7 @@
 					"$(SRCROOT)/../../platforms/Mac\\ OS/third-party/libav/lib",
 				);
 				PRODUCT_NAME = QVideoCodecPluginFree;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -383,6 +384,7 @@
 					"$(SRCROOT)/../../platforms/Mac\\ OS/third-party/libav/lib",
 				);
 				PRODUCT_NAME = QVideoCodecPluginFree;
+				SDKROOT = macosx10.6;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
