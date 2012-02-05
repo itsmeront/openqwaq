@@ -128,14 +128,19 @@ int qCreateEncoderAPI(QEncoder **eptr, char *args, int argsSize, int semaIndex, 
 	// to make it work.
 	param.b_vfr_input = 0;
 	
+	// Don't believe that we pay attention to this... see comments below
+	// about quality- vs. bitrated based targets.
 	param.rc.i_bitrate = vargs->bitRate;
 
 	// We used to use these, but they don't seem to be needed???
 //	param.rc.i_vbv_max_bitrate = vargs->bitRate;
 //	param.rc.i_vbv_buffer_size = 30; 
 
-	// quality target
-	param.rc.f_rf_constant = 20;
+	// Quality.  We use a quality-based target rather than a bitrate
+	// target, so it's a bit tricky to choose a value that gives the
+	// desired bitrate.  This setting has been empirically selected
+	// to look good enough, and be low-bitrate enough.
+	param.rc.f_rf_constant = 25;
 	param.rc.i_rc_method = X264_RC_CRF;
 	
 	// Yeah, I know that "zero latency" isn't a "profile" per-se...
